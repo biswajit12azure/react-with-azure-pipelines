@@ -1,4 +1,4 @@
+import SuplierDiversity from "./suppliers/SuplierDiversity";
 import ManageProfileSD from "./ManageProfileSD";
-import HomeSD from "./HomeSD";
 
-export {ManageProfileSD,HomeSD}
+export {ManageProfileSD,SuplierDiversity}

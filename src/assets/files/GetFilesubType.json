@@ -1,0 +1,31 @@
+{
+  "Succeeded": true,
+  "Message": null,
+  "Errors": null,
+  "Data": [
+    {
+      "Description": "ACCOUNT_RQST_TO_LDC",
+      "MessageTypeId": 11,
+      "Filename": "ACCOUNT_RQST_TO_LDC_YYYYMMDD.XML",
+      "SupplierMessageTypeCode": "X"
+    },
+    {
+      "Description": "CHARGES_RQST_TO_LDC",
+      "MessageTypeId": 4,
+      "Filename": "CHARGES_RQST_TO_LDC_YYYYMMDD.XML",
+      "SupplierMessageTypeCode": "C"
+    },
+    {
+      "Description": "CONSUMPTION_RQST",
+      "MessageTypeId": 9,
+      "Filename": "CONSUMPTION_RQST_YYYYMMDD.XML",
+      "SupplierMessageTypeCode": "N"
+    },
+    {
+      "Description": "RATECHANGE_RQST",
+      "MessageTypeId": 6,
+      "Filename": "RATECHANGE_RQST_YYYYMMDD.XML",
+      "SupplierMessageTypeCode": "R"
+    }
+  ]
+}

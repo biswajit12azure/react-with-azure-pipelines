@@ -16,10 +16,6 @@ export const user = {
       "jwToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJSYXZpLlNvbmkxQHN1dGhlcmxhbmRnbG9iYWwuY29tIiwianRpIjoiNDlhMWMwZjYtMGVlMy00ZjYxLTk4OTMtNWRiNGJmZWVhOTFjIiwiZW1haWwiOiJSYXZpLlNvbmkxQHN1dGhlcmxhbmRnbG9iYWwuY29tIiwidWlkIjoiUmF2aS5Tb25pMUBzdXRoZXJsYW5kZ2xvYmFsLmNvbSIsImlwIjoiMTkyLjE2OC4xLjUiLCJleHAiOjE3MzQwMTc4MzgsImlzcyI6Ildhc2hnYXMtZVNlcnZpY2UiLCJhdWQiOiJXYXNoZ2FzLWVTZXJ2aWNlIn0.gWctwIu5Uu-CbgbIi05dBAog9TP7C7Adxwvf07B_2xE",
       "Status": "Approved",
       "tokenExpiry": "2024-12-12T21:07:19.0712093+05:30",
-      "isAdmin": true,
-      "StateID": 3,
-      "Address": "Test Address",
-      "ZipCode": "3564734",
     },
     "UserAccess": [
       {
@@ -363,24 +359,6 @@ export const user = {
         ]
       }
     ],
-    "State": [
-      {
-        "StateId": 2,
-        "StateName": "AL"
-      },
-      {
-        "StateId": 3,
-        "StateName": "NY"
-      },
-      {
-        "StateId": 4,
-        "StateName": "WC"
-      },
-      {
-        "StateId": 5,
-        "StateName": "CL"
-      }
-    ]
   }
 }
 
@@ -865,11 +843,15 @@ export const supplierBusinessData = [
   }
 ]
 
-export const supportedFormat = ['.jpg', '.png', '.docx', '.pdf']
+export const supportedFormat = ['.jpeg', '.png', '.docx', '.pdf']
 
 export const supplierSupportedFormat = ['.jpg', '.png', '.docx', '.pdf']
 
-export const supportSupportedFormat = ['.jpg', '.png', '.docx', '.pdf']
+export const supportSupportedFormat = ['.jpg', '.png', '.docx', '.pdf','.xls', '.xlsx', '.txt', '.csv', '.zip']
+
+export const announcementFormat = ['.jpg', '.png', '.docx', '.pdf', '.xls', '.xlsx', '.txt', '.zip', '.csv']
+
+export const firmSupportedFormat = ['.xls', '.xlsx']
 
 export const registerMapCenter =
 {
@@ -1559,7 +1541,7 @@ export const faqData = {
     {
       "ID": 2,
       "Question": "What is my Name",
-      "Answer": "I am from Sutherland so don't know",
+      "Answer": "<b>I am from Sutherland so don't know<b/>",
       "PortalID": 1,
       "IsActive": true
     },
@@ -1690,7 +1672,7 @@ export const marketerGroupGetData = {
   "Data": {
     "MarketerID": 1,
     "MarketerName": "Marketer1",
-    "MarketerStartDate":"2024-01-27T12:25:22.747Z",
+    "MarketerStartDate": "2024-01-27T12:25:22.747Z",
     "MarketerGroups": [
       {
         "ID": 1,
@@ -1809,7 +1791,7 @@ export const marketerGroupGetData = {
     ]
   }
 }
-export const pipelineMatrixData={
+export const pipelineMatrixData = {
   "Succeeded": true,
   "Message": "Get Pipeline Matrix successfully!!",
   "Errors": null,
@@ -2117,7 +2099,7 @@ export const pipelineMatrixData={
   ]
 }
 
-export const pipelineGuideData={
+export const pipelineGuideData = {
   "Succeeded": true,
   "Message": "Get PipelineDeliveryGuid successfully",
   "Errors": null,
@@ -2129,13 +2111,6 @@ export const pipelineGuideData={
       "RemainingFTLoad": 4000
     },
     "PipeLines": [
-      {
-        "MatrixID": 2,
-        "PipeNomination": 2000,
-        "PipelineName": "Columbia",
-        "MinValue": "45",
-        "MaxValue": "80"
-      },
       {
         "MatrixID": 8,
         "PipeNomination": 2000,
@@ -2170,6 +2145,22117 @@ export const pipelineGuideData={
         "PipelineName": "TCO Transit",
         "MinValue": "45",
         "MaxValue": "80"
+      }
+    ]
+  }
+}
+
+export const getNominationPipeline = {
+  "Succeeded": true,
+  "Message": null,
+  "Errors": null,
+  "Data": {
+    "NominationData": {
+      "PipelineID": 101,
+      "PipelineName": "Columbia",
+      "CompanyId": 173,
+      "ContractData": [
+        {
+          "ContractID": 3934,
+          "ContractDetails": [
+            {
+              "ContractDate": "2025-02-13T00:00:00",
+              "ContractValue": "500"
+            },
+            {
+              "ContractDate": "2025-02-14T00:00:00",
+              "ContractValue": "600"
+            },
+            {
+              "ContractDate": "2025-02-14T00:00:00",
+              "ContractValue": "600"
+            },
+            {
+              "ContractDate": "2025-02-14T00:00:00",
+              "ContractValue": "700"
+            },
+            {
+              "ContractDate": "2025-02-02T00:00:00",
+              "ContractValue": "100"
+            }
+          ]
+        },
+        {
+          "ContractID": 86149,
+          "ContractDetails": [
+            {
+              "ContractDate": "2025-02-01T00:00:00",
+              "ContractValue": "40"
+            }
+          ]
+        },
+        {
+          "ContractID": 1234,
+          "ContractDetails": [
+            {
+              "ContractDate": "2025-02-13T00:00:00",
+              "ContractValue": "500"
+            },
+            {
+              "ContractDate": "2025-02-14T00:00:00",
+              "ContractValue": "600"
+            },
+            {
+              "ContractDate": "2025-02-14T00:00:00",
+              "ContractValue": "600"
+            },
+            {
+              "ContractDate": "2025-02-14T00:00:00",
+              "ContractValue": "700"
+            },
+            {
+              "ContractDate": "2025-02-02T00:00:00",
+              "ContractValue": "100"
+            }
+          ]
+        },
+        {
+          "ContractID": 3456,
+          "ContractDetails": [
+            {
+              "ContractDate": "2025-02-13T00:00:00",
+              "ContractValue": "500"
+            },
+            {
+              "ContractDate": "2025-02-14T00:00:00",
+              "ContractValue": "600"
+            },
+            {
+              "ContractDate": "2025-02-14T00:00:00",
+              "ContractValue": "600"
+            },
+            {
+              "ContractDate": "2025-02-14T00:00:00",
+              "ContractValue": "700"
+            },
+            {
+              "ContractDate": "2025-02-02T00:00:00",
+              "ContractValue": "100"
+            }
+          ]
+        },
+        {
+          "ContractID": 7890,
+          "ContractDetails": [
+            {
+              "ContractDate": "2025-02-13T00:00:00",
+              "ContractValue": "500"
+            },
+            {
+              "ContractDate": "2025-02-14T00:00:00",
+              "ContractValue": "600"
+            },
+            {
+              "ContractDate": "2025-02-14T00:00:00",
+              "ContractValue": "600"
+            },
+            {
+              "ContractDate": "2025-02-14T00:00:00",
+              "ContractValue": "700"
+            },
+            {
+              "ContractDate": "2025-02-02T00:00:00",
+              "ContractValue": "100"
+            }
+          ]
+        },
+        {
+          "ContractID": 4567,
+          "ContractDetails": [
+            {
+              "ContractDate": "2025-02-13T00:00:00",
+              "ContractValue": "500"
+            },
+            {
+              "ContractDate": "2025-02-14T00:00:00",
+              "ContractValue": "600"
+            },
+            {
+              "ContractDate": "2025-02-14T00:00:00",
+              "ContractValue": "600"
+            },
+            {
+              "ContractDate": "2025-02-14T00:00:00",
+              "ContractValue": "700"
+            },
+            {
+              "ContractDate": "2025-02-02T00:00:00",
+              "ContractValue": "100"
+            }
+          ]
+        },
+      ],
+      "TotalPipelineData": {
+        "ContractName": "Columbia",
+        "ContractDetails": [
+          {
+            "ContractDate": "2025-02-01T00:00:00",
+            "ContractValue": "40"
+          },
+          {
+            "ContractDate": "2025-02-02T00:00:00",
+            "ContractValue": "100"
+          },
+          {
+            "ContractDate": "2025-02-13T00:00:00",
+            "ContractValue": "500"
+          },
+          {
+            "ContractDate": "2025-02-14T00:00:00",
+            "ContractValue": "1900"
+          }
+        ]
+      },
+      "TotalAllPipelineData": {
+        "ContractName": "Pipeline",
+        "ContractDetails": [
+          {
+            "ContractDate": "2025-02-01T00:00:00",
+            "ContractValue": "40"
+          },
+          {
+            "ContractDate": "2025-02-02T00:00:00",
+            "ContractValue": "100"
+          },
+          {
+            "ContractDate": "2025-02-13T00:00:00",
+            "ContractValue": "500"
+          },
+          {
+            "ContractDate": "2025-02-14T00:00:00",
+            "ContractValue": "1900" //total of all contracts for the pipeline Columbia for the month of February 14th 600+600+700
+          }
+        ]
+      },
+      "TotalGroupData": {
+        "ContractName": "Group",
+        "ContractDetails": []
+      }
+    },
+    "PipelineData": [
+      {
+        "PipelineID": 101,
+        "Name": "Columbia"
+      }
+    ],
+    "MarketerData": [
+      {
+        "MarketerID": 173,
+        "MarketerName": "Amerada Hess Corp"
+      }
+    ]
+  }
+}
+
+export const getByInterruptible = {
+  "Succeeded": true,
+  "Message": null,
+  "Errors": null,
+  "Data": {
+    "InterruptibleData": [
+      {
+        "AllocationGroupID": 743,
+        "CompanyID": 100914,
+        "CompanyName": "NRG Business Market,LLC - 145",
+        "AllocationGroup": "HEM MD IP",
+        "EffectiveDate": "2024-12-01T00:00:00",
+        "EndDate": "2024-12-31T00:00:00",
+        "PreviousBalanceFirm": 0,
+        "PreviousBalanceInterruptible": -7630,
+        "CashOutAdjustmentAmount": 0,
+        "ImbalanceAdjustedVolume": 0,
+        "DailyRequiredVolume": 0,
+        "ShipmentMonth": "2024-12-01T00:00:00",
+        "TotalForecastImbal": 0,
+        "TotalNominationAllocations": 0,
+        "TotalUsage": 508,
+        "ThresholdValue": 76,
+        "MonthEndImbalanceInterruptible": -8138,
+        "MonthEndImbalanceFirm": -7630,
+        "OutsideThresholdAmount": -8062
+      }
+    ],
+    "Marketers": [
+      {
+        "MarketerID": 101,
+        "MarketerName": "Washington Gas"
+      },
+      {
+        "MarketerID": 103,
+        "MarketerName": "Constellation Energy Source"
+      },
+      {
+        "MarketerID": 134,
+        "MarketerName": "UGI Energy Services - 33"
+      },
+      {
+        "MarketerID": 136,
+        "MarketerName": "WGL Energy Svcs - 35"
+      },
+      {
+        "MarketerID": 161,
+        "MarketerName": "Colonial Energy"
+      },
+      {
+        "MarketerID": 177,
+        "MarketerName": "NOVEC Energy Solutions – 76"
+      },
+      {
+        "MarketerID": 179,
+        "MarketerName": "Sprague Op Res LLC - 78"
+      },
+      {
+        "MarketerID": 182,
+        "MarketerName": "Bollinger Energy"
+      },
+      {
+        "MarketerID": 203,
+        "MarketerName": "Sprague Op Res LLC - 102"
+      },
+      {
+        "MarketerID": 204,
+        "MarketerName": "Gateway Energy Services"
+      },
+      {
+        "MarketerID": 205,
+        "MarketerName": "Stand Energy"
+      },
+      {
+        "MarketerID": 210,
+        "MarketerName": "A-Advantage Heating & A/C, Inc."
+      },
+      {
+        "MarketerID": 211,
+        "MarketerName": "Argent Heating & Cooling, LLC"
+      },
+      {
+        "MarketerID": 212,
+        "MarketerName": "ARS of MD d/b/a John C. Dorsey"
+      },
+      {
+        "MarketerID": 213,
+        "MarketerName": "R. A. Dobson, Inc."
+      },
+      {
+        "MarketerID": 214,
+        "MarketerName": "Home Appliance Repair"
+      },
+      {
+        "MarketerID": 215,
+        "MarketerName": "JED Mechanical"
+      },
+      {
+        "MarketerID": 216,
+        "MarketerName": "Jiffy Plumbing and Heating, Inc."
+      },
+      {
+        "MarketerID": 217,
+        "MarketerName": "Mindte Heating & A/C"
+      },
+      {
+        "MarketerID": 218,
+        "MarketerName": "Moran's Refrigeration Service"
+      },
+      {
+        "MarketerID": 219,
+        "MarketerName": "My Plumber"
+      },
+      {
+        "MarketerID": 220,
+        "MarketerName": "A-One Air, Inc."
+      },
+      {
+        "MarketerID": 221,
+        "MarketerName": "All-Pro Services, Inc."
+      },
+      {
+        "MarketerID": 222,
+        "MarketerName": "Brennan's Heating & A/C Service"
+      },
+      {
+        "MarketerID": 223,
+        "MarketerName": "Central Services, Inc."
+      },
+      {
+        "MarketerID": 224,
+        "MarketerName": "Mann-In, Inc."
+      },
+      {
+        "MarketerID": 226,
+        "MarketerName": "Spartan Plumbing, Heating"
+      },
+      {
+        "MarketerID": 227,
+        "MarketerName": "Utility Service Express"
+      },
+      {
+        "MarketerID": 228,
+        "MarketerName": "Cropp-Metcalfe"
+      },
+      {
+        "MarketerID": 229,
+        "MarketerName": "John C. Flood"
+      },
+      {
+        "MarketerID": 230,
+        "MarketerName": "S. J. Burdick, Inc."
+      },
+      {
+        "MarketerID": 231,
+        "MarketerName": "Featherstone A/C & Heating, Inc."
+      },
+      {
+        "MarketerID": 232,
+        "MarketerName": "Foley Mechanical"
+      },
+      {
+        "MarketerID": 233,
+        "MarketerName": "Jim's Inc. (Plumbing & Heating)"
+      },
+      {
+        "MarketerID": 234,
+        "MarketerName": "Jolles Brothers, Inc."
+      },
+      {
+        "MarketerID": 235,
+        "MarketerName": "Jones-Rogers, Inc."
+      },
+      {
+        "MarketerID": 236,
+        "MarketerName": "M & M Mechanical, Inc."
+      },
+      {
+        "MarketerID": 237,
+        "MarketerName": "Pope's Heating & A/C Service"
+      },
+      {
+        "MarketerID": 238,
+        "MarketerName": "Air Pro Heating and A/C, Inc."
+      },
+      {
+        "MarketerID": 239,
+        "MarketerName": "John C. Flood, Inc. of Va."
+      },
+      {
+        "MarketerID": 240,
+        "MarketerName": "C. B. Lucas Co., Inc."
+      },
+      {
+        "MarketerID": 241,
+        "MarketerName": "Robinsons Air Cond. & Htg."
+      },
+      {
+        "MarketerID": 242,
+        "MarketerName": "Vernon Heating & A/C"
+      },
+      {
+        "MarketerID": 243,
+        "MarketerName": "Woodbridge Plumbing, Inc."
+      },
+      {
+        "MarketerID": 244,
+        "MarketerName": "Ace A/C & Heating Co."
+      },
+      {
+        "MarketerID": 245,
+        "MarketerName": "Hamby Services Corp."
+      },
+      {
+        "MarketerID": 246,
+        "MarketerName": "Combustioneer Corp."
+      },
+      {
+        "MarketerID": 247,
+        "MarketerName": "Northstar Heating & A/C, Inc."
+      },
+      {
+        "MarketerID": 248,
+        "MarketerName": "Airon, Inc."
+      },
+      {
+        "MarketerID": 249,
+        "MarketerName": "Airflow Service Company"
+      },
+      {
+        "MarketerID": 250,
+        "MarketerName": "Bowman's Heating & Air Cond."
+      },
+      {
+        "MarketerID": 251,
+        "MarketerName": "Cyprus Heating & A/C, Inc."
+      },
+      {
+        "MarketerID": 252,
+        "MarketerName": "M.E. Flow, Inc."
+      },
+      {
+        "MarketerID": 253,
+        "MarketerName": "RAM Company Heating & A/C, Inc."
+      },
+      {
+        "MarketerID": 254,
+        "MarketerName": "Richards' Air Cond. Co., Inc."
+      },
+      {
+        "MarketerID": 255,
+        "MarketerName": "Service Specialties, Inc."
+      },
+      {
+        "MarketerID": 256,
+        "MarketerName": "Silver Spring A/C & Heating Co."
+      },
+      {
+        "MarketerID": 257,
+        "MarketerName": "David Snell & Son, Inc."
+      },
+      {
+        "MarketerID": 259,
+        "MarketerName": "Parrish Services"
+      },
+      {
+        "MarketerID": 260,
+        "MarketerName": "Aaron Gas Solutions"
+      },
+      {
+        "MarketerID": 263,
+        "MarketerName": "A-1 Heating & A/C"
+      },
+      {
+        "MarketerID": 266,
+        "MarketerName": "A-Annandale Plumbing"
+      },
+      {
+        "MarketerID": 267,
+        "MarketerName": "Air Distribution Co. Inc. (Adco)"
+      },
+      {
+        "MarketerID": 268,
+        "MarketerName": "Capitol Services Plumbing"
+      },
+      {
+        "MarketerID": 270,
+        "MarketerName": "C. L. Hibbard Plumbing"
+      },
+      {
+        "MarketerID": 271,
+        "MarketerName": "Wachter & Norwood"
+      },
+      {
+        "MarketerID": 272,
+        "MarketerName": "Sanford Kramer Plumbing & Heatin"
+      },
+      {
+        "MarketerID": 273,
+        "MarketerName": "Refrigeration Systems"
+      },
+      {
+        "MarketerID": 274,
+        "MarketerName": "Northern Virginia Heating"
+      },
+      {
+        "MarketerID": 275,
+        "MarketerName": "Nichols & Phipps Plumbing & Heat"
+      },
+      {
+        "MarketerID": 276,
+        "MarketerName": "McCarthy Heating and A/C"
+      },
+      {
+        "MarketerID": 277,
+        "MarketerName": "Leonard-Splaine Co, Inc."
+      },
+      {
+        "MarketerID": 278,
+        "MarketerName": "General Heating/ARS"
+      },
+      {
+        "MarketerID": 279,
+        "MarketerName": "Garneski Air Conditioning & Heat"
+      },
+      {
+        "MarketerID": 280,
+        "MarketerName": "Galaxy Heating & A/C"
+      },
+      {
+        "MarketerID": 281,
+        "MarketerName": "Climate Heating & Cooling"
+      },
+      {
+        "MarketerID": 286,
+        "MarketerName": "Mark's AC"
+      },
+      {
+        "MarketerID": 305,
+        "MarketerName": "D. H. Stevens, Inc."
+      },
+      {
+        "MarketerID": 306,
+        "MarketerName": "Trademasters Service Corp."
+      },
+      {
+        "MarketerID": 307,
+        "MarketerName": "Washington Enterprises1"
+      },
+      {
+        "MarketerID": 308,
+        "MarketerName": "Washington Enterprises"
+      },
+      {
+        "MarketerID": 309,
+        "MarketerName": "John G. Webster Company"
+      },
+      {
+        "MarketerID": 310,
+        "MarketerName": "James A. Wheat & Sons"
+      },
+      {
+        "MarketerID": 311,
+        "MarketerName": "Fry Plumbing and Heating Corp."
+      },
+      {
+        "MarketerID": 312,
+        "MarketerName": "Hawkins Plumbing"
+      },
+      {
+        "MarketerID": 313,
+        "MarketerName": "Krafft Air Conditioning Service "
+      },
+      {
+        "MarketerID": 314,
+        "MarketerName": "3-D Plumbing & Heating, Inc."
+      },
+      {
+        "MarketerID": 315,
+        "MarketerName": "A-Wayne's Heating and Cooling"
+      },
+      {
+        "MarketerID": 316,
+        "MarketerName": "Kensington Heating & Cooling"
+      },
+      {
+        "MarketerID": 325,
+        "MarketerName": "United Air Temp"
+      },
+      {
+        "MarketerID": 326,
+        "MarketerName": "Constellation New Energy"
+      },
+      {
+        "MarketerID": 385,
+        "MarketerName": "Home Air"
+      },
+      {
+        "MarketerID": 433,
+        "MarketerName": "Stehle Engineering Corp"
+      },
+      {
+        "MarketerID": 434,
+        "MarketerName": "Rodgers Consulting"
+      },
+      {
+        "MarketerID": 435,
+        "MarketerName": "Constellation Design Group, Inc"
+      },
+      {
+        "MarketerID": 437,
+        "MarketerName": "A. Morton Thomas and Associates"
+      },
+      {
+        "MarketerID": 438,
+        "MarketerName": "Inframap"
+      },
+      {
+        "MarketerID": 439,
+        "MarketerName": "Control Point Associates, Inc"
+      },
+      {
+        "MarketerID": 440,
+        "MarketerName": "Loiederman Soltesz Associates"
+      },
+      {
+        "MarketerID": 445,
+        "MarketerName": "Bolton-Latham,LLC."
+      },
+      {
+        "MarketerID": 446,
+        "MarketerName": "Macris,hendricks & Glascock P.A."
+      },
+      {
+        "MarketerID": 447,
+        "MarketerName": "The Wilson T. Ballard Company"
+      },
+      {
+        "MarketerID": 465,
+        "MarketerName": "R.C. Fields, Jr. & Associates"
+      },
+      {
+        "MarketerID": 466,
+        "MarketerName": "VIKA, Inc"
+      },
+      {
+        "MarketerID": 467,
+        "MarketerName": "Earth Tech, Inc."
+      },
+      {
+        "MarketerID": 468,
+        "MarketerName": "Christopher Consultants, Ltd"
+      },
+      {
+        "MarketerID": 469,
+        "MarketerName": "Mid-Atlantic Utility Locating "
+      },
+      {
+        "MarketerID": 470,
+        "MarketerName": "Washington Gas Co."
+      },
+      {
+        "MarketerID": 471,
+        "MarketerName": "Town of Leesburg, VA"
+      },
+      {
+        "MarketerID": 485,
+        "MarketerName": "CAS Engineering"
+      },
+      {
+        "MarketerID": 486,
+        "MarketerName": "VSA Construction Services, LLC"
+      },
+      {
+        "MarketerID": 487,
+        "MarketerName": "VIKA"
+      },
+      {
+        "MarketerID": 488,
+        "MarketerName": "Greenhorne & O'Mara, Inc."
+      },
+      {
+        "MarketerID": 505,
+        "MarketerName": "Patton, Harris, Rust & Associate"
+      },
+      {
+        "MarketerID": 525,
+        "MarketerName": "Baker and Associates"
+      },
+      {
+        "MarketerID": 545,
+        "MarketerName": "National Cable Construction, Inc"
+      },
+      {
+        "MarketerID": 565,
+        "MarketerName": "christopher consultants, ltd."
+      },
+      {
+        "MarketerID": 566,
+        "MarketerName": "century eng"
+      },
+      {
+        "MarketerID": 567,
+        "MarketerName": "Wiles Mensch Corporation"
+      },
+      {
+        "MarketerID": 585,
+        "MarketerName": "Rodger's consulting"
+      },
+      {
+        "MarketerID": 586,
+        "MarketerName": "RODGERS CONSULTING, INC."
+      },
+      {
+        "MarketerID": 587,
+        "MarketerName": "tbe group"
+      },
+      {
+        "MarketerID": 588,
+        "MarketerName": "Mercado Consultants, Inc."
+      },
+      {
+        "MarketerID": 589,
+        "MarketerName": "Control Point Associates, Inc."
+      },
+      {
+        "MarketerID": 590,
+        "MarketerName": "Bolton & Associates LLC"
+      },
+      {
+        "MarketerID": 591,
+        "MarketerName": "VIKA, Inc, Attn:Ms J.J. Mashburn"
+      },
+      {
+        "MarketerID": 592,
+        "MarketerName": "The Tech Group, Inc."
+      },
+      {
+        "MarketerID": 593,
+        "MarketerName": "the techgroup, inc"
+      },
+      {
+        "MarketerID": 594,
+        "MarketerName": "THE TECH GROUP, INC"
+      },
+      {
+        "MarketerID": 595,
+        "MarketerName": "Johnson, Mirmiran & Thompson"
+      },
+      {
+        "MarketerID": 605,
+        "MarketerName": "Cervantes & Associates, P.C."
+      },
+      {
+        "MarketerID": 606,
+        "MarketerName": "Wiley & Wilson, Inc."
+      },
+      {
+        "MarketerID": 625,
+        "MarketerName": "Fibernet Construction, LLC "
+      },
+      {
+        "MarketerID": 626,
+        "MarketerName": "PEPCO"
+      },
+      {
+        "MarketerID": 645,
+        "MarketerName": "Dewberry and Davis, LLC"
+      },
+      {
+        "MarketerID": 646,
+        "MarketerName": "Arlington County DES"
+      },
+      {
+        "MarketerID": 665,
+        "MarketerName": "Fairfax County, DPWES"
+      },
+      {
+        "MarketerID": 685,
+        "MarketerName": "Delon Hampton & Associates"
+      },
+      {
+        "MarketerID": 705,
+        "MarketerName": "So-Deep, Inc."
+      },
+      {
+        "MarketerID": 725,
+        "MarketerName": "So Deep Inc."
+      },
+      {
+        "MarketerID": 726,
+        "MarketerName": "So Deep, Inc."
+      },
+      {
+        "MarketerID": 727,
+        "MarketerName": "Whitney, Bailey, Cox & Magnani "
+      },
+      {
+        "MarketerID": 745,
+        "MarketerName": "Accurate Infrastructure Data Inc"
+      },
+      {
+        "MarketerID": 765,
+        "MarketerName": "Capitol Engineers, P.C."
+      },
+      {
+        "MarketerID": 785,
+        "MarketerName": "the Engineering Groupe, Inc."
+      },
+      {
+        "MarketerID": 786,
+        "MarketerName": "Maddox Engineers & Surveyors"
+      },
+      {
+        "MarketerID": 787,
+        "MarketerName": "dominion surveyors inc."
+      },
+      {
+        "MarketerID": 788,
+        "MarketerName": "EBA Engineering Inc."
+      },
+      {
+        "MarketerID": 789,
+        "MarketerName": "William H. Gordon Associates"
+      },
+      {
+        "MarketerID": 790,
+        "MarketerName": "VIKA, Incorporated"
+      },
+      {
+        "MarketerID": 791,
+        "MarketerName": "Legion Design/Campbell & Assoc."
+      },
+      {
+        "MarketerID": 792,
+        "MarketerName": "Design/Build Concepts, Ltd."
+      },
+      {
+        "MarketerID": 805,
+        "MarketerName": "Dewberry"
+      },
+      {
+        "MarketerID": 825,
+        "MarketerName": "KCI"
+      },
+      {
+        "MarketerID": 826,
+        "MarketerName": "KCW ENGINEERING TECHNOLOGIES,INC"
+      },
+      {
+        "MarketerID": 827,
+        "MarketerName": "kcw wngineering tec."
+      },
+      {
+        "MarketerID": 828,
+        "MarketerName": "FAIRFAX WATER"
+      },
+      {
+        "MarketerID": 829,
+        "MarketerName": "Adtek Engineers, Inc"
+      },
+      {
+        "MarketerID": 830,
+        "MarketerName": "fairfax county water"
+      },
+      {
+        "MarketerID": 831,
+        "MarketerName": "KCI Technologies, Inc."
+      },
+      {
+        "MarketerID": 832,
+        "MarketerName": "Landmark Engineering, Inc."
+      },
+      {
+        "MarketerID": 833,
+        "MarketerName": "Fairfax County Water Authority"
+      },
+      {
+        "MarketerID": 834,
+        "MarketerName": "Vika Inc."
+      },
+      {
+        "MarketerID": 835,
+        "MarketerName": "KCI Technologies"
+      },
+      {
+        "MarketerID": 846,
+        "MarketerName": "Loudoun County"
+      },
+      {
+        "MarketerID": 866,
+        "MarketerName": "Fairfax Water"
+      },
+      {
+        "MarketerID": 886,
+        "MarketerName": "Burgess & Niple"
+      },
+      {
+        "MarketerID": 906,
+        "MarketerName": "Gutschick, Little & Weber, PA"
+      },
+      {
+        "MarketerID": 907,
+        "MarketerName": "Dulles Transit Engineers, JV"
+      },
+      {
+        "MarketerID": 908,
+        "MarketerName": "Gutschick Little & Weber"
+      },
+      {
+        "MarketerID": 910,
+        "MarketerName": "Delon Hampton and Associates"
+      },
+      {
+        "MarketerID": 926,
+        "MarketerName": "Richter & Associates"
+      },
+      {
+        "MarketerID": 946,
+        "MarketerName": "Clark Pinnacle"
+      },
+      {
+        "MarketerID": 947,
+        "MarketerName": "JMT Engineering"
+      },
+      {
+        "MarketerID": 949,
+        "MarketerName": "Marlboro Engineering Cons., Inc."
+      },
+      {
+        "MarketerID": 950,
+        "MarketerName": "CAPITOL DEVELOPMENT DESIGN"
+      },
+      {
+        "MarketerID": 951,
+        "MarketerName": "Woolpert, Inc."
+      },
+      {
+        "MarketerID": 952,
+        "MarketerName": "Charles P. Johnson & Associates"
+      },
+      {
+        "MarketerID": 953,
+        "MarketerName": "Adtek Engineers, Inc."
+      },
+      {
+        "MarketerID": 954,
+        "MarketerName": "Land Design Consultants"
+      },
+      {
+        "MarketerID": 967,
+        "MarketerName": "Capitol Development Design Inc."
+      },
+      {
+        "MarketerID": 968,
+        "MarketerName": "Capitol Development Design, inc."
+      },
+      {
+        "MarketerID": 969,
+        "MarketerName": "ECC"
+      },
+      {
+        "MarketerID": 970,
+        "MarketerName": "Ben Dyer Associates, Inc."
+      },
+      {
+        "MarketerID": 971,
+        "MarketerName": "Clark Realty Capital, L.L.C."
+      },
+      {
+        "MarketerID": 972,
+        "MarketerName": "metcalf & eddy"
+      },
+      {
+        "MarketerID": 987,
+        "MarketerName": "C.C. Johnson & Malhotra, P.C."
+      },
+      {
+        "MarketerID": 988,
+        "MarketerName": "Infrasource(Mid Atlantic Pipelin"
+      },
+      {
+        "MarketerID": 989,
+        "MarketerName": "Rummel, Klepper & Kahl, LLP"
+      },
+      {
+        "MarketerID": 990,
+        "MarketerName": "PEPCO / Henkels & McCoy"
+      },
+      {
+        "MarketerID": 1007,
+        "MarketerName": "URS Corporation"
+      },
+      {
+        "MarketerID": 1008,
+        "MarketerName": "Patton Harris Rust & Associates"
+      },
+      {
+        "MarketerID": 1009,
+        "MarketerName": "Greenhorne & O'Mara"
+      },
+      {
+        "MarketerID": 1010,
+        "MarketerName": "BOWMAN CONSULTING"
+      },
+      {
+        "MarketerID": 1027,
+        "MarketerName": "Greenman-Pedersen, Inc."
+      },
+      {
+        "MarketerID": 1028,
+        "MarketerName": "DEWBERRY"
+      },
+      {
+        "MarketerID": 1047,
+        "MarketerName": "Pepco"
+      },
+      {
+        "MarketerID": 1048,
+        "MarketerName": "DCWASA"
+      },
+      {
+        "MarketerID": 1049,
+        "MarketerName": "D.C. Water & Sewer Authority"
+      },
+      {
+        "MarketerID": 1050,
+        "MarketerName": "DC WASA"
+      },
+      {
+        "MarketerID": 1067,
+        "MarketerName": "Water and Sewer Authority"
+      },
+      {
+        "MarketerID": 1090,
+        "MarketerName": "Capitol Recovery Services"
+      },
+      {
+        "MarketerID": 1110,
+        "MarketerName": "Morris & Ritchie Associates, Inc"
+      },
+      {
+        "MarketerID": 1148,
+        "MarketerName": "McKissack and Mckissack"
+      },
+      {
+        "MarketerID": 1168,
+        "MarketerName": "Greenhorne & O'Mara, Inc."
+      },
+      {
+        "MarketerID": 1190,
+        "MarketerName": "Greenhorne & O'Mara, Inc."
+      },
+      {
+        "MarketerID": 1207,
+        "MarketerName": "Adtek Engineers"
+      },
+      {
+        "MarketerID": 1227,
+        "MarketerName": "Huron Consulting"
+      },
+      {
+        "MarketerID": 1228,
+        "MarketerName": "Bolton and Associates, LLC"
+      },
+      {
+        "MarketerID": 1229,
+        "MarketerName": "Prince George's County, Maryland"
+      },
+      {
+        "MarketerID": 1247,
+        "MarketerName": "ADTEK"
+      },
+      {
+        "MarketerID": 1267,
+        "MarketerName": "Meridian Surveys"
+      },
+      {
+        "MarketerID": 1268,
+        "MarketerName": "Johnson Mirmiran and Thompson In"
+      },
+      {
+        "MarketerID": 1269,
+        "MarketerName": "Sheladia Associates Inc"
+      },
+      {
+        "MarketerID": 1270,
+        "MarketerName": "Washington Suburban Sanitary Commission"
+      },
+      {
+        "MarketerID": 1271,
+        "MarketerName": "WSSC"
+      },
+      {
+        "MarketerID": 1288,
+        "MarketerName": "Rinker Design Associates"
+      },
+      {
+        "MarketerID": 1289,
+        "MarketerName": "LR Engineering, LLC"
+      },
+      {
+        "MarketerID": 1308,
+        "MarketerName": "Michael Baker Jr"
+      },
+      {
+        "MarketerID": 1309,
+        "MarketerName": "Greenhorne & O'Mara, Inc."
+      },
+      {
+        "MarketerID": 1368,
+        "MarketerName": "Bromley's Utility Consulting Svc"
+      },
+      {
+        "MarketerID": 1369,
+        "MarketerName": "William H. Gordon Assoc., Inc."
+      },
+      {
+        "MarketerID": 1391,
+        "MarketerName": "URS Corp."
+      },
+      {
+        "MarketerID": 1408,
+        "MarketerName": "CLARK NEXSEN"
+      },
+      {
+        "MarketerID": 1428,
+        "MarketerName": "George Mason University"
+      },
+      {
+        "MarketerID": 1429,
+        "MarketerName": "Morris & Ritchie Associates"
+      },
+      {
+        "MarketerID": 1448,
+        "MarketerName": "AB Consultants Inc."
+      },
+      {
+        "MarketerID": 1449,
+        "MarketerName": "AECOM Technical Services, Inc"
+      },
+      {
+        "MarketerID": 1488,
+        "MarketerName": "Washington Suburban Sanit Comm"
+      },
+      {
+        "MarketerID": 1508,
+        "MarketerName": "AULtec Inc."
+      },
+      {
+        "MarketerID": 1509,
+        "MarketerName": "CH2M HILL INC"
+      },
+      {
+        "MarketerID": 1510,
+        "MarketerName": "BRUDIS AND ASSOCIATES INC."
+      },
+      {
+        "MarketerID": 1528,
+        "MarketerName": "Walter L. Phillips Inc."
+      },
+      {
+        "MarketerID": 1548,
+        "MarketerName": "A. Morton Thomas & Associates"
+      },
+      {
+        "MarketerID": 1549,
+        "MarketerName": "BURGESS & NIPLE, INC."
+      },
+      {
+        "MarketerID": 1568,
+        "MarketerName": "Paciulli, Simmons & Associates"
+      },
+      {
+        "MarketerID": 1588,
+        "MarketerName": "Precision Surveying and Consulti"
+      },
+      {
+        "MarketerID": 1589,
+        "MarketerName": "Volkert Engineering PC"
+      },
+      {
+        "MarketerID": 1608,
+        "MarketerName": "Naval Facilities"
+      },
+      {
+        "MarketerID": 1628,
+        "MarketerName": "West Consulting Group LLC"
+      },
+      {
+        "MarketerID": 1629,
+        "MarketerName": "USDA-10300 Baltimore Ave"
+      },
+      {
+        "MarketerID": 1648,
+        "MarketerName": "Urban Ltd."
+      },
+      {
+        "MarketerID": 1668,
+        "MarketerName": "PG Associates, Inc."
+      },
+      {
+        "MarketerID": 1688,
+        "MarketerName": "MONTGOMERY COUNTY, MARYLAND"
+      },
+      {
+        "MarketerID": 1689,
+        "MarketerName": "Montgomery County Government"
+      },
+      {
+        "MarketerID": 1708,
+        "MarketerName": "Metropolitan Comm. Group"
+      },
+      {
+        "MarketerID": 1748,
+        "MarketerName": "michael belisle design"
+      },
+      {
+        "MarketerID": 1768,
+        "MarketerName": "Charles P.Johnson & Assoc."
+      },
+      {
+        "MarketerID": 1808,
+        "MarketerName": "MACRIS, HENDRICKS & GLASCOCK, P."
+      },
+      {
+        "MarketerID": 1828,
+        "MarketerName": "William H. Gordon Associates, In"
+      },
+      {
+        "MarketerID": 1849,
+        "MarketerName": "Maddox Engineers and Surveyors"
+      },
+      {
+        "MarketerID": 1868,
+        "MarketerName": "William H Gordon Associates"
+      },
+      {
+        "MarketerID": 1888,
+        "MarketerName": "PHRA "
+      },
+      {
+        "MarketerID": 1908,
+        "MarketerName": "utility locating service inc"
+      },
+      {
+        "MarketerID": 1910,
+        "MarketerName": "Bowman"
+      },
+      {
+        "MarketerID": 1928,
+        "MarketerName": "Qwest Government Services, Inc."
+      },
+      {
+        "MarketerID": 1929,
+        "MarketerName": "HNTB"
+      },
+      {
+        "MarketerID": 1948,
+        "MarketerName": "Landesign, Inc."
+      },
+      {
+        "MarketerID": 1968,
+        "MarketerName": "Montgomery County"
+      },
+      {
+        "MarketerID": 1988,
+        "MarketerName": "Tenacity Group"
+      },
+      {
+        "MarketerID": 1989,
+        "MarketerName": "FBRC, LLC"
+      },
+      {
+        "MarketerID": 2008,
+        "MarketerName": "damian@utilitysystems.com"
+      },
+      {
+        "MarketerID": 2029,
+        "MarketerName": "Daniel Consultants, Inc"
+      },
+      {
+        "MarketerID": 2048,
+        "MarketerName": "Patton, Harris, Rust & Assoc, pc"
+      },
+      {
+        "MarketerID": 2068,
+        "MarketerName": "Michael Baker Jr., Inc."
+      },
+      {
+        "MarketerID": 2088,
+        "MarketerName": "B. Frank Joy, LLC"
+      },
+      {
+        "MarketerID": 2108,
+        "MarketerName": "Gulick Group Land Resources"
+      },
+      {
+        "MarketerID": 2128,
+        "MarketerName": "Shell Energy"
+      },
+      {
+        "MarketerID": 2208,
+        "MarketerName": "Precision Systems, Inc"
+      },
+      {
+        "MarketerID": 2228,
+        "MarketerName": "ADTEK ENGINEERS"
+      },
+      {
+        "MarketerID": 2248,
+        "MarketerName": "Associates Plumbing, Inc."
+      },
+      {
+        "MarketerID": 2249,
+        "MarketerName": "Dewberry & Davis "
+      },
+      {
+        "MarketerID": 2268,
+        "MarketerName": "Woolpert"
+      },
+      {
+        "MarketerID": 2288,
+        "MarketerName": "Bernard F. Locraft Civil Engineers"
+      },
+      {
+        "MarketerID": 2308,
+        "MarketerName": "drs development, llc"
+      },
+      {
+        "MarketerID": 2348,
+        "MarketerName": "Wallace Montgomery"
+      },
+      {
+        "MarketerID": 2368,
+        "MarketerName": "Taylor Wiseman Taylor"
+      },
+      {
+        "MarketerID": 2431,
+        "MarketerName": "Utility Professional Services In"
+      },
+      {
+        "MarketerID": 2443,
+        "MarketerName": "CDM"
+      },
+      {
+        "MarketerID": 2446,
+        "MarketerName": "Macris Hendricks and Glascock P."
+      },
+      {
+        "MarketerID": 2468,
+        "MarketerName": "Berman Enterprises, LP"
+      },
+      {
+        "MarketerID": 2477,
+        "MarketerName": "O Brien and Gere Engineers Inc"
+      },
+      {
+        "MarketerID": 2535,
+        "MarketerName": "Bohler Engineering"
+      },
+      {
+        "MarketerID": 2584,
+        "MarketerName": "O'Brien and Gere"
+      },
+      {
+        "MarketerID": 2594,
+        "MarketerName": "Washington Gas"
+      },
+      {
+        "MarketerID": 2652,
+        "MarketerName": "macris,hendricks & glascock, p.a"
+      },
+      {
+        "MarketerID": 2726,
+        "MarketerName": "Baltimore Gas & Electric"
+      },
+      {
+        "MarketerID": 2776,
+        "MarketerName": "Engineering and Environment Inc."
+      },
+      {
+        "MarketerID": 3019,
+        "MarketerName": "Trammell Crow Company"
+      },
+      {
+        "MarketerID": 3020,
+        "MarketerName": "Joe Jackson Associates, P.C."
+      },
+      {
+        "MarketerID": 3023,
+        "MarketerName": "Rummel Klepper and Kahl LLP"
+      },
+      {
+        "MarketerID": 3029,
+        "MarketerName": "Rummel, Klepper & Khal,LLP"
+      },
+      {
+        "MarketerID": 3030,
+        "MarketerName": "George Mason University"
+      },
+      {
+        "MarketerID": 3068,
+        "MarketerName": "Stantec"
+      },
+      {
+        "MarketerID": 3079,
+        "MarketerName": "Rummel, Klepper & Kahl"
+      },
+      {
+        "MarketerID": 3084,
+        "MarketerName": "Greenhorne & O'Mara, Inc."
+      },
+      {
+        "MarketerID": 3085,
+        "MarketerName": "Greenhorne & O 'Mara"
+      },
+      {
+        "MarketerID": 3088,
+        "MarketerName": "Alexandria Surveys"
+      },
+      {
+        "MarketerID": 3155,
+        "MarketerName": "A. Morton Thomas and Associates"
+      },
+      {
+        "MarketerID": 3170,
+        "MarketerName": "Georgetown University"
+      },
+      {
+        "MarketerID": 3284,
+        "MarketerName": "Tri Tek Engineering"
+      },
+      {
+        "MarketerID": 3381,
+        "MarketerName": "Applied Civil Engineering"
+      },
+      {
+        "MarketerID": 3389,
+        "MarketerName": "Joyce Engineering Corporation"
+      },
+      {
+        "MarketerID": 3397,
+        "MarketerName": "Accumark, Inc."
+      },
+      {
+        "MarketerID": 3521,
+        "MarketerName": "JAS Engineering & Design, LLC"
+      },
+      {
+        "MarketerID": 3695,
+        "MarketerName": "Prince William County"
+      },
+      {
+        "MarketerID": 3730,
+        "MarketerName": "Vogel Engineering +Timmons Group"
+      },
+      {
+        "MarketerID": 3804,
+        "MarketerName": "Greenhorne & O'mara"
+      },
+      {
+        "MarketerID": 4035,
+        "MarketerName": "Archibuild"
+      },
+      {
+        "MarketerID": 4287,
+        "MarketerName": "AB CONSULTANTS, INC."
+      },
+      {
+        "MarketerID": 4291,
+        "MarketerName": "Baltimore Gas and Electric"
+      },
+      {
+        "MarketerID": 4292,
+        "MarketerName": "BGE"
+      },
+      {
+        "MarketerID": 4552,
+        "MarketerName": "RK&K Consulting Engineers, LLP "
+      },
+      {
+        "MarketerID": 4693,
+        "MarketerName": "KCW Engineering Technologies"
+      },
+      {
+        "MarketerID": 4719,
+        "MarketerName": "BC Consultants, Inc."
+      },
+      {
+        "MarketerID": 4744,
+        "MarketerName": "Utilities Search Inc"
+      },
+      {
+        "MarketerID": 4780,
+        "MarketerName": "PHR+A"
+      },
+      {
+        "MarketerID": 5080,
+        "MarketerName": "Wallace, Montgomery & Associates"
+      },
+      {
+        "MarketerID": 5140,
+        "MarketerName": "Pepco"
+      },
+      {
+        "MarketerID": 5444,
+        "MarketerName": "Wallace, Montgomery & Assoc."
+      },
+      {
+        "MarketerID": 5560,
+        "MarketerName": "NAI The Michael Companies"
+      },
+      {
+        "MarketerID": 5701,
+        "MarketerName": "Dominion Surveyors"
+      },
+      {
+        "MarketerID": 5739,
+        "MarketerName": "Michael Baker Jr., Inc"
+      },
+      {
+        "MarketerID": 5904,
+        "MarketerName": "WRA"
+      },
+      {
+        "MarketerID": 6024,
+        "MarketerName": "Dewberry & Davis LLC"
+      },
+      {
+        "MarketerID": 6398,
+        "MarketerName": "O'Connell & Lawrence, Inc."
+      },
+      {
+        "MarketerID": 6424,
+        "MarketerName": "O'Connell & Lawrence, Inc."
+      },
+      {
+        "MarketerID": 6684,
+        "MarketerName": "Jefferson Builders, Inc."
+      },
+      {
+        "MarketerID": 6945,
+        "MarketerName": "CDDI LLC"
+      },
+      {
+        "MarketerID": 7047,
+        "MarketerName": "Montgomery County MD"
+      },
+      {
+        "MarketerID": 7206,
+        "MarketerName": "Capitol Development Design Inc."
+      },
+      {
+        "MarketerID": 7371,
+        "MarketerName": "National Park Service"
+      },
+      {
+        "MarketerID": 7460,
+        "MarketerName": "Whitney Bailey Cox & Magnani,LLC"
+      },
+      {
+        "MarketerID": 7477,
+        "MarketerName": "Patton, Harris, Rust & Assoc"
+      },
+      {
+        "MarketerID": 7485,
+        "MarketerName": "PATTON HARRIS RUST + ASS"
+      },
+      {
+        "MarketerID": 7531,
+        "MarketerName": "CDDI, LLC"
+      },
+      {
+        "MarketerID": 7931,
+        "MarketerName": "Architectural Solutions LLC"
+      },
+      {
+        "MarketerID": 8186,
+        "MarketerName": "M-NCPPC"
+      },
+      {
+        "MarketerID": 8366,
+        "MarketerName": "Charles P. Johnson &amp; Associates"
+      },
+      {
+        "MarketerID": 8509,
+        "MarketerName": "DMJMHarris"
+      },
+      {
+        "MarketerID": 8707,
+        "MarketerName": "Soltesz"
+      },
+      {
+        "MarketerID": 8887,
+        "MarketerName": "Huntley, Nyce & Associates"
+      },
+      {
+        "MarketerID": 8927,
+        "MarketerName": "Greenhorne & O'Mara"
+      },
+      {
+        "MarketerID": 9088,
+        "MarketerName": "Loiederman Soltesz Associates"
+      },
+      {
+        "MarketerID": 9128,
+        "MarketerName": "Bowman Consulting Group, Ltd."
+      },
+      {
+        "MarketerID": 9150,
+        "MarketerName": "RJM Engineering"
+      },
+      {
+        "MarketerID": 9186,
+        "MarketerName": "huntley nyce"
+      },
+      {
+        "MarketerID": 9228,
+        "MarketerName": "Greenhorne & O'mara"
+      },
+      {
+        "MarketerID": 9372,
+        "MarketerName": "John E. Harms, Jr. & Associates"
+      },
+      {
+        "MarketerID": 9387,
+        "MarketerName": "ESE Consultants (Toll Brothers)"
+      },
+      {
+        "MarketerID": 9728,
+        "MarketerName": "Inframap Corp"
+      },
+      {
+        "MarketerID": 10028,
+        "MarketerName": "Parsons Brinckerhoff"
+      },
+      {
+        "MarketerID": 10606,
+        "MarketerName": "CDDI"
+      },
+      {
+        "MarketerID": 10806,
+        "MarketerName": "Whitman, Requardt & Associates"
+      },
+      {
+        "MarketerID": 10827,
+        "MarketerName": "NDEC Corp."
+      },
+      {
+        "MarketerID": 10909,
+        "MarketerName": "Huntley, Nyce & Associates, Ltd"
+      },
+      {
+        "MarketerID": 11491,
+        "MarketerName": "Dominion Energy"
+      },
+      {
+        "MarketerID": 11649,
+        "MarketerName": "KCW ENGINEERING TECH INC."
+      },
+      {
+        "MarketerID": 11670,
+        "MarketerName": "Utility Consultants, Inc."
+      },
+      {
+        "MarketerID": 13289,
+        "MarketerName": "GREENHORNE AND O'MARA"
+      },
+      {
+        "MarketerID": 14050,
+        "MarketerName": "AIDATA Inc"
+      },
+      {
+        "MarketerID": 15037,
+        "MarketerName": "PEPCO"
+      },
+      {
+        "MarketerID": 16273,
+        "MarketerName": "AMT LLC"
+      },
+      {
+        "MarketerID": 16751,
+        "MarketerName": "McCrone Inc."
+      },
+      {
+        "MarketerID": 16869,
+        "MarketerName": "WSSC"
+      },
+      {
+        "MarketerID": 17630,
+        "MarketerName": "FirstData/Remitco"
+      },
+      {
+        "MarketerID": 17649,
+        "MarketerName": "Nolan Associates, Inc."
+      },
+      {
+        "MarketerID": 17771,
+        "MarketerName": "Site Solutions Inc"
+      },
+      {
+        "MarketerID": 17870,
+        "MarketerName": "Minkoff Development Corporation"
+      },
+      {
+        "MarketerID": 17909,
+        "MarketerName": "LSA"
+      },
+      {
+        "MarketerID": 18150,
+        "MarketerName": "RDA Engineers Inc."
+      },
+      {
+        "MarketerID": 18190,
+        "MarketerName": "Utility Sytems C&E, LLC"
+      },
+      {
+        "MarketerID": 18209,
+        "MarketerName": "Bowman Consulting"
+      },
+      {
+        "MarketerID": 18389,
+        "MarketerName": "WASHINGTON GAS"
+      },
+      {
+        "MarketerID": 18609,
+        "MarketerName": "City of Rockville"
+      },
+      {
+        "MarketerID": 18873,
+        "MarketerName": "JACOBS ENGINEERING GROUP"
+      },
+      {
+        "MarketerID": 19931,
+        "MarketerName": "Stand Energy 2"
+      },
+      {
+        "MarketerID": 20013,
+        "MarketerName": "A. Morton Thomas and Assoc,, Inc"
+      },
+      {
+        "MarketerID": 20377,
+        "MarketerName": "Arlington County Government"
+      },
+      {
+        "MarketerID": 20451,
+        "MarketerName": "Danella Engineering & Const."
+      },
+      {
+        "MarketerID": 20629,
+        "MarketerName": "Solar Energy Design, Inc."
+      },
+      {
+        "MarketerID": 21131,
+        "MarketerName": "Capitol Engineers, PC"
+      },
+      {
+        "MarketerID": 21249,
+        "MarketerName": "Chester Engineers"
+      },
+      {
+        "MarketerID": 21631,
+        "MarketerName": "Dewberry and Davis LLC"
+      },
+      {
+        "MarketerID": 21694,
+        "MarketerName": "JA Underground"
+      },
+      {
+        "MarketerID": 21871,
+        "MarketerName": "Edwards Utility Mapping"
+      },
+      {
+        "MarketerID": 22849,
+        "MarketerName": "M-NCPPC"
+      },
+      {
+        "MarketerID": 23289,
+        "MarketerName": "Oyster Imus Petzold and Assoc"
+      },
+      {
+        "MarketerID": 23450,
+        "MarketerName": "Axiom Engineering Design"
+      },
+      {
+        "MarketerID": 23810,
+        "MarketerName": "Loudoun Water"
+      },
+      {
+        "MarketerID": 24430,
+        "MarketerName": "MEX-EC LLC"
+      },
+      {
+        "MarketerID": 24649,
+        "MarketerName": "US Dept. of Agriculture"
+      },
+      {
+        "MarketerID": 25331,
+        "MarketerName": "PHRA"
+      },
+      {
+        "MarketerID": 25689,
+        "MarketerName": "West Group Properties LLC"
+      },
+      {
+        "MarketerID": 25751,
+        "MarketerName": "Brudis and Associates"
+      },
+      {
+        "MarketerID": 25789,
+        "MarketerName": "Toole Design Group"
+      },
+      {
+        "MarketerID": 27253,
+        "MarketerName": "Wheaton Vol. Rescue Squad"
+      },
+      {
+        "MarketerID": 27293,
+        "MarketerName": "MCG Utilities"
+      },
+      {
+        "MarketerID": 27913,
+        "MarketerName": "Charles P. Johnson & Assoc. Inc."
+      },
+      {
+        "MarketerID": 28112,
+        "MarketerName": "O'Brien & Gere"
+      },
+      {
+        "MarketerID": 28219,
+        "MarketerName": "O'Brien & Gere"
+      },
+      {
+        "MarketerID": 28492,
+        "MarketerName": "O'Brien & Gere"
+      },
+      {
+        "MarketerID": 28674,
+        "MarketerName": "Oyster Imus Petzold and Associat"
+      },
+      {
+        "MarketerID": 30534,
+        "MarketerName": "Accumark Inc"
+      },
+      {
+        "MarketerID": 30575,
+        "MarketerName": "Arlington County Gov't"
+      },
+      {
+        "MarketerID": 31318,
+        "MarketerName": "Alpha Corporation"
+      },
+      {
+        "MarketerID": 32114,
+        "MarketerName": "Benning & Associates, Inc."
+      },
+      {
+        "MarketerID": 32258,
+        "MarketerName": "Rajan Mahima Associates"
+      },
+      {
+        "MarketerID": 32594,
+        "MarketerName": "Urban, Ltd."
+      },
+      {
+        "MarketerID": 33115,
+        "MarketerName": "Dewberry Engineers Inc "
+      },
+      {
+        "MarketerID": 34340,
+        "MarketerName": "1218 T Street NW"
+      },
+      {
+        "MarketerID": 34594,
+        "MarketerName": "Landesign"
+      },
+      {
+        "MarketerID": 35974,
+        "MarketerName": "Pennoni Associates Inc."
+      },
+      {
+        "MarketerID": 36415,
+        "MarketerName": "Georgetown"
+      },
+      {
+        "MarketerID": 36594,
+        "MarketerName": "Lanier Poppe Engineering"
+      },
+      {
+        "MarketerID": 37217,
+        "MarketerName": "Pepco"
+      },
+      {
+        "MarketerID": 37234,
+        "MarketerName": "Washington Suburban Sanitary Com"
+      },
+      {
+        "MarketerID": 37515,
+        "MarketerName": "bowman condulting group"
+      },
+      {
+        "MarketerID": 37714,
+        "MarketerName": "Nat'l Capital Planning Commissio"
+      },
+      {
+        "MarketerID": 37895,
+        "MarketerName": "Pepco Government Services LLC"
+      },
+      {
+        "MarketerID": 38158,
+        "MarketerName": "Greenhorne & O'Mara, Inc."
+      },
+      {
+        "MarketerID": 38354,
+        "MarketerName": "Greenhorne and O'Mara, Inc."
+      },
+      {
+        "MarketerID": 38475,
+        "MarketerName": "Whitman Requardt and Associates "
+      },
+      {
+        "MarketerID": 38914,
+        "MarketerName": "William H. Gordon Associates,Inc"
+      },
+      {
+        "MarketerID": 39455,
+        "MarketerName": "Legion Design"
+      },
+      {
+        "MarketerID": 39655,
+        "MarketerName": "Dewberry "
+      },
+      {
+        "MarketerID": 40354,
+        "MarketerName": "Whitman Requardt & Associates"
+      },
+      {
+        "MarketerID": 40455,
+        "MarketerName": "W.S.S.C."
+      },
+      {
+        "MarketerID": 40662,
+        "MarketerName": "PULS "
+      },
+      {
+        "MarketerID": 40917,
+        "MarketerName": "VHB"
+      },
+      {
+        "MarketerID": 41215,
+        "MarketerName": "Johnson Bernat Associates"
+      },
+      {
+        "MarketerID": 42235,
+        "MarketerName": "Wiley|Wilson"
+      },
+      {
+        "MarketerID": 42874,
+        "MarketerName": "Dewberry & Davis"
+      },
+      {
+        "MarketerID": 42936,
+        "MarketerName": "UDR, INC."
+      },
+      {
+        "MarketerID": 42983,
+        "MarketerName": "CHA Inc. (Pepco Contractor)"
+      },
+      {
+        "MarketerID": 43174,
+        "MarketerName": "KCI Management"
+      },
+      {
+        "MarketerID": 43635,
+        "MarketerName": "VIKA Capitol, LLC"
+      },
+      {
+        "MarketerID": 44138,
+        "MarketerName": "STV Incorporated"
+      },
+      {
+        "MarketerID": 44274,
+        "MarketerName": "RK&K"
+      },
+      {
+        "MarketerID": 44358,
+        "MarketerName": "Pepco Holdings, Inc. (PHI)"
+      },
+      {
+        "MarketerID": 44454,
+        "MarketerName": "A Advantage Heating & A/C"
+      },
+      {
+        "MarketerID": 44495,
+        "MarketerName": "CountrySide Surveys"
+      },
+      {
+        "MarketerID": 44555,
+        "MarketerName": "UDR"
+      },
+      {
+        "MarketerID": 45176,
+        "MarketerName": "Pepco"
+      },
+      {
+        "MarketerID": 45238,
+        "MarketerName": "Black & Veatch"
+      },
+      {
+        "MarketerID": 45834,
+        "MarketerName": "Ben Dyer Associates"
+      },
+      {
+        "MarketerID": 46055,
+        "MarketerName": "Ayers Saint Gross"
+      },
+      {
+        "MarketerID": 46395,
+        "MarketerName": "CDI Properties, LLC"
+      },
+      {
+        "MarketerID": 47274,
+        "MarketerName": "Jacobs"
+      },
+      {
+        "MarketerID": 47275,
+        "MarketerName": "Gannett Fleming Inc"
+      },
+      {
+        "MarketerID": 48059,
+        "MarketerName": "DC Water"
+      },
+      {
+        "MarketerID": 48214,
+        "MarketerName": "Landmark Engineering"
+      },
+      {
+        "MarketerID": 49514,
+        "MarketerName": "AB CONSULTANTS INC."
+      },
+      {
+        "MarketerID": 49554,
+        "MarketerName": "Gutschick, Little & Weber, P.A."
+      },
+      {
+        "MarketerID": 49974,
+        "MarketerName": "Government Services IPT"
+      },
+      {
+        "MarketerID": 50134,
+        "MarketerName": "Greenhorne & O'Mara"
+      },
+      {
+        "MarketerID": 50255,
+        "MarketerName": "Greenhorne & O'Mara, Inc."
+      },
+      {
+        "MarketerID": 50855,
+        "MarketerName": "TRC Solutions"
+      },
+      {
+        "MarketerID": 50935,
+        "MarketerName": "Utility Professional Services"
+      },
+      {
+        "MarketerID": 51954,
+        "MarketerName": "Sabra, Wang and Associates, Inc."
+      },
+      {
+        "MarketerID": 53256,
+        "MarketerName": "Snider and Associates"
+      },
+      {
+        "MarketerID": 53295,
+        "MarketerName": "Potomac Valley Surveys"
+      },
+      {
+        "MarketerID": 53614,
+        "MarketerName": "DAJANI, LLC"
+      },
+      {
+        "MarketerID": 54634,
+        "MarketerName": "Voyten And Associates, Inc."
+      },
+      {
+        "MarketerID": 55034,
+        "MarketerName": "US Army"
+      },
+      {
+        "MarketerID": 55514,
+        "MarketerName": "DC Water"
+      },
+      {
+        "MarketerID": 55635,
+        "MarketerName": "Indra Energy - MD - 119"
+      },
+      {
+        "MarketerID": 55636,
+        "MarketerName": "Smart One Energy"
+      },
+      {
+        "MarketerID": 55638,
+        "MarketerName": "Maryland Gas and Electric"
+      },
+      {
+        "MarketerID": 55654,
+        "MarketerName": "Meridian Surveys"
+      },
+      {
+        "MarketerID": 56174,
+        "MarketerName": "Rinker Design Associates"
+      },
+      {
+        "MarketerID": 58038,
+        "MarketerName": "EnerNoc"
+      },
+      {
+        "MarketerID": 58395,
+        "MarketerName": "CHACONSULTING"
+      },
+      {
+        "MarketerID": 60034,
+        "MarketerName": "RDA"
+      },
+      {
+        "MarketerID": 62435,
+        "MarketerName": "None"
+      },
+      {
+        "MarketerID": 62437,
+        "MarketerName": "Dewberry"
+      },
+      {
+        "MarketerID": 63278,
+        "MarketerName": "AMEC"
+      },
+      {
+        "MarketerID": 64356,
+        "MarketerName": "Gannett Fleming"
+      },
+      {
+        "MarketerID": 64494,
+        "MarketerName": "DCWATER"
+      },
+      {
+        "MarketerID": 64598,
+        "MarketerName": "DC Water"
+      },
+      {
+        "MarketerID": 64814,
+        "MarketerName": "Greenhorne & O'Mara, Inc."
+      },
+      {
+        "MarketerID": 65135,
+        "MarketerName": "Constellation New Energy 2"
+      },
+      {
+        "MarketerID": 66794,
+        "MarketerName": "ECS Mid-Atlantic, LLC"
+      },
+      {
+        "MarketerID": 67394,
+        "MarketerName": "TRC Solution"
+      },
+      {
+        "MarketerID": 68494,
+        "MarketerName": "Greenhorne & O'Mara, Inc."
+      },
+      {
+        "MarketerID": 68495,
+        "MarketerName": "GHD Inc"
+      },
+      {
+        "MarketerID": 69194,
+        "MarketerName": "Visnic Homes, Inc."
+      },
+      {
+        "MarketerID": 69514,
+        "MarketerName": "Rice Associates Inc."
+      },
+      {
+        "MarketerID": 70434,
+        "MarketerName": "Xoom Energy Maryland"
+      },
+      {
+        "MarketerID": 70454,
+        "MarketerName": "World Energy"
+      },
+      {
+        "MarketerID": 70494,
+        "MarketerName": "Greeley and Hansen"
+      },
+      {
+        "MarketerID": 70677,
+        "MarketerName": "Forest Glen Annex "
+      },
+      {
+        "MarketerID": 70695,
+        "MarketerName": "Forest Glen Annex"
+      },
+      {
+        "MarketerID": 71014,
+        "MarketerName": "Advisors LLC"
+      },
+      {
+        "MarketerID": 71655,
+        "MarketerName": "McKissack &McKissack Inc"
+      },
+      {
+        "MarketerID": 71895,
+        "MarketerName": "McKissack and McKissack Inc"
+      },
+      {
+        "MarketerID": 72179,
+        "MarketerName": "Insight Property Group"
+      },
+      {
+        "MarketerID": 72875,
+        "MarketerName": "Energy Plus Natural Gas LLC"
+      },
+      {
+        "MarketerID": 73396,
+        "MarketerName": "AMT LLC"
+      },
+      {
+        "MarketerID": 73914,
+        "MarketerName": "Deca Energy"
+      },
+      {
+        "MarketerID": 73915,
+        "MarketerName": "Ambit Energy"
+      },
+      {
+        "MarketerID": 74174,
+        "MarketerName": "CNA, LLC"
+      },
+      {
+        "MarketerID": 74355,
+        "MarketerName": "Sabra, Wang, & Associates, Inc."
+      },
+      {
+        "MarketerID": 74714,
+        "MarketerName": "Georgetown University"
+      },
+      {
+        "MarketerID": 75394,
+        "MarketerName": "Utility Profrssional Services, I"
+      },
+      {
+        "MarketerID": 75576,
+        "MarketerName": "Kibart, Inc."
+      },
+      {
+        "MarketerID": 76734,
+        "MarketerName": "IGS Energy - MD - 128"
+      },
+      {
+        "MarketerID": 77554,
+        "MarketerName": "The Engineering Groupe"
+      },
+      {
+        "MarketerID": 77755,
+        "MarketerName": "O'Brien & Gere"
+      },
+      {
+        "MarketerID": 77834,
+        "MarketerName": "O'Brien & Gere"
+      },
+      {
+        "MarketerID": 78514,
+        "MarketerName": "Parsons Brinckerhoff, INC"
+      },
+      {
+        "MarketerID": 79099,
+        "MarketerName": "HNTB"
+      },
+      {
+        "MarketerID": 80065,
+        "MarketerName": "TRC Solutions"
+      },
+      {
+        "MarketerID": 82856,
+        "MarketerName": "AB Consultants Inc"
+      },
+      {
+        "MarketerID": 82859,
+        "MarketerName": "CAS Engineering, Inc"
+      },
+      {
+        "MarketerID": 85337,
+        "MarketerName": "Langan Engineering and Environme"
+      },
+      {
+        "MarketerID": 85400,
+        "MarketerName": "Dewberry Consultants LLC"
+      },
+      {
+        "MarketerID": 88794,
+        "MarketerName": "Georgetown University-PFM"
+      },
+      {
+        "MarketerID": 89135,
+        "MarketerName": "Engie Power & Gas - 135"
+      },
+      {
+        "MarketerID": 89194,
+        "MarketerName": "Langan Engineering"
+      },
+      {
+        "MarketerID": 89534,
+        "MarketerName": "Langan Engineering & Environment"
+      },
+      {
+        "MarketerID": 90154,
+        "MarketerName": "A. Morton Thomas"
+      },
+      {
+        "MarketerID": 90454,
+        "MarketerName": "Witmer Associates LLC"
+      },
+      {
+        "MarketerID": 90954,
+        "MarketerName": "Constellation Energy Gas Choice"
+      },
+      {
+        "MarketerID": 90976,
+        "MarketerName": "Kim Engineering"
+      },
+      {
+        "MarketerID": 91974,
+        "MarketerName": "CAD-CON Consulting Inc"
+      },
+      {
+        "MarketerID": 93354,
+        "MarketerName": "AMT, LLC"
+      },
+      {
+        "MarketerID": 95454,
+        "MarketerName": "TRC Solution"
+      },
+      {
+        "MarketerID": 99461,
+        "MarketerName": "CHA Consulting, Inc"
+      },
+      {
+        "MarketerID": 100535,
+        "MarketerName": "Viridian Energy"
+      },
+      {
+        "MarketerID": 100554,
+        "MarketerName": "Xoom Energy"
+      },
+      {
+        "MarketerID": 100895,
+        "MarketerName": "Insight, LLC"
+      },
+      {
+        "MarketerID": 100914,
+        "MarketerName": "NRG Business Market,LLC - 145"
+      },
+      {
+        "MarketerID": 101516,
+        "MarketerName": "McIlvried DiDiano & Mox LLC"
+      },
+      {
+        "MarketerID": 103174,
+        "MarketerName": "Engie Power & Gas - 144"
+      },
+      {
+        "MarketerID": 104474,
+        "MarketerName": "Stand Energy UCB RR"
+      },
+      {
+        "MarketerID": 104756,
+        "MarketerName": "Insight LLC"
+      },
+      {
+        "MarketerID": 105614,
+        "MarketerName": "Triad Engineering"
+      },
+      {
+        "MarketerID": 105679,
+        "MarketerName": "Triad Engineering"
+      },
+      {
+        "MarketerID": 105682,
+        "MarketerName": "Wiley Wilson"
+      },
+      {
+        "MarketerID": 106114,
+        "MarketerName": "EBA Engineering "
+      },
+      {
+        "MarketerID": 106655,
+        "MarketerName": "EBA Engineering"
+      },
+      {
+        "MarketerID": 108496,
+        "MarketerName": "Utility Professional Services, I"
+      },
+      {
+        "MarketerID": 108594,
+        "MarketerName": "Utility Professional Services "
+      },
+      {
+        "MarketerID": 109494,
+        "MarketerName": "ab consultants"
+      },
+      {
+        "MarketerID": 119354,
+        "MarketerName": "Insight"
+      },
+      {
+        "MarketerID": 120394,
+        "MarketerName": "Louis Berger Group"
+      },
+      {
+        "MarketerID": 121234,
+        "MarketerName": "Dacca, Inc."
+      },
+      {
+        "MarketerID": 122074,
+        "MarketerName": "Louis Berger Water Services Inc"
+      },
+      {
+        "MarketerID": 122214,
+        "MarketerName": "Enspire Energy"
+      },
+      {
+        "MarketerID": 123275,
+        "MarketerName": "CEGC"
+      },
+      {
+        "MarketerID": 124754,
+        "MarketerName": "JJB DC Inc."
+      },
+      {
+        "MarketerID": 126195,
+        "MarketerName": "WGL Energy customer care center"
+      },
+      {
+        "MarketerID": 127554,
+        "MarketerName": "Burns & McDonnell"
+      },
+      {
+        "MarketerID": 128254,
+        "MarketerName": "USA Groups"
+      },
+      {
+        "MarketerID": 136034,
+        "MarketerName": "Direct Energy Services,LLC-156"
+      },
+      {
+        "MarketerID": 142214,
+        "MarketerName": "SFE Energy"
+      },
+      {
+        "MarketerID": 142215,
+        "MarketerName": "AGERA Energy - 159"
+      },
+      {
+        "MarketerID": 142216,
+        "MarketerName": "AGERA Energy - 160"
+      },
+      {
+        "MarketerID": 142815,
+        "MarketerName": "Department of Energy & Environment (DOEE)"
+      },
+      {
+        "MarketerID": 142816,
+        "MarketerName": "Office of Home Energy Programs (OHEP)"
+      },
+      {
+        "MarketerID": 142817,
+        "MarketerName": "Montgomery County Social Services"
+      },
+      {
+        "MarketerID": 142818,
+        "MarketerName": "Prince Georges County Social Services"
+      },
+      {
+        "MarketerID": 142819,
+        "MarketerName": "Saint Mary's County Social Services"
+      },
+      {
+        "MarketerID": 142820,
+        "MarketerName": "Frederick County Department of Social Services"
+      },
+      {
+        "MarketerID": 142821,
+        "MarketerName": "Calvert County Social Services"
+      },
+      {
+        "MarketerID": 142822,
+        "MarketerName": "Charles County Social Services"
+      },
+      {
+        "MarketerID": 142823,
+        "MarketerName": "Virginia Department of Social Services (VDSS)"
+      },
+      {
+        "MarketerID": 142824,
+        "MarketerName": "Fairfax County Social Services"
+      },
+      {
+        "MarketerID": 142825,
+        "MarketerName": "Prince William County Social Services"
+      },
+      {
+        "MarketerID": 142826,
+        "MarketerName": "Alexandria Division of Human Services"
+      },
+      {
+        "MarketerID": 142827,
+        "MarketerName": "Winchester Department of Social Services"
+      },
+      {
+        "MarketerID": 142828,
+        "MarketerName": "Shenandoah Department of Social Services"
+      },
+      {
+        "MarketerID": 142829,
+        "MarketerName": "Arlington County Social Services"
+      },
+      {
+        "MarketerID": 142830,
+        "MarketerName": "Loudoun County Department of Family Services"
+      },
+      {
+        "MarketerID": 142831,
+        "MarketerName": "Salvation Army"
+      },
+      {
+        "MarketerID": 142832,
+        "MarketerName": "Saint Vincent de Paul  Society"
+      },
+      {
+        "MarketerID": 142833,
+        "MarketerName": "Catholic Charities"
+      },
+      {
+        "MarketerID": 142834,
+        "MarketerName": "Luthern Social Services"
+      },
+      {
+        "MarketerID": 142876,
+        "MarketerName": "NOVEC Energy Solutions – 164"
+      },
+      {
+        "MarketerID": 142895,
+        "MarketerName": "Dominion Energy Solutions - 150"
+      },
+      {
+        "MarketerID": 142909,
+        "MarketerName": "MAJOR Energy"
+      },
+      {
+        "MarketerID": 142922,
+        "MarketerName": "NRG Home"
+      },
+      {
+        "MarketerID": 142936,
+        "MarketerName": "Mansfield Power and Gas LLC"
+      },
+      {
+        "MarketerID": 142939,
+        "MarketerName": "Just Energy"
+      },
+      {
+        "MarketerID": 142941,
+        "MarketerName": "Shipley Energy"
+      },
+      {
+        "MarketerID": 142942,
+        "MarketerName": "Planet Energy"
+      },
+      {
+        "MarketerID": 142943,
+        "MarketerName": "Spring Power & Gas"
+      },
+      {
+        "MarketerID": 142944,
+        "MarketerName": "Twin Eagle Energy"
+      },
+      {
+        "MarketerID": 142968,
+        "MarketerName": "Indra Energy - DC - 169"
+      },
+      {
+        "MarketerID": 142969,
+        "MarketerName": "Indra Energy - VA - 170"
+      },
+      {
+        "MarketerID": 142983,
+        "MarketerName": "Viridian Energy DUAL"
+      },
+      {
+        "MarketerID": 142984,
+        "MarketerName": "Viridian Energy UCB BR"
+      },
+      {
+        "MarketerID": 142985,
+        "MarketerName": "Engie Power & Gas - 173"
+      },
+      {
+        "MarketerID": 142991,
+        "MarketerName": "IDT Energy"
+      },
+      {
+        "MarketerID": 142992,
+        "MarketerName": "MPower Energy NJ LLC"
+      },
+      {
+        "MarketerID": 142993,
+        "MarketerName": "PESCO Energy - 175"
+      },
+      {
+        "MarketerID": 142994,
+        "MarketerName": "PESCO Energy - 176"
+      },
+      {
+        "MarketerID": 142995,
+        "MarketerName": "Think Energy"
+      },
+      {
+        "MarketerID": 142996,
+        "MarketerName": "Virginia Retail Energy - 178"
+      },
+      {
+        "MarketerID": 142997,
+        "MarketerName": "Virginia Retail Energy - 179"
+      },
+      {
+        "MarketerID": 142998,
+        "MarketerName": "Stand Energy - 180"
+      },
+      {
+        "MarketerID": 142999,
+        "MarketerName": "Stand Energy - 181"
+      },
+      {
+        "MarketerID": 143009,
+        "MarketerName": "Clearview Energy"
+      },
+      {
+        "MarketerID": 143010,
+        "MarketerName": "South Jersey Energy Corp - 184"
+      },
+      {
+        "MarketerID": 143011,
+        "MarketerName": "South Jersey Energy Corp - 185"
+      },
+      {
+        "MarketerID": 143012,
+        "MarketerName": "Indra Energy - MD - 186"
+      },
+      {
+        "MarketerID": 143013,
+        "MarketerName": "Tomorrow Energy Corp"
+      },
+      {
+        "MarketerID": 143014,
+        "MarketerName": "Think Energy - 188"
+      },
+      {
+        "MarketerID": 143015,
+        "MarketerName": "American Power & Gas"
+      },
+      {
+        "MarketerID": 143016,
+        "MarketerName": "Atlantic Energy"
+      },
+      {
+        "MarketerID": 143017,
+        "MarketerName": "Median Energy"
+      },
+      {
+        "MarketerID": 143027,
+        "MarketerName": "Josco Energy - 192"
+      },
+      {
+        "MarketerID": 143028,
+        "MarketerName": "Josco Energy - 193"
+      },
+      {
+        "MarketerID": 143029,
+        "MarketerName": "CleanSky Energy - DC and MD - 194"
+      },
+      {
+        "MarketerID": 143030,
+        "MarketerName": "CleanSky Energy - DC and MD - 195"
+      },
+      {
+        "MarketerID": 143039,
+        "MarketerName": "UGI Energy Services - 197"
+      },
+      {
+        "MarketerID": 143040,
+        "MarketerName": "Indra Energy - MD - 198"
+      },
+      {
+        "MarketerID": 143041,
+        "MarketerName": "Indra Energy - MD - 199"
+      },
+      {
+        "MarketerID": 143042,
+        "MarketerName": "Indra Energy - DC - 200"
+      },
+      {
+        "MarketerID": 143043,
+        "MarketerName": "Indra Energy - DC - 201"
+      },
+      {
+        "MarketerID": 143044,
+        "MarketerName": "Indra Energy - VA - 202"
+      },
+      {
+        "MarketerID": 143045,
+        "MarketerName": "Indra Energy - VA - 203"
+      },
+      {
+        "MarketerID": 143047,
+        "MarketerName": "MD DHCD"
+      },
+      {
+        "MarketerID": 143049,
+        "MarketerName": "Park Power LLC - DC - 204"
+      },
+      {
+        "MarketerID": 143050,
+        "MarketerName": "Park Power LLC - DC - 205"
+      },
+      {
+        "MarketerID": 143051,
+        "MarketerName": "Park Power LLC - DC - 206"
+      },
+      {
+        "MarketerID": 143063,
+        "MarketerName": "East Coast Power & Gas - MD - 207"
+      },
+      {
+        "MarketerID": 143064,
+        "MarketerName": "East Coast Power & Gas - MD - 208"
+      },
+      {
+        "MarketerID": 143065,
+        "MarketerName": "East Coast Power & Gas - MD - 209"
+      },
+      {
+        "MarketerID": 143066,
+        "MarketerName": "Statewise Energy - MD - 210"
+      },
+      {
+        "MarketerID": 143087,
+        "MarketerName": "Statewise Energy - MD - 211"
+      },
+      {
+        "MarketerID": 143099,
+        "MarketerName": "NRG Business Market,LLC - 212"
+      },
+      {
+        "MarketerID": 143100,
+        "MarketerName": "NRG Business Market,LLC - 213"
+      },
+      {
+        "MarketerID": 143101,
+        "MarketerName": "NRG Business Market,LLC - 214"
+      },
+      {
+        "MarketerID": 143113,
+        "MarketerName": "Nordic Energy Services - 215"
+      },
+      {
+        "MarketerID": 143114,
+        "MarketerName": "Nordic Energy Services - 216"
+      },
+      {
+        "MarketerID": 143115,
+        "MarketerName": "Nordic Energy Services - 217"
+      },
+      {
+        "MarketerID": 143116,
+        "MarketerName": "Nordic Energy Services - 218"
+      },
+      {
+        "MarketerID": 143117,
+        "MarketerName": "SunSea Energy - DC - 219"
+      },
+      {
+        "MarketerID": 143118,
+        "MarketerName": "SunSea Energy - DC - 220"
+      },
+      {
+        "MarketerID": 143119,
+        "MarketerName": "SunSea Energy - DC - 221"
+      },
+      {
+        "MarketerID": 143120,
+        "MarketerName": "SunSea Energy - DC - 222"
+      },
+      {
+        "MarketerID": 143121,
+        "MarketerName": "SunSea Energy - MD & VA - 223"
+      },
+      {
+        "MarketerID": 143122,
+        "MarketerName": "SunSea Energy - MD & VA - 224"
+      },
+      {
+        "MarketerID": 143123,
+        "MarketerName": "SunSea Energy - MD & VA - 225"
+      },
+      {
+        "MarketerID": 143124,
+        "MarketerName": "SunSea Energy - MD & VA - 226"
+      },
+      {
+        "MarketerID": 143125,
+        "MarketerName": "Alpha Gas and Electric - DC - 227"
+      },
+      {
+        "MarketerID": 143127,
+        "MarketerName": "Alpha Gas and Electric - DC - 229"
+      },
+      {
+        "MarketerID": 143128,
+        "MarketerName": "Alpha Gas and Electric - VA - 230"
+      },
+      {
+        "MarketerID": 143129,
+        "MarketerName": "Alpha Gas and Electric - DC - 231"
+      },
+      {
+        "MarketerID": 143130,
+        "MarketerName": "Alpha Gas and Electric - VA - 232"
+      },
+      {
+        "MarketerID": 143132,
+        "MarketerName": "Alpha Gas and Electric - VA - 234"
+      },
+      {
+        "MarketerID": 143133,
+        "MarketerName": "Alpha Gas and Electric - MD - 235"
+      },
+      {
+        "MarketerID": 143134,
+        "MarketerName": "Alpha Gas and Electric - MD - 236"
+      },
+      {
+        "MarketerID": 143135,
+        "MarketerName": "Alpha Gas and Electric - MD - 237"
+      },
+      {
+        "MarketerID": 143136,
+        "MarketerName": "Alpha Gas and Electric - MD - 238"
+      },
+      {
+        "MarketerID": 143145,
+        "MarketerName": "Green Choice Energy - DC - 239"
+      },
+      {
+        "MarketerID": 143146,
+        "MarketerName": "Green Choice Energy - DC - 240"
+      },
+      {
+        "MarketerID": 143147,
+        "MarketerName": "Green Choice Energy - DC - 241"
+      },
+      {
+        "MarketerID": 143148,
+        "MarketerName": "Green Choice Energy - DC - 242"
+      },
+      {
+        "MarketerID": 143149,
+        "MarketerName": "Green Choice Energy - MD & VA - 243"
+      },
+      {
+        "MarketerID": 143150,
+        "MarketerName": "Green Choice Energy - MD & VA - 244"
+      },
+      {
+        "MarketerID": 143151,
+        "MarketerName": "Green Choice Energy - MD & VA - 245"
+      },
+      {
+        "MarketerID": 143152,
+        "MarketerName": "Green Choice Energy - MD & VA - 246"
+      },
+      {
+        "MarketerID": 143155,
+        "MarketerName": "Discount Power LLC - DC - 247"
+      },
+      {
+        "MarketerID": 143156,
+        "MarketerName": "Discount Power LLC - DC - 248"
+      },
+      {
+        "MarketerID": 143157,
+        "MarketerName": "Discount Power LLC - DC - 249"
+      },
+      {
+        "MarketerID": 143158,
+        "MarketerName": "Discount Power LLC - DC - 250"
+      },
+      {
+        "MarketerID": 143159,
+        "MarketerName": "Discount Power LLC - MD & VA - 251"
+      },
+      {
+        "MarketerID": 143160,
+        "MarketerName": "Discount Power LLC - MD & VA - 252"
+      },
+      {
+        "MarketerID": 143161,
+        "MarketerName": "Discount Power LLC - MD & VA - 253"
+      },
+      {
+        "MarketerID": 143162,
+        "MarketerName": "Discount Power LLC - MD & VA - 254"
+      },
+      {
+        "MarketerID": 143163,
+        "MarketerName": "Park Power LLC - MD & VA - 255"
+      },
+      {
+        "MarketerID": 143164,
+        "MarketerName": "Park Power LLC - MD & VA - 256"
+      },
+      {
+        "MarketerID": 143165,
+        "MarketerName": "Park Power LLC - MD & VA - 257"
+      },
+      {
+        "MarketerID": 143166,
+        "MarketerName": "Park Power LLC - MD & VA - 258"
+      },
+      {
+        "MarketerID": 143240,
+        "MarketerName": "Washington Suburban Sanitary Commission "
+      },
+      {
+        "MarketerID": 143244,
+        "MarketerName": "Greenlight Energy Inc."
+      },
+      {
+        "MarketerID": 143248,
+        "MarketerName": "IGS Energy - MD"
+      },
+      {
+        "MarketerID": 143251,
+        "MarketerName": "IGS Energy - VA & DC "
+      },
+      {
+        "MarketerID": 143255,
+        "MarketerName": "Engie Power & Gas"
+      },
+      {
+        "MarketerID": 143263,
+        "MarketerName": "Wave Energy"
+      },
+      {
+        "MarketerID": 143298,
+        "MarketerName": "United Energy Trading "
+      },
+      {
+        "MarketerID": 143317,
+        "MarketerName": "Spark Energy Gas LLC"
+      },
+      {
+        "MarketerID": 143395,
+        "MarketerName": "Virginia Light & Power LLC"
+      },
+      {
+        "MarketerID": 143399,
+        "MarketerName": "New Wave Energy LLC - MD "
+      },
+      {
+        "MarketerID": 143403,
+        "MarketerName": "New Wave Energy LLC - DC & VA"
+      },
+      {
+        "MarketerID": 143415,
+        "MarketerName": "American Power & Gas - DC"
+      },
+      {
+        "MarketerID": 143440,
+        "MarketerName": "Electric Advisers Inc"
+      },
+      {
+        "MarketerID": 143461,
+        "MarketerName": "Vista Energy"
+      },
+      {
+        "MarketerID": 143462,
+        "MarketerName": "Vista Energy - 303"
+      },
+      {
+        "MarketerID": 143463,
+        "MarketerName": "Vista Energy - 304"
+      },
+      {
+        "MarketerID": 143464,
+        "MarketerName": "Vista Energy - 305"
+      },
+      {
+        "MarketerID": 143465,
+        "MarketerName": "Gas South"
+      },
+      {
+        "MarketerID": 143466,
+        "MarketerName": "Gas South - 307"
+      },
+      {
+        "MarketerID": 143467,
+        "MarketerName": "Gas South - 308"
+      },
+      {
+        "MarketerID": 143468,
+        "MarketerName": "Gas South - 309"
+      },
+      {
+        "MarketerID": 143472,
+        "MarketerName": "American Power & Gas - 310"
+      },
+      {
+        "MarketerID": 143473,
+        "MarketerName": "American Power & Gas - DC - 311"
+      },
+      {
+        "MarketerID": 143474,
+        "MarketerName": "Atlantic Energy - 312"
+      },
+      {
+        "MarketerID": 143475,
+        "MarketerName": "Clearview Energy - 313"
+      },
+      {
+        "MarketerID": 143476,
+        "MarketerName": "Deca Energy - 314"
+      },
+      {
+        "MarketerID": 143477,
+        "MarketerName": "Energy Plus Natural Gas LLC - 316"
+      },
+      {
+        "MarketerID": 143478,
+        "MarketerName": "Gateway Energy Services - 317"
+      },
+      {
+        "MarketerID": 143479,
+        "MarketerName": "IDT Energy - 318"
+      },
+      {
+        "MarketerID": 143480,
+        "MarketerName": "Major Energy - 321"
+      },
+      {
+        "MarketerID": 143481,
+        "MarketerName": "Maryland Gas & Electric - 322"
+      },
+      {
+        "MarketerID": 143482,
+        "MarketerName": "Median Energy - 323"
+      },
+      {
+        "MarketerID": 143483,
+        "MarketerName": "Mpower Energy NJ LLC - 324"
+      },
+      {
+        "MarketerID": 143484,
+        "MarketerName": "NRG Home - 325"
+      },
+      {
+        "MarketerID": 143485,
+        "MarketerName": "SFE Energy - 326"
+      },
+      {
+        "MarketerID": 143486,
+        "MarketerName": "Spring Power & Gas - 327"
+      },
+      {
+        "MarketerID": 143487,
+        "MarketerName": "StateWise Energy MD LLC"
+      },
+      {
+        "MarketerID": 143488,
+        "MarketerName": "Xoom Energy - 329"
+      },
+      {
+        "MarketerID": 143489,
+        "MarketerName": "Xoom Energy of VA"
+      }
+    ]
+  }
+}
+
+export const AdminCustomerData = {
+  "Succeeded": true,
+  "Message": "Get MArketer Account Association successfully!!",
+  "Errors": null,
+  "Data": {
+    "AccountID": 456660,
+    "AccountNumber": "220002633091",
+    "EffectiveDate": "2025-02-25T00:00:00",
+    "EndDate": "2025-05-30T00:00:00",
+    "CompanyID": 1,
+    "BillingCycleDay": 1,
+    "AllocationGroupID": 2,
+    "Marketer": [
+      {
+        "MarketerID": 1,
+        "MarketerName": "Ambit Energy"
+      },
+      {
+        "MarketerID": 2,
+        "MarketerName": "AGERA Energy"
+      },
+      {
+        "MarketerID": 3,
+        "MarketerName": "Atlantic Energy"
+      },
+      {
+        "MarketerID": 4,
+        "MarketerName": "AOC"
+      },
+      {
+        "MarketerID": 5,
+        "MarketerName": "Bolenja-Italy"
+      }
+    ],
+    "MarketerGroup": [
+      {
+        "ID": 2,
+        "GroupName": "Test Marketer"
+      },
+      {
+        "ID": 3,
+        "GroupName": "Marketer child - Interuptible"
+      }
+    ],
+    "AccountAssociationHistories": [
+      {
+        "AccountID": 456660,
+        "AccountNumber": "220002633091",
+        "EffectiveDate": "2003-01-01T00:00:00",
+        "EndDate": "2004-06-30T00:00:00",
+        "CompanyID": 101,
+        "CompanyName": "Washington Gas",
+        "AllocationGroupID": 61,
+        "AllocationGroup": "IRate Accounts"
+      },
+      {
+        "AccountID": 456660,
+        "AccountNumber": "220002633091",
+        "EffectiveDate": "2003-07-31T00:00:00",
+        "EndDate": "2006-02-28T00:00:00",
+        "CompanyID": 136,
+        "CompanyName": "WGL Energy Svcs - 35",
+        "AllocationGroupID": 33,
+        "AllocationGroup": "WGES MD IP"
+      },
+      {
+        "AccountID": 456660,
+        "AccountNumber": "220002633091",
+        "EffectiveDate": "2006-03-01T00:00:00",
+        "EndDate": "2012-09-30T00:00:00",
+        "CompanyID": 173,
+        "CompanyName": "Amerada Hess Corp",
+        "AllocationGroupID": 22,
+        "AllocationGroup": "AMERAD MD IP-Inactive"
+      },
+      {
+        "AccountID": 456660,
+        "AccountNumber": "220002633091",
+        "EffectiveDate": "2014-12-01T00:00:00",
+        "EndDate": "2016-02-29T00:00:00",
+        "CompanyID": 182,
+        "CompanyName": "Bollinger Energy",
+        "AllocationGroupID": 301,
+        "AllocationGroup": "BOLLIN MD IP"
+      },
+      {
+        "AccountID": 456660,
+        "AccountNumber": "220002633091",
+        "EffectiveDate": "2012-10-01T00:00:00",
+        "EndDate": "2014-10-31T00:00:00",
+        "CompanyID": 136,
+        "CompanyName": "WGL Energy Svcs - 35",
+        "AllocationGroupID": 33,
+        "AllocationGroup": "WGES MD IP"
+      },
+      {
+        "AccountID": 456660,
+        "AccountNumber": "220002633091",
+        "EffectiveDate": "2016-03-01T00:00:00",
+        "EndDate": "2016-03-31T00:00:00",
+        "CompanyID": 136,
+        "CompanyName": "WGL Energy Svcs - 35",
+        "AllocationGroupID": 149,
+        "AllocationGroup": "WGES VA IP"
+      },
+      {
+        "AccountID": 456660,
+        "AccountNumber": "220002633091",
+        "EffectiveDate": "2016-03-01T00:00:00",
+        "EndDate": null,
+        "CompanyID": 136,
+        "CompanyName": "WGL Energy Svcs - 35",
+        "AllocationGroupID": 33,
+        "AllocationGroup": "WGES MD IP"
+      }
+    ]
+  }
+}
+
+export const getByFirm = {
+  "Succeeded": true,
+  "Message": null,
+  "Errors": null,
+  "Data": [
+    {
+      AllocationGroupID: 1,
+      AllocationGroup: "AGERA FP",
+      GroupImbalance: 11.237,
+      ImbalanceAdjustedVolume: 997,
+      InventoryBalance: 12.130,
+      EffectiveDate: "2025-02-01T00:00:00"
+    },
+    {
+      AllocationGroupID: 2,
+      AllocationGroup: "AMBIT FP",
+      GroupImbalance: 11.237,
+      ImbalanceAdjustedVolume: 997,
+      InventoryBalance: 12.130,
+      EffectiveDate: "2025-02-01T00:00:00"
+    },
+    {
+      AllocationGroupID: 3,
+      AllocationGroup: "WGES FP",
+      GroupImbalance: 11.237,
+      ImbalanceAdjustedVolume: 997,
+      InventoryBalance: 12.130,
+      EffectiveDate: "2025-02-01T00:00:00"
+    }
+  ]
+}
+
+export const NominationGroupData = {
+  "Succeeded": true,
+  "Message": null,
+  "Errors": null,
+  "Data": {
+    "GroupData": {
+      "MarketerID": 173,
+      "MaketerName": "Amerada Hess Corp",
+      "GroupData1": [
+        {
+          "GroupID": 21,
+          "GroupName": "AMERAD DC IP-Inactive",
+          "GroupDetails": [
+            {
+              "ShipmentDate": "2025-03-01T00:00:00",
+              "GroupValue": "728",
+              "GroupDate": "2005-03-01T00:00:00",
+              "NominationID": 216,
+              "NominationValue": "826.00",
+              "DRVID": 6097,
+              "DRV_value": 825
+            },
+            {
+              "ShipmentDate": "2005-03-02T00:00:00",
+              "GroupValue": "778",
+              "GroupDate": "2005-06-02T00:00:00",
+              "NominationID": 217,
+              "NominationValue": "0.00",
+              "DRVID": 6098,
+              "DRV_value": 818
+            },
+            {
+              "ShipmentDate": "2025-06-03T00:00:00",
+              "GroupValue": "746",
+              "GroupDate": "2025-06-03T00:00:00",
+              "NominationID": 218,
+              "NominationValue": "0.00",
+              "DRVID": 6099,
+              "DRV_value": 818
+            },
+            {
+              "ShipmentDate": "2025-06-04T00:00:00",
+              "GroupValue": "610",
+              "GroupDate": "2025-06-04T00:00:00",
+              "NominationID": 219,
+              "NominationValue": "0.00",
+              "DRVID": 6100,
+              "DRV_value": 769
+            },
+            {
+              "ShipmentDate": "2025-06-05T00:00:00",
+              "GroupValue": "625",
+              "GroupDate": "2025-06-05T00:00:00",
+              "NominationID": 220,
+              "NominationValue": "0.00",
+              "DRVID": 6101,
+              "DRV_value": 769
+            },
+            {
+              "ShipmentDate": "2025-06-06T00:00:00",
+              "GroupValue": "817",
+              "GroupDate": "2025-06-06T00:00:00",
+              "NominationID": 221,
+              "NominationValue": "0.00",
+              "DRVID": 6102,
+              "DRV_value": 785
+            },
+            {
+              "ShipmentDate": "2025-06-07T00:00:00",
+              "GroupValue": "898",
+              "GroupDate": "2025-06-07T00:00:00",
+              "NominationID": 222,
+              "NominationValue": "0.00",
+              "DRVID": 6103,
+              "DRV_value": 818
+            },
+            {
+              "ShipmentDate": "2025-06-08T00:00:00",
+              "GroupValue": "924",
+              "GroupDate": "2025-06-08T00:00:00",
+              "NominationID": 223,
+              "NominationValue": "0.00",
+              "DRVID": 6104,
+              "DRV_value": 818
+            },
+            {
+              "ShipmentDate": "2025-06-09T00:00:00",
+              "GroupValue": "795",
+              "GroupDate": "2025-06-09T00:00:00",
+              "NominationID": 224,
+              "NominationValue": "0.00",
+              "DRVID": 6105,
+              "DRV_value": 818
+            },
+            {
+              "ShipmentDate": "2025-06-10T00:00:00",
+              "GroupValue": "809",
+              "GroupDate": "2025-06-10T00:00:00",
+              "NominationID": 225,
+              "NominationValue": "0.00",
+              "DRVID": 6106,
+              "DRV_value": 818
+            },
+            {
+              "ShipmentDate": "2025-06-11T00:00:00",
+              "GroupValue": "586",
+              "GroupDate": "2025-06-11T00:00:00",
+              "NominationID": 226,
+              "NominationValue": "0.00",
+              "DRVID": 6107,
+              "DRV_value": 785
+            },
+            {
+              "ShipmentDate": "2025-06-12T00:00:00",
+              "GroupValue": "674",
+              "GroupDate": "2025-06-12T00:00:00",
+              "NominationID": 227,
+              "NominationValue": "0.00",
+              "DRVID": 6108,
+              "DRV_value": 761
+            },
+            {
+              "ShipmentDate": "2025-06-13T00:00:00",
+              "GroupValue": "812",
+              "GroupDate": "2025-06-13T00:00:00",
+              "NominationID": 228,
+              "NominationValue": "0.00",
+              "DRVID": 6109,
+              "DRV_value": 785
+            },
+            {
+              "ShipmentDate": "2025-06-14T00:00:00",
+              "GroupValue": "1170",
+              "GroupDate": "2025-06-14T00:00:00",
+              "NominationID": 229,
+              "NominationValue": "0.00",
+              "DRVID": 6110,
+              "DRV_value": 818
+            },
+            {
+              "ShipmentDate": "2025-06-15T00:00:00",
+              "GroupValue": "1261",
+              "GroupDate": "2025-06-15T00:00:00",
+              "NominationID": 230,
+              "NominationValue": "0.00",
+              "DRVID": 6111,
+              "DRV_value": 818
+            },
+            {
+              "ShipmentDate": "2025-06-16T00:00:00",
+              "GroupValue": "1407",
+              "GroupDate": "2025-06-16T00:00:00",
+              "NominationID": 231,
+              "NominationValue": "0.00",
+              "DRVID": 6112,
+              "DRV_value": 818
+            },
+            {
+              "ShipmentDate": "2025-06-17T00:00:00",
+              "GroupValue": "1341",
+              "GroupDate": "2025-06-17T00:00:00",
+              "NominationID": 232,
+              "NominationValue": "0.00",
+              "DRVID": 6113,
+              "DRV_value": 820
+            },
+            {
+              "ShipmentDate": "2025-06-18T00:00:00",
+              "GroupValue": "1233",
+              "GroupDate": "2025-06-18T00:00:00",
+              "NominationID": 233,
+              "NominationValue": "0.00",
+              "DRVID": 6114,
+              "DRV_value": 779
+            },
+            {
+              "ShipmentDate": "2025-06-19T00:00:00",
+              "GroupValue": "965",
+              "GroupDate": "2025-06-19T00:00:00",
+              "NominationID": 234,
+              "NominationValue": "0.00",
+              "DRVID": 6115,
+              "DRV_value": 738
+            },
+            {
+              "ShipmentDate": "2025-06-20T00:00:00",
+              "GroupValue": "979",
+              "GroupDate": "2025-06-20T00:00:00",
+              "NominationID": 235,
+              "NominationValue": "0.00",
+              "DRVID": 6116,
+              "DRV_value": 779
+            },
+            {
+              "ShipmentDate": "2025-06-21T00:00:00",
+              "GroupValue": "793",
+              "GroupDate": "2025-06-21T00:00:00",
+              "NominationID": 236,
+              "NominationValue": "0.00",
+              "DRVID": 6117,
+              "DRV_value": 820
+            },
+            {
+              "ShipmentDate": "2025-06-22T00:00:00",
+              "GroupValue": "973",
+              "GroupDate": "2025-06-22T00:00:00",
+              "NominationID": 237,
+              "NominationValue": "0.00",
+              "DRVID": 6118,
+              "DRV_value": 1028
+            },
+            {
+              "ShipmentDate": "2025-06-23T00:00:00",
+              "GroupValue": "862",
+              "GroupDate": "2025-06-23T00:00:00",
+              "NominationID": 238,
+              "NominationValue": "0.00",
+              "DRVID": 6119,
+              "DRV_value": 1028
+            },
+            {
+              "ShipmentDate": "2025-06-24T00:00:00",
+              "GroupValue": "811",
+              "GroupDate": "2025-06-24T00:00:00",
+              "NominationID": 239,
+              "NominationValue": "0.00",
+              "DRVID": 6120,
+              "DRV_value": 872
+            },
+            {
+              "ShipmentDate": "2025-06-25T00:00:00",
+              "GroupValue": "833",
+              "GroupDate": "2025-06-25T00:00:00",
+              "NominationID": 240,
+              "NominationValue": "0.00",
+              "DRVID": 6121,
+              "DRV_value": 828
+            },
+            {
+              "ShipmentDate": "2025-06-26T00:00:00",
+              "GroupValue": "644",
+              "GroupDate": "2025-06-26T00:00:00",
+              "NominationID": 241,
+              "NominationValue": "0.00",
+              "DRVID": 6122,
+              "DRV_value": 785
+            },
+            {
+              "ShipmentDate": "2025-06-27T00:00:00",
+              "GroupValue": "697",
+              "GroupDate": "2025-06-27T00:00:00",
+              "NominationID": 242,
+              "NominationValue": "0.00",
+              "DRVID": 6123,
+              "DRV_value": 828
+            },
+            {
+              "ShipmentDate": "2025-06-28T00:00:00",
+              "GroupValue": "729",
+              "GroupDate": "2025-06-28T00:00:00",
+              "NominationID": 243,
+              "NominationValue": "0.00",
+              "DRVID": 6124,
+              "DRV_value": 872
+            },
+            {
+              "ShipmentDate": "2025-06-29T00:00:00",
+              "GroupValue": "731",
+              "GroupDate": "2025-06-29T00:00:00",
+              "NominationID": 244,
+              "NominationValue": "0.00",
+              "DRVID": 6125,
+              "DRV_value": 872
+            },
+            {
+              "ShipmentDate": "2025-06-30T00:00:00",
+              "GroupValue": "784",
+              "GroupDate": "2025-06-30T00:00:00",
+              "NominationID": 245,
+              "NominationValue": "0.00",
+              "DRVID": 6126,
+              "DRV_value": 716
+            }
+          ]
+        },
+        {
+          "GroupID": 22,
+          "GroupName": "Group 2",
+          "GroupDetails": [
+            {
+              "ShipmentDate": "2025-03-01T00:00:00",
+              "GroupValue": "728",
+              "GroupDate": "2005-03-01T00:00:00",
+              "NominationID": 216,
+              "NominationValue": "826.00",
+              "DRVID": 6097,
+              "DRV_value": 825
+            },
+            {
+              "ShipmentDate": "2005-03-02T00:00:00",
+              "GroupValue": "778",
+              "GroupDate": "2005-03-02T00:00:00",
+              "NominationID": 217,
+              "NominationValue": "0.00",
+              "DRVID": 6098,
+              "DRV_value": 818
+            },
+            {
+              "ShipmentDate": "2025-03-03T00:00:00",
+              "GroupValue": "746",
+              "GroupDate": "2025-03-03T00:00:00",
+              "NominationID": 218,
+              "NominationValue": "0.00",
+              "DRVID": 6099,
+              "DRV_value": 818
+            },
+            {
+              "ShipmentDate": "2025-03-04T00:00:00",
+              "GroupValue": "610",
+              "GroupDate": "2025-03-04T00:00:00",
+              "NominationID": 219,
+              "NominationValue": "0.00",
+              "DRVID": 6100,
+              "DRV_value": 769
+            },
+            {
+              "ShipmentDate": "2025-03-05T00:00:00",
+              "GroupValue": "625",
+              "GroupDate": "2025-03-05T00:00:00",
+              "NominationID": 220,
+              "NominationValue": "0.00",
+              "DRVID": 6101,
+              "DRV_value": 769
+            },
+            {
+              "ShipmentDate": "2025-03-03T00:00:00",
+              "GroupValue": "817",
+              "GroupDate": "2025-03-03T00:00:00",
+              "NominationID": 221,
+              "NominationValue": "0.00",
+              "DRVID": 6102,
+              "DRV_value": 785
+            },
+            {
+              "ShipmentDate": "2025-03-07T00:00:00",
+              "GroupValue": "898",
+              "GroupDate": "2025-03-07T00:00:00",
+              "NominationID": 222,
+              "NominationValue": "0.00",
+              "DRVID": 6103,
+              "DRV_value": 818
+            },
+            {
+              "ShipmentDate": "2025-03-08T00:00:00",
+              "GroupValue": "924",
+              "GroupDate": "2025-03-08T00:00:00",
+              "NominationID": 223,
+              "NominationValue": "0.00",
+              "DRVID": 6104,
+              "DRV_value": 818
+            },
+            {
+              "ShipmentDate": "2025-03-09T00:00:00",
+              "GroupValue": "795",
+              "GroupDate": "2025-03-09T00:00:00",
+              "NominationID": 224,
+              "NominationValue": "0.00",
+              "DRVID": 6105,
+              "DRV_value": 818
+            },
+            {
+              "ShipmentDate": "2025-03-10T00:00:00",
+              "GroupValue": "809",
+              "GroupDate": "2025-03-10T00:00:00",
+              "NominationID": 225,
+              "NominationValue": "0.00",
+              "DRVID": 6103,
+              "DRV_value": 818
+            },
+            {
+              "ShipmentDate": "2025-03-11T00:00:00",
+              "GroupValue": "586",
+              "GroupDate": "2025-03-11T00:00:00",
+              "NominationID": 226,
+              "NominationValue": "0.00",
+              "DRVID": 6107,
+              "DRV_value": 785
+            },
+            {
+              "ShipmentDate": "2025-03-12T00:00:00",
+              "GroupValue": "674",
+              "GroupDate": "2025-03-12T00:00:00",
+              "NominationID": 227,
+              "NominationValue": "0.00",
+              "DRVID": 6108,
+              "DRV_value": 761
+            },
+            {
+              "ShipmentDate": "2025-03-13T00:00:00",
+              "GroupValue": "812",
+              "GroupDate": "2025-03-13T00:00:00",
+              "NominationID": 228,
+              "NominationValue": "0.00",
+              "DRVID": 6109,
+              "DRV_value": 785
+            },
+            {
+              "ShipmentDate": "2025-03-14T00:00:00",
+              "GroupValue": "1170",
+              "GroupDate": "2025-03-14T00:00:00",
+              "NominationID": 229,
+              "NominationValue": "0.00",
+              "DRVID": 6110,
+              "DRV_value": 818
+            },
+            {
+              "ShipmentDate": "2025-03-15T00:00:00",
+              "GroupValue": "1261",
+              "GroupDate": "2025-03-15T00:00:00",
+              "NominationID": 230,
+              "NominationValue": "0.00",
+              "DRVID": 6111,
+              "DRV_value": 818
+            },
+            {
+              "ShipmentDate": "2025-03-16T00:00:00",
+              "GroupValue": "1407",
+              "GroupDate": "2025-03-16T00:00:00",
+              "NominationID": 231,
+              "NominationValue": "0.00",
+              "DRVID": 6112,
+              "DRV_value": 818
+            },
+            {
+              "ShipmentDate": "2025-03-17T00:00:00",
+              "GroupValue": "1341",
+              "GroupDate": "2025-03-17T00:00:00",
+              "NominationID": 232,
+              "NominationValue": "0.00",
+              "DRVID": 6113,
+              "DRV_value": 820
+            },
+            {
+              "ShipmentDate": "2025-03-18T00:00:00",
+              "GroupValue": "1233",
+              "GroupDate": "2025-03-18T00:00:00",
+              "NominationID": 233,
+              "NominationValue": "0.00",
+              "DRVID": 6114,
+              "DRV_value": 779
+            },
+            {
+              "ShipmentDate": "2025-03-19T00:00:00",
+              "GroupValue": "965",
+              "GroupDate": "2025-03-19T00:00:00",
+              "NominationID": 234,
+              "NominationValue": "0.00",
+              "DRVID": 6115,
+              "DRV_value": 738
+            },
+            {
+              "ShipmentDate": "2025-03-20T00:00:00",
+              "GroupValue": "979",
+              "GroupDate": "2025-03-20T00:00:00",
+              "NominationID": 235,
+              "NominationValue": "0.00",
+              "DRVID": 6116,
+              "DRV_value": 779
+            },
+            {
+              "ShipmentDate": "2025-03-21T00:00:00",
+              "GroupValue": "793",
+              "GroupDate": "2025-03-21T00:00:00",
+              "NominationID": 236,
+              "NominationValue": "0.00",
+              "DRVID": 6117,
+              "DRV_value": 820
+            },
+            {
+              "ShipmentDate": "2025-03-22T00:00:00",
+              "GroupValue": "973",
+              "GroupDate": "2025-03-22T00:00:00",
+              "NominationID": 237,
+              "NominationValue": "0.00",
+              "DRVID": 6118,
+              "DRV_value": 1028
+            },
+            {
+              "ShipmentDate": "2025-03-23T00:00:00",
+              "GroupValue": "862",
+              "GroupDate": "2025-03-23T00:00:00",
+              "NominationID": 238,
+              "NominationValue": "0.00",
+              "DRVID": 6119,
+              "DRV_value": 1028
+            },
+            {
+              "ShipmentDate": "2025-03-24T00:00:00",
+              "GroupValue": "811",
+              "GroupDate": "2025-03-24T00:00:00",
+              "NominationID": 239,
+              "NominationValue": "0.00",
+              "DRVID": 6120,
+              "DRV_value": 872
+            },
+            {
+              "ShipmentDate": "2025-03-25T00:00:00",
+              "GroupValue": "833",
+              "GroupDate": "2025-03-25T00:00:00",
+              "NominationID": 240,
+              "NominationValue": "0.00",
+              "DRVID": 6121,
+              "DRV_value": 828
+            },
+            {
+              "ShipmentDate": "2025-03-26T00:00:00",
+              "GroupValue": "644",
+              "GroupDate": "2025-03-26T00:00:00",
+              "NominationID": 241,
+              "NominationValue": "0.00",
+              "DRVID": 6122,
+              "DRV_value": 785
+            },
+            {
+              "ShipmentDate": "2025-03-27T00:00:00",
+              "GroupValue": "697",
+              "GroupDate": "2025-03-27T00:00:00",
+              "NominationID": 242,
+              "NominationValue": "0.00",
+              "DRVID": 6123,
+              "DRV_value": 828
+            },
+            {
+              "ShipmentDate": "2025-03-28T00:00:00",
+              "GroupValue": "729",
+              "GroupDate": "2025-03-28T00:00:00",
+              "NominationID": 243,
+              "NominationValue": "0.00",
+              "DRVID": 6124,
+              "DRV_value": 872
+            },
+            {
+              "ShipmentDate": "2025-03-29T00:00:00",
+              "GroupValue": "731",
+              "GroupDate": "2025-03-29T00:00:00",
+              "NominationID": 244,
+              "NominationValue": "0.00",
+              "DRVID": 6125,
+              "DRV_value": 872
+            },
+            {
+              "ShipmentDate": "2025-03-30T00:00:00",
+              "GroupValue": "784",
+              "GroupDate": "2025-03-30T00:00:00",
+              "NominationID": 245,
+              "NominationValue": "0.00",
+              "DRVID": 6126,
+              "DRV_value": 716
+            }
+          ]
+        },
+      ],
+      "TotalGroupData": {
+        "GroupName": "Group",
+        "GroupDetails": [
+          {
+            "ShipmentDate": null,
+            "GroupValue": null,
+            "GroupDate": "2025-03-03T00:00:00",
+            "NominationID": null,
+            "NominationValue": "3308.00",
+            "DRVID": null,
+            "DRV_value": null
+          },
+          {
+            "ShipmentDate": null,
+            "GroupValue": null,
+            "GroupDate": "2025-03-02T00:00:00",
+            "NominationID": null,
+            "NominationValue": "40.00",
+            "DRVID": null,
+            "DRV_value": null
+          }
+        ]
+      }
+
+    },
+    "MarketerData": [
+      {
+        "MarketerID": 101,
+        "MarketerName": "Washington Gas Light Company"
+      },
+      {
+        "MarketerID": 102,
+        "MarketerName": "AGF Direct Gas Sales Inc"
+      }
+    ],
+    "ListGroupData": [
+      {
+        "GroupID": 21,
+        "GroupName": "AMERAD DC IP-Inactive"
+      },
+      {
+        "GroupID": 22,
+        "GroupName": "AMERAD MD IP-Inactive"
+      },
+      {
+        "GroupID": 23,
+        "GroupName": "BGE HO MD IP-Inactive"
+      }]
+  }
+}
+
+export const fileHubSupportedFormat = ['.xls', '.xlsx']
+
+export const fileHubUETSupportedFormat = ['.xml']
+
+export const accountInquiryData = {
+  "Succeeded": true,
+  "Message": null,
+  "Errors": null,
+  Data: {
+    AccountData: [
+      {
+        AccountID: 1,
+        AccountNumber: "12245460096",
+        AccountHolder: "Test Account",
+        SecondaryName: "Test Account",
+        ServiceAddress: "No 1 texas city USA country",
+        BillingAddress: "No 2 texas city USA country",
+        PhoneNumber: "1234567890",
+        AmountDue: "388.01"
+      },
+      {
+        AccountID: 2,
+        AccountNumber: "3674523756984",
+        AccountHolder: "Test2 Account",
+        SecondaryName: "Test2 Account",
+        ServiceAddress: "No 1 texas city USA country",
+        BillingAddress: "No 2 texas city USA country",
+        PhoneNumber: "845-343-121-3455",
+        AmountDue: "388.01"
+      },
+      {
+        AccountID: 3,
+        AccountNumber: "92478634545",
+        AccountHolder: "Test3 Account",
+        SecondaryName: "Test3 Account",
+        ServiceAddress: "No 1 texas city USA country",
+        BillingAddress: "No 2 texas city USA country",
+        PhoneNumber: "1234567890",
+        AmountDue: "388.01"
+      },
+      {
+        AccountID: 4,
+        AccountNumber: "013946564",
+        AccountHolder: "Test4 Account",
+        SecondaryName: "Test4 Account",
+        ServiceAddress: "No 1 texas city USA country",
+        BillingAddress: "No 2 texas city USA country",
+        PhoneNumber: "1234567890",
+        AmountDue: "388.01"
+      }
+    ]
+  }
+}
+
+export const monthlyStorageFakeData ={
+  "Succeeded": true,
+  "Message": null,
+  "Errors": null,
+  "Data": {
+    "MonthlyStorageData": [
+      {
+        "ShipmentDate": "2024-04-01T00:00:00",
+        "TotalNominationAllocations": 68036,
+        "TotalUsage": 75054,
+        "TotalInjection": -7140,
+        "TotalBalance": 1560436
+      },
+      {
+        "ShipmentDate": "2024-04-02T00:00:00",
+        "TotalNominationAllocations": 66377,
+        "TotalUsage": 84043,
+        "TotalInjection": -17973,
+        "TotalBalance": 1542463
+      },
+      {
+        "ShipmentDate": "2024-04-03T00:00:00",
+        "TotalNominationAllocations": 62999,
+        "TotalUsage": 91235,
+        "TotalInjection": -28727,
+        "TotalBalance": 1513736
+      },
+      {
+        "ShipmentDate": "2024-04-04T00:00:00",
+        "TotalNominationAllocations": 82141,
+        "TotalUsage": 91954,
+        "TotalInjection": -9984,
+        "TotalBalance": 1503752
+      },
+      {
+        "ShipmentDate": "2024-04-05T00:00:00",
+        "TotalNominationAllocations": 92247,
+        "TotalUsage": 94112,
+        "TotalInjection": -1897,
+        "TotalBalance": 1501855
+      },
+      {
+        "ShipmentDate": "2024-04-06T00:00:00",
+        "TotalNominationAllocations": 93495,
+        "TotalUsage": 81526,
+        "TotalInjection": 11896,
+        "TotalBalance": 1513751
+      },
+      {
+        "ShipmentDate": "2024-04-07T00:00:00",
+        "TotalNominationAllocations": 86372,
+        "TotalUsage": 67143,
+        "TotalInjection": 19112,
+        "TotalBalance": 1532863
+      },
+      {
+        "ShipmentDate": "2024-04-08T00:00:00",
+        "TotalNominationAllocations": 78422,
+        "TotalUsage": 48444,
+        "TotalInjection": 29795,
+        "TotalBalance": 1562658
+      },
+      {
+        "ShipmentDate": "2024-04-09T00:00:00",
+        "TotalNominationAllocations": 72224,
+        "TotalUsage": 31184,
+        "TotalInjection": 40789,
+        "TotalBalance": 1603447
+      },
+      {
+        "ShipmentDate": "2024-04-10T00:00:00",
+        "TotalNominationAllocations": 69234,
+        "TotalUsage": 31184,
+        "TotalInjection": 37818,
+        "TotalBalance": 1641265
+      },
+      {
+        "ShipmentDate": "2024-04-11T00:00:00",
+        "TotalNominationAllocations": 66899,
+        "TotalUsage": 31184,
+        "TotalInjection": 35497,
+        "TotalBalance": 1676762
+      },
+      {
+        "ShipmentDate": "2024-04-12T00:00:00",
+        "TotalNominationAllocations": 71527,
+        "TotalUsage": 31184,
+        "TotalInjection": 40097,
+        "TotalBalance": 1716859
+      },
+      {
+        "ShipmentDate": "2024-04-13T00:00:00",
+        "TotalNominationAllocations": 71726,
+        "TotalUsage": 49883,
+        "TotalInjection": 21710,
+        "TotalBalance": 1738569
+      },
+      {
+        "ShipmentDate": "2024-04-14T00:00:00",
+        "TotalNominationAllocations": 68336,
+        "TotalUsage": 31184,
+        "TotalInjection": 36925,
+        "TotalBalance": 1775494
+      },
+      {
+        "ShipmentDate": "2024-04-15T00:00:00",
+        "TotalNominationAllocations": 68303,
+        "TotalUsage": 31184,
+        "TotalInjection": 36892,
+        "TotalBalance": 1812386
+      },
+      {
+        "ShipmentDate": "2024-04-16T00:00:00",
+        "TotalNominationAllocations": 68644,
+        "TotalUsage": 31184,
+        "TotalInjection": 37231,
+        "TotalBalance": 1849617
+      },
+      {
+        "ShipmentDate": "2024-04-17T00:00:00",
+        "TotalNominationAllocations": 69119,
+        "TotalUsage": 31184,
+        "TotalInjection": 37703,
+        "TotalBalance": 1887320
+      },
+      {
+        "ShipmentDate": "2024-04-18T00:00:00",
+        "TotalNominationAllocations": 68976,
+        "TotalUsage": 36578,
+        "TotalInjection": 32200,
+        "TotalBalance": 1919520
+      },
+      {
+        "ShipmentDate": "2024-04-19T00:00:00",
+        "TotalNominationAllocations": 74690,
+        "TotalUsage": 62109,
+        "TotalInjection": 12504,
+        "TotalBalance": 1932024
+      },
+      {
+        "ShipmentDate": "2024-04-20T00:00:00",
+        "TotalNominationAllocations": 70360,
+        "TotalUsage": 49523,
+        "TotalInjection": 20710,
+        "TotalBalance": 1952734
+      },
+      {
+        "ShipmentDate": "2024-04-21T00:00:00",
+        "TotalNominationAllocations": 70289,
+        "TotalUsage": 83324,
+        "TotalInjection": -13262,
+        "TotalBalance": 1939472
+      },
+      {
+        "ShipmentDate": "2024-04-22T00:00:00",
+        "TotalNominationAllocations": 63288,
+        "TotalUsage": 66064,
+        "TotalInjection": -2824,
+        "TotalBalance": 1936648
+      },
+      {
+        "ShipmentDate": "2024-04-23T00:00:00",
+        "TotalNominationAllocations": 63201,
+        "TotalUsage": 32623,
+        "TotalInjection": 30391,
+        "TotalBalance": 1967039
+      },
+      {
+        "ShipmentDate": "2024-04-24T00:00:00",
+        "TotalNominationAllocations": 77896,
+        "TotalUsage": 37297,
+        "TotalInjection": 40351,
+        "TotalBalance": 2007390
+      },
+      {
+        "ShipmentDate": "2024-04-25T00:00:00",
+        "TotalNominationAllocations": 102539,
+        "TotalUsage": 72537,
+        "TotalInjection": 29819,
+        "TotalBalance": 2037209
+      },
+      {
+        "ShipmentDate": "2024-04-26T00:00:00",
+        "TotalNominationAllocations": 89368,
+        "TotalUsage": 58153,
+        "TotalInjection": 31024,
+        "TotalBalance": 2068233
+      },
+      {
+        "ShipmentDate": "2024-04-27T00:00:00",
+        "TotalNominationAllocations": 68787,
+        "TotalUsage": 57075,
+        "TotalInjection": 11640,
+        "TotalBalance": 2079873
+      },
+      {
+        "ShipmentDate": "2024-04-28T00:00:00",
+        "TotalNominationAllocations": 69079,
+        "TotalUsage": 31184,
+        "TotalInjection": 37664,
+        "TotalBalance": 2117537
+      },
+      {
+        "ShipmentDate": "2024-04-29T00:00:00",
+        "TotalNominationAllocations": 69011,
+        "TotalUsage": 31184,
+        "TotalInjection": 37596,
+        "TotalBalance": 2155133
+      },
+      {
+        "ShipmentDate": "2024-04-30T00:00:00",
+        "TotalNominationAllocations": 69080,
+        "TotalUsage": 31184,
+        "TotalInjection": 37665,
+        "TotalBalance": 2192798
+      }
+    ],
+    "AvailableMonths": [
+      {
+        "DisplayMonth": "April 2025",
+        "MonthKey": "4/1/2025",
+        "MonthValue": "04/01/2025 00:00:00"
+      },
+      {
+        "DisplayMonth": "March 2025",
+        "MonthKey": "3/1/2025",
+        "MonthValue": "03/01/2025 00:00:00"
+      },
+      {
+        "DisplayMonth": "February 2025",
+        "MonthKey": "2/1/2025",
+        "MonthValue": "02/01/2025 00:00:00"
+      },
+      {
+        "DisplayMonth": "January 2025",
+        "MonthKey": "1/1/2025",
+        "MonthValue": "01/01/2025 00:00:00"
+      },
+      {
+        "DisplayMonth": "December 2024",
+        "MonthKey": "12/1/2024",
+        "MonthValue": "12/01/2024 00:00:00"
+      },
+      {
+        "DisplayMonth": "November 2024",
+        "MonthKey": "11/1/2024",
+        "MonthValue": "11/01/2024 00:00:00"
+      },
+      {
+        "DisplayMonth": "October 2024",
+        "MonthKey": "10/1/2024",
+        "MonthValue": "10/01/2024 00:00:00"
+      },
+      {
+        "DisplayMonth": "September 2024",
+        "MonthKey": "9/1/2024",
+        "MonthValue": "09/01/2024 00:00:00"
+      },
+      {
+        "DisplayMonth": "August 2024",
+        "MonthKey": "8/1/2024",
+        "MonthValue": "08/01/2024 00:00:00"
+      },
+      {
+        "DisplayMonth": "July 2024",
+        "MonthKey": "7/1/2024",
+        "MonthValue": "07/01/2024 00:00:00"
+      },
+      {
+        "DisplayMonth": "June 2024",
+        "MonthKey": "6/1/2024",
+        "MonthValue": "06/01/2024 00:00:00"
+      },
+      {
+        "DisplayMonth": "May 2024",
+        "MonthKey": "5/1/2024",
+        "MonthValue": "05/01/2024 00:00:00"
+      },
+      {
+        "DisplayMonth": "April 2024",
+        "MonthKey": "4/1/2024",
+        "MonthValue": "04/01/2024 00:00:00"
+      },
+      {
+        "DisplayMonth": "March 2024",
+        "MonthKey": "3/1/2024",
+        "MonthValue": "03/01/2024 00:00:00"
+      },
+      {
+        "DisplayMonth": "February 2024",
+        "MonthKey": "2/1/2024",
+        "MonthValue": "02/01/2024 00:00:00"
+      },
+      {
+        "DisplayMonth": "January 2024",
+        "MonthKey": "1/1/2024",
+        "MonthValue": "01/01/2024 00:00:00"
+      },
+      {
+        "DisplayMonth": "December 2023",
+        "MonthKey": "12/1/2023",
+        "MonthValue": "12/01/2023 00:00:00"
+      },
+      {
+        "DisplayMonth": "November 2023",
+        "MonthKey": "11/1/2023",
+        "MonthValue": "11/01/2023 00:00:00"
+      },
+      {
+        "DisplayMonth": "October 2023",
+        "MonthKey": "10/1/2023",
+        "MonthValue": "10/01/2023 00:00:00"
+      },
+      {
+        "DisplayMonth": "September 2023",
+        "MonthKey": "9/1/2023",
+        "MonthValue": "09/01/2023 00:00:00"
+      },
+      {
+        "DisplayMonth": "August 2023",
+        "MonthKey": "8/1/2023",
+        "MonthValue": "08/01/2023 00:00:00"
+      },
+      {
+        "DisplayMonth": "July 2023",
+        "MonthKey": "7/1/2023",
+        "MonthValue": "07/01/2023 00:00:00"
+      },
+      {
+        "DisplayMonth": "June 2023",
+        "MonthKey": "6/1/2023",
+        "MonthValue": "06/01/2023 00:00:00"
+      },
+      {
+        "DisplayMonth": "May 2023",
+        "MonthKey": "5/1/2023",
+        "MonthValue": "05/01/2023 00:00:00"
+      },
+      {
+        "DisplayMonth": "April 2023",
+        "MonthKey": "4/1/2023",
+        "MonthValue": "04/01/2023 00:00:00"
+      },
+      {
+        "DisplayMonth": "March 2023",
+        "MonthKey": "3/1/2023",
+        "MonthValue": "03/01/2023 00:00:00"
+      },
+      {
+        "DisplayMonth": "February 2023",
+        "MonthKey": "2/1/2023",
+        "MonthValue": "02/01/2023 00:00:00"
+      },
+      {
+        "DisplayMonth": "January 2023",
+        "MonthKey": "1/1/2023",
+        "MonthValue": "01/01/2023 00:00:00"
+      },
+      {
+        "DisplayMonth": "December 2022",
+        "MonthKey": "12/1/2022",
+        "MonthValue": "12/01/2022 00:00:00"
+      },
+      {
+        "DisplayMonth": "November 2022",
+        "MonthKey": "11/1/2022",
+        "MonthValue": "11/01/2022 00:00:00"
+      },
+      {
+        "DisplayMonth": "October 2022",
+        "MonthKey": "10/1/2022",
+        "MonthValue": "10/01/2022 00:00:00"
+      },
+      {
+        "DisplayMonth": "September 2022",
+        "MonthKey": "9/1/2022",
+        "MonthValue": "09/01/2022 00:00:00"
+      },
+      {
+        "DisplayMonth": "August 2022",
+        "MonthKey": "8/1/2022",
+        "MonthValue": "08/01/2022 00:00:00"
+      },
+      {
+        "DisplayMonth": "July 2022",
+        "MonthKey": "7/1/2022",
+        "MonthValue": "07/01/2022 00:00:00"
+      },
+      {
+        "DisplayMonth": "June 2022",
+        "MonthKey": "6/1/2022",
+        "MonthValue": "06/01/2022 00:00:00"
+      },
+      {
+        "DisplayMonth": "May 2022",
+        "MonthKey": "5/1/2022",
+        "MonthValue": "05/01/2022 00:00:00"
+      },
+      {
+        "DisplayMonth": "April 2022",
+        "MonthKey": "4/1/2022",
+        "MonthValue": "04/01/2022 00:00:00"
+      },
+      {
+        "DisplayMonth": "March 2022",
+        "MonthKey": "3/1/2022",
+        "MonthValue": "03/01/2022 00:00:00"
+      },
+      {
+        "DisplayMonth": "February 2022",
+        "MonthKey": "2/1/2022",
+        "MonthValue": "02/01/2022 00:00:00"
+      },
+      {
+        "DisplayMonth": "January 2022",
+        "MonthKey": "1/1/2022",
+        "MonthValue": "01/01/2022 00:00:00"
+      },
+      {
+        "DisplayMonth": "December 2021",
+        "MonthKey": "12/1/2021",
+        "MonthValue": "12/01/2021 00:00:00"
+      },
+      {
+        "DisplayMonth": "November 2021",
+        "MonthKey": "11/1/2021",
+        "MonthValue": "11/01/2021 00:00:00"
+      },
+      {
+        "DisplayMonth": "October 2021",
+        "MonthKey": "10/1/2021",
+        "MonthValue": "10/01/2021 00:00:00"
+      },
+      {
+        "DisplayMonth": "September 2021",
+        "MonthKey": "9/1/2021",
+        "MonthValue": "09/01/2021 00:00:00"
+      },
+      {
+        "DisplayMonth": "August 2021",
+        "MonthKey": "8/1/2021",
+        "MonthValue": "08/01/2021 00:00:00"
+      },
+      {
+        "DisplayMonth": "July 2021",
+        "MonthKey": "7/1/2021",
+        "MonthValue": "07/01/2021 00:00:00"
+      },
+      {
+        "DisplayMonth": "June 2021",
+        "MonthKey": "6/1/2021",
+        "MonthValue": "06/01/2021 00:00:00"
+      },
+      {
+        "DisplayMonth": "May 2021",
+        "MonthKey": "5/1/2021",
+        "MonthValue": "05/01/2021 00:00:00"
+      },
+      {
+        "DisplayMonth": "April 2021",
+        "MonthKey": "4/1/2021",
+        "MonthValue": "04/01/2021 00:00:00"
+      },
+      {
+        "DisplayMonth": "March 2021",
+        "MonthKey": "3/1/2021",
+        "MonthValue": "03/01/2021 00:00:00"
+      },
+      {
+        "DisplayMonth": "February 2021",
+        "MonthKey": "2/1/2021",
+        "MonthValue": "02/01/2021 00:00:00"
+      },
+      {
+        "DisplayMonth": "January 2021",
+        "MonthKey": "1/1/2021",
+        "MonthValue": "01/01/2021 00:00:00"
+      },
+      {
+        "DisplayMonth": "December 2020",
+        "MonthKey": "12/1/2020",
+        "MonthValue": "12/01/2020 00:00:00"
+      },
+      {
+        "DisplayMonth": "November 2020",
+        "MonthKey": "11/1/2020",
+        "MonthValue": "11/01/2020 00:00:00"
+      },
+      {
+        "DisplayMonth": "October 2020",
+        "MonthKey": "10/1/2020",
+        "MonthValue": "10/01/2020 00:00:00"
+      },
+      {
+        "DisplayMonth": "September 2020",
+        "MonthKey": "9/1/2020",
+        "MonthValue": "09/01/2020 00:00:00"
+      },
+      {
+        "DisplayMonth": "August 2020",
+        "MonthKey": "8/1/2020",
+        "MonthValue": "08/01/2020 00:00:00"
+      },
+      {
+        "DisplayMonth": "July 2020",
+        "MonthKey": "7/1/2020",
+        "MonthValue": "07/01/2020 00:00:00"
+      },
+      {
+        "DisplayMonth": "June 2020",
+        "MonthKey": "6/1/2020",
+        "MonthValue": "06/01/2020 00:00:00"
+      },
+      {
+        "DisplayMonth": "May 2020",
+        "MonthKey": "5/1/2020",
+        "MonthValue": "05/01/2020 00:00:00"
+      },
+      {
+        "DisplayMonth": "April 2020",
+        "MonthKey": "4/1/2020",
+        "MonthValue": "04/01/2020 00:00:00"
+      }
+    ],
+    "MarketerList": [
+      {
+        "CompanyID": 136,
+        "Description": "WGL Energy Svcs - 35",
+        "DescriptionAndId": "WGL Energy Svcs - 35 (136)"
+      }
+    ],
+    "ImbalanceAdjustedVolume": {
+      "Value": 1567576,
+      "MonthEndBalanceForCurrentMonth": 2192798,
+      "ImbalanceAdjustedVolume": 453,
+      "BeginingBalanceForNextMonth": 2193251
+    },
+    "MonthlyTotalStorage": {
+      "MonthlyTotalNominationAllocations": 2212665,
+      "MonthlyTotalUsage": 1581701,
+      "MonthlyTotalInjection": 625222,
+      "MonthEndBalance": 2192798
+    }
+  }
+}
+
+export const MarketerCustomerData = {
+  Succeeded: true,
+  Message: "Account overview retrieved successfully",
+  Errors: null,
+  Data: {
+    accountOverviewInfo: {
+      Account: "320005071248",
+      CUSTOMER_NAME: "MARVIN ALLEN",
+      LAST_BILL_DATE: "",
+      LAST_BILL_AMT: "",
+      LAST_PAYMT_DTE: "",
+      LAST_PAYMT_AMT: "",
+      STATUS: 1,
+      SERVICE_ADDR: "609 Nathan Pl NELeesburg, VA 20176-2350 USA",
+      ErrorMessage: null,
+      amountDue: 388.17,
+    },
+    getLegacyBillDates_Resp: {
+      Account: "320005071248",
+      dueDate: "12-05-2024",
+      pastDue: "-",
+      amountDue: 388.17,
+      INVOICE: [
+        {
+          Bill_Date: null,
+          PrintDocument: null,
+          Bill_Start_Date: null,
+          Bill_End_Date: null,
+          Invoice_Amount: null,
+          IsThirdParty: false,
+        },
+      ],
+      ERRORS: [
+        {
+          Message_Type: "I",
+          Message_Txt1: "Print Document doesn’t exist in the archive server",
+          Message_Txt2: null,
+        },
+      ],
+    },
+    paymentHistoryInfo_Resp: {
+      PaymentHistory: [],
+    },
+  },
+};
+
+export const CityGateReportsData = {
+  "Succeeded": true,
+  "Message": "Report Received",
+  "Errors": null,
+  "Data": {
+    "supplybyCityGateReport": [
+      {
+        "CompanyID": 103,
+        "ShortName": "Constellation Energy Source",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 103,
+        "ShortName": "Constellation Energy Source",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 103,
+        "ShortName": "Constellation Energy Source",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 103,
+        "ShortName": "Constellation Energy Source",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 103,
+        "ShortName": "Constellation Energy Source",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 103,
+        "ShortName": "Constellation Energy Source",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 134,
+        "ShortName": "UGI Energy Services - 33",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 6156,
+        "TotalByShortName": 8208,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 75,
+        "NominationPercentageOverall": 2.97,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 134,
+        "ShortName": "UGI Energy Services - 33",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 8208,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 134,
+        "ShortName": "UGI Energy Services - 33",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 821,
+        "TotalByShortName": 8208,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 10,
+        "NominationPercentageOverall": 0.4,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 134,
+        "ShortName": "UGI Energy Services - 33",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 821,
+        "TotalByShortName": 8208,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 10,
+        "NominationPercentageOverall": 0.4,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 134,
+        "ShortName": "UGI Energy Services - 33",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 410,
+        "TotalByShortName": 8208,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 5,
+        "NominationPercentageOverall": 0.2,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 134,
+        "ShortName": "UGI Energy Services - 33",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 8208,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 136,
+        "ShortName": "WGL Energy Svcs - 35",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 74574,
+        "TotalByShortName": 99715,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 74.79,
+        "NominationPercentageOverall": 35.98,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 136,
+        "ShortName": "WGL Energy Svcs - 35",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 99715,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 136,
+        "ShortName": "WGL Energy Svcs - 35",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 9879,
+        "TotalByShortName": 99715,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 9.91,
+        "NominationPercentageOverall": 4.77,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 136,
+        "ShortName": "WGL Energy Svcs - 35",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 10085,
+        "TotalByShortName": 99715,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 10.11,
+        "NominationPercentageOverall": 4.87,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 136,
+        "ShortName": "WGL Energy Svcs - 35",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 5177,
+        "TotalByShortName": 99715,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 5.19,
+        "NominationPercentageOverall": 2.5,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 136,
+        "ShortName": "WGL Energy Svcs - 35",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 99715,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 161,
+        "ShortName": "Colonial Energy",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 0,
+        "TotalByShortName": 74,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 161,
+        "ShortName": "Colonial Energy",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 74,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 161,
+        "ShortName": "Colonial Energy",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 74,
+        "TotalByShortName": 74,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 100,
+        "NominationPercentageOverall": 0.04,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 161,
+        "ShortName": "Colonial Energy",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 74,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 161,
+        "ShortName": "Colonial Energy",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 74,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 161,
+        "ShortName": "Colonial Energy",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 74,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 177,
+        "ShortName": "NOVEC Energy Solutions – 76",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 7257,
+        "TotalByShortName": 9811,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 73.97,
+        "NominationPercentageOverall": 3.5,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 177,
+        "ShortName": "NOVEC Energy Solutions – 76",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 9811,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 177,
+        "ShortName": "NOVEC Energy Solutions – 76",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 1124,
+        "TotalByShortName": 9811,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 11.46,
+        "NominationPercentageOverall": 0.54,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 177,
+        "ShortName": "NOVEC Energy Solutions – 76",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 1231,
+        "TotalByShortName": 9811,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 12.55,
+        "NominationPercentageOverall": 0.59,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 177,
+        "ShortName": "NOVEC Energy Solutions – 76",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 199,
+        "TotalByShortName": 9811,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 2.03,
+        "NominationPercentageOverall": 0.1,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 177,
+        "ShortName": "NOVEC Energy Solutions – 76",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 9811,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 179,
+        "ShortName": "Sprague Op Res LLC - 78",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 2412,
+        "TotalByShortName": 3492,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 69.07,
+        "NominationPercentageOverall": 1.16,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 179,
+        "ShortName": "Sprague Op Res LLC - 78",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 3492,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 179,
+        "ShortName": "Sprague Op Res LLC - 78",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 500,
+        "TotalByShortName": 3492,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 14.32,
+        "NominationPercentageOverall": 0.24,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 179,
+        "ShortName": "Sprague Op Res LLC - 78",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 580,
+        "TotalByShortName": 3492,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 16.61,
+        "NominationPercentageOverall": 0.28,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 179,
+        "ShortName": "Sprague Op Res LLC - 78",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 3492,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 179,
+        "ShortName": "Sprague Op Res LLC - 78",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 3492,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 182,
+        "ShortName": "Bollinger Energy",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 2748,
+        "TotalByShortName": 3379,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 81.33,
+        "NominationPercentageOverall": 1.33,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 182,
+        "ShortName": "Bollinger Energy",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 3379,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 182,
+        "ShortName": "Bollinger Energy",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 160,
+        "TotalByShortName": 3379,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 4.74,
+        "NominationPercentageOverall": 0.08,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 182,
+        "ShortName": "Bollinger Energy",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 314,
+        "TotalByShortName": 3379,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 9.29,
+        "NominationPercentageOverall": 0.15,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 182,
+        "ShortName": "Bollinger Energy",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 157,
+        "TotalByShortName": 3379,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 4.65,
+        "NominationPercentageOverall": 0.08,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 182,
+        "ShortName": "Bollinger Energy",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 3379,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 203,
+        "ShortName": "Sprague Op Res LLC - 102",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 203,
+        "ShortName": "Sprague Op Res LLC - 102",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 203,
+        "ShortName": "Sprague Op Res LLC - 102",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 203,
+        "ShortName": "Sprague Op Res LLC - 102",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 203,
+        "ShortName": "Sprague Op Res LLC - 102",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 203,
+        "ShortName": "Sprague Op Res LLC - 102",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 204,
+        "ShortName": "Gateway Energy Services",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 0,
+        "TotalByShortName": 727,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 204,
+        "ShortName": "Gateway Energy Services",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 727,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 204,
+        "ShortName": "Gateway Energy Services",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 727,
+        "TotalByShortName": 727,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 100,
+        "NominationPercentageOverall": 0.35,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 204,
+        "ShortName": "Gateway Energy Services",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 727,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 204,
+        "ShortName": "Gateway Energy Services",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 727,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 204,
+        "ShortName": "Gateway Energy Services",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 727,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 205,
+        "ShortName": "Stand Energy",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 1500,
+        "TotalByShortName": 2322,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 64.6,
+        "NominationPercentageOverall": 0.72,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 205,
+        "ShortName": "Stand Energy",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 2322,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 205,
+        "ShortName": "Stand Energy",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 272,
+        "TotalByShortName": 2322,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 11.71,
+        "NominationPercentageOverall": 0.13,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 205,
+        "ShortName": "Stand Energy",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 275,
+        "TotalByShortName": 2322,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 11.84,
+        "NominationPercentageOverall": 0.13,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 205,
+        "ShortName": "Stand Energy",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 275,
+        "TotalByShortName": 2322,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 11.84,
+        "NominationPercentageOverall": 0.13,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 205,
+        "ShortName": "Stand Energy",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 2322,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 326,
+        "ShortName": "Constellation New Energy",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 15411,
+        "TotalByShortName": 30383,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 50.72,
+        "NominationPercentageOverall": 7.44,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 326,
+        "ShortName": "Constellation New Energy",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 30383,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 326,
+        "ShortName": "Constellation New Energy",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 2400,
+        "TotalByShortName": 30383,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 7.9,
+        "NominationPercentageOverall": 1.16,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 326,
+        "ShortName": "Constellation New Energy",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 8572,
+        "TotalByShortName": 30383,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 28.21,
+        "NominationPercentageOverall": 4.14,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 326,
+        "ShortName": "Constellation New Energy",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 4000,
+        "TotalByShortName": 30383,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 13.17,
+        "NominationPercentageOverall": 1.93,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 326,
+        "ShortName": "Constellation New Energy",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 30383,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 2128,
+        "ShortName": "Shell Energy",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 2128,
+        "ShortName": "Shell Energy",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 2128,
+        "ShortName": "Shell Energy",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 2128,
+        "ShortName": "Shell Energy",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 2128,
+        "ShortName": "Shell Energy",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 2128,
+        "ShortName": "Shell Energy",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 19931,
+        "ShortName": "Stand Energy 2",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 19931,
+        "ShortName": "Stand Energy 2",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 19931,
+        "ShortName": "Stand Energy 2",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 19931,
+        "ShortName": "Stand Energy 2",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 19931,
+        "ShortName": "Stand Energy 2",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 19931,
+        "ShortName": "Stand Energy 2",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 55635,
+        "ShortName": "Indra Energy - MD - 119",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 288,
+        "TotalByShortName": 288,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 100,
+        "NominationPercentageOverall": 0.14,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 55635,
+        "ShortName": "Indra Energy - MD - 119",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 288,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 55635,
+        "ShortName": "Indra Energy - MD - 119",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 0,
+        "TotalByShortName": 288,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 55635,
+        "ShortName": "Indra Energy - MD - 119",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 288,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 55635,
+        "ShortName": "Indra Energy - MD - 119",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 288,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 55635,
+        "ShortName": "Indra Energy - MD - 119",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 288,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 55636,
+        "ShortName": "Smart One Energy",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 55636,
+        "ShortName": "Smart One Energy",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 55636,
+        "ShortName": "Smart One Energy",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 55636,
+        "ShortName": "Smart One Energy",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 55636,
+        "ShortName": "Smart One Energy",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 55636,
+        "ShortName": "Smart One Energy",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 55638,
+        "ShortName": "Maryland Gas and Electric",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 672,
+        "TotalByShortName": 1046,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 64.24,
+        "NominationPercentageOverall": 0.32,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 55638,
+        "ShortName": "Maryland Gas and Electric",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 1046,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 55638,
+        "ShortName": "Maryland Gas and Electric",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 74,
+        "TotalByShortName": 1046,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 7.07,
+        "NominationPercentageOverall": 0.04,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 55638,
+        "ShortName": "Maryland Gas and Electric",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 200,
+        "TotalByShortName": 1046,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 19.12,
+        "NominationPercentageOverall": 0.1,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 55638,
+        "ShortName": "Maryland Gas and Electric",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 100,
+        "TotalByShortName": 1046,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 9.56,
+        "NominationPercentageOverall": 0.05,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 55638,
+        "ShortName": "Maryland Gas and Electric",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 1046,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 58038,
+        "ShortName": "EnerNoc",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 58038,
+        "ShortName": "EnerNoc",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 58038,
+        "ShortName": "EnerNoc",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 58038,
+        "ShortName": "EnerNoc",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 58038,
+        "ShortName": "EnerNoc",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 58038,
+        "ShortName": "EnerNoc",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 65135,
+        "ShortName": "Constellation New Energy 2",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 65135,
+        "ShortName": "Constellation New Energy 2",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 65135,
+        "ShortName": "Constellation New Energy 2",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 65135,
+        "ShortName": "Constellation New Energy 2",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 65135,
+        "ShortName": "Constellation New Energy 2",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 65135,
+        "ShortName": "Constellation New Energy 2",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 70434,
+        "ShortName": "Xoom Energy Maryland",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 0,
+        "TotalByShortName": 554,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 70434,
+        "ShortName": "Xoom Energy Maryland",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 554,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 70434,
+        "ShortName": "Xoom Energy Maryland",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 554,
+        "TotalByShortName": 554,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 100,
+        "NominationPercentageOverall": 0.27,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 70434,
+        "ShortName": "Xoom Energy Maryland",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 554,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 70434,
+        "ShortName": "Xoom Energy Maryland",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 554,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 70434,
+        "ShortName": "Xoom Energy Maryland",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 554,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 70454,
+        "ShortName": "World Energy",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 70454,
+        "ShortName": "World Energy",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 70454,
+        "ShortName": "World Energy",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 70454,
+        "ShortName": "World Energy",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 70454,
+        "ShortName": "World Energy",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 70454,
+        "ShortName": "World Energy",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 72875,
+        "ShortName": "Energy Plus Natural Gas LLC",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 0,
+        "TotalByShortName": 122,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 72875,
+        "ShortName": "Energy Plus Natural Gas LLC",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 122,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 72875,
+        "ShortName": "Energy Plus Natural Gas LLC",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 122,
+        "TotalByShortName": 122,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 100,
+        "NominationPercentageOverall": 0.06,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 72875,
+        "ShortName": "Energy Plus Natural Gas LLC",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 122,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 72875,
+        "ShortName": "Energy Plus Natural Gas LLC",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 122,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 72875,
+        "ShortName": "Energy Plus Natural Gas LLC",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 122,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 73914,
+        "ShortName": "Deca Energy",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 0,
+        "TotalByShortName": 642,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 73914,
+        "ShortName": "Deca Energy",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 642,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 73914,
+        "ShortName": "Deca Energy",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 642,
+        "TotalByShortName": 642,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 100,
+        "NominationPercentageOverall": 0.31,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 73914,
+        "ShortName": "Deca Energy",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 642,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 73914,
+        "ShortName": "Deca Energy",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 642,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 73914,
+        "ShortName": "Deca Energy",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 642,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 73915,
+        "ShortName": "Ambit Energy",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 118,
+        "TotalByShortName": 369,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 31.98,
+        "NominationPercentageOverall": 0.06,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 73915,
+        "ShortName": "Ambit Energy",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 369,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 73915,
+        "ShortName": "Ambit Energy",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 50,
+        "TotalByShortName": 369,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 13.55,
+        "NominationPercentageOverall": 0.02,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 73915,
+        "ShortName": "Ambit Energy",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 126,
+        "TotalByShortName": 369,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 34.15,
+        "NominationPercentageOverall": 0.06,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 73915,
+        "ShortName": "Ambit Energy",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 75,
+        "TotalByShortName": 369,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 20.33,
+        "NominationPercentageOverall": 0.04,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 73915,
+        "ShortName": "Ambit Energy",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 369,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 76734,
+        "ShortName": "IGS Energy - MD - 128",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 76734,
+        "ShortName": "IGS Energy - MD - 128",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 76734,
+        "ShortName": "IGS Energy - MD - 128",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 76734,
+        "ShortName": "IGS Energy - MD - 128",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 76734,
+        "ShortName": "IGS Energy - MD - 128",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 76734,
+        "ShortName": "IGS Energy - MD - 128",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 89135,
+        "ShortName": "Engie Power & Gas - 135",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 2005,
+        "TotalByShortName": 4175,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 48.02,
+        "NominationPercentageOverall": 0.97,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 89135,
+        "ShortName": "Engie Power & Gas - 135",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 4175,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 89135,
+        "ShortName": "Engie Power & Gas - 135",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 300,
+        "TotalByShortName": 4175,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 7.19,
+        "NominationPercentageOverall": 0.14,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 89135,
+        "ShortName": "Engie Power & Gas - 135",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 1249,
+        "TotalByShortName": 4175,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 29.92,
+        "NominationPercentageOverall": 0.6,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 89135,
+        "ShortName": "Engie Power & Gas - 135",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 621,
+        "TotalByShortName": 4175,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 14.87,
+        "NominationPercentageOverall": 0.3,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 89135,
+        "ShortName": "Engie Power & Gas - 135",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 4175,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 90954,
+        "ShortName": "Constellation Energy Gas Choice",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 90954,
+        "ShortName": "Constellation Energy Gas Choice",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 90954,
+        "ShortName": "Constellation Energy Gas Choice",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 90954,
+        "ShortName": "Constellation Energy Gas Choice",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 90954,
+        "ShortName": "Constellation Energy Gas Choice",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 90954,
+        "ShortName": "Constellation Energy Gas Choice",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 100535,
+        "ShortName": "Viridian Energy",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 44,
+        "TotalByShortName": 44,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 100,
+        "NominationPercentageOverall": 0.02,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 100535,
+        "ShortName": "Viridian Energy",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 44,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 100535,
+        "ShortName": "Viridian Energy",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 0,
+        "TotalByShortName": 44,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 100535,
+        "ShortName": "Viridian Energy",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 44,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 100535,
+        "ShortName": "Viridian Energy",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 44,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 100535,
+        "ShortName": "Viridian Energy",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 44,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 100554,
+        "ShortName": "Xoom Energy",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 0,
+        "TotalByShortName": 137,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 100554,
+        "ShortName": "Xoom Energy",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 137,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 100554,
+        "ShortName": "Xoom Energy",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 137,
+        "TotalByShortName": 137,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 100,
+        "NominationPercentageOverall": 0.07,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 100554,
+        "ShortName": "Xoom Energy",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 137,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 100554,
+        "ShortName": "Xoom Energy",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 137,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 100554,
+        "ShortName": "Xoom Energy",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 137,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 100914,
+        "ShortName": "NRG Business Market,LLC - 145",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 19238,
+        "TotalByShortName": 25651,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 75,
+        "NominationPercentageOverall": 9.28,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 100914,
+        "ShortName": "NRG Business Market,LLC - 145",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 25651,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 100914,
+        "ShortName": "NRG Business Market,LLC - 145",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 2565,
+        "TotalByShortName": 25651,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 10,
+        "NominationPercentageOverall": 1.24,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 100914,
+        "ShortName": "NRG Business Market,LLC - 145",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 2565,
+        "TotalByShortName": 25651,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 10,
+        "NominationPercentageOverall": 1.24,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 100914,
+        "ShortName": "NRG Business Market,LLC - 145",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 1283,
+        "TotalByShortName": 25651,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 5,
+        "NominationPercentageOverall": 0.62,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 100914,
+        "ShortName": "NRG Business Market,LLC - 145",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 25651,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 103174,
+        "ShortName": "Engie Power & Gas - 144",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 103174,
+        "ShortName": "Engie Power & Gas - 144",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 103174,
+        "ShortName": "Engie Power & Gas - 144",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 103174,
+        "ShortName": "Engie Power & Gas - 144",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 103174,
+        "ShortName": "Engie Power & Gas - 144",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 103174,
+        "ShortName": "Engie Power & Gas - 144",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 104474,
+        "ShortName": "Stand Energy UCB RR",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 104474,
+        "ShortName": "Stand Energy UCB RR",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 104474,
+        "ShortName": "Stand Energy UCB RR",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 104474,
+        "ShortName": "Stand Energy UCB RR",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 104474,
+        "ShortName": "Stand Energy UCB RR",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 104474,
+        "ShortName": "Stand Energy UCB RR",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 122214,
+        "ShortName": "Enspire Energy",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 0,
+        "TotalByShortName": 699,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 122214,
+        "ShortName": "Enspire Energy",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 699,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 122214,
+        "ShortName": "Enspire Energy",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 699,
+        "TotalByShortName": 699,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 100,
+        "NominationPercentageOverall": 0.34,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 122214,
+        "ShortName": "Enspire Energy",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 699,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 122214,
+        "ShortName": "Enspire Energy",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 699,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 122214,
+        "ShortName": "Enspire Energy",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 699,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 123275,
+        "ShortName": "CEGC",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 123275,
+        "ShortName": "CEGC",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 123275,
+        "ShortName": "CEGC",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 123275,
+        "ShortName": "CEGC",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 123275,
+        "ShortName": "CEGC",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 123275,
+        "ShortName": "CEGC",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 136034,
+        "ShortName": "Direct Energy Services,LLC-156",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 0,
+        "TotalByShortName": 219,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 136034,
+        "ShortName": "Direct Energy Services,LLC-156",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 219,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 136034,
+        "ShortName": "Direct Energy Services,LLC-156",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 219,
+        "TotalByShortName": 219,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 100,
+        "NominationPercentageOverall": 0.11,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 136034,
+        "ShortName": "Direct Energy Services,LLC-156",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 219,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 136034,
+        "ShortName": "Direct Energy Services,LLC-156",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 219,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 136034,
+        "ShortName": "Direct Energy Services,LLC-156",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 219,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 142214,
+        "ShortName": "SFE Energy",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 1279,
+        "TotalByShortName": 1279,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 100,
+        "NominationPercentageOverall": 0.62,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 142214,
+        "ShortName": "SFE Energy",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 1279,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 142214,
+        "ShortName": "SFE Energy",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 0,
+        "TotalByShortName": 1279,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 142214,
+        "ShortName": "SFE Energy",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 1279,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 142214,
+        "ShortName": "SFE Energy",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 1279,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 142214,
+        "ShortName": "SFE Energy",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 1279,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 142215,
+        "ShortName": "AGERA Energy - 159",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 142215,
+        "ShortName": "AGERA Energy - 159",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 142215,
+        "ShortName": "AGERA Energy - 159",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 142215,
+        "ShortName": "AGERA Energy - 159",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 142215,
+        "ShortName": "AGERA Energy - 159",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 142215,
+        "ShortName": "AGERA Energy - 159",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 142216,
+        "ShortName": "AGERA Energy - 160",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 142216,
+        "ShortName": "AGERA Energy - 160",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 142216,
+        "ShortName": "AGERA Energy - 160",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 142216,
+        "ShortName": "AGERA Energy - 160",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 142216,
+        "ShortName": "AGERA Energy - 160",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 142216,
+        "ShortName": "AGERA Energy - 160",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 142876,
+        "ShortName": "NOVEC Energy Solutions – 164",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 142876,
+        "ShortName": "NOVEC Energy Solutions – 164",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 142876,
+        "ShortName": "NOVEC Energy Solutions – 164",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 142876,
+        "ShortName": "NOVEC Energy Solutions – 164",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 142876,
+        "ShortName": "NOVEC Energy Solutions – 164",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 142876,
+        "ShortName": "NOVEC Energy Solutions – 164",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 142895,
+        "ShortName": "Dominion Energy Solutions - 150",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 142895,
+        "ShortName": "Dominion Energy Solutions - 150",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 142895,
+        "ShortName": "Dominion Energy Solutions - 150",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 142895,
+        "ShortName": "Dominion Energy Solutions - 150",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 142895,
+        "ShortName": "Dominion Energy Solutions - 150",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 142895,
+        "ShortName": "Dominion Energy Solutions - 150",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 142909,
+        "ShortName": "MAJOR Energy",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 30,
+        "TotalByShortName": 30,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 100,
+        "NominationPercentageOverall": 0.01,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 142909,
+        "ShortName": "MAJOR Energy",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 30,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 142909,
+        "ShortName": "MAJOR Energy",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 0,
+        "TotalByShortName": 30,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 142909,
+        "ShortName": "MAJOR Energy",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 30,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 142909,
+        "ShortName": "MAJOR Energy",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 30,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 142909,
+        "ShortName": "MAJOR Energy",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 30,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 142922,
+        "ShortName": "NRG Home",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 0,
+        "TotalByShortName": 220,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 142922,
+        "ShortName": "NRG Home",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 220,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 142922,
+        "ShortName": "NRG Home",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 220,
+        "TotalByShortName": 220,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 100,
+        "NominationPercentageOverall": 0.11,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 142922,
+        "ShortName": "NRG Home",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 220,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 142922,
+        "ShortName": "NRG Home",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 220,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 142922,
+        "ShortName": "NRG Home",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 220,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 142936,
+        "ShortName": "Mansfield Power and Gas LLC",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 142936,
+        "ShortName": "Mansfield Power and Gas LLC",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 142936,
+        "ShortName": "Mansfield Power and Gas LLC",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 142936,
+        "ShortName": "Mansfield Power and Gas LLC",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 142936,
+        "ShortName": "Mansfield Power and Gas LLC",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 142936,
+        "ShortName": "Mansfield Power and Gas LLC",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 142939,
+        "ShortName": "Just Energy",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 142939,
+        "ShortName": "Just Energy",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 142939,
+        "ShortName": "Just Energy",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 142939,
+        "ShortName": "Just Energy",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 142939,
+        "ShortName": "Just Energy",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 142939,
+        "ShortName": "Just Energy",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 142941,
+        "ShortName": "Shipley Energy",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 142941,
+        "ShortName": "Shipley Energy",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 142941,
+        "ShortName": "Shipley Energy",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 142941,
+        "ShortName": "Shipley Energy",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 142941,
+        "ShortName": "Shipley Energy",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 142941,
+        "ShortName": "Shipley Energy",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 142942,
+        "ShortName": "Planet Energy",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 142942,
+        "ShortName": "Planet Energy",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 142942,
+        "ShortName": "Planet Energy",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 142942,
+        "ShortName": "Planet Energy",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 142942,
+        "ShortName": "Planet Energy",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 142942,
+        "ShortName": "Planet Energy",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 142943,
+        "ShortName": "Spring Power & Gas",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 31,
+        "TotalByShortName": 31,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 100,
+        "NominationPercentageOverall": 0.01,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 142943,
+        "ShortName": "Spring Power & Gas",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 31,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 142943,
+        "ShortName": "Spring Power & Gas",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 0,
+        "TotalByShortName": 31,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 142943,
+        "ShortName": "Spring Power & Gas",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 31,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 142943,
+        "ShortName": "Spring Power & Gas",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 31,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 142943,
+        "ShortName": "Spring Power & Gas",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 31,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 142944,
+        "ShortName": "Twin Eagle Energy",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 142944,
+        "ShortName": "Twin Eagle Energy",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 142944,
+        "ShortName": "Twin Eagle Energy",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 142944,
+        "ShortName": "Twin Eagle Energy",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 142944,
+        "ShortName": "Twin Eagle Energy",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 142944,
+        "ShortName": "Twin Eagle Energy",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 142968,
+        "ShortName": "Indra Energy - DC - 169",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 95,
+        "TotalByShortName": 95,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 100,
+        "NominationPercentageOverall": 0.05,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 142968,
+        "ShortName": "Indra Energy - DC - 169",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 95,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 142968,
+        "ShortName": "Indra Energy - DC - 169",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 0,
+        "TotalByShortName": 95,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 142968,
+        "ShortName": "Indra Energy - DC - 169",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 95,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 142968,
+        "ShortName": "Indra Energy - DC - 169",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 95,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 142968,
+        "ShortName": "Indra Energy - DC - 169",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 95,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 142969,
+        "ShortName": "Indra Energy - VA - 170",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 100,
+        "TotalByShortName": 100,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 100,
+        "NominationPercentageOverall": 0.05,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 142969,
+        "ShortName": "Indra Energy - VA - 170",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 100,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 142969,
+        "ShortName": "Indra Energy - VA - 170",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 0,
+        "TotalByShortName": 100,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 142969,
+        "ShortName": "Indra Energy - VA - 170",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 100,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 142969,
+        "ShortName": "Indra Energy - VA - 170",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 100,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 142969,
+        "ShortName": "Indra Energy - VA - 170",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 100,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 142983,
+        "ShortName": "Viridian Energy DUAL",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 142983,
+        "ShortName": "Viridian Energy DUAL",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 142983,
+        "ShortName": "Viridian Energy DUAL",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 142983,
+        "ShortName": "Viridian Energy DUAL",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 142983,
+        "ShortName": "Viridian Energy DUAL",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 142983,
+        "ShortName": "Viridian Energy DUAL",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 142984,
+        "ShortName": "Viridian Energy UCB BR",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 142984,
+        "ShortName": "Viridian Energy UCB BR",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 142984,
+        "ShortName": "Viridian Energy UCB BR",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 142984,
+        "ShortName": "Viridian Energy UCB BR",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 142984,
+        "ShortName": "Viridian Energy UCB BR",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 142984,
+        "ShortName": "Viridian Energy UCB BR",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 142985,
+        "ShortName": "Engie Power & Gas - 173",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 142985,
+        "ShortName": "Engie Power & Gas - 173",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 142985,
+        "ShortName": "Engie Power & Gas - 173",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 142985,
+        "ShortName": "Engie Power & Gas - 173",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 142985,
+        "ShortName": "Engie Power & Gas - 173",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 142985,
+        "ShortName": "Engie Power & Gas - 173",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 142991,
+        "ShortName": "IDT Energy",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 426,
+        "TotalByShortName": 426,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 100,
+        "NominationPercentageOverall": 0.21,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 142991,
+        "ShortName": "IDT Energy",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 426,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 142991,
+        "ShortName": "IDT Energy",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 0,
+        "TotalByShortName": 426,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 142991,
+        "ShortName": "IDT Energy",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 426,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 142991,
+        "ShortName": "IDT Energy",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 426,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 142991,
+        "ShortName": "IDT Energy",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 426,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 142992,
+        "ShortName": "MPower Energy NJ LLC",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 759,
+        "TotalByShortName": 759,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 100,
+        "NominationPercentageOverall": 0.37,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 142992,
+        "ShortName": "MPower Energy NJ LLC",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 759,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 142992,
+        "ShortName": "MPower Energy NJ LLC",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 0,
+        "TotalByShortName": 759,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 142992,
+        "ShortName": "MPower Energy NJ LLC",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 759,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 142992,
+        "ShortName": "MPower Energy NJ LLC",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 759,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 142992,
+        "ShortName": "MPower Energy NJ LLC",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 759,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 142993,
+        "ShortName": "PESCO Energy - 175",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 142993,
+        "ShortName": "PESCO Energy - 175",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 142993,
+        "ShortName": "PESCO Energy - 175",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 142993,
+        "ShortName": "PESCO Energy - 175",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 142993,
+        "ShortName": "PESCO Energy - 175",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 142993,
+        "ShortName": "PESCO Energy - 175",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 142994,
+        "ShortName": "PESCO Energy - 176",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 142994,
+        "ShortName": "PESCO Energy - 176",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 142994,
+        "ShortName": "PESCO Energy - 176",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 142994,
+        "ShortName": "PESCO Energy - 176",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 142994,
+        "ShortName": "PESCO Energy - 176",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 142994,
+        "ShortName": "PESCO Energy - 176",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 142995,
+        "ShortName": "Think Energy",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 142995,
+        "ShortName": "Think Energy",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 142995,
+        "ShortName": "Think Energy",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 142995,
+        "ShortName": "Think Energy",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 142995,
+        "ShortName": "Think Energy",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 142995,
+        "ShortName": "Think Energy",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 142996,
+        "ShortName": "Virginia Retail Energy - 178",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 142996,
+        "ShortName": "Virginia Retail Energy - 178",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 142996,
+        "ShortName": "Virginia Retail Energy - 178",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 142996,
+        "ShortName": "Virginia Retail Energy - 178",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 142996,
+        "ShortName": "Virginia Retail Energy - 178",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 142996,
+        "ShortName": "Virginia Retail Energy - 178",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 142997,
+        "ShortName": "Virginia Retail Energy - 179",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 142997,
+        "ShortName": "Virginia Retail Energy - 179",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 142997,
+        "ShortName": "Virginia Retail Energy - 179",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 142997,
+        "ShortName": "Virginia Retail Energy - 179",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 142997,
+        "ShortName": "Virginia Retail Energy - 179",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 142997,
+        "ShortName": "Virginia Retail Energy - 179",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 142998,
+        "ShortName": "Stand Energy - 180",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 142998,
+        "ShortName": "Stand Energy - 180",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 142998,
+        "ShortName": "Stand Energy - 180",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 142998,
+        "ShortName": "Stand Energy - 180",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 142998,
+        "ShortName": "Stand Energy - 180",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 142998,
+        "ShortName": "Stand Energy - 180",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 142999,
+        "ShortName": "Stand Energy - 181",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 142999,
+        "ShortName": "Stand Energy - 181",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 142999,
+        "ShortName": "Stand Energy - 181",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 142999,
+        "ShortName": "Stand Energy - 181",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 142999,
+        "ShortName": "Stand Energy - 181",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 142999,
+        "ShortName": "Stand Energy - 181",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143009,
+        "ShortName": "Clearview Energy",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 143009,
+        "ShortName": "Clearview Energy",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143009,
+        "ShortName": "Clearview Energy",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 143009,
+        "ShortName": "Clearview Energy",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 143009,
+        "ShortName": "Clearview Energy",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143009,
+        "ShortName": "Clearview Energy",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143010,
+        "ShortName": "South Jersey Energy Corp - 184",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 143010,
+        "ShortName": "South Jersey Energy Corp - 184",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143010,
+        "ShortName": "South Jersey Energy Corp - 184",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 143010,
+        "ShortName": "South Jersey Energy Corp - 184",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 143010,
+        "ShortName": "South Jersey Energy Corp - 184",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143010,
+        "ShortName": "South Jersey Energy Corp - 184",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143011,
+        "ShortName": "South Jersey Energy Corp - 185",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 143011,
+        "ShortName": "South Jersey Energy Corp - 185",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143011,
+        "ShortName": "South Jersey Energy Corp - 185",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 143011,
+        "ShortName": "South Jersey Energy Corp - 185",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 143011,
+        "ShortName": "South Jersey Energy Corp - 185",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143011,
+        "ShortName": "South Jersey Energy Corp - 185",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143012,
+        "ShortName": "Indra Energy - MD - 186",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 143012,
+        "ShortName": "Indra Energy - MD - 186",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143012,
+        "ShortName": "Indra Energy - MD - 186",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 143012,
+        "ShortName": "Indra Energy - MD - 186",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 143012,
+        "ShortName": "Indra Energy - MD - 186",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143012,
+        "ShortName": "Indra Energy - MD - 186",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143013,
+        "ShortName": "Tomorrow Energy Corp",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 139,
+        "TotalByShortName": 139,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 100,
+        "NominationPercentageOverall": 0.07,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 143013,
+        "ShortName": "Tomorrow Energy Corp",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 139,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143013,
+        "ShortName": "Tomorrow Energy Corp",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 0,
+        "TotalByShortName": 139,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 143013,
+        "ShortName": "Tomorrow Energy Corp",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 139,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 143013,
+        "ShortName": "Tomorrow Energy Corp",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 139,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143013,
+        "ShortName": "Tomorrow Energy Corp",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 139,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143014,
+        "ShortName": "Think Energy - 188",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 143014,
+        "ShortName": "Think Energy - 188",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143014,
+        "ShortName": "Think Energy - 188",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 143014,
+        "ShortName": "Think Energy - 188",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 143014,
+        "ShortName": "Think Energy - 188",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143014,
+        "ShortName": "Think Energy - 188",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143015,
+        "ShortName": "American Power & Gas",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 0,
+        "TotalByShortName": 100,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 143015,
+        "ShortName": "American Power & Gas",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 100,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143015,
+        "ShortName": "American Power & Gas",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 100,
+        "TotalByShortName": 100,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 100,
+        "NominationPercentageOverall": 0.05,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 143015,
+        "ShortName": "American Power & Gas",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 100,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 143015,
+        "ShortName": "American Power & Gas",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 100,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143015,
+        "ShortName": "American Power & Gas",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 100,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143016,
+        "ShortName": "Atlantic Energy",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 258,
+        "TotalByShortName": 258,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 100,
+        "NominationPercentageOverall": 0.12,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 143016,
+        "ShortName": "Atlantic Energy",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 258,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143016,
+        "ShortName": "Atlantic Energy",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 0,
+        "TotalByShortName": 258,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 143016,
+        "ShortName": "Atlantic Energy",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 258,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 143016,
+        "ShortName": "Atlantic Energy",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 258,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143016,
+        "ShortName": "Atlantic Energy",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 258,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143017,
+        "ShortName": "Median Energy",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 139,
+        "TotalByShortName": 139,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 100,
+        "NominationPercentageOverall": 0.07,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 143017,
+        "ShortName": "Median Energy",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 139,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143017,
+        "ShortName": "Median Energy",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 0,
+        "TotalByShortName": 139,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 143017,
+        "ShortName": "Median Energy",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 139,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 143017,
+        "ShortName": "Median Energy",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 139,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143017,
+        "ShortName": "Median Energy",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 139,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143027,
+        "ShortName": "Josco Energy - 192",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 143027,
+        "ShortName": "Josco Energy - 192",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143027,
+        "ShortName": "Josco Energy - 192",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 143027,
+        "ShortName": "Josco Energy - 192",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 143027,
+        "ShortName": "Josco Energy - 192",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143027,
+        "ShortName": "Josco Energy - 192",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143028,
+        "ShortName": "Josco Energy - 193",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 143028,
+        "ShortName": "Josco Energy - 193",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143028,
+        "ShortName": "Josco Energy - 193",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 143028,
+        "ShortName": "Josco Energy - 193",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 143028,
+        "ShortName": "Josco Energy - 193",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143028,
+        "ShortName": "Josco Energy - 193",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143029,
+        "ShortName": "CleanSky Energy - DC and MD - 194",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 168,
+        "TotalByShortName": 168,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 100,
+        "NominationPercentageOverall": 0.08,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 143029,
+        "ShortName": "CleanSky Energy - DC and MD - 194",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 168,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143029,
+        "ShortName": "CleanSky Energy - DC and MD - 194",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 0,
+        "TotalByShortName": 168,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 143029,
+        "ShortName": "CleanSky Energy - DC and MD - 194",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 168,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 143029,
+        "ShortName": "CleanSky Energy - DC and MD - 194",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 168,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143029,
+        "ShortName": "CleanSky Energy - DC and MD - 194",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 168,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143030,
+        "ShortName": "CleanSky Energy - DC and MD - 195",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 143030,
+        "ShortName": "CleanSky Energy - DC and MD - 195",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143030,
+        "ShortName": "CleanSky Energy - DC and MD - 195",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 143030,
+        "ShortName": "CleanSky Energy - DC and MD - 195",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 143030,
+        "ShortName": "CleanSky Energy - DC and MD - 195",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143030,
+        "ShortName": "CleanSky Energy - DC and MD - 195",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143039,
+        "ShortName": "UGI Energy Services - 197",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 143039,
+        "ShortName": "UGI Energy Services - 197",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143039,
+        "ShortName": "UGI Energy Services - 197",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 143039,
+        "ShortName": "UGI Energy Services - 197",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 143039,
+        "ShortName": "UGI Energy Services - 197",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143039,
+        "ShortName": "UGI Energy Services - 197",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143040,
+        "ShortName": "Indra Energy - MD - 198",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 143040,
+        "ShortName": "Indra Energy - MD - 198",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143040,
+        "ShortName": "Indra Energy - MD - 198",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 143040,
+        "ShortName": "Indra Energy - MD - 198",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 143040,
+        "ShortName": "Indra Energy - MD - 198",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143040,
+        "ShortName": "Indra Energy - MD - 198",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143041,
+        "ShortName": "Indra Energy - MD - 199",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 143041,
+        "ShortName": "Indra Energy - MD - 199",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143041,
+        "ShortName": "Indra Energy - MD - 199",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 143041,
+        "ShortName": "Indra Energy - MD - 199",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 143041,
+        "ShortName": "Indra Energy - MD - 199",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143041,
+        "ShortName": "Indra Energy - MD - 199",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143042,
+        "ShortName": "Indra Energy - DC - 200",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 143042,
+        "ShortName": "Indra Energy - DC - 200",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143042,
+        "ShortName": "Indra Energy - DC - 200",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 143042,
+        "ShortName": "Indra Energy - DC - 200",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 143042,
+        "ShortName": "Indra Energy - DC - 200",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143042,
+        "ShortName": "Indra Energy - DC - 200",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143043,
+        "ShortName": "Indra Energy - DC - 201",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 143043,
+        "ShortName": "Indra Energy - DC - 201",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143043,
+        "ShortName": "Indra Energy - DC - 201",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 143043,
+        "ShortName": "Indra Energy - DC - 201",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 143043,
+        "ShortName": "Indra Energy - DC - 201",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143043,
+        "ShortName": "Indra Energy - DC - 201",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143044,
+        "ShortName": "Indra Energy - VA - 202",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 143044,
+        "ShortName": "Indra Energy - VA - 202",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143044,
+        "ShortName": "Indra Energy - VA - 202",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 143044,
+        "ShortName": "Indra Energy - VA - 202",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 143044,
+        "ShortName": "Indra Energy - VA - 202",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143044,
+        "ShortName": "Indra Energy - VA - 202",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143045,
+        "ShortName": "Indra Energy - VA - 203",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 143045,
+        "ShortName": "Indra Energy - VA - 203",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143045,
+        "ShortName": "Indra Energy - VA - 203",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 143045,
+        "ShortName": "Indra Energy - VA - 203",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 143045,
+        "ShortName": "Indra Energy - VA - 203",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143045,
+        "ShortName": "Indra Energy - VA - 203",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143049,
+        "ShortName": "Park Power LLC - DC - 204",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 29,
+        "TotalByShortName": 29,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 100,
+        "NominationPercentageOverall": 0.01,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 143049,
+        "ShortName": "Park Power LLC - DC - 204",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 29,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143049,
+        "ShortName": "Park Power LLC - DC - 204",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 0,
+        "TotalByShortName": 29,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 143049,
+        "ShortName": "Park Power LLC - DC - 204",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 29,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 143049,
+        "ShortName": "Park Power LLC - DC - 204",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 29,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143049,
+        "ShortName": "Park Power LLC - DC - 204",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 29,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143050,
+        "ShortName": "Park Power LLC - DC - 205",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 143050,
+        "ShortName": "Park Power LLC - DC - 205",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143050,
+        "ShortName": "Park Power LLC - DC - 205",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 143050,
+        "ShortName": "Park Power LLC - DC - 205",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 143050,
+        "ShortName": "Park Power LLC - DC - 205",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143050,
+        "ShortName": "Park Power LLC - DC - 205",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143051,
+        "ShortName": "Park Power LLC - DC - 206",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 143051,
+        "ShortName": "Park Power LLC - DC - 206",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143051,
+        "ShortName": "Park Power LLC - DC - 206",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 143051,
+        "ShortName": "Park Power LLC - DC - 206",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 143051,
+        "ShortName": "Park Power LLC - DC - 206",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143051,
+        "ShortName": "Park Power LLC - DC - 206",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143063,
+        "ShortName": "East Coast Power & Gas - MD - 207",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 143063,
+        "ShortName": "East Coast Power & Gas - MD - 207",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143063,
+        "ShortName": "East Coast Power & Gas - MD - 207",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 143063,
+        "ShortName": "East Coast Power & Gas - MD - 207",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 143063,
+        "ShortName": "East Coast Power & Gas - MD - 207",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143063,
+        "ShortName": "East Coast Power & Gas - MD - 207",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143064,
+        "ShortName": "East Coast Power & Gas - MD - 208",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 143064,
+        "ShortName": "East Coast Power & Gas - MD - 208",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143064,
+        "ShortName": "East Coast Power & Gas - MD - 208",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 143064,
+        "ShortName": "East Coast Power & Gas - MD - 208",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 143064,
+        "ShortName": "East Coast Power & Gas - MD - 208",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143064,
+        "ShortName": "East Coast Power & Gas - MD - 208",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143065,
+        "ShortName": "East Coast Power & Gas - MD - 209",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 143065,
+        "ShortName": "East Coast Power & Gas - MD - 209",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143065,
+        "ShortName": "East Coast Power & Gas - MD - 209",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 143065,
+        "ShortName": "East Coast Power & Gas - MD - 209",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 143065,
+        "ShortName": "East Coast Power & Gas - MD - 209",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143065,
+        "ShortName": "East Coast Power & Gas - MD - 209",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143066,
+        "ShortName": "Statewise Energy - MD - 210",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 196,
+        "TotalByShortName": 196,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 100,
+        "NominationPercentageOverall": 0.09,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 143066,
+        "ShortName": "Statewise Energy - MD - 210",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 196,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143066,
+        "ShortName": "Statewise Energy - MD - 210",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 0,
+        "TotalByShortName": 196,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 143066,
+        "ShortName": "Statewise Energy - MD - 210",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 196,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 143066,
+        "ShortName": "Statewise Energy - MD - 210",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 196,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143066,
+        "ShortName": "Statewise Energy - MD - 210",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 196,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143087,
+        "ShortName": "Statewise Energy - MD - 211",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 143087,
+        "ShortName": "Statewise Energy - MD - 211",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143087,
+        "ShortName": "Statewise Energy - MD - 211",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 143087,
+        "ShortName": "Statewise Energy - MD - 211",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 143087,
+        "ShortName": "Statewise Energy - MD - 211",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143087,
+        "ShortName": "Statewise Energy - MD - 211",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143099,
+        "ShortName": "NRG Business Market,LLC - 212",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 143099,
+        "ShortName": "NRG Business Market,LLC - 212",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143099,
+        "ShortName": "NRG Business Market,LLC - 212",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 143099,
+        "ShortName": "NRG Business Market,LLC - 212",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 143099,
+        "ShortName": "NRG Business Market,LLC - 212",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143099,
+        "ShortName": "NRG Business Market,LLC - 212",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143100,
+        "ShortName": "NRG Business Market,LLC - 213",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 143100,
+        "ShortName": "NRG Business Market,LLC - 213",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143100,
+        "ShortName": "NRG Business Market,LLC - 213",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 143100,
+        "ShortName": "NRG Business Market,LLC - 213",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 143100,
+        "ShortName": "NRG Business Market,LLC - 213",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143100,
+        "ShortName": "NRG Business Market,LLC - 213",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143101,
+        "ShortName": "NRG Business Market,LLC - 214",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 143101,
+        "ShortName": "NRG Business Market,LLC - 214",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143101,
+        "ShortName": "NRG Business Market,LLC - 214",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 143101,
+        "ShortName": "NRG Business Market,LLC - 214",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 143101,
+        "ShortName": "NRG Business Market,LLC - 214",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143101,
+        "ShortName": "NRG Business Market,LLC - 214",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143113,
+        "ShortName": "Nordic Energy Services - 215",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 69,
+        "TotalByShortName": 69,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 100,
+        "NominationPercentageOverall": 0.03,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 143113,
+        "ShortName": "Nordic Energy Services - 215",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 69,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143113,
+        "ShortName": "Nordic Energy Services - 215",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 0,
+        "TotalByShortName": 69,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 143113,
+        "ShortName": "Nordic Energy Services - 215",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 69,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 143113,
+        "ShortName": "Nordic Energy Services - 215",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 69,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143113,
+        "ShortName": "Nordic Energy Services - 215",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 69,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143114,
+        "ShortName": "Nordic Energy Services - 216",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 143114,
+        "ShortName": "Nordic Energy Services - 216",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143114,
+        "ShortName": "Nordic Energy Services - 216",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 143114,
+        "ShortName": "Nordic Energy Services - 216",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 143114,
+        "ShortName": "Nordic Energy Services - 216",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143114,
+        "ShortName": "Nordic Energy Services - 216",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143115,
+        "ShortName": "Nordic Energy Services - 217",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 143115,
+        "ShortName": "Nordic Energy Services - 217",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143115,
+        "ShortName": "Nordic Energy Services - 217",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 143115,
+        "ShortName": "Nordic Energy Services - 217",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 143115,
+        "ShortName": "Nordic Energy Services - 217",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143115,
+        "ShortName": "Nordic Energy Services - 217",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143116,
+        "ShortName": "Nordic Energy Services - 218",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 143116,
+        "ShortName": "Nordic Energy Services - 218",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143116,
+        "ShortName": "Nordic Energy Services - 218",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 143116,
+        "ShortName": "Nordic Energy Services - 218",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 143116,
+        "ShortName": "Nordic Energy Services - 218",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143116,
+        "ShortName": "Nordic Energy Services - 218",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143117,
+        "ShortName": "SunSea Energy - DC - 219",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 143117,
+        "ShortName": "SunSea Energy - DC - 219",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143117,
+        "ShortName": "SunSea Energy - DC - 219",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 143117,
+        "ShortName": "SunSea Energy - DC - 219",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 143117,
+        "ShortName": "SunSea Energy - DC - 219",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143117,
+        "ShortName": "SunSea Energy - DC - 219",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143118,
+        "ShortName": "SunSea Energy - DC - 220",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 143118,
+        "ShortName": "SunSea Energy - DC - 220",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143118,
+        "ShortName": "SunSea Energy - DC - 220",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 143118,
+        "ShortName": "SunSea Energy - DC - 220",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 143118,
+        "ShortName": "SunSea Energy - DC - 220",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143118,
+        "ShortName": "SunSea Energy - DC - 220",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143119,
+        "ShortName": "SunSea Energy - DC - 221",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 143119,
+        "ShortName": "SunSea Energy - DC - 221",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143119,
+        "ShortName": "SunSea Energy - DC - 221",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 143119,
+        "ShortName": "SunSea Energy - DC - 221",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 143119,
+        "ShortName": "SunSea Energy - DC - 221",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143119,
+        "ShortName": "SunSea Energy - DC - 221",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143120,
+        "ShortName": "SunSea Energy - DC - 222",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 143120,
+        "ShortName": "SunSea Energy - DC - 222",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143120,
+        "ShortName": "SunSea Energy - DC - 222",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 143120,
+        "ShortName": "SunSea Energy - DC - 222",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 143120,
+        "ShortName": "SunSea Energy - DC - 222",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143120,
+        "ShortName": "SunSea Energy - DC - 222",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143121,
+        "ShortName": "SunSea Energy - MD & VA - 223",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 143121,
+        "ShortName": "SunSea Energy - MD & VA - 223",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143121,
+        "ShortName": "SunSea Energy - MD & VA - 223",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 143121,
+        "ShortName": "SunSea Energy - MD & VA - 223",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 143121,
+        "ShortName": "SunSea Energy - MD & VA - 223",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143121,
+        "ShortName": "SunSea Energy - MD & VA - 223",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143122,
+        "ShortName": "SunSea Energy - MD & VA - 224",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 143122,
+        "ShortName": "SunSea Energy - MD & VA - 224",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143122,
+        "ShortName": "SunSea Energy - MD & VA - 224",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 143122,
+        "ShortName": "SunSea Energy - MD & VA - 224",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 143122,
+        "ShortName": "SunSea Energy - MD & VA - 224",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143122,
+        "ShortName": "SunSea Energy - MD & VA - 224",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143123,
+        "ShortName": "SunSea Energy - MD & VA - 225",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 143123,
+        "ShortName": "SunSea Energy - MD & VA - 225",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143123,
+        "ShortName": "SunSea Energy - MD & VA - 225",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 143123,
+        "ShortName": "SunSea Energy - MD & VA - 225",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 143123,
+        "ShortName": "SunSea Energy - MD & VA - 225",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143123,
+        "ShortName": "SunSea Energy - MD & VA - 225",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143124,
+        "ShortName": "SunSea Energy - MD & VA - 226",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 143124,
+        "ShortName": "SunSea Energy - MD & VA - 226",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143124,
+        "ShortName": "SunSea Energy - MD & VA - 226",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 143124,
+        "ShortName": "SunSea Energy - MD & VA - 226",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 143124,
+        "ShortName": "SunSea Energy - MD & VA - 226",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143124,
+        "ShortName": "SunSea Energy - MD & VA - 226",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143125,
+        "ShortName": "Alpha Gas and Electric - DC - 227",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 4,
+        "TotalByShortName": 4,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 100,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 143125,
+        "ShortName": "Alpha Gas and Electric - DC - 227",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 4,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143125,
+        "ShortName": "Alpha Gas and Electric - DC - 227",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 0,
+        "TotalByShortName": 4,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 143125,
+        "ShortName": "Alpha Gas and Electric - DC - 227",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 4,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 143125,
+        "ShortName": "Alpha Gas and Electric - DC - 227",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 4,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143125,
+        "ShortName": "Alpha Gas and Electric - DC - 227",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 4,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143127,
+        "ShortName": "Alpha Gas and Electric - DC - 229",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 143127,
+        "ShortName": "Alpha Gas and Electric - DC - 229",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143127,
+        "ShortName": "Alpha Gas and Electric - DC - 229",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 143127,
+        "ShortName": "Alpha Gas and Electric - DC - 229",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 143127,
+        "ShortName": "Alpha Gas and Electric - DC - 229",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143127,
+        "ShortName": "Alpha Gas and Electric - DC - 229",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143128,
+        "ShortName": "Alpha Gas and Electric - VA - 230",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 143128,
+        "ShortName": "Alpha Gas and Electric - VA - 230",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143128,
+        "ShortName": "Alpha Gas and Electric - VA - 230",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 143128,
+        "ShortName": "Alpha Gas and Electric - VA - 230",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 143128,
+        "ShortName": "Alpha Gas and Electric - VA - 230",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143128,
+        "ShortName": "Alpha Gas and Electric - VA - 230",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143129,
+        "ShortName": "Alpha Gas and Electric - DC - 231",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 143129,
+        "ShortName": "Alpha Gas and Electric - DC - 231",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143129,
+        "ShortName": "Alpha Gas and Electric - DC - 231",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 143129,
+        "ShortName": "Alpha Gas and Electric - DC - 231",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 143129,
+        "ShortName": "Alpha Gas and Electric - DC - 231",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143129,
+        "ShortName": "Alpha Gas and Electric - DC - 231",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143130,
+        "ShortName": "Alpha Gas and Electric - VA - 232",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 143130,
+        "ShortName": "Alpha Gas and Electric - VA - 232",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143130,
+        "ShortName": "Alpha Gas and Electric - VA - 232",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 143130,
+        "ShortName": "Alpha Gas and Electric - VA - 232",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 143130,
+        "ShortName": "Alpha Gas and Electric - VA - 232",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143130,
+        "ShortName": "Alpha Gas and Electric - VA - 232",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143132,
+        "ShortName": "Alpha Gas and Electric - VA - 234",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 143132,
+        "ShortName": "Alpha Gas and Electric - VA - 234",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143132,
+        "ShortName": "Alpha Gas and Electric - VA - 234",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 143132,
+        "ShortName": "Alpha Gas and Electric - VA - 234",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 143132,
+        "ShortName": "Alpha Gas and Electric - VA - 234",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143132,
+        "ShortName": "Alpha Gas and Electric - VA - 234",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143133,
+        "ShortName": "Alpha Gas and Electric - MD - 235",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 32,
+        "TotalByShortName": 32,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 100,
+        "NominationPercentageOverall": 0.02,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 143133,
+        "ShortName": "Alpha Gas and Electric - MD - 235",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 32,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143133,
+        "ShortName": "Alpha Gas and Electric - MD - 235",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 0,
+        "TotalByShortName": 32,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 143133,
+        "ShortName": "Alpha Gas and Electric - MD - 235",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 32,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 143133,
+        "ShortName": "Alpha Gas and Electric - MD - 235",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 32,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143133,
+        "ShortName": "Alpha Gas and Electric - MD - 235",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 32,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143134,
+        "ShortName": "Alpha Gas and Electric - MD - 236",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 143134,
+        "ShortName": "Alpha Gas and Electric - MD - 236",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143134,
+        "ShortName": "Alpha Gas and Electric - MD - 236",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 143134,
+        "ShortName": "Alpha Gas and Electric - MD - 236",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 143134,
+        "ShortName": "Alpha Gas and Electric - MD - 236",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143134,
+        "ShortName": "Alpha Gas and Electric - MD - 236",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143135,
+        "ShortName": "Alpha Gas and Electric - MD - 237",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 143135,
+        "ShortName": "Alpha Gas and Electric - MD - 237",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143135,
+        "ShortName": "Alpha Gas and Electric - MD - 237",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 143135,
+        "ShortName": "Alpha Gas and Electric - MD - 237",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 143135,
+        "ShortName": "Alpha Gas and Electric - MD - 237",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143135,
+        "ShortName": "Alpha Gas and Electric - MD - 237",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143136,
+        "ShortName": "Alpha Gas and Electric - MD - 238",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 143136,
+        "ShortName": "Alpha Gas and Electric - MD - 238",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143136,
+        "ShortName": "Alpha Gas and Electric - MD - 238",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 143136,
+        "ShortName": "Alpha Gas and Electric - MD - 238",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 143136,
+        "ShortName": "Alpha Gas and Electric - MD - 238",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143136,
+        "ShortName": "Alpha Gas and Electric - MD - 238",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143145,
+        "ShortName": "Green Choice Energy - DC - 239",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 20,
+        "TotalByShortName": 20,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 100,
+        "NominationPercentageOverall": 0.01,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 143145,
+        "ShortName": "Green Choice Energy - DC - 239",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 20,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143145,
+        "ShortName": "Green Choice Energy - DC - 239",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 0,
+        "TotalByShortName": 20,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 143145,
+        "ShortName": "Green Choice Energy - DC - 239",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 20,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 143145,
+        "ShortName": "Green Choice Energy - DC - 239",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 20,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143145,
+        "ShortName": "Green Choice Energy - DC - 239",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 20,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143146,
+        "ShortName": "Green Choice Energy - DC - 240",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 143146,
+        "ShortName": "Green Choice Energy - DC - 240",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143146,
+        "ShortName": "Green Choice Energy - DC - 240",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 143146,
+        "ShortName": "Green Choice Energy - DC - 240",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 143146,
+        "ShortName": "Green Choice Energy - DC - 240",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143146,
+        "ShortName": "Green Choice Energy - DC - 240",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143147,
+        "ShortName": "Green Choice Energy - DC - 241",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 143147,
+        "ShortName": "Green Choice Energy - DC - 241",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143147,
+        "ShortName": "Green Choice Energy - DC - 241",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 143147,
+        "ShortName": "Green Choice Energy - DC - 241",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 143147,
+        "ShortName": "Green Choice Energy - DC - 241",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143147,
+        "ShortName": "Green Choice Energy - DC - 241",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143148,
+        "ShortName": "Green Choice Energy - DC - 242",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 143148,
+        "ShortName": "Green Choice Energy - DC - 242",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143148,
+        "ShortName": "Green Choice Energy - DC - 242",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 143148,
+        "ShortName": "Green Choice Energy - DC - 242",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 143148,
+        "ShortName": "Green Choice Energy - DC - 242",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143148,
+        "ShortName": "Green Choice Energy - DC - 242",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143149,
+        "ShortName": "Green Choice Energy - MD & VA - 243",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 143149,
+        "ShortName": "Green Choice Energy - MD & VA - 243",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143149,
+        "ShortName": "Green Choice Energy - MD & VA - 243",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 143149,
+        "ShortName": "Green Choice Energy - MD & VA - 243",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 143149,
+        "ShortName": "Green Choice Energy - MD & VA - 243",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143149,
+        "ShortName": "Green Choice Energy - MD & VA - 243",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143150,
+        "ShortName": "Green Choice Energy - MD & VA - 244",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 143150,
+        "ShortName": "Green Choice Energy - MD & VA - 244",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143150,
+        "ShortName": "Green Choice Energy - MD & VA - 244",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 143150,
+        "ShortName": "Green Choice Energy - MD & VA - 244",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 143150,
+        "ShortName": "Green Choice Energy - MD & VA - 244",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143150,
+        "ShortName": "Green Choice Energy - MD & VA - 244",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143151,
+        "ShortName": "Green Choice Energy - MD & VA - 245",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 143151,
+        "ShortName": "Green Choice Energy - MD & VA - 245",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143151,
+        "ShortName": "Green Choice Energy - MD & VA - 245",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 143151,
+        "ShortName": "Green Choice Energy - MD & VA - 245",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 143151,
+        "ShortName": "Green Choice Energy - MD & VA - 245",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143151,
+        "ShortName": "Green Choice Energy - MD & VA - 245",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143152,
+        "ShortName": "Green Choice Energy - MD & VA - 246",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 143152,
+        "ShortName": "Green Choice Energy - MD & VA - 246",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143152,
+        "ShortName": "Green Choice Energy - MD & VA - 246",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 143152,
+        "ShortName": "Green Choice Energy - MD & VA - 246",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 143152,
+        "ShortName": "Green Choice Energy - MD & VA - 246",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143152,
+        "ShortName": "Green Choice Energy - MD & VA - 246",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143155,
+        "ShortName": "Discount Power LLC - DC - 247",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 143155,
+        "ShortName": "Discount Power LLC - DC - 247",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143155,
+        "ShortName": "Discount Power LLC - DC - 247",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 143155,
+        "ShortName": "Discount Power LLC - DC - 247",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 143155,
+        "ShortName": "Discount Power LLC - DC - 247",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143155,
+        "ShortName": "Discount Power LLC - DC - 247",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143156,
+        "ShortName": "Discount Power LLC - DC - 248",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 143156,
+        "ShortName": "Discount Power LLC - DC - 248",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143156,
+        "ShortName": "Discount Power LLC - DC - 248",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 143156,
+        "ShortName": "Discount Power LLC - DC - 248",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 143156,
+        "ShortName": "Discount Power LLC - DC - 248",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143156,
+        "ShortName": "Discount Power LLC - DC - 248",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143157,
+        "ShortName": "Discount Power LLC - DC - 249",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 143157,
+        "ShortName": "Discount Power LLC - DC - 249",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143157,
+        "ShortName": "Discount Power LLC - DC - 249",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 143157,
+        "ShortName": "Discount Power LLC - DC - 249",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 143157,
+        "ShortName": "Discount Power LLC - DC - 249",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143157,
+        "ShortName": "Discount Power LLC - DC - 249",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143158,
+        "ShortName": "Discount Power LLC - DC - 250",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 143158,
+        "ShortName": "Discount Power LLC - DC - 250",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143158,
+        "ShortName": "Discount Power LLC - DC - 250",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 143158,
+        "ShortName": "Discount Power LLC - DC - 250",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 143158,
+        "ShortName": "Discount Power LLC - DC - 250",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143158,
+        "ShortName": "Discount Power LLC - DC - 250",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143159,
+        "ShortName": "Discount Power LLC - MD & VA - 251",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 143159,
+        "ShortName": "Discount Power LLC - MD & VA - 251",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143159,
+        "ShortName": "Discount Power LLC - MD & VA - 251",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 143159,
+        "ShortName": "Discount Power LLC - MD & VA - 251",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 143159,
+        "ShortName": "Discount Power LLC - MD & VA - 251",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143159,
+        "ShortName": "Discount Power LLC - MD & VA - 251",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143160,
+        "ShortName": "Discount Power LLC - MD & VA - 252",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 143160,
+        "ShortName": "Discount Power LLC - MD & VA - 252",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143160,
+        "ShortName": "Discount Power LLC - MD & VA - 252",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 143160,
+        "ShortName": "Discount Power LLC - MD & VA - 252",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 143160,
+        "ShortName": "Discount Power LLC - MD & VA - 252",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143160,
+        "ShortName": "Discount Power LLC - MD & VA - 252",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143161,
+        "ShortName": "Discount Power LLC - MD & VA - 253",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 143161,
+        "ShortName": "Discount Power LLC - MD & VA - 253",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143161,
+        "ShortName": "Discount Power LLC - MD & VA - 253",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 143161,
+        "ShortName": "Discount Power LLC - MD & VA - 253",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 143161,
+        "ShortName": "Discount Power LLC - MD & VA - 253",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143161,
+        "ShortName": "Discount Power LLC - MD & VA - 253",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143162,
+        "ShortName": "Discount Power LLC - MD & VA - 254",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 143162,
+        "ShortName": "Discount Power LLC - MD & VA - 254",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143162,
+        "ShortName": "Discount Power LLC - MD & VA - 254",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 143162,
+        "ShortName": "Discount Power LLC - MD & VA - 254",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 143162,
+        "ShortName": "Discount Power LLC - MD & VA - 254",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143162,
+        "ShortName": "Discount Power LLC - MD & VA - 254",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143163,
+        "ShortName": "Park Power LLC - MD & VA - 255",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 22,
+        "TotalByShortName": 22,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 100,
+        "NominationPercentageOverall": 0.01,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 143163,
+        "ShortName": "Park Power LLC - MD & VA - 255",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 22,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143163,
+        "ShortName": "Park Power LLC - MD & VA - 255",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 0,
+        "TotalByShortName": 22,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 143163,
+        "ShortName": "Park Power LLC - MD & VA - 255",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 22,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 143163,
+        "ShortName": "Park Power LLC - MD & VA - 255",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 22,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143163,
+        "ShortName": "Park Power LLC - MD & VA - 255",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 22,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143164,
+        "ShortName": "Park Power LLC - MD & VA - 256",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 143164,
+        "ShortName": "Park Power LLC - MD & VA - 256",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143164,
+        "ShortName": "Park Power LLC - MD & VA - 256",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 143164,
+        "ShortName": "Park Power LLC - MD & VA - 256",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 143164,
+        "ShortName": "Park Power LLC - MD & VA - 256",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143164,
+        "ShortName": "Park Power LLC - MD & VA - 256",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143165,
+        "ShortName": "Park Power LLC - MD & VA - 257",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 143165,
+        "ShortName": "Park Power LLC - MD & VA - 257",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143165,
+        "ShortName": "Park Power LLC - MD & VA - 257",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 143165,
+        "ShortName": "Park Power LLC - MD & VA - 257",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 143165,
+        "ShortName": "Park Power LLC - MD & VA - 257",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143165,
+        "ShortName": "Park Power LLC - MD & VA - 257",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143166,
+        "ShortName": "Park Power LLC - MD & VA - 258",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 143166,
+        "ShortName": "Park Power LLC - MD & VA - 258",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143166,
+        "ShortName": "Park Power LLC - MD & VA - 258",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 143166,
+        "ShortName": "Park Power LLC - MD & VA - 258",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 143166,
+        "ShortName": "Park Power LLC - MD & VA - 258",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143166,
+        "ShortName": "Park Power LLC - MD & VA - 258",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143240,
+        "ShortName": "Washington Suburban Sanitary Commission ",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 790,
+        "TotalByShortName": 1581,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 49.97,
+        "NominationPercentageOverall": 0.38,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 143240,
+        "ShortName": "Washington Suburban Sanitary Commission ",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 1581,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143240,
+        "ShortName": "Washington Suburban Sanitary Commission ",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 393,
+        "TotalByShortName": 1581,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 24.86,
+        "NominationPercentageOverall": 0.19,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 143240,
+        "ShortName": "Washington Suburban Sanitary Commission ",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 398,
+        "TotalByShortName": 1581,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 25.17,
+        "NominationPercentageOverall": 0.19,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 143240,
+        "ShortName": "Washington Suburban Sanitary Commission ",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 1581,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143240,
+        "ShortName": "Washington Suburban Sanitary Commission ",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 1581,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143244,
+        "ShortName": "Greenlight Energy Inc.",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 2,
+        "TotalByShortName": 2,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 100,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 143244,
+        "ShortName": "Greenlight Energy Inc.",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 2,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143244,
+        "ShortName": "Greenlight Energy Inc.",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 0,
+        "TotalByShortName": 2,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 143244,
+        "ShortName": "Greenlight Energy Inc.",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 2,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 143244,
+        "ShortName": "Greenlight Energy Inc.",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 2,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143244,
+        "ShortName": "Greenlight Energy Inc.",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 2,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143248,
+        "ShortName": "IGS Energy - MD",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 981,
+        "TotalByShortName": 1381,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 71.04,
+        "NominationPercentageOverall": 0.47,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 143248,
+        "ShortName": "IGS Energy - MD",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 1381,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143248,
+        "ShortName": "IGS Energy - MD",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 100,
+        "TotalByShortName": 1381,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 7.24,
+        "NominationPercentageOverall": 0.05,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 143248,
+        "ShortName": "IGS Energy - MD",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 200,
+        "TotalByShortName": 1381,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 14.48,
+        "NominationPercentageOverall": 0.1,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 143248,
+        "ShortName": "IGS Energy - MD",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 100,
+        "TotalByShortName": 1381,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 7.24,
+        "NominationPercentageOverall": 0.05,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143248,
+        "ShortName": "IGS Energy - MD",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 1381,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143251,
+        "ShortName": "IGS Energy - VA & DC ",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 4038,
+        "TotalByShortName": 5418,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 74.53,
+        "NominationPercentageOverall": 1.95,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 143251,
+        "ShortName": "IGS Energy - VA & DC ",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 5418,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143251,
+        "ShortName": "IGS Energy - VA & DC ",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 340,
+        "TotalByShortName": 5418,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 6.28,
+        "NominationPercentageOverall": 0.16,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 143251,
+        "ShortName": "IGS Energy - VA & DC ",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 700,
+        "TotalByShortName": 5418,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 12.92,
+        "NominationPercentageOverall": 0.34,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 143251,
+        "ShortName": "IGS Energy - VA & DC ",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 340,
+        "TotalByShortName": 5418,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 6.28,
+        "NominationPercentageOverall": 0.16,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143251,
+        "ShortName": "IGS Energy - VA & DC ",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 5418,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143255,
+        "ShortName": "Engie Power & Gas",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 143255,
+        "ShortName": "Engie Power & Gas",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143255,
+        "ShortName": "Engie Power & Gas",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 143255,
+        "ShortName": "Engie Power & Gas",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 143255,
+        "ShortName": "Engie Power & Gas",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143255,
+        "ShortName": "Engie Power & Gas",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143263,
+        "ShortName": "Wave Energy",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 143263,
+        "ShortName": "Wave Energy",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143263,
+        "ShortName": "Wave Energy",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 143263,
+        "ShortName": "Wave Energy",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 143263,
+        "ShortName": "Wave Energy",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143263,
+        "ShortName": "Wave Energy",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143298,
+        "ShortName": "United Energy Trading ",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 1500,
+        "TotalByShortName": 2700,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 55.56,
+        "NominationPercentageOverall": 0.72,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 143298,
+        "ShortName": "United Energy Trading ",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 2700,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143298,
+        "ShortName": "United Energy Trading ",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 1200,
+        "TotalByShortName": 2700,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 44.44,
+        "NominationPercentageOverall": 0.58,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 143298,
+        "ShortName": "United Energy Trading ",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 2700,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 143298,
+        "ShortName": "United Energy Trading ",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 2700,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143298,
+        "ShortName": "United Energy Trading ",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 2700,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143317,
+        "ShortName": "Spark Energy Gas LLC",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 143317,
+        "ShortName": "Spark Energy Gas LLC",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143317,
+        "ShortName": "Spark Energy Gas LLC",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 143317,
+        "ShortName": "Spark Energy Gas LLC",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 143317,
+        "ShortName": "Spark Energy Gas LLC",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143317,
+        "ShortName": "Spark Energy Gas LLC",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143395,
+        "ShortName": "Virginia Light & Power LLC",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 143395,
+        "ShortName": "Virginia Light & Power LLC",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143395,
+        "ShortName": "Virginia Light & Power LLC",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 143395,
+        "ShortName": "Virginia Light & Power LLC",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 143395,
+        "ShortName": "Virginia Light & Power LLC",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143395,
+        "ShortName": "Virginia Light & Power LLC",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143399,
+        "ShortName": "New Wave Energy LLC - MD ",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 143399,
+        "ShortName": "New Wave Energy LLC - MD ",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143399,
+        "ShortName": "New Wave Energy LLC - MD ",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 143399,
+        "ShortName": "New Wave Energy LLC - MD ",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 143399,
+        "ShortName": "New Wave Energy LLC - MD ",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143399,
+        "ShortName": "New Wave Energy LLC - MD ",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143403,
+        "ShortName": "New Wave Energy LLC - DC & VA",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 143403,
+        "ShortName": "New Wave Energy LLC - DC & VA",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143403,
+        "ShortName": "New Wave Energy LLC - DC & VA",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 143403,
+        "ShortName": "New Wave Energy LLC - DC & VA",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 143403,
+        "ShortName": "New Wave Energy LLC - DC & VA",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143403,
+        "ShortName": "New Wave Energy LLC - DC & VA",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143415,
+        "ShortName": "American Power & Gas - DC",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 143415,
+        "ShortName": "American Power & Gas - DC",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143415,
+        "ShortName": "American Power & Gas - DC",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 143415,
+        "ShortName": "American Power & Gas - DC",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 143415,
+        "ShortName": "American Power & Gas - DC",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143415,
+        "ShortName": "American Power & Gas - DC",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143440,
+        "ShortName": "Electric Advisers Inc",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 143440,
+        "ShortName": "Electric Advisers Inc",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143440,
+        "ShortName": "Electric Advisers Inc",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 143440,
+        "ShortName": "Electric Advisers Inc",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 143440,
+        "ShortName": "Electric Advisers Inc",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143440,
+        "ShortName": "Electric Advisers Inc",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143461,
+        "ShortName": "Vista Energy",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 143461,
+        "ShortName": "Vista Energy",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143461,
+        "ShortName": "Vista Energy",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 143461,
+        "ShortName": "Vista Energy",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 143461,
+        "ShortName": "Vista Energy",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143461,
+        "ShortName": "Vista Energy",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143462,
+        "ShortName": "Vista Energy - 303",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 143462,
+        "ShortName": "Vista Energy - 303",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143462,
+        "ShortName": "Vista Energy - 303",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 143462,
+        "ShortName": "Vista Energy - 303",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 143462,
+        "ShortName": "Vista Energy - 303",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143462,
+        "ShortName": "Vista Energy - 303",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143463,
+        "ShortName": "Vista Energy - 304",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 143463,
+        "ShortName": "Vista Energy - 304",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143463,
+        "ShortName": "Vista Energy - 304",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 143463,
+        "ShortName": "Vista Energy - 304",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 143463,
+        "ShortName": "Vista Energy - 304",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143463,
+        "ShortName": "Vista Energy - 304",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143464,
+        "ShortName": "Vista Energy - 305",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 143464,
+        "ShortName": "Vista Energy - 305",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143464,
+        "ShortName": "Vista Energy - 305",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 143464,
+        "ShortName": "Vista Energy - 305",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 143464,
+        "ShortName": "Vista Energy - 305",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143464,
+        "ShortName": "Vista Energy - 305",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143465,
+        "ShortName": "Gas South",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 143465,
+        "ShortName": "Gas South",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143465,
+        "ShortName": "Gas South",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 143465,
+        "ShortName": "Gas South",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 143465,
+        "ShortName": "Gas South",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143465,
+        "ShortName": "Gas South",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143466,
+        "ShortName": "Gas South - 307",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 143466,
+        "ShortName": "Gas South - 307",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143466,
+        "ShortName": "Gas South - 307",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 143466,
+        "ShortName": "Gas South - 307",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 143466,
+        "ShortName": "Gas South - 307",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143466,
+        "ShortName": "Gas South - 307",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143467,
+        "ShortName": "Gas South - 308",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 143467,
+        "ShortName": "Gas South - 308",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143467,
+        "ShortName": "Gas South - 308",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 143467,
+        "ShortName": "Gas South - 308",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 143467,
+        "ShortName": "Gas South - 308",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143467,
+        "ShortName": "Gas South - 308",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143468,
+        "ShortName": "Gas South - 309",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 143468,
+        "ShortName": "Gas South - 309",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143468,
+        "ShortName": "Gas South - 309",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 143468,
+        "ShortName": "Gas South - 309",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 143468,
+        "ShortName": "Gas South - 309",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143468,
+        "ShortName": "Gas South - 309",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143472,
+        "ShortName": "American Power & Gas - 310",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 143472,
+        "ShortName": "American Power & Gas - 310",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143472,
+        "ShortName": "American Power & Gas - 310",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 143472,
+        "ShortName": "American Power & Gas - 310",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 143472,
+        "ShortName": "American Power & Gas - 310",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143472,
+        "ShortName": "American Power & Gas - 310",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143473,
+        "ShortName": "American Power & Gas - DC - 311",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 143473,
+        "ShortName": "American Power & Gas - DC - 311",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143473,
+        "ShortName": "American Power & Gas - DC - 311",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 143473,
+        "ShortName": "American Power & Gas - DC - 311",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 143473,
+        "ShortName": "American Power & Gas - DC - 311",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143473,
+        "ShortName": "American Power & Gas - DC - 311",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143474,
+        "ShortName": "Atlantic Energy - 312",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 143474,
+        "ShortName": "Atlantic Energy - 312",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143474,
+        "ShortName": "Atlantic Energy - 312",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 143474,
+        "ShortName": "Atlantic Energy - 312",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 143474,
+        "ShortName": "Atlantic Energy - 312",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143474,
+        "ShortName": "Atlantic Energy - 312",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143475,
+        "ShortName": "Clearview Energy - 313",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 143475,
+        "ShortName": "Clearview Energy - 313",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143475,
+        "ShortName": "Clearview Energy - 313",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 143475,
+        "ShortName": "Clearview Energy - 313",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 143475,
+        "ShortName": "Clearview Energy - 313",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143475,
+        "ShortName": "Clearview Energy - 313",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143476,
+        "ShortName": "Deca Energy - 314",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 143476,
+        "ShortName": "Deca Energy - 314",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143476,
+        "ShortName": "Deca Energy - 314",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 143476,
+        "ShortName": "Deca Energy - 314",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 143476,
+        "ShortName": "Deca Energy - 314",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143476,
+        "ShortName": "Deca Energy - 314",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143477,
+        "ShortName": "Energy Plus Natural Gas LLC - 316",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 143477,
+        "ShortName": "Energy Plus Natural Gas LLC - 316",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143477,
+        "ShortName": "Energy Plus Natural Gas LLC - 316",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 143477,
+        "ShortName": "Energy Plus Natural Gas LLC - 316",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 143477,
+        "ShortName": "Energy Plus Natural Gas LLC - 316",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143477,
+        "ShortName": "Energy Plus Natural Gas LLC - 316",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143478,
+        "ShortName": "Gateway Energy Services - 317",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 143478,
+        "ShortName": "Gateway Energy Services - 317",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143478,
+        "ShortName": "Gateway Energy Services - 317",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 143478,
+        "ShortName": "Gateway Energy Services - 317",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 143478,
+        "ShortName": "Gateway Energy Services - 317",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143478,
+        "ShortName": "Gateway Energy Services - 317",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143479,
+        "ShortName": "IDT Energy - 318",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 143479,
+        "ShortName": "IDT Energy - 318",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143479,
+        "ShortName": "IDT Energy - 318",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 143479,
+        "ShortName": "IDT Energy - 318",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 143479,
+        "ShortName": "IDT Energy - 318",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143479,
+        "ShortName": "IDT Energy - 318",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143480,
+        "ShortName": "Major Energy - 321",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 143480,
+        "ShortName": "Major Energy - 321",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143480,
+        "ShortName": "Major Energy - 321",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 143480,
+        "ShortName": "Major Energy - 321",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 143480,
+        "ShortName": "Major Energy - 321",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143480,
+        "ShortName": "Major Energy - 321",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143481,
+        "ShortName": "Maryland Gas & Electric - 322",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 143481,
+        "ShortName": "Maryland Gas & Electric - 322",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143481,
+        "ShortName": "Maryland Gas & Electric - 322",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 143481,
+        "ShortName": "Maryland Gas & Electric - 322",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 143481,
+        "ShortName": "Maryland Gas & Electric - 322",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143481,
+        "ShortName": "Maryland Gas & Electric - 322",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143482,
+        "ShortName": "Median Energy - 323",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 143482,
+        "ShortName": "Median Energy - 323",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143482,
+        "ShortName": "Median Energy - 323",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 143482,
+        "ShortName": "Median Energy - 323",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 143482,
+        "ShortName": "Median Energy - 323",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143482,
+        "ShortName": "Median Energy - 323",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143483,
+        "ShortName": "Mpower Energy NJ LLC - 324",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 143483,
+        "ShortName": "Mpower Energy NJ LLC - 324",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143483,
+        "ShortName": "Mpower Energy NJ LLC - 324",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 143483,
+        "ShortName": "Mpower Energy NJ LLC - 324",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 143483,
+        "ShortName": "Mpower Energy NJ LLC - 324",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143483,
+        "ShortName": "Mpower Energy NJ LLC - 324",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143484,
+        "ShortName": "NRG Home - 325",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 143484,
+        "ShortName": "NRG Home - 325",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143484,
+        "ShortName": "NRG Home - 325",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 143484,
+        "ShortName": "NRG Home - 325",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 143484,
+        "ShortName": "NRG Home - 325",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143484,
+        "ShortName": "NRG Home - 325",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143485,
+        "ShortName": "SFE Energy - 326",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 143485,
+        "ShortName": "SFE Energy - 326",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143485,
+        "ShortName": "SFE Energy - 326",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 143485,
+        "ShortName": "SFE Energy - 326",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 143485,
+        "ShortName": "SFE Energy - 326",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143485,
+        "ShortName": "SFE Energy - 326",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143486,
+        "ShortName": "Spring Power & Gas - 327",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 143486,
+        "ShortName": "Spring Power & Gas - 327",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143486,
+        "ShortName": "Spring Power & Gas - 327",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 143486,
+        "ShortName": "Spring Power & Gas - 327",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 143486,
+        "ShortName": "Spring Power & Gas - 327",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143486,
+        "ShortName": "Spring Power & Gas - 327",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143487,
+        "ShortName": "StateWise Energy MD LLC",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 143487,
+        "ShortName": "StateWise Energy MD LLC",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143487,
+        "ShortName": "StateWise Energy MD LLC",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 143487,
+        "ShortName": "StateWise Energy MD LLC",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 143487,
+        "ShortName": "StateWise Energy MD LLC",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143487,
+        "ShortName": "StateWise Energy MD LLC",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143488,
+        "ShortName": "Xoom Energy - 329",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 143488,
+        "ShortName": "Xoom Energy - 329",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143488,
+        "ShortName": "Xoom Energy - 329",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 143488,
+        "ShortName": "Xoom Energy - 329",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 143488,
+        "ShortName": "Xoom Energy - 329",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143488,
+        "ShortName": "Xoom Energy - 329",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143489,
+        "ShortName": "Xoom Energy of VA",
+        "PipelineID": 101,
+        "PipelineName": "Columbia",
+        "Ordinal": 1,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 69.25,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 143530,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "A"
+      },
+      {
+        "CompanyID": 143489,
+        "ShortName": "Xoom Energy of VA",
+        "PipelineID": 102,
+        "PipelineName": "Cove Pt",
+        "Ordinal": 2,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143489,
+        "ShortName": "Xoom Energy of VA",
+        "PipelineID": 103,
+        "PipelineName": "Dominion",
+        "Ordinal": 3,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 11.42,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 23672,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "C"
+      },
+      {
+        "CompanyID": 143489,
+        "ShortName": "Xoom Energy of VA",
+        "PipelineID": 104,
+        "PipelineName": "Transco",
+        "Ordinal": 4,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 13.18,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 27316,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "B"
+      },
+      {
+        "CompanyID": 143489,
+        "ShortName": "Xoom Energy of VA",
+        "PipelineID": 105,
+        "PipelineName": "Transco Z6",
+        "Ordinal": 5,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 6.15,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 12737,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      },
+      {
+        "CompanyID": 143489,
+        "ShortName": "Xoom Energy of VA",
+        "PipelineID": 106,
+        "PipelineName": "TCO Transit",
+        "Ordinal": 6,
+        "TotalNomination": 0,
+        "TotalByShortName": 0,
+        "NominationPercentageSum": 100,
+        "NominationPercentGroupWise": 0,
+        "GrandTotal": 207255,
+        "PipeLineTotal": 0,
+        "NominationPercentageByShortName": 0,
+        "NominationPercentageOverall": 0,
+        "PipelineLabel": "D"
+      }
+    ],
+    "TotalByShortName": null,
+    "GrandTotal": null,
+    "PipeLineTotal": null,
+    "sumByPipeline": null,
+    "totalSum": null
+  }
+}
+
+export const NominationComplianceData ={  
+  "Succeeded": true,
+  "Message": "Nomination Compliance Report successfully found",
+  "Errors": null,
+  "Data": {
+    "ReportName": "Nomination Compliance Report",
+    "MarketerName": "AOC",
+    "DateRange": "2024-06-15 to 2024-06-15",
+    "DatePublished": "2025-04-28T09:49:39.7243854+00:00",
+    "Details": [
+      {
+        "ShipmentDate": "2024-06-15T00:00:00",
+        "RowNum": null,
+        "AllocationGroupID": null,
+        "AllocationGroup": null,
+        "TotalNominationAllocations": null,
+        "DailyRequiredVolume": null,
+        "TotalUsage": null,
+        "totalforecastimbal": null,
+        "TotalPenalty": null,
+        "Pipeline": "Dominion",
+        "TotalNominations": 0,
+        "CompanyID": null,
+        "IsFirm": null,
+        "Name": null
+      },
+      {
+        "ShipmentDate": "2024-06-15T00:00:00",
+        "RowNum": null,
+        "AllocationGroupID": null,
+        "AllocationGroup": null,
+        "TotalNominationAllocations": null,
+        "DailyRequiredVolume": null,
+        "TotalUsage": null,
+        "totalforecastimbal": null,
+        "TotalPenalty": null,
+        "Pipeline": "TCO Transit",
+        "TotalNominations": 0,
+        "CompanyID": null,
+        "IsFirm": null,
+        "Name": null
+      },
+      {
+        "ShipmentDate": "2024-06-15T00:00:00",
+        "RowNum": null,
+        "AllocationGroupID": null,
+        "AllocationGroup": null,
+        "TotalNominationAllocations": null,
+        "DailyRequiredVolume": null,
+        "TotalUsage": null,
+        "totalforecastimbal": null,
+        "TotalPenalty": null,
+        "Pipeline": "Transco",
+        "TotalNominations": 0,
+        "CompanyID": null,
+        "IsFirm": null,
+        "Name": null
+      },
+      {
+        "ShipmentDate": "2024-06-15T00:00:00",
+        "RowNum": null,
+        "AllocationGroupID": null,
+        "AllocationGroup": null,
+        "TotalNominationAllocations": null,
+        "DailyRequiredVolume": null,
+        "TotalUsage": null,
+        "totalforecastimbal": null,
+        "TotalPenalty": null,
+        "Pipeline": "Transco Z6",
+        "TotalNominations": 0,
+        "CompanyID": null,
+        "IsFirm": null,
+        "Name": null
+      },
+      {
+        "ShipmentDate": "2024-06-15T00:00:00",
+        "RowNum": 1,
+        "AllocationGroupID": 1017,
+        "AllocationGroup": "AOC",
+        "TotalNominationAllocations": 1367,
+        "DailyRequiredVolume": 1167,
+        "TotalUsage": 1167,
+        "totalforecastimbal": 200,
+        "TotalPenalty": 0,
+        "Pipeline": "Columbia",
+        "TotalNominations": 0,
+        "CompanyID": 114,
+        "IsFirm": true,
+        "Name": "AOC"
+      },
+      {
+        "ShipmentDate": "2024-06-15T00:00:00",
+        "RowNum": 2,
+        "AllocationGroupID": 1038,
+        "AllocationGroup": "AOC IP",
+        "TotalNominationAllocations": 2500,
+        "DailyRequiredVolume": 2500,
+        "TotalUsage": 0,
+        "totalforecastimbal": 0,
+        "TotalPenalty": 0,
+        "Pipeline": "Cove Pt",
+        "TotalNominations": 0,
+        "CompanyID": 114,
+        "IsFirm": false,
+        "Name": "AOC IP"
+      }
+    
+    ],
+    "MarketerList": [
+      {
+        "CompanyID": 114,
+        "Description": "AOC",
+        "MarketerID": 114,
+        "MarketerName": "AOC"
+      }
+    ],
+    "TotalPenalty": 0,
+    "TotalForecastImbalance": 200,
+    "TotalUsage": 1167,
+    "DailyRequiredVolume": 3667,
+    "TotalNominationAllocations": 3867,
+    "TotalNominations": 0
+  }
+}
+
+export const PipelineConfirmationData ={
+  "Succeeded": true,
+  "Message": null,
+  "Errors": null,
+  "Data": {
+    "ReportName": "Operator Confirmation Report",
+    "PipelineName": "Columbia Gas Transmission Co.",
+    "Date": "2024-11-19T09:54:08.994Z",
+    "DatePublished": "2025-04-28T09:56:19.6947476+00:00",
+    "ReportBody": [
+      {
+        "Marketer": "AGERA Energy - 159",
+        "ContractNumber": "6228",
+        "Nomination": 15
+      }
+    ],
+    "TotalNominationForEachMarketer": [
+      {
+        "Marketer": "AGERA Energy - 159",
+        "TotalNomination": 15
+      }
+    ],
+    "TotalNominationForPipeline": 15
+  }
+}
+
+export const ActivityInterruptibleData={
+  "Succeeded": true,
+  "Message": null,
+  "Errors": null,
+  "Data": {
+    "AdjustmentActivityInterruptibleReport": [
+      {
+        "AllocationGroupID": 33,
+        "CompanyID": 136,
+        "CompanyName": "WGL Energy Svcs - 35",
+        "AllocationGroup": "WGES MD IP",
+        "EffectiveDate": "2024-04-01T00:00:00",
+        "EndDate": "2024-04-30T00:00:00",
+        "PreviousBalanceFirm": 0,
+        "PreviousBalanceInterruptible": -9791702,
+        "CashOutAdjustmentAmount": 0,
+        "ImbalanceAdjustedVolume": 0,
+        "DailyRequiredVolume": 870000,
+        "ShipmentMonth": "2024-04-01T00:00:00",
+        "TotalForecastImbal": 34246,
+        "TotalNominationAllocations": 904246,
+        "TotalUsage": 877538,
+        "ThresholdValue": 131631,
+        "MonthEndImbalanceInterruptible": -9764994,
+        "MonthEndImbalanceFirm": -9757456,
+        "OutsideThresholdAmount": -9633363
+      },
+      {
+        "AllocationGroupID": 149,
+        "CompanyID": 136,
+        "CompanyName": "WGL Energy Svcs - 35",
+        "AllocationGroup": "WGES VA IP",
+        "EffectiveDate": "2024-04-01T00:00:00",
+        "EndDate": "2024-04-30T00:00:00",
+        "PreviousBalanceFirm": 0,
+        "PreviousBalanceInterruptible": -49945500,
+        "CashOutAdjustmentAmount": 0,
+        "ImbalanceAdjustedVolume": 0,
+        "DailyRequiredVolume": 129000,
+        "ShipmentMonth": "2024-04-01T00:00:00",
+        "TotalForecastImbal": -1300,
+        "TotalNominationAllocations": 127700,
+        "TotalUsage": 136711,
+        "ThresholdValue": 20507,
+        "MonthEndImbalanceInterruptible": -49954511,
+        "MonthEndImbalanceFirm": -49946800,
+        "OutsideThresholdAmount": -49934004
+      },
+      {
+        "AllocationGroupID": 183,
+        "CompanyID": 136,
+        "CompanyName": "WGL Energy Svcs - 35",
+        "AllocationGroup": "WGES DC IP",
+        "EffectiveDate": "2024-04-01T00:00:00",
+        "EndDate": "2024-04-30T00:00:00",
+        "PreviousBalanceFirm": 0,
+        "PreviousBalanceInterruptible": 72760,
+        "CashOutAdjustmentAmount": 0,
+        "ImbalanceAdjustedVolume": 0,
+        "DailyRequiredVolume": 321000,
+        "ShipmentMonth": "2024-04-01T00:00:00",
+        "TotalForecastImbal": -33800,
+        "TotalNominationAllocations": 287200,
+        "TotalUsage": 272801,
+        "ThresholdValue": 48150,
+        "MonthEndImbalanceInterruptible": 78778,
+        "MonthEndImbalanceFirm": 87159,
+        "OutsideThresholdAmount": 30628
+      }
+    ],
+    "Marketers": [
+      {
+        "MarketerID": 326,
+        "MarketerName": "Constellation New Energy"
+      },
+      {
+        "MarketerID": 2128,
+        "MarketerName": "sdfsd"
+      },
+      {
+        "MarketerID": 55638,
+        "MarketerName": "Maryland Gas and Electric"
+      },
+      {
+        "MarketerID": 58038,
+        "MarketerName": "testtttt"
+      },
+      {
+        "MarketerID": 65135,
+        "MarketerName": "Csonstellation New Energy 2"
+      },
+      {
+        "MarketerID": 70454,
+        "MarketerName": "World Energy"
+      },
+      {
+        "MarketerID": 72875,
+        "MarketerName": "Energy Plus Natural Gas LLC"
+      },
+      {
+        "MarketerID": 73914,
+        "MarketerName": "Deca Energy"
+      },
+      {
+        "MarketerID": 73915,
+        "MarketerName": "Ambit Energy12"
+      },
+      {
+        "MarketerID": 76734,
+        "MarketerName": "IGS Energy - MD - 128"
+      },
+      {
+        "MarketerID": 89135,
+        "MarketerName": "Engie Power & Gas - 135"
+      },
+      {
+        "MarketerID": 90954,
+        "MarketerName": "Constellation Energy Gas Choice"
+      },
+      {
+        "MarketerID": 100535,
+        "MarketerName": "Viridian Energy"
+      },
+      {
+        "MarketerID": 100554,
+        "MarketerName": "Xoom Energy"
+      },
+      {
+        "MarketerID": 100914,
+        "MarketerName": "NRG Business Market,LLC - 145"
+      },
+      {
+        "MarketerID": 103174,
+        "MarketerName": "Engie Power & Gas - 144"
+      },
+      {
+        "MarketerID": 104474,
+        "MarketerName": "Stand Energy UCB RR"
+      },
+      {
+        "MarketerID": 122214,
+        "MarketerName": "Enspire Energy"
+      },
+      {
+        "MarketerID": 123275,
+        "MarketerName": "CEGC"
+      },
+      {
+        "MarketerID": 136034,
+        "MarketerName": "Direct Energy Services,LLC-156"
+      },
+      {
+        "MarketerID": 142214,
+        "MarketerName": "SFE Energy"
+      },
+      {
+        "MarketerID": 142215,
+        "MarketerName": "AGERA Energy - 159"
+      },
+      {
+        "MarketerID": 142216,
+        "MarketerName": "AGERA Energy - 160"
+      },
+      {
+        "MarketerID": 142876,
+        "MarketerName": "NOVEC Energy Solutions – 164"
+      },
+      {
+        "MarketerID": 142895,
+        "MarketerName": "Dominion Energy Solutions - 150"
+      },
+      {
+        "MarketerID": 142909,
+        "MarketerName": "MAJOR Energy"
+      },
+      {
+        "MarketerID": 142922,
+        "MarketerName": "NRG Home"
+      },
+      {
+        "MarketerID": 142936,
+        "MarketerName": "Mansfield Power and Gas LLC"
+      },
+      {
+        "MarketerID": 142939,
+        "MarketerName": "Just Energy"
+      },
+      {
+        "MarketerID": 142941,
+        "MarketerName": "Shipley Energy"
+      },
+      {
+        "MarketerID": 142942,
+        "MarketerName": "Planet Energy"
+      },
+      {
+        "MarketerID": 142943,
+        "MarketerName": "Spring Power & Gas"
+      },
+      {
+        "MarketerID": 142944,
+        "MarketerName": "Twin Eagle Energy"
+      },
+      {
+        "MarketerID": 142968,
+        "MarketerName": "Indra Energy - DC - 169"
+      },
+      {
+        "MarketerID": 142969,
+        "MarketerName": "Indra Energy - VA - 170"
+      },
+      {
+        "MarketerID": 142983,
+        "MarketerName": "Viridian Energy DUAL"
+      },
+      {
+        "MarketerID": 142984,
+        "MarketerName": "Viridian Energy UCB BR"
+      },
+      {
+        "MarketerID": 142985,
+        "MarketerName": "Engie Power & Gas - 173"
+      },
+      {
+        "MarketerID": 142991,
+        "MarketerName": "IDT Energy"
+      },
+      {
+        "MarketerID": 142992,
+        "MarketerName": "MPower Energy NJ LLC"
+      },
+      {
+        "MarketerID": 142993,
+        "MarketerName": "PESCO Energy - 175"
+      },
+      {
+        "MarketerID": 142994,
+        "MarketerName": "PESCO Energy - 176"
+      },
+      {
+        "MarketerID": 142995,
+        "MarketerName": "Think Energy"
+      },
+      {
+        "MarketerID": 142996,
+        "MarketerName": "Virginia Retail Energy - 178"
+      },
+      {
+        "MarketerID": 142997,
+        "MarketerName": "Virginia Retail Energy - 179"
+      },
+      {
+        "MarketerID": 142998,
+        "MarketerName": "Stand Energy - 180"
+      },
+      {
+        "MarketerID": 142999,
+        "MarketerName": "Stand Energy - 181"
+      },
+      {
+        "MarketerID": 143009,
+        "MarketerName": "Clearview Energy"
+      },
+      {
+        "MarketerID": 143010,
+        "MarketerName": "South Jersey Energy Corp - 184"
+      },
+      {
+        "MarketerID": 143011,
+        "MarketerName": "South Jersey Energy Corp - 185"
+      },
+      {
+        "MarketerID": 143012,
+        "MarketerName": "Indra Energy - MD - 186"
+      },
+      {
+        "MarketerID": 143013,
+        "MarketerName": "Tomorrow Energy Corp"
+      },
+      {
+        "MarketerID": 143014,
+        "MarketerName": "Think Energy - 188"
+      },
+      {
+        "MarketerID": 143015,
+        "MarketerName": "American Power & Gas"
+      },
+      {
+        "MarketerID": 143016,
+        "MarketerName": "Atlantic Energy"
+      },
+      {
+        "MarketerID": 143017,
+        "MarketerName": "Median Energy"
+      },
+      {
+        "MarketerID": 143027,
+        "MarketerName": "Josco Energy - 192"
+      },
+      {
+        "MarketerID": 143028,
+        "MarketerName": "Josco Energy - 193"
+      },
+      {
+        "MarketerID": 143029,
+        "MarketerName": "CleanSky Energy - DC and MD - 194"
+      },
+      {
+        "MarketerID": 143030,
+        "MarketerName": "CleanSky Energy - DC and MD - 195"
+      },
+      {
+        "MarketerID": 143039,
+        "MarketerName": "UGI Energy Services - 197"
+      },
+      {
+        "MarketerID": 143040,
+        "MarketerName": "Indra Energy - MD - 198"
+      },
+      {
+        "MarketerID": 143041,
+        "MarketerName": "Indra Energy - MD - 199"
+      },
+      {
+        "MarketerID": 143042,
+        "MarketerName": "Indra Energy - DC - 200"
+      },
+      {
+        "MarketerID": 143043,
+        "MarketerName": "Indra Energy - DC - 201"
+      },
+      {
+        "MarketerID": 143044,
+        "MarketerName": "Indra Energy - VA - 202"
+      },
+      {
+        "MarketerID": 143045,
+        "MarketerName": "Indra Energy - VA - 203"
+      },
+      {
+        "MarketerID": 143049,
+        "MarketerName": "Park Power LLC - DC - 204"
+      },
+      {
+        "MarketerID": 143050,
+        "MarketerName": "Park Power LLC - DC - 205"
+      },
+      {
+        "MarketerID": 143051,
+        "MarketerName": "Park Power LLC - DC - 206"
+      },
+      {
+        "MarketerID": 143063,
+        "MarketerName": "East Coast Power & Gas - MD - 207"
+      },
+      {
+        "MarketerID": 143064,
+        "MarketerName": "East Coast Power & Gas - MD - 208"
+      },
+      {
+        "MarketerID": 143065,
+        "MarketerName": "East Coast Power & Gas - MD - 209"
+      },
+      {
+        "MarketerID": 143066,
+        "MarketerName": "Statewise Energy - MD - 210"
+      },
+      {
+        "MarketerID": 143087,
+        "MarketerName": "Statewise Energy - MD - 211"
+      },
+      {
+        "MarketerID": 143099,
+        "MarketerName": "NRG Business Market,LLC - 212"
+      },
+      {
+        "MarketerID": 143100,
+        "MarketerName": "NRG Business Market,LLC - 213"
+      },
+      {
+        "MarketerID": 143101,
+        "MarketerName": "NRG Business Market,LLC - 214"
+      },
+      {
+        "MarketerID": 143113,
+        "MarketerName": "Nordic Energy Services - 215"
+      },
+      {
+        "MarketerID": 143114,
+        "MarketerName": "Nordic Energy Services - 216"
+      },
+      {
+        "MarketerID": 143115,
+        "MarketerName": "Nordic Energy Services - 217"
+      },
+      {
+        "MarketerID": 143116,
+        "MarketerName": "Nordic Energy Services - 218"
+      },
+      {
+        "MarketerID": 143117,
+        "MarketerName": "SunSea Energy - DC - 219"
+      },
+      {
+        "MarketerID": 143118,
+        "MarketerName": "SunSea Energy - DC - 220"
+      },
+      {
+        "MarketerID": 143119,
+        "MarketerName": "SunSea Energy - DC - 221"
+      },
+      {
+        "MarketerID": 143120,
+        "MarketerName": "SunSea Energy - DC - 222"
+      },
+      {
+        "MarketerID": 143121,
+        "MarketerName": "SunSea Energy - MD & VA - 223"
+      },
+      {
+        "MarketerID": 143122,
+        "MarketerName": "SunSea Energy - MD & VA - 224"
+      },
+      {
+        "MarketerID": 143123,
+        "MarketerName": "SunSea Energy - MD & VA - 225"
+      },
+      {
+        "MarketerID": 143124,
+        "MarketerName": "SunSea Energy - MD & VA - 226"
+      },
+      {
+        "MarketerID": 143125,
+        "MarketerName": "Alpha Gas and Electric - DC - 227"
+      },
+      {
+        "MarketerID": 143127,
+        "MarketerName": "Alpha Gas and Electric - DC - 229"
+      },
+      {
+        "MarketerID": 143128,
+        "MarketerName": "Alpha Gas and Electric - VA - 230"
+      },
+      {
+        "MarketerID": 143129,
+        "MarketerName": "Alpha Gas and Electric - DC - 231"
+      },
+      {
+        "MarketerID": 143130,
+        "MarketerName": "Alpha Gas and Electric - VA - 232"
+      },
+      {
+        "MarketerID": 143132,
+        "MarketerName": "Alpha Gas and Electric - VA - 234"
+      },
+      {
+        "MarketerID": 143133,
+        "MarketerName": "Alpha Gas and Electric - MD - 235"
+      },
+      {
+        "MarketerID": 143134,
+        "MarketerName": "Alpha Gas and Electric - MD - 236"
+      },
+      {
+        "MarketerID": 143135,
+        "MarketerName": "Alpha Gas and Electric - MD - 237"
+      },
+      {
+        "MarketerID": 143136,
+        "MarketerName": "Alpha Gas and Electric - MD - 238"
+      },
+      {
+        "MarketerID": 143145,
+        "MarketerName": "Green Choice Energy - DC - 239"
+      },
+      {
+        "MarketerID": 143146,
+        "MarketerName": "Green Choice Energy - DC - 240"
+      },
+      {
+        "MarketerID": 143147,
+        "MarketerName": "Green Choice Energy - DC - 241"
+      },
+      {
+        "MarketerID": 143148,
+        "MarketerName": "Green Choice Energy - DC - 242"
+      },
+      {
+        "MarketerID": 143149,
+        "MarketerName": "Green Choice Energy - MD & VA - 243"
+      },
+      {
+        "MarketerID": 143150,
+        "MarketerName": "Green Choice Energy - MD & VA - 244"
+      },
+      {
+        "MarketerID": 143151,
+        "MarketerName": "Green Choice Energy - MD & VA - 245"
+      },
+      {
+        "MarketerID": 143152,
+        "MarketerName": "Green Choice Energy - MD & VA - 246"
+      },
+      {
+        "MarketerID": 143155,
+        "MarketerName": "Discount Power LLC - DC - 247"
+      },
+      {
+        "MarketerID": 143156,
+        "MarketerName": "Discount Power LLC - DC - 248"
+      },
+      {
+        "MarketerID": 143157,
+        "MarketerName": "Discount Power LLC - DC - 249"
+      },
+      {
+        "MarketerID": 143158,
+        "MarketerName": "Discount Power LLC - DC - 250"
+      },
+      {
+        "MarketerID": 143159,
+        "MarketerName": "Discount Power LLC - MD & VA - 251"
+      },
+      {
+        "MarketerID": 143160,
+        "MarketerName": "Discount Power LLC - MD & VA - 252"
+      },
+      {
+        "MarketerID": 143161,
+        "MarketerName": "Discount Power LLC - MD & VA - 253"
+      },
+      {
+        "MarketerID": 143162,
+        "MarketerName": "Discount Power LLC - MD & VA - 254"
+      },
+      {
+        "MarketerID": 143163,
+        "MarketerName": "Park Power LLC - MD & VA - 255"
+      },
+      {
+        "MarketerID": 143164,
+        "MarketerName": "Park Power LLC - MD & VA - 256"
+      },
+      {
+        "MarketerID": 143165,
+        "MarketerName": "Park Power LLC - MD & VA - 257"
+      },
+      {
+        "MarketerID": 143166,
+        "MarketerName": "Park Power LLC - MD & VA - 258"
+      },
+      {
+        "MarketerID": 143240,
+        "MarketerName": "Washington Suburban Sanitary Commission "
+      },
+      {
+        "MarketerID": 143244,
+        "MarketerName": "Greenlight Energy Inc."
+      },
+      {
+        "MarketerID": 143248,
+        "MarketerName": "IGS Energy - MD"
+      },
+      {
+        "MarketerID": 143251,
+        "MarketerName": "IGS Energy - VA & DC "
+      },
+      {
+        "MarketerID": 143255,
+        "MarketerName": "Engie Power & Gas"
+      },
+      {
+        "MarketerID": 143263,
+        "MarketerName": "Wave Energy"
+      },
+      {
+        "MarketerID": 143298,
+        "MarketerName": "United Energy Trading "
+      },
+      {
+        "MarketerID": 143317,
+        "MarketerName": "Spark Energy Gas LLC"
+      },
+      {
+        "MarketerID": 143395,
+        "MarketerName": "Virginia Light & Power LLC"
+      },
+      {
+        "MarketerID": 143399,
+        "MarketerName": "New Wave Energy LLC - MD "
+      },
+      {
+        "MarketerID": 143403,
+        "MarketerName": "New Wave Energy LLC - DC & VA"
+      },
+      {
+        "MarketerID": 143415,
+        "MarketerName": "American Power & Gas - DC"
+      },
+      {
+        "MarketerID": 143440,
+        "MarketerName": "Electric Advisers Inc"
+      },
+      {
+        "MarketerID": 143461,
+        "MarketerName": "Vista Energy"
+      },
+      {
+        "MarketerID": 143462,
+        "MarketerName": "Vista Energy - 303"
+      },
+      {
+        "MarketerID": 143463,
+        "MarketerName": "Vista Energy - 304"
+      },
+      {
+        "MarketerID": 143464,
+        "MarketerName": "Vista Energy - 305"
+      },
+      {
+        "MarketerID": 143465,
+        "MarketerName": "Gas South"
+      },
+      {
+        "MarketerID": 143466,
+        "MarketerName": "Gas South - 307"
+      },
+      {
+        "MarketerID": 143467,
+        "MarketerName": "Gas South - 308"
+      },
+      {
+        "MarketerID": 143468,
+        "MarketerName": "Gas South - 309"
+      },
+      {
+        "MarketerID": 143472,
+        "MarketerName": "American Power & Gas - 310"
+      },
+      {
+        "MarketerID": 143473,
+        "MarketerName": "American Power & Gas - DC - 311"
+      },
+      {
+        "MarketerID": 143474,
+        "MarketerName": "Atlantic Energy - 312"
+      },
+      {
+        "MarketerID": 143475,
+        "MarketerName": "Clearview Energy - 313"
+      },
+      {
+        "MarketerID": 143476,
+        "MarketerName": "Deca Energy - 314"
+      },
+      {
+        "MarketerID": 143477,
+        "MarketerName": "Energy Plus Natural Gas LLC - 316"
+      },
+      {
+        "MarketerID": 143478,
+        "MarketerName": "Gateway Energy Services - 317"
+      },
+      {
+        "MarketerID": 143479,
+        "MarketerName": "IDT Energy - 318"
+      },
+      {
+        "MarketerID": 143480,
+        "MarketerName": "Major Energy - 321"
+      },
+      {
+        "MarketerID": 143481,
+        "MarketerName": "Maryland Gas & Electric - 322"
+      },
+      {
+        "MarketerID": 143482,
+        "MarketerName": "Median Energy - 323"
+      },
+      {
+        "MarketerID": 143483,
+        "MarketerName": "Mpower Energy NJ LLC - 324"
+      },
+      {
+        "MarketerID": 143484,
+        "MarketerName": "NRG Home - 325"
+      },
+      {
+        "MarketerID": 143485,
+        "MarketerName": "SFE Energy - 326"
+      },
+      {
+        "MarketerID": 143486,
+        "MarketerName": "Spring Power & Gas - 327"
+      },
+      {
+        "MarketerID": 143487,
+        "MarketerName": "StateWise Energy MD LLC"
+      },
+      {
+        "MarketerID": 143488,
+        "MarketerName": "Xoom Energy - 329"
+      },
+      {
+        "MarketerID": 143489,
+        "MarketerName": "Xoom Energy of VA"
+      },
+      {
+        "MarketerID": 143490,
+        "MarketerName": "Raghav"
+      },
+      {
+        "MarketerID": 143491,
+        "MarketerName": "test markter"
+      },
+      {
+        "MarketerID": 143492,
+        "MarketerName": "tessttttttttt"
+      },
+      {
+        "MarketerID": 143493,
+        "MarketerName": "teststttt majid tesst"
+      },
+      {
+        "MarketerID": 143494,
+        "MarketerName": "EnerNocqwertgyhj"
+      },
+      {
+        "MarketerID": 143495,
+        "MarketerName": "wertyuwertyu"
+      },
+      {
+        "MarketerID": 143496,
+        "MarketerName": "wertyuiuytre"
+      },
+      {
+        "MarketerID": 143497,
+        "MarketerName": "testttttt234"
+      },
+      {
+        "MarketerID": 143498,
+        "MarketerName": "tesssssssssssssssst"
+      },
+      {
+        "MarketerID": 143499,
+        "MarketerName": "teeeeeeeeeeeeeeeeest"
+      },
+      {
+        "MarketerID": 143500,
+        "MarketerName": "tttttttttesssttt"
+      },
+      {
+        "MarketerID": 143501,
+        "MarketerName": "majidtest"
+      },
+      {
+        "MarketerID": 143502,
+        "MarketerName": "mounikatessstttt"
+      },
+      {
+        "MarketerID": 143503,
+        "MarketerName": "datetessstttt"
+      },
+      {
+        "MarketerID": 143504,
+        "MarketerName": "datetest2"
+      },
+      {
+        "MarketerID": 143505,
+        "MarketerName": "datetest2222"
+      },
+      {
+        "MarketerID": 143506,
+        "MarketerName": "datetestt3"
+      },
+      {
+        "MarketerID": 143507,
+        "MarketerName": "datetest333434"
+      },
+      {
+        "MarketerID": 143508,
+        "MarketerName": "ravitesssst"
+      },
+      {
+        "MarketerID": 143509,
+        "MarketerName": "Marketer001"
+      },
+      {
+        "MarketerID": 143510,
+        "MarketerName": "Marketer002"
+      },
+      {
+        "MarketerID": 143511,
+        "MarketerName": "TEstDEMo"
+      },
+      {
+        "MarketerID": 143512,
+        "MarketerName": "Colonial"
+      },
+      {
+        "MarketerID": 143513,
+        "MarketerName": "Test Marketer 1"
+      },
+      {
+        "MarketerID": 143514,
+        "MarketerName": "jhgfdsdfjhgfd"
+      },
+      {
+        "MarketerID": 143515,
+        "MarketerName": "asdfnbvcxhgfdgf"
+      },
+      {
+        "MarketerID": 143516,
+        "MarketerName": "cvbvbcvbdfgdfg"
+      },
+      {
+        "MarketerID": 143517,
+        "MarketerName": "lkjhjkl"
       }
     ]
   }

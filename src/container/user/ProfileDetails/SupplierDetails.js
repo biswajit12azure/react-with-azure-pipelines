@@ -42,7 +42,7 @@ const SupplierDetails = ({ register,
             </Grid>
 
             <Grid item xs={12} sm={6} md={6} className='supplierDetailes'>
-                <Typography component="div" className="passwordcheck border-none">
+                <Typography component="div" className="passwordcheck border-none marbottom0 selecticon">
                     <AutocompleteInput
                         id="CategoryID"
                         name="CategoryID"
@@ -57,7 +57,7 @@ const SupplierDetails = ({ register,
                 </Typography>
             </Grid>
             <Grid item xs={12} sm={6} md={6} className='supplierDetailes'>
-                <Typography component="div" className="passwordcheck  border-none">
+                <Typography component="div" className="passwordcheck  border-none marbottom0 selecticon">
                     <MultiSelectInput
                         id="ClassificationID"
                         control={control}
@@ -85,8 +85,9 @@ const SupplierDetails = ({ register,
                 />
             </Grid>
             <Grid item xs={12} sm={6} md={6} className='supplierDetailes'>
-            <Typography component="div" className="passwordcheck border-none">
-                <CustomDatePicker
+            <Typography component="div" className="passwordcheck border-none SelectedDate">
+                <CustomDatePicker 
+            
                     id="ExpiryDate"
                     control={control}
                     name="ExpiryDate"
@@ -100,7 +101,7 @@ const SupplierDetails = ({ register,
                 </Typography>
             </Grid>
             <Grid item xs={12} sm={6} md={6} className='supplierDetailes'>
-                <Typography component="div" className="passwordcheck border-none">
+                <Typography component="div" className="passwordcheck border-none marbottom0 selecticon">
                     <AutocompleteInput
                         id="AgencyID"
                         name="AgencyID"
@@ -115,7 +116,7 @@ const SupplierDetails = ({ register,
                 </Typography>
             </Grid>
             <Grid item xs={12} sm={6} md={6} className='supplierDetailes'>
-                <Typography component="div" className="passwordcheck border-none">
+                <Typography component="div" className="passwordcheck border-none marbottom0 selecticon">
                     <AutocompleteInput
                         id="AgencyStateID"
                         name="AgencyStateID"
@@ -200,7 +201,7 @@ const SupplierDetails = ({ register,
                 />
             </Grid>
             <Grid item xs={12} sm={4} md={4} className='supplierDetailes'>
-                <Typography component="div" className="passwordcheck border-none">
+                <Typography component="div" className="passwordcheck border-none marbottom0 selecticon" >
                     <AutocompleteInput
                         id="State"
                         control={control}

@@ -1,27 +1,27 @@
 import React, { useState, useMemo, useEffect } from 'react';
 import { MaterialReactTable, useMaterialReactTable } from 'material-react-table';
 import IconButton from '@mui/material/IconButton';
-import { Box, InputAdornment, TextField, Tooltip } from '@mui/material';
-import { PlayCircleOutline, PauseCircleOutline, Clear, DeleteForever, Sync } from '@mui/icons-material';
-import { ModalPopup, MultiSelectAutocomplete } from '_components';
+import { Box,  TextField, Tooltip ,Typography } from '@mui/material';
+import { PlayCircleOutline, PauseCircleOutline,FilterListOff} from '@mui/icons-material';
+import { ModalPopup, MultiSelectMenu } from '_components';
 import { MarketerDetails } from "container/admin";
 import dayjs from 'dayjs';
 import { DatePicker } from '@mui/x-date-pickers';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 
-const MarketerList = ({ marketerData, rowSelection, handleChange, isModalOpen, setIsModalOpen, onLockToggle, selectedRows, setSelectedRows,
+const MarketerList = ({ marketerData, rowSelection, handleChange,isActivate, isModalOpen, setIsModalOpen, onLockToggle, selectedRows, setSelectedRows,
     setRowSelection, handleToggleActiveStatus, handleRefresh }) => {
 
-    const uetFiles = marketerData?.UETFileDate?.map(uet => ({ value: uet.UETFileID, label: uet.UETFileName })) || [];
+    const uetFiles = marketerData?.UETFileDate?.map(uet => ({ value: uet.UETFileID.toString(), label: uet.UETFileName })) || [];
     const data = marketerData?.Marketers || [];
     const [selectedRow, setSelectedRow] = useState(null);
-
     const [isConfirmEnabled, setIsConfirmEnabled] = useState(false);
-
+    const [openRowId, setOpenRowId] = useState(null);
     const handleMultiSelectChange = (newValue, row, columnKey) => {
         handleChange(newValue, row.original, columnKey);
         setIsConfirmEnabled(true);
+        console.log(isConfirmEnabled);
     };
 
     const handleInputChange = (value, row, columnKey) => {
@@ -44,12 +44,11 @@ const MarketerList = ({ marketerData, rowSelection, handleChange, isModalOpen, s
         setIsModalOpen(false);
     }
 
+
     const columns = useMemo(() => {
         const baseColumns = [
             {
                 accessorKey: 'PortalID', header: 'Portal ID',
-                enableEditing: false,
-                enableSorting: true,
                 Cell: ({ row }) => (
                     <span onClick={() => handleAddEdit(row)} >
                         {row.original.PortalID}
@@ -59,8 +58,6 @@ const MarketerList = ({ marketerData, rowSelection, handleChange, isModalOpen, s
             {
                 accessorKey: 'MarketerName',
                 header: 'Marketer Name',
-                enableEditing: true,
-                enableSorting: true,
                 Cell: ({ cell, row }) => (
                     <TextField
                         className='ServiceProvider'
@@ -69,33 +66,66 @@ const MarketerList = ({ marketerData, rowSelection, handleChange, isModalOpen, s
                     />
                 ),
             },
+            // {
+            //     accessorKey: 'StartDate',
+            //     header: 'Start Date',
+            //     //filterVariant: 'date',
+            //     filterFn: (row, columnId, filterValue) => {
+            //         const dateValue = row.getValue(columnId);
+            //         return dayjs(dateValue).format('MM/DD/YYYY').toLowerCase().includes(filterValue.toLowerCase());
+            //       //  return dayjs(dateValue).isSame(dayjs(filterValue), 'day');
+            //     },
+            //     Cell: ({ cell, row }) => {
+            //         const dateValue = cell.getValue();
+            //         const currentDate = dayjs();
+            //         const minDate = currentDate.subtract(3, 'month');
+            //         const maxDate = currentDate.add(3, 'month');
+            //         const marketerStartDate = dayjs(row.original.MarketerStartDate);
+
+            //         return (
+            //             <LocalizationProvider dateAdapter={AdapterDayjs}>
+            //                 <DatePicker
+            //                     className='SelectedDate'
+            //                     views={['year', 'month', 'day']}
+            //                     value={dayjs(dateValue)}
+            //                     onChange={(newValue) => handleInputChange(newValue.toISOString(), row, 'StartDate')}
+            //                     minDate={marketerStartDate.isAfter(minDate) ? marketerStartDate : minDate}
+            //                     maxDate={maxDate}
+            //                     slotProps={{
+            //                         textField: (params) => <TextField {...params} />
+            //                     }}
+            //                 />
+            //             </LocalizationProvider>
+            //         );
+            //     },
+            // },
             {
                 accessorKey: 'StartDate',
                 header: 'Start Date',
-                enableEditing: true,
-                enableSorting: true,
-                //filterVariant: 'date',
                 filterFn: (row, columnId, filterValue) => {
                     const dateValue = row.getValue(columnId);
                     return dayjs(dateValue).format('MM/DD/YYYY').toLowerCase().includes(filterValue.toLowerCase());
-                  //  return dayjs(dateValue).isSame(dayjs(filterValue), 'day');
                 },
                 Cell: ({ cell, row }) => {
-                    const dateValue = cell.getValue();
-                    const currentDate = dayjs();
-                    const minDate = currentDate.subtract(3, 'month');
+                    const dateValue = dayjs(cell.getValue());
+                    const currentDate = dayjs().startOf('day'); // Ensure time portion does not affect comparison
+                    const minDate = currentDate;
                     const maxDate = currentDate.add(3, 'month');
                     const marketerStartDate = dayjs(row.original.MarketerStartDate);
-
+            
+                    const isPastDate = dateValue.isBefore(currentDate, 'day'); // Check if StartDate is in the past
+                    const effectiveMinDate = marketerStartDate.isAfter(minDate) ? marketerStartDate : minDate;
+            
                     return (
                         <LocalizationProvider dateAdapter={AdapterDayjs}>
                             <DatePicker
                                 className='SelectedDate'
                                 views={['year', 'month', 'day']}
-                                value={dayjs(dateValue)}
-                                onChange={(newValue) => handleInputChange(newValue.toISOString(), row, 'StartDate')}
-                                minDate={marketerStartDate.isAfter(minDate) ? marketerStartDate : minDate}
+                                value={dateValue}
+                                onChange={(newValue) => handleInputChange(newValue?.toISOString(), row, 'StartDate')}
+                                minDate={effectiveMinDate}
                                 maxDate={maxDate}
+                                disabled={isPastDate} // Disable if the StartDate is in the past
                                 slotProps={{
                                     textField: (params) => <TextField {...params} />
                                 }}
@@ -103,12 +133,10 @@ const MarketerList = ({ marketerData, rowSelection, handleChange, isModalOpen, s
                         </LocalizationProvider>
                     );
                 },
-            },
+            },            
             {
                 accessorKey: 'ServiceProvider',
                 header: 'Service Provider',
-                enableEditing: true,
-                enableSorting: true,
                 Cell: ({ cell, row }) => (
                     <TextField
                         className='ServiceProvider'
@@ -130,35 +158,61 @@ const MarketerList = ({ marketerData, rowSelection, handleChange, isModalOpen, s
                 // filterFn: (row, columnId, filterValue) => {
                 //     const rowValue = row.getValue(columnId);
                 //     const selectedValues = rowValue.split(','); // Split the comma-separated values
-                //     return selectedValues.some(value => filterValue.toLowerCase().includes(value.toLowerCase())); // Check if any selected value matches the filter value
+                //     return selectedValues.some(value => {
+                //       const file = uetFiles.find(file => file.value === value);
+                //       return file?.label.toLowerCase().includes(filterValue.toLowerCase());
+                //     });
                 // },
                 Cell: ({ row, column }) => {
                     const columnKey = column.id || column.accessorKey;
                     const selectedValues = row.original[columnKey]?.split(',') || [];
                     return (
-                        <MultiSelectAutocomplete
+                        <Typography component="div" className='marbottom0 selecticon margintop10'>
+                        <MultiSelectMenu
                             options={uetFiles}
                             onChange={(newValue) => handleMultiSelectChange(newValue, row, columnKey)}
                             label="UET File Type"
                             value={selectedValues.join(',')}
+                            style={{
+                                height: '48px'}}
                         />
+                        </Typography>
                     );
                 }
-            }
+            },
+            {
+                accessorKey: 'IsActive', header: 'Status',
+                Cell: ({ row }) => (
+                    <span onClick={() => handleAddEdit(row)} >
+                        {row.original.IsActive ===true ? "Active" :"InActive"}
+                    </span>
+                ),
+            },
         ];
 
         return baseColumns;
     }, [handleChange, uetFiles]);
-
+    useEffect(() => {
+        // Reset openRowId when new data is loaded
+        setOpenRowId(null);
+      }, [data]);
     const handleAddEdit = (row) => {
-        row.toggleExpanded();
+        if (openRowId === row.id) {
+            setOpenRowId(null); 
+            // Collapse if clicked again
+          } else {
+            
+            setOpenRowId(row.id); // Expand the clicked row
+            row.toggleExpanded(row.id); 
+          }
+        // row.toggleExpanded();
     };
 
     const table = useMaterialReactTable({
         columns,
         data,
         enableHiding: false,
-        enableGlobalFilter: true,
+        columnFilterDisplayMode: 'popover',
         enableFullScreenToggle: false,
         enableColumnActions: false,
         paginationDisplayMode: 'pages',
@@ -168,6 +222,7 @@ const MarketerList = ({ marketerData, rowSelection, handleChange, isModalOpen, s
         positionExpandColumn: 'first',
         positionActionsColumn: "last",
         positionToolbarAlertBanner: 'none',
+        autoResetPageIndex: false,
         state: {
             rowSelection,
         },
@@ -178,20 +233,53 @@ const MarketerList = ({ marketerData, rowSelection, handleChange, isModalOpen, s
         displayColumnDefOptions: {
             'mrt-row-expand': {
                 header: "",
-                size: 10,//make the expand column wider
-            }
+                size: 10, // make the expand column wider
+                muiTableHeadCellProps: {
+                    sx: {
+                        display: 'none', // Hide the expand column
+                    },
+                },
+                muiTableBodyCellProps: {
+                    sx: {
+                        display: 'none', // Hide the expand column
+                    },
+                },
+            },
         },
         initialState: {
             columnOrder: [
                 'mrt-row-expand',
                 'mrt-row-select',
+                'ServiceProvider',
                 'PortalID',
                 'MarketerName',
                 'StartDate',
-                'ServiceProvider',
                 "UETFileID",
                 'mrt-row-actions'
             ],
+            sorting: [
+                {
+                  id: 'PortalID', 
+                  desc: false, 
+                },
+                {
+                  id: 'MarketerName', 
+                  desc: false, 
+                },
+                {
+                  id: 'StartDate', 
+                  desc: false, 
+                },
+              {
+                  id: 'ServiceProvider', 
+                  desc: false, 
+                },
+              {
+                  id: 'UETFileID', 
+                  desc: false, 
+                },
+              
+              ],
         },
         renderTopToolbarCustomActions: () => (
             <Box
@@ -202,17 +290,17 @@ const MarketerList = ({ marketerData, rowSelection, handleChange, isModalOpen, s
                     flexWrap: 'wrap',
                 }}
             >
-                <Tooltip title="Refresh" className='Deactivate'>
+                <Tooltip title="Clear Filter" className='Deactivate'>
                     <div>
                         <IconButton onClick={handleRefresh} >
-                            <Sync variant="contained" color="secondary" />
+                            <FilterListOff variant="contained" color="secondary" />
                         </IconButton>
                     </div>
                 </Tooltip>
-                <Tooltip title="Deactivate" className='Deactivate'>
+                <Tooltip title={isActivate?"Deactivate":"Activate"} className='Deactivate'>
                     <div>
                         <IconButton onClick={handleToggleActiveStatus} disabled={selectedRows?.length === 0}>
-                            <PauseCircleOutline variant="contained" color="secondary" />
+                           {isActivate ? <PauseCircleOutline variant="contained" color="secondary"/> : <PlayCircleOutline variant="contained" color="secondary"/> }
                         </IconButton>
                     </div>
                 </Tooltip>
@@ -220,13 +308,15 @@ const MarketerList = ({ marketerData, rowSelection, handleChange, isModalOpen, s
         ),
         renderRowActions: ({ row }) => {
             return (
-                <div style={{ display: 'flex', gap: '0.5rem' }} className='tableicons'>
+                <div  className='tableicons'>
+                    <Tooltip title={row.original.IsActive ? "Deactivate" : "Activate" } arrow>
                     <IconButton onClick={() => handleOpenModal(row)} className='lock'>
-                        {row.original.IsActive ? <PlayCircleOutline /> : <PauseCircleOutline />}
+                        {row.original.IsActive ?<PauseCircleOutline /> : <PlayCircleOutline /> }
                     </IconButton>
+                    </Tooltip>
                     {isModalOpen && <ModalPopup
                         header="Marketer"
-                        message1={selectedRow?.original.IsActive ? "Are you sure you want to deactivate marketer?" : "Are you sure you want to activate marketers?"}
+                        message1={selectedRow?.original.IsActive ? "Are you sure you want to deactivate marketer?" : "Are you sure you want to activate marketer?"}
                         btnPrimaryText="Confirm"
                         btnSecondaryText="Cancel"
                         handlePrimaryClick={() => handleLockToggle(selectedRow)}
@@ -237,9 +327,10 @@ const MarketerList = ({ marketerData, rowSelection, handleChange, isModalOpen, s
             )
         },
         renderDetailPanel: ({ row }) => (
-            <Box sx={{ padding: 2 }}>
+            openRowId === row.id && (  <Box sx={{ padding: 2 }}>
                 <MarketerDetails marketer={row.original} uetFileData={marketerData?.UETFileDate} />
             </Box>
+            )
         ),
         muiExpandButtonProps: {
             sx: {

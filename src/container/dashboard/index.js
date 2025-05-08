@@ -1,3 +1,4 @@
 import Home from "./Home";
+import Footer from "./Footer";
 
-export {Home};
+export {Home,Footer};

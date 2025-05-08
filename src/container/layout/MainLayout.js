@@ -23,7 +23,7 @@ const MainLayout = () => {
     const navigate=useNavigate();
     const handleSupportClick=()=>
         {
-          navigate('/faqView');
+          navigate('/faqViews',{ state: { page:"Login" }});
         }
    return( <>
         <PortalZoom></PortalZoom>

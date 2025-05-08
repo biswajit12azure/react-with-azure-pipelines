@@ -1,0 +1,78 @@
+trigger: none
+pr: none
+
+pool:
+  name: Default
+  demands:
+    - Agent.Name -equals AZWSVDOP101 
+
+variables:
+  SONARQUBE_PROJECT_KEY: 'eServicesReplatforming-FrontEnd'
+  SONARQUBE_URL: 'http://10.55.52.6:9000'
+  SONARQUBE_REPORT_PATH: '$(Build.ArtifactStagingDirectory)/sonar-report'
+  # Store SONARQUBE_TOKEN as a secret variable in Azure DevOps
+
+stages:
+- stage: BuildAndAnalyze
+  jobs:
+  - job: Build
+    steps:
+    - checkout: self
+
+    # Install Node.js
+    - task: UseNode@1
+      displayName: 'Install Node.js'
+      inputs:
+        version: '20.x'
+
+    # Install project dependencies
+    - script: |
+        echo "Installing dependencies..."
+        npm install --legacy-peer-deps
+        npm install eslint-plugin-html --save-dev
+      displayName: 'Install Dependencies'
+
+    # Build React project
+    - script: |
+        echo "Building the project..."
+        npm run build
+      displayName: 'Build React Project'
+
+    # Run SonarQube Analysis
+    - script: |
+        echo "Running SonarQube Scanner..."
+        mkdir "$(SONARQUBE_REPORT_PATH)"
+        "C:\sonar-scanner\bin\sonar-scanner.bat" ^
+          -Dsonar.projectKey=$(SONARQUBE_PROJECT_KEY) ^
+          -Dsonar.host.url=$(SONARQUBE_URL) ^
+          -Dsonar.login=$(SONARQUBE_TOKEN) ^
+          -Dsonar.language=js ^
+          -Dsonar.sourceEncoding=UTF-8 ^
+          -Dsonar.sources=src ^
+          -Dsonar.qualitygate.wait=false ^
+          -Dsonar.exclusions=**/node_modules/**,**/build/**,**/dist/** ^
+          -Dsonar.verbose=true > $(SONARQUBE_REPORT_PATH)/sonar-report.html
+      displayName: 'Run SonarQube Scanner'
+
+    - script: |
+        echo "Fetching SonarQube Report..."
+        powershell -Command "Invoke-WebRequest -Uri '$(SONARQUBE_URL)/api/issues/search?componentKeys=$(SONARQUBE_PROJECT_KEY)&severities=CRITICAL,BLOCKER&statuses=OPEN' -UseBasicParsing -Headers @{Authorization='Basic '+[Convert]::ToBase64String([Text.Encoding]::ASCII.GetBytes('$(SONARQUBE_TOKEN):'))} | Select-Object -Expand Content | ConvertFrom-Json | ConvertTo-Json -Depth 10 | Out-File -FilePath $(SONARQUBE_REPORT_PATH)/sonar.json"
+      displayName: 'Download and Format SonarQube JSON Report'
+  
+    - script: |
+         echo "Running ESLint for linting..."
+         npx eslint src/ --format html --output-file $(Build.ArtifactStagingDirectory)/eslint-report.html || exit 0
+      displayName: 'Run ESLint Linting'
+
+# Publish the ESLint report for better visibility
+    - task: PublishBuildArtifacts@1
+      displayName: 'Upload ESLint Report'
+      inputs:
+          pathToPublish: '$(Build.ArtifactStagingDirectory)/eslint-report.html'
+          artifactName: 'ESLintReport'
+
+    - task: PublishBuildArtifacts@1
+      displayName: 'Upload SonarQube Report'
+      inputs:
+        pathToPublish: '$(SONARQUBE_REPORT_PATH)'
+        artifactName: 'SonarQubeReport'

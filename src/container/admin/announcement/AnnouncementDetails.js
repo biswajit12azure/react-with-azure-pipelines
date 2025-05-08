@@ -1,35 +1,39 @@
 import React, { useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
+import { FilterListOff } from '@mui/icons-material';
 import Grid from '@mui/material/Grid2';
-import { Edit, PushPin, PushPinOutlined,  Download  } from '@mui/icons-material';
-import { Typography, IconButton, Checkbox, Button } from '@mui/material';
-import { Delete} from 'images';
+import { Edit, PushPin, PushPinOutlined } from '@mui/icons-material';
+import { Typography, IconButton, Checkbox, Tooltip, Box } from '@mui/material';
+import { Delete, Deletewhite } from 'images';
 import dayjs from 'dayjs';
-import {materialsymbolsdownload} from 'images';
-import { base64ToFile } from '_utils';
-import { alertActions, announcementAction } from '_store';
+// import { base64ToFile } from '_utils';
+import { alertActions, announcementAction, announcementFilterActions } from '_store';
+import AnnouncementFilter from './AnnouncementFilter';
+import { ModalPopup } from '_components';
 
-const AnnouncementDetails = ({ announcementData, onEditClick, handleRefresh }) => {
+const AnnouncementDetails = ({ announcementData, onEditClick, handleRefresh,portalData,roleData}) => {
     const dispatch = useDispatch();
+    const [announcementDataList,setannouncementDataList] =useState(announcementData);
     const [pinnedAnnouncements, setPinnedAnnouncements] = useState({});
     const [selectedAnnouncements, setSelectedAnnouncements] = useState([]);
-
+    const [isFilterOpen, setIsFilterOpen] = useState(false);
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [isSingleModalOpen, setIsSingleModalOpen] = useState(false);
+    const [isSingleDelete,setIsSingleDelete] = useState(null);
     useEffect(() => {
         const initialPinnedState = {};
-        announcementData?.forEach(data => {
+        announcementDataList?.forEach(data => {
             initialPinnedState[data.ID] = data.IsPinned;
         });
         setPinnedAnnouncements(initialPinnedState);
-    }, [announcementData, setPinnedAnnouncements]);
+    }, [announcementDataList, setPinnedAnnouncements]);
 
-    const handleDownload = (base64String, fileName) => {
-        base64ToFile(base64String, fileName);
-    };
+    useEffect(()=>setannouncementDataList(announcementData),[announcementData])
 
-    const onDeleteClick = async (id) => {
+    const onDeleteClick = async () => {
         dispatch(alertActions.clear());
         try {
-            const result = await dispatch(announcementAction.deleteAnnouncement(id));
+            const result = await dispatch(announcementAction.deleteAnnouncement(isSingleDelete));
 
             if (result?.error) {
                 dispatch(alertActions.error({ message: result?.payload?.Message || result?.error.message, header: "Announcement" }));
@@ -46,7 +50,7 @@ const AnnouncementDetails = ({ announcementData, onEditClick, handleRefresh }) =
 
     const onBulkDeleteClick = async () => {
         dispatch(alertActions.clear());
-        try {           
+        try {
             const result = await dispatch(announcementAction.deleteAllAnnouncement(selectedAnnouncements));
 
             if (result?.error) {
@@ -91,16 +95,100 @@ const AnnouncementDetails = ({ announcementData, onEditClick, handleRefresh }) =
         );
     };
 
+    const handleFilterOpen = () => {
+        setIsFilterOpen(true);
+    };
+
+    const handleFilterClose = () => {
+        setIsFilterOpen(false);
+    };
+
+    const handleOpenModalAnnoucement = () => {
+        setIsModalOpen(true);
+    };
+
+    const handleCloseModal = () => {
+        setIsModalOpen(false);
+        setIsSingleModalOpen(false);
+        setSelectedAnnouncements([]);
+    };
+
+    const handleSingleOpenDelete = (data) => {
+        setIsSingleDelete(data.ID)
+        setIsSingleModalOpen(true);
+    }
+
+    const onApplyFilter = async (Data) => {
+        const result = await dispatch(announcementFilterActions.getAnnouncements(Data));
+      if(result?.payload?.Succeeded){
+            setannouncementDataList(result?.payload?.Data)
+        }
+        if (result?.error) {
+            dispatch(alertActions.error({ message: result?.payload || result?.error.message, header: "Announcement" }));
+            return;
+        }
+    }
+
+
     return (
         <Typography className='Announcementsdetails'>
-            {/* <Typography variant="h3" component="h3" className="Announcements-text">Announcements</Typography> */}
-            <Typography className='containedLoginbutton containedLoginbuttonlist'><Button className="Loginbutton" variant="contained" color="secondary" onClick={onBulkDeleteClick} disabled={selectedAnnouncements.length === 0}>
-                Delete
-            </Button>
-            </Typography>
+
+            <Box
+                sx={{
+                    display: 'flex',
+                    gap: '16px',
+                    padding: '8px',
+                    flexWrap: 'wrap',
+                    justifyContent: 'space-between'
+                }}
+            >
+                <Box
+                    sx={{
+                        display: 'flex',
+                        gap: '16px',
+                    }}
+                >
+                    <Tooltip title="clear filter" className='Deactivate'>
+                        <div>
+                            <IconButton onClick={handleRefresh}>
+                                <FilterListOff variant="contained" color="secondary" />
+                            </IconButton>
+                        </div>
+                    </Tooltip>
+                    <Tooltip title="Delete Selected" className='DeleteSelected'>
+                        <div>
+                            <IconButton className='delete' onClick={handleOpenModalAnnoucement} disabled={selectedAnnouncements.length === 0}>
+                                <img src={Deletewhite} alt="Delete" />
+                            </IconButton>
+
+                            {isModalOpen && <ModalPopup
+                                header="File Delete"
+                                message1={
+                                    selectedAnnouncements.length > 1
+                                        ? "Are you sure, you want to delete selected announcements?"
+                                        : "Are you sure, you want to delete the announcement?"
+                                }
+                                btnPrimaryText="Confirm"
+                                btnSecondaryText="Cancel"
+                                handlePrimaryClick={() => { onBulkDeleteClick(); setIsModalOpen(false); }}
+                                handleSecondaryClick={() => handleCloseModal()}
+                            />
+                            }
+                        </div>
+                    </Tooltip>
+                </Box>
+                <AnnouncementFilter
+                    isOpen={isFilterOpen}
+                    onClose={handleFilterClose}
+                    onOpen={handleFilterOpen}
+                    portalData={portalData}
+                    roleData={roleData}
+                    onApplyFilter={onApplyFilter}
+                />
+            </Box>
             <Typography className='Announcementcontainer' component="div">
-                {announcementData && announcementData.length > 0 ? (
-                    announcementData.map((data, index) => (
+                {announcementDataList && announcementDataList.length > 0 ? (
+                    announcementDataList.map((data, index) => (
                         <Typography key={index} className='Announcementsnew' component="div">
                             <Grid container>
                                 <Grid size={{ xs: 4, sm: 3, md: 3 }}>
@@ -123,31 +211,33 @@ const AnnouncementDetails = ({ announcementData, onEditClick, handleRefresh }) =
                                     <Typography component="div">
                                         <Typography component="h3" className='title'>{data.Title}</Typography>
                                         <Typography component="p" className='content'>{data.Data}</Typography>
-                                        {/* {data?.FileData &&
-                                            <Typography component="div">
-                                                <Typography component="span" className="DocumentDescription">{data?.FileData.FileName}</Typography>
-                                                <Typography component="div" className="DocumentTypeID">
-                                                    <IconButton onClick={() => handleDownload(data?.FileData.File, data?.FileData.FileName)}>                                        
-                                                        <img src={materialsymbolsdownload} alt='download'></img>
-                                                    </IconButton>
-                                                </Typography>
-                                            </Typography>
-                                        } */}
+
                                     </Typography>
                                 </Grid>
                                 <Grid size={{ xs: 2, sm: 3, md: 3 }} className='Announcementiconslist-flex'>
                                     <Typography component="div" className='Announcementiconslist'>
 
                                         <IconButton aria-label="pin" onClick={() => onPinClick(data.ID)}>
-                                            {pinnedAnnouncements[data.ID] ? <PushPin color="primary" className='PushPinOutlined' /> : <PushPinOutlined color="default" className='PushPinOutlined'/>}
+                                            {pinnedAnnouncements[data.ID] ? <PushPin color="primary" className='PushPinOutlined' /> : <PushPinOutlined color="default" className='PushPinOutlined' />}
                                         </IconButton>
                                         <IconButton aria-label="edit" onClick={() => onEditClick(data)}>
                                             <Edit color="primary" />
                                         </IconButton>
-                                        <IconButton aria-label="delete" className='Delete' onClick={() => onDeleteClick(data.ID)}>
-                                            {/* <Delete color="secondary" /> */}
+                                      
+                                        <IconButton aria-label="delete" className='Delete' onClick={()=>handleSingleOpenDelete(data)}>
                                             <img src={Delete} alt="Delete" ></img>
                                         </IconButton>
+                                        
+                            {isSingleModalOpen && <ModalPopup
+                                header="File Delete"
+                                message1={`Are you sure, you want to delete the announcement?`}
+                                btnPrimaryText="Confirm"
+                                btnSecondaryText="Cancel"
+                                handlePrimaryClick={() => { onDeleteClick(); setIsSingleModalOpen(false); }}
+                                handleSecondaryClick={() => handleCloseModal()}
+                            />
+                            }
+                                        
                                     </Typography>
                                 </Grid>
                             </Grid>

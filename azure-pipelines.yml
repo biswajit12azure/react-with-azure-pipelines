@@ -1,0 +1,46 @@
+trigger:
+  - Development
+
+pool:
+  name: Default
+
+steps:
+  # ✅ Install Latest Node.js (22.x for better performance)
+  - task: NodeTool@0
+    inputs:
+      versionSpec: '20.x'
+    displayName: 'Install Node.js 20'
+
+  # ✅ Install Dependencies (Only if node_modules is missing)
+  - script: |
+      if not exist "$(Build.SourcesDirectory)\node_modules" (
+        echo "node_modules not found. Installing dependencies..."
+        npm i --prefer-offline --legacy-peer-deps --concurrency=%NUMBER_OF_PROCESSORS%
+      ) else (
+        echo "Skipping dependency installation as node_modules already exists."
+      )
+    displayName: 'Install Dependencies (Skip if Exists)'
+    workingDirectory: $(Build.SourcesDirectory)
+
+  # ✅ Run Security Audit (Optional, can be disabled)
+  # ✅ Run Security Audit (Log warnings but do not fail pipeline)
+  #- script: |
+  #    npm audit --audit-level=high || echo "⚠ Security vulnerabilities found. Please review the report."
+  #  displayName: 'Run Security Audit (Warnings Only)'
+  #  continueOnError: true  # This ensures the pipeline does not fail but logs issues
+
+
+  # ✅ Build React Application with Multi-Threading
+  - script: |
+      npm run build -- --max-old-space-size=4096 --threads=%NUMBER_OF_PROCESSORS%
+    displayName: 'Build React Application (Optimized)'
+    workingDirectory: $(Build.SourcesDirectory)
+
+  # ✅ Validate Build Output
+  - script: |
+      if not exist "$(Build.SourcesDirectory)\build" (
+        echo Build output directory not found!
+        exit /b 1
+      )
+    displayName: 'Validate Build Output'
+

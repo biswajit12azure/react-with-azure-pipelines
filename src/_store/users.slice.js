@@ -1,4 +1,4 @@
-import { createAsyncThunk, createReducer, createSlice } from '@reduxjs/toolkit';
+import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import { trackPromise } from 'react-promise-tracker';
 import { authActions } from '_store';
 import { fetchWrapper } from '_utils/fetch-wrapper';

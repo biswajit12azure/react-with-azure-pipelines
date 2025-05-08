@@ -12,7 +12,6 @@ import { DatePicker } from '@mui/x-date-pickers';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 
-
 const MarketerGroupFilter = ({ marketerData, handleFilterSubmit, marketerId, setMarketerId, isOpen, onClose, onOpen }) => {
     const dispatch = useDispatch();
     const [anchorEl, setAnchorEl] = useState(null);
@@ -23,7 +22,7 @@ const MarketerGroupFilter = ({ marketerData, handleFilterSubmit, marketerId, set
         value: x.MarketerID
     })) || [];
 
-    const { handleSubmit, control, watch, reset, trigger, setValue, formState: { errors } } = useForm({
+    const { handleSubmit, control, watch, reset, trigger, setValue, formState: { errors,isValid } } = useForm({
         defaultValues: {
             GroupName: '',
             StartMonth: null,
@@ -34,16 +33,16 @@ const MarketerGroupFilter = ({ marketerData, handleFilterSubmit, marketerId, set
 
     const watchedValues = watch();
 
-    useEffect(() => {
-        const hasValue = Object.values(watchedValues).some(value => value !== '' && value !== null);
-        setIsFormValid(hasValue);
-    }, [watchedValues]);
+    // useEffect(() => {
+    //     const hasValue = Object.values(watchedValues).some(value => value !== '' && value !== null);
+    //     setIsFormValid(hasValue);
+    // }, [watchedValues]);
 
-    useEffect(() => {
-        if (marketerId) {
-            setValue('MarketerID', marketerId);
-        }
-    }, [marketerId, setValue]);
+    // useEffect(() => {
+    //     if (marketerId) {
+    //         setValue('MarketerID', marketerId);
+    //     }
+    // }, [marketerId, setValue]);
 
     const canBeOpen = isOpen && Boolean(anchorEl);
     const id = canBeOpen ? 'simple-popper' : undefined;
@@ -51,11 +50,18 @@ const MarketerGroupFilter = ({ marketerData, handleFilterSubmit, marketerId, set
     const onSubmit = async (data) => {
         dispatch(alertActions.clear());
         try {
-            const startMonth = dayjs(data.StartMonth).isValid() ? dayjs(data.StartMonth).toISOString() : null;
-            const endMonth = dayjs(data.EndMonth).isValid() ? dayjs(data.EndMonth).toISOString() : null;
-            data = { ...data, StartMonth: startMonth, EndMonth: endMonth };
+            const startMonth = dayjs(data.StartMonth).isValid() ? dayjs(data.StartMonth).format('YYYY-MM-DDTHH:mm:ss') : null;
+            const endMonth = dayjs(data.EndMonth).isValid() ? dayjs(data.EndMonth).format('YYYY-MM-DDTHH:mm:ss') : null;
+            // data = { ...data, StartMonth: startMonth, EndMonth: endMonth };
 
-            const result = await dispatch(marketergroupAction.filter(data)).unwrap();
+             const transformed = {
+                GroupName: data.GroupName || "",
+                StartMonth: startMonth,
+                MarketerID: data.MarketerID || 0,
+                EndMonth: endMonth
+                }
+
+            const result = await dispatch(marketergroupAction.filter(transformed)).unwrap();
             if (result?.error) {
                 dispatch(alertActions.error({ message: result?.payload || result?.error.message, header: "Fetch Failed" }));
                 return;
@@ -96,6 +102,22 @@ const MarketerGroupFilter = ({ marketerData, handleFilterSubmit, marketerId, set
             EndMonth: null
         });
     };
+    useEffect(() => {
+        const hasValue = Object.entries(watchedValues).some(([key, value]) => {
+          if (key === 'MarketerID') {
+            return value !== null && value !== undefined && value !== '' && value !== 0;
+          }
+          if (typeof value === 'string') {
+            return value.trim() !== '';
+          }
+          if (typeof value === 'object' && value !== null) {
+            return true; // Date fields like StartMonth, EndMonth
+          }
+          return false;
+        });
+        setIsFormValid(hasValue);
+      }, [watchedValues]);
+      
 
     return (
         <>
@@ -112,6 +134,7 @@ const MarketerGroupFilter = ({ marketerData, handleFilterSubmit, marketerId, set
                                 </Grid>
                             </Grid>
                         </Typography>
+                         <Typography component="div" className='marbottom0 selecticon marginbottom16'>
                         <AutocompleteInput
                             control={control}
                             name="MarketerID"
@@ -122,6 +145,7 @@ const MarketerGroupFilter = ({ marketerData, handleFilterSubmit, marketerId, set
                             handleBlur={handleBlur}
                             trigger={trigger}
                         />
+                        </Typography>
                         <CustomTextFieldInput
                             control={control}
                             name="GroupName"
@@ -138,6 +162,10 @@ const MarketerGroupFilter = ({ marketerData, handleFilterSubmit, marketerId, set
                                         {...field}
                                         label="Start Month"
                                         views={['year', 'month']}
+                                        onChange={(date) => {
+                                            const startOfMonth = date?.startOf('month'); // Normalize to 1st of month
+                                            field.onChange(startOfMonth); // Use field.onChange directly
+                                          }}
                                         slotProps={{
                                             textField: (params) => <TextField {...params} />
                                         }}
@@ -155,6 +183,10 @@ const MarketerGroupFilter = ({ marketerData, handleFilterSubmit, marketerId, set
                                         {...field}
                                         label="End Month"
                                         views={['year', 'month']}
+                                        onChange={(date) => {
+                                            const endOfMonth = date?.endOf('month'); // Set to last day of month
+                                            field.onChange(endOfMonth);
+                                          }}
                                         slotProps={{
                                             textField: (params) => <TextField {...params} />
                                         }}

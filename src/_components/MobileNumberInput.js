@@ -4,7 +4,7 @@ import { Controller } from 'react-hook-form';
 import InputMask from 'react-input-mask';
 import ErrorIcon from '@mui/icons-material/Error';
 
-const MobileNumberInput = ({ control, name, label, rules, errors, handleBlur, handleFocus }) => (
+const MobileNumberInput = ({ control, name, label, rules, errors, handleBlur, handleFocus, disabled }) => (
     <Controller
         name={name}
         control={control}
@@ -25,6 +25,8 @@ const MobileNumberInput = ({ control, name, label, rules, errors, handleBlur, ha
                             {...inputProps}
                             id={name}
                             name={name}
+                            disabled={disabled || false}
+                            // startAdornment={<InputAdornment position="start"></InputAdornment>}
                             endAdornment={
                                 errors[name] ? (
                                     <InputAdornment position="end">

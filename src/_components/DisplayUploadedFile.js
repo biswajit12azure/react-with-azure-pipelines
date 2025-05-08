@@ -15,13 +15,13 @@ const DisplayUploadedFile = ({ exsistingFiles = [] }) => {
   };
   return (
     <div>
-      <Accordion>
+      <Accordion >
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel1-content"
           id="panel1-header"
         >
-          <Typography className="p-0" component="h2">Uploaded Documents</Typography>
+          <Typography className="p-0 AccordionSummaryheading" component="h2" >Uploaded Documents</Typography>
         </AccordionSummary>
         <AccordionDetails>
           <div className="DownloadContainer">

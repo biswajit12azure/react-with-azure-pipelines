@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React from 'react';
 import Grid from '@mui/material/Grid2';
 import { Accordion, AccordionSummary, AccordionDetails, Typography, IconButton } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
@@ -63,7 +63,7 @@ const FAQDetails = ({ faqData, portalData, onEditClick, handleRefresh }) => {
                                                 <Typography component="h5">{q.Question}</Typography>
                                                 <Grid container>
                                                 <Grid size={{ xs: 6, sm: 6, md: 9 }}>
-                                                <Typography>{q.Answer}</Typography>
+                                                <Typography><div dangerouslySetInnerHTML={{ __html: q.Answer }}></div></Typography>
                                                 </Grid>
                                                 <Grid size={{ xs: 6, sm: 6, md: 3 }} className='Announcementiconslist-flex'>
                                                     <Typography component="div" className='Announcementiconslist'>

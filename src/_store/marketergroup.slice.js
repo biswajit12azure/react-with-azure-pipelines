@@ -1,4 +1,4 @@
-import { createAsyncThunk, createReducer, createSlice } from '@reduxjs/toolkit';
+import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import { trackPromise } from 'react-promise-tracker';
 import { fetchWrapper } from '_utils/fetch-wrapper';
 
@@ -73,7 +73,7 @@ function createExtraActions() {
             `${name}/insert`,
             async (transformedData , { rejectWithValue }) => { 
                 try {
-                    const response = await trackPromise(fetchWrapper.post(`${baseUrl}/CreateMarketerGroup`,{Data: transformedData}));
+                    const response = await trackPromise(fetchWrapper.post(`${baseUrl}/CreateMarketerGroup`,{marketerGroupRequest: transformedData}));
                     return response;
                 } catch (error) {
                     return rejectWithValue(error);

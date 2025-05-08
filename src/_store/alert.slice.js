@@ -35,7 +35,9 @@ function createReducers() {
             header:action.payload?.header || '',
             message: action.payload?.message || action.payload,
             message2: action.payload?.message2 || '',
-            showAfterRedirect: action.payload?.showAfterRedirect
+            showAfterRedirect: action.payload?.showAfterRedirect,
+            islogout: action.payload?.islogout || false,
+            buttonText: action.payload?.buttonText || 'Close'
         };
     }
 
@@ -45,7 +47,9 @@ function createReducers() {
             header:action.payload?.header || '',
             message: action.payload?.message || action.payload,
             message2: action.payload?.message2 || '',
-            showAfterRedirect: action.payload?.showAfterRedirect
+            showAfterRedirect: action.payload?.showAfterRedirect,
+            islogout: action.payload?.islogout || false,
+            buttonText: action.payload?.buttonText || 'Close'
         };
     }
 

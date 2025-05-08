@@ -1,0 +1,47 @@
+trigger: none
+pr: none
+
+pool:
+  vmImage: 'windows-latest'  
+
+variables:
+  BUILD_ARTIFACT_PATH: '$(Build.ArtifactStagingDirectory)'
+  CODEQL_DB_PATH: '$(Agent.TempDirectory)/codeql-database'
+
+stages:
+- stage: BuildAndCodeQL
+  jobs:
+  - job: CodeQL
+    steps:
+    - checkout: self
+
+    # Install Node.js
+    - task: NodeTool@0
+      displayName: 'Install Node.js'
+      inputs:
+        versionSpec: '20.x'
+
+    # Install project dependencies
+    - script: |
+        echo "Installing dependencies..."
+        npm install --legacy-peer-deps
+      displayName: 'Install Dependencies'
+
+    # CodeQL: Initialize
+    - task: AdvancedSecurity-Codeql-Init@1
+      displayName: 'Initialize CodeQL'
+      inputs:
+        languages: 'javascript'  # ✅ React project
+        buildType: 'manual'
+
+    # CodeQL: Build step (manual build)
+    - script: |
+        echo "Running manual build step for CodeQL..."
+        npm run build
+      displayName: 'Run Build Step for CodeQL'
+    
+    - task: AdvancedSecurity-Dependency-Scanning@1
+    
+    # CodeQL: Analyze
+    - task: AdvancedSecurity-Codeql-Analyze@1
+      displayName: 'Perform CodeQL Analysis'

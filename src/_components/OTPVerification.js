@@ -3,6 +3,9 @@ import Link from "@material-ui/core/Link";
 import { Controller, useForm } from "react-hook-form";
 import { yupResolver } from '@hookform/resolvers/yup';
 import { MuiOtpInput } from "mui-one-time-password-input";
+import { useDispatch, useSelector } from "react-redux";
+import { alertActions, authActions, userActions } from '_store';
+import { resetFailedLabels, resetSuccessLabels } from "_utils/labels";
 import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
 import Box from '@mui/material/Box';
@@ -13,7 +16,12 @@ import Grid from '@mui/material/Grid2';
 import { logo } from '../images';
 import { labels } from "_utils/labels";
 const OTPVerification = ({ fullName, open, handleOTPSubmit, handleOtpClose }) => {
-    const { handleSubmit, control, formState: { errors, isValid }, trigger } = useForm({
+    const dispatch = useDispatch();
+    const user = useSelector(x => x.users?.userDetails);
+
+    const userId = user?.UserID;
+    const email = user?.EmailID;
+    const { handleSubmit, control, formState: { errors, isValid } } = useForm({
         resolver: yupResolver(otpValidationSchema)
     });
 
@@ -22,6 +30,18 @@ const OTPVerification = ({ fullName, open, handleOTPSubmit, handleOtpClose }) =>
         handleOTPSubmit(otp);
     }
 
+    const handleResendOtp = async() => {
+        const generateOtpResult = await dispatch(authActions.generateOtp({ email }));
+        dispatch(alertActions?.success({message:`Verification code resent successfully.`, header:`Reset Password`}));
+        if (generateOtpResult?.error) {
+          dispatch(alertActions.error({
+            showAfterRedirect: true,
+            message: generateOtpResult?.payload || generateOtpResult?.error.message,
+            header: resetFailedLabels.header
+          }));
+          return;
+        }
+    }
     return (
         <Modal
             open={open}
@@ -36,8 +56,7 @@ const OTPVerification = ({ fullName, open, handleOTPSubmit, handleOtpClose }) =>
                             {labels.eServicePortal}
                         </Link>
                         <Typography component="h2" variant="h5" className="headercontent"> <b>{`Hello, ${fullName || ""}!`}</b></Typography>
-                        <Typography component="p" className="modalpopupcontent">We have sent a Verification code to your registered Email Address.
-                            Please enter the code below to verify your identity and proceed with the password reset.</Typography>
+                        <Typography component="p" className="modalpopupcontent">A verification code has been sent to your registered email address. Please enter the code below to complete your password reset.</Typography>
 
                         <form  onSubmit={handleSubmit(onSubmit)} className='newpassword-list form forgotpasswordcontainer p-0'>
                             <div className="App">
@@ -68,15 +87,34 @@ const OTPVerification = ({ fullName, open, handleOTPSubmit, handleOtpClose }) =>
                             >
                                 VERIFY
                             </Button>
-                            <Button
-                                fullWidth
-                                variant="contained"
-                                color="primary"
-                                className="buttonCancel"
-                                onClick={handleOtpClose}
-                            >
-                                Cancel
-                            </Button>
+                                <Box>
+                                    <Grid container direction="row" spacing={2} className="">
+                                        <Grid size={{ xs: 12, sm: 6, md: 6 }}>
+                                            <Button
+                                                fullWidth
+                                                variant="contained"
+                                                color="primary"
+                                                className="Loginbutton cancelbutton"
+                                                onClick={handleOtpClose}
+                                            >
+                                                Cancel
+                                            </Button>
+                                        </Grid>
+                                        <Grid size={{ xs: 12, sm: 6, md: 6 }}>
+                                            <Button
+                                                fullWidth
+                                                variant="contained"
+                                                color="primary"
+                                                className="Loginbutton cancelbutton"
+                                            onClick={handleResendOtp}
+                                            >
+                                                Resend OTP
+                                            </Button>
+                                        </Grid>
+
+                                    </Grid>
+                                </Box>
+                            
                             </Box>
                         </form>
                     </Grid>

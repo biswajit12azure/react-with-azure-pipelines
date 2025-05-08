@@ -12,31 +12,36 @@ import Link from "@material-ui/core/Link";
 import Box from '@mui/material/Box';
 import InputAdornment from '@mui/material/InputAdornment';
 import { logo, icoutlineemail } from '../../images';
+import { Error } from "@mui/icons-material";
+
 const ResetPassword = ({ open, handleClose, onSubmitToOTP }) => {
     const dispatch = useDispatch();
-    const formOptions = { resolver: yupResolver(resetValidationSchema) };
-    const { register, handleSubmit, trigger, formState: { errors, isValid } } = useForm(formOptions);
+    const [emailError, setEmailError] = useState('');
+
+    const { register, handleSubmit, trigger, reset, formState: { errors, isValid } } = useForm({
+        resolver: yupResolver(resetValidationSchema),
+        mode: 'onChange',
+    });
 
     const onSubmit = async ({ email }) => {
+        setEmailError('');
+        dispatch(alertActions.clear());
         try {
             const result = await dispatch(authActions.forgotPasswordRequest({ email }));
-             if (result?.error) {                
-                dispatch(alertActions.error({
-                    showAfterRedirect: true,
-                    message: result?.error.message,
-                    header: emailSentLabels.header
-                }));
+            if (result?.error) {
+                setEmailError(result.payload);
                 return;
-             }
-             await handleClose();
-             // onSubmitToOTP();
-             dispatch(alertActions.success({
+            }
+
+            // onSubmitToOTP();
+            dispatch(alertActions.success({
                 showAfterRedirect: true,
-                message: emailSentLabels.message1,
-                header: emailSentLabels.header
+                message: result?.payload?.Message,
+                header: `Reset Password`
             }));
+            handleClose();
         } catch (error) {
-            dispatch(alertActions.error({ message: error?.message || error, header: "Forgot Password" }));                                              
+            dispatch(alertActions.error({ message: error?.message || error, header: "Forgot Password" }));
         }
     };
 
@@ -44,6 +49,12 @@ const ResetPassword = ({ open, handleClose, onSubmitToOTP }) => {
         const fieldName = e.target.name;
         await trigger(fieldName); // Trigger validation for the field
     };
+
+    const handleForgotPasswordClose = () => {
+        reset({ email: '' });
+        setEmailError('');
+        handleClose();
+    }
 
     return (
         <Modal
@@ -70,8 +81,8 @@ const ResetPassword = ({ open, handleClose, onSubmitToOTP }) => {
                             <TextField
                                 id="input-with-icon-textfield"
                                 {...register('email')}
-                                error={!!errors.email}
-                                helperText={errors.email?.message}
+                                error={!!errors.email || !!emailError}
+                                helperText={errors.email?.message || emailError}
                                 onBlur={handleBlur}
                                 InputProps={{
                                     startAdornment: (
@@ -79,6 +90,13 @@ const ResetPassword = ({ open, handleClose, onSubmitToOTP }) => {
                                             <img src={icoutlineemail} alt="Email icon" />
                                         </InputAdornment>
                                     ),
+                                    endAdornment: (
+                                        (errors.email || emailError) ? (
+                                            <InputAdornment position="end">
+                                                <Error style={{ color: 'red' }} />
+                                            </InputAdornment>
+                                        ) : null
+                                    )
                                 }}
                                 variant="outlined"
                             />
@@ -98,7 +116,7 @@ const ResetPassword = ({ open, handleClose, onSubmitToOTP }) => {
                             variant="contained"
                             color="primary"
                             className="buttonCancel"
-                            onClick={handleClose}
+                            onClick={handleForgotPasswordClose}
                         >
                             Cancel
                         </Button>

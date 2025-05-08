@@ -1,31 +1,28 @@
-import React, { useEffect } from "react";
+import React, { useEffect} from "react";
 import { useDispatch, useSelector } from 'react-redux';
-import { Box, Typography } from '@mui/material';
 import Grid from '@mui/material/Grid2';
-import { Button } from '@mui/material';
-import Accordion from "@mui/material/Accordion";
-import AccordionSummary from "@mui/material/AccordionSummary";
-import AccordionDetails from "@mui/material/AccordionDetails";
+import { Button, Box, Typography, Accordion, AccordionSummary, AccordionDetails } from '@mui/material';
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import { DisplayUploadedFile } from '_components';
-import { alertActions, mapCenterAction } from '_store';
+import { alertActions, userActions } from '_store';
 
-const UserProfileDetailsMC = ({ userData, roles, handleReject, singleUserUpdate, handleResetPassword }) => {
-    const header = " Individual User Profile";
+const UserProfileDetailsMC = ({ userData, roles, portalAccess, handleResetPassword, onLockToggle, setSelectedUser, setshowDetailSection, singleUserUpdate }) => {
+    const header = " User Details";
     const dispatch = useDispatch();
+    // const [open, setOpen] = useState(false);
     const id = userData.UserID;
     const RoleName = roles.filter((item) => item?.value === userData.RoleID);
-    const user = useSelector(x => x.mapcenter?.userData);
-
-    const dlStateName = user?.State?.find(state => state.StateId === user?.DLState)?.StateName;
-    const companyStateName = user?.State?.find(state => state.StateId === user?.CompanyState)?.StateName;
-    const homeStateName = user?.State?.find(state => state.StateId === user?.HomeState)?.StateName;
+    const user = useSelector(x => x.users?.userDetails);
+    const authUser = useSelector(x => x.auth.value);
+    const userAccess = authUser?.Data?.UserAccess;
+    // const userdetails = authUser?.Data?.UserDetails;
+    // const isReviewer = userAccess?.some(access => access.Role.toLowerCase().includes('reviewer'));
+    const isAdmin = userAccess?.some(access => access.Role.toLowerCase().includes('admin'));
 
     useEffect(() => {
         const fetchData = async () => {
-            dispatch(alertActions.clear());
+            dispatch(userActions.clear());
             try {
-                const result = await dispatch(mapCenterAction.get({ id })).unwrap();
+                const result = await dispatch(userActions.getUserDetailsById(id)).unwrap();
 
                 if (result?.error) {
                     dispatch(alertActions.error({
@@ -43,10 +40,28 @@ const UserProfileDetailsMC = ({ userData, roles, handleReject, singleUserUpdate,
         fetchData();
     }, [id, dispatch]);
 
+    // const handleRejectClick = () => {
+    //     setOpen(true);
+    // };
+
+    // const handleClose = () => {
+    //     setOpen(false);
+    // };
+
+    // const handleRejectConfirm = (reason, comments) => {
+    //     handleReject(userData, reason, comments);
+    //     setOpen(false);
+    // };
+
+    const handleReviewChange = () => {
+        setSelectedUser(userData);
+        setshowDetailSection(true);
+    }
+
     return (
         <Box>
             <Box className="userInformationcontainer">
-                <Accordion component="div">
+                <Accordion component="div" defaultExpanded>
                     <AccordionSummary
                         expandIcon={<ExpandMoreIcon />}
                         aria-controls="panel1-content"
@@ -60,31 +75,31 @@ const UserProfileDetailsMC = ({ userData, roles, handleReject, singleUserUpdate,
                             <Grid size={{ xs: 12, sm: 12, md: 6 }}>
                                 <Typography component="div" className="UserName">
                                     <Grid container spacing={3}>
-                                        <Grid size={{ xs: 6, sm: 6, md: 6 }}>
-                                            <Typography component="span" className="textleft">User Name:</Typography>
+                                        <Grid size={{ xs: 6, sm: 6, md: 4 }}>
+                                            <Typography component="span" className="textleft">Full Name:</Typography>
                                         </Grid>
-                                        <Grid size={{ xs: 6, sm: 6, md: 6 }}>
+                                        <Grid size={{ xs: 6, sm: 6, md: 8 }}>
                                             <Typography component="span" className="textright">{user?.FullName}</Typography>
                                         </Grid>
                                     </Grid>
                                 </Typography>
                                 <Typography component="div" className="UserName">
                                     <Grid container spacing={3}>
-                                        <Grid size={{ xs: 6, sm: 6, md: 6 }}>
+                                        <Grid size={{ xs: 6, sm: 6, md: 4 }}>
                                             <Typography component="span" className="textleft">Company Name:</Typography>
                                         </Grid>
-                                        <Grid size={{ xs: 6, sm: 6, md: 6 }}>
-                                            <Typography component="span" className="textright">{userData?.CompanyName}</Typography>
+                                        <Grid size={{ xs: 6, sm: 6, md: 8 }}>
+                                            <Typography component="span" className="textright">{user?.CompanyName}</Typography>
                                         </Grid>
                                     </Grid>
                                 </Typography>
                                 <Typography component="div" className="UserName">
                                     <Grid container spacing={3}>
-                                        <Grid size={{ xs: 6, sm: 6, md: 6 }}>
-                                            <Typography component="span" className="textleft">Email:</Typography>
+                                        <Grid size={{ xs: 6, sm: 6, md: 4 }}>
+                                            <Typography component="span" className="textleft">Email Address:</Typography>
                                         </Grid>
-                                        <Grid size={{ xs: 6, sm: 6, md: 6 }}>
-                                            <Typography component="span" className="textright">{userData?.EmailID}</Typography>
+                                        <Grid size={{ xs: 6, sm: 6, md: 8 }}>
+                                            <Typography component="span" className="textright">{user?.EmailID}</Typography>
                                         </Grid>
                                     </Grid>
                                 </Typography>
@@ -92,20 +107,30 @@ const UserProfileDetailsMC = ({ userData, roles, handleReject, singleUserUpdate,
                             <Grid size={{ xs: 12, sm: 12, md: 6 }}>
                                 <Typography component="div" className="UserName">
                                     <Grid container spacing={3}>
-                                        <Grid size={{ xs: 6, sm: 6, md: 6 }}>
+                                        <Grid size={{ xs: 6, sm: 6, md: 4 }}>
                                             <Typography component="span" className="textleft">Phone Number:</Typography>
                                         </Grid>
-                                        <Grid size={{ xs: 6, sm: 6, md: 6 }}>
-                                            <Typography component="span" className="textright">{user?.CompanyContactTelephone}</Typography>
+                                        <Grid size={{ xs: 6, sm: 6, md: 8 }}>
+                                            <Typography component="span" className="textright">{user?.MobileNumber}</Typography>
                                         </Grid>
                                     </Grid>
                                 </Typography>
                                 <Typography component="div" className="UserName">
                                     <Grid container spacing={3}>
-                                        <Grid size={{ xs: 6, sm: 6, md: 6 }}>
+                                        <Grid size={{ xs: 6, sm: 6, md: 4 }}>
+                                            <Typography component="span" className="textleft">Portal Access :</Typography>
+                                        </Grid>
+                                        <Grid size={{ xs: 6, sm: 6, md: 8 }}>
+                                            <Typography component="span" className="textright">{portalAccess}</Typography>
+                                        </Grid>
+                                    </Grid>
+                                </Typography>
+                                <Typography component="div" className="UserName">
+                                    <Grid container spacing={3}>
+                                        <Grid size={{ xs: 6, sm: 6, md: 4 }}>
                                             <Typography component="span" className="textleft">Portal Role :</Typography>
                                         </Grid>
-                                        <Grid size={{ xs: 6, sm: 6, md: 6 }}>
+                                        <Grid size={{ xs: 6, sm: 6, md: 8 }}>
                                             <Typography component="span" className="textright">{RoleName[0]?.label}</Typography>
                                         </Grid>
                                     </Grid>
@@ -115,290 +140,51 @@ const UserProfileDetailsMC = ({ userData, roles, handleReject, singleUserUpdate,
                     </AccordionDetails>
                 </Accordion>
             </Box>
-            <Grid container spacing={2}>
-                <Grid size={{ xs: 12, sm: 12, md: 6 }}>
-                    <Box className="userInformationcontainer p-0">
-                        <Grid container spacing={3}>
-                            <Grid size={{ xs: 12, sm: 12, md: 12 }}>
-                                <Accordion component="div">
-                                    <AccordionSummary
-                                        expandIcon={<ExpandMoreIcon />}
-                                        aria-controls="panel1-content"
-                                        id="panel1-header"
-                                        component="div"
-                                    >
-                                        <Typography className="p-0" component="h2">PERSONAL INFORMATION</Typography>
-                                    </AccordionSummary>
-                                    <AccordionDetails>
-                                        <Typography component="div" className="UserName">
-                                            <Grid container>
-                                                <Grid size={{ xs: 6, sm: 6, md: 6 }}>
-                                                    <Typography component="span" className="textleft" >Full Name</Typography>
-                                                </Grid>
-                                                <Grid size={{ xs: 6, sm: 6, md: 6 }}>
-                                                    <Typography component="span" className="textright">{user?.FullName}</Typography>
-                                                </Grid>
-                                            </Grid>
-                                        </Typography>
-                                        <Typography component="div" className="UserName">
-                                            <Grid container>
-                                                <Grid size={{ xs: 6, sm: 6, md: 6 }}>
-                                                    <Typography component="span" className="textleft">Street Address:</Typography>
-                                                </Grid>
-                                                <Grid size={{ xs: 6, sm: 6, md: 6 }}>
-                                                    <Typography component="span" className="textright">{user?.HomeStreetAddress1}</Typography>
-                                                </Grid>
-                                            </Grid>
-                                        </Typography>
-                                        <Typography component="div" className="UserName">
-                                            <Grid container>
-                                                <Grid size={{ xs: 6, sm: 6, md: 6 }}>
-                                                    <Typography component="span" className="textleft">City:</Typography>
-                                                </Grid>
-                                                <Grid size={{ xs: 6, sm: 6, md: 6 }}>
-                                                    <Typography component="span" className="textright">{user?.HomeCity}</Typography>
-                                                </Grid>
-                                            </Grid>
-                                        </Typography>
-                                        <Typography component="div" className="UserName">
-                                            <Grid container>
-                                                <Grid size={{ xs: 6, sm: 6, md: 6 }}>
-                                                    <Typography component="span" className="textleft">State</Typography>
-                                                </Grid>
-                                                <Grid size={{ xs: 6, sm: 6, md: 6 }}>
-                                                    <Typography component="span" className="textright">{homeStateName}</Typography>
-                                                </Grid>
-                                            </Grid>
-                                        </Typography>
-                                        <Typography component="div" className="UserName">
-                                            <Grid container>
-                                                <Grid size={{ xs: 6, sm: 6, md: 6 }}>
-                                                    <Typography component="span" className="textleft">Zip Code</Typography>
-                                                </Grid>
-                                                <Grid size={{ xs: 6, sm: 6, md: 6 }}>
-                                                    <Typography component="span" className="textright">{user?.HomeZipCode}</Typography>
-                                                </Grid>
-                                            </Grid>
-                                        </Typography>
-                                        <Typography component="div" className="UserName">
-                                            <Grid container>
-                                                <Grid size={{ xs: 6, sm: 6, md: 6 }}>
-                                                    <Typography component="span" className="textleft">Driving License</Typography>
-
-                                                </Grid>
-                                                <Grid size={{ xs: 6, sm: 6, md: 6 }}>
-                                                    <Typography component="span" className="textright">{user?.DLNumber}</Typography>
-                                                </Grid>
-                                            </Grid>
-                                        </Typography>
-                                        <Typography component="div" className="UserName">
-                                            <Grid container>
-                                                <Grid size={{ xs: 6, sm: 6, md: 6 }}>
-                                                    <Typography component="span" className="textleft">License State</Typography>
-                                                </Grid>
-                                                <Grid size={{ xs: 6, sm: 6, md: 6 }}>
-                                                    <Typography component="span" className="textright">{dlStateName}</Typography>
-                                                </Grid>
-                                            </Grid>
-                                        </Typography>
-                                    </AccordionDetails>
-                                </Accordion>
-                            </Grid>
-                        </Grid>
-                    </Box>
-                </Grid>
-                <Grid size={{ xs: 12, sm: 12, md: 6 }}>
-                    <Box className="userInformationcontainer p-0">
-                        <Grid container spacing={3}>
-                            <Grid size={{ xs: 12, sm: 12, md: 12 }}>
-                                <Accordion>
-                                    <AccordionSummary
-                                        expandIcon={<ExpandMoreIcon />}
-                                        aria-controls="panel1-content"
-                                        id="panel1-header"
-                                    >
-                                        <Typography className="p-0" component="h2">COMPANY INFORMATION</Typography>
-                                    </AccordionSummary>
-                                    <AccordionDetails>
-                                        <Typography component="div" className="UserName">
-                                            <Grid container>
-                                                <Grid size={{ xs: 6, sm: 6, md: 6 }}>
-                                                    <Typography component="span" className="textleft">Company Name</Typography>
-
-                                                </Grid>
-                                                <Grid size={{ xs: 6, sm: 6, md: 6 }}>
-                                                    <Typography component="span" className="textright">{userData?.CompanyName}</Typography>
-                                                </Grid>
-                                            </Grid>
-                                        </Typography>
-                                        <Typography component="div" className="UserName">
-                                            <Grid container>
-                                                <Grid size={{ xs: 6, sm: 6, md: 6 }}>
-                                                    <Typography component="span" className="textleft">Tax TaxIdentification Number</Typography>
-
-                                                </Grid>
-                                                <Grid size={{ xs: 6, sm: 6, md: 6 }}>
-                                                    <Typography component="span" className="textright">{user?.TaxIdentificationNumber}</Typography>
-                                                </Grid>
-                                            </Grid>
-                                        </Typography>
-                                        <Typography component="div" className="UserName">
-                                            <Grid container>
-                                                <Grid size={{ xs: 6, sm: 6, md: 6 }}>
-                                                    <Typography component="span" className="textleft">Street Address:</Typography>
-
-                                                </Grid>
-                                                <Grid size={{ xs: 6, sm: 6, md: 6 }}>
-                                                    <Typography component="span" className="textright">{user?.CompanyStreetAddress1}</Typography>
-                                                </Grid>
-                                            </Grid>
-                                        </Typography>
-                                        <Typography component="div" className="UserName">
-                                            <Grid container>
-                                                <Grid size={{ xs: 6, sm: 6, md: 6 }}>
-                                                    <Typography component="span" className="textleft">City:</Typography>
-                                                </Grid>
-                                                <Grid size={{ xs: 6, sm: 6, md: 6 }}>
-                                                    <Typography component="span" className="textright">{user?.CompanyCity}</Typography>
-                                                </Grid>
-                                            </Grid>
-                                        </Typography>
-                                        <Typography component="div" className="UserName">
-                                            <Grid container>
-                                                <Grid size={{ xs: 6, sm: 6, md: 6 }}>
-                                                    <Typography component="span" className="textleft">Company State</Typography>
-                                                </Grid>
-                                                <Grid size={{ xs: 6, sm: 6, md: 6 }}>
-                                                    <Typography component="span" className="textright">{companyStateName}</Typography>
-                                                </Grid>
-                                            </Grid>
-                                        </Typography>
-                                        <Typography component="div" className="UserName">
-                                            <Grid container>
-                                                <Grid size={{ xs: 6, sm: 6, md: 6 }}>
-                                                    <Typography component="span" className="textleft">Zip Code</Typography>
-                                                </Grid>
-                                                <Grid size={{ xs: 6, sm: 6, md: 6 }}>
-                                                    <Typography component="span" className="textright">{user?.CompanyZipCode}</Typography>
-                                                </Grid>
-                                            </Grid>
-                                        </Typography>
-                                    </AccordionDetails>
-                                </Accordion>
-                            </Grid>
-                        </Grid>
-                    </Box>
-                </Grid>
-            </Grid>
-            <Grid container spacing={2}>
-                <Grid size={{ xs: 12, sm: 12, md: 6 }}>
-                    <Box className="userInformationcontainer p-0">
-                        <Grid container spacing={3}>
-                            <Grid size={{ xs: 12, sm: 12, md: 12 }}>
-                                <Accordion>
-                                    <AccordionSummary
-                                        expandIcon={<ExpandMoreIcon />}
-                                        aria-controls="panel1-content"
-                                        id="panel1-header"
-                                    >
-                                        <Typography className="p-0" component="h2">COMPANY POINT OF CONTACT</Typography>
-                                    </AccordionSummary>
-                                    <AccordionDetails>
-                                        <Typography component="div" className="UserName">
-                                            <Grid container>
-                                                <Grid size={{ xs: 6, sm: 6, md: 6 }}>
-                                                    <Typography component="span" className="textleft">Company Contact Name</Typography>
-
-                                                </Grid>
-                                                <Grid size={{ xs: 6, sm: 6, md: 6 }}>
-                                                    <Typography component="span" className="textright">{user?.CompanyContactName}</Typography>
-                                                </Grid>
-                                            </Grid>
-                                        </Typography>
-                                        <Typography component="div" className="UserName">
-                                            <Grid container>
-                                                <Grid size={{ xs: 6, sm: 6, md: 6 }}>
-                                                    <Typography component="span" className="textleft">Email Address</Typography>
-
-                                                </Grid>
-                                                <Grid size={{ xs: 6, sm: 6, md: 6 }}>
-                                                    <Typography component="span" className="textright">{user?.CompanyContactEmailAddress}</Typography>
-                                                </Grid>
-                                            </Grid>
-                                        </Typography>
-                                        <Typography component="div" className="UserName">
-                                            <Grid container>
-                                                <Grid size={{ xs: 6, sm: 6, md: 6 }}>
-                                                    <Typography component="span" className="textleft">Phone Number</Typography>
-
-                                                </Grid>
-                                                <Grid size={{ xs: 6, sm: 6, md: 6 }}>
-                                                    <Typography component="span" className="textright">{user?.CompanyContactTelephone}</Typography>
-                                                </Grid>
-                                            </Grid>
-                                        </Typography>
-                                        <Typography component="div" className="UserName">
-                                            <Grid container>
-                                                <Grid size={{ xs: 6, sm: 6, md: 6 }}>
-                                                    <Typography component="span" className="textleft">Authorized WGL Contact</Typography>
-
-                                                </Grid>
-                                                <Grid size={{ xs: 6, sm: 6, md: 6 }}>
-                                                    <Typography component="span" className="textright">{user?.AuthorizedWGLContact}</Typography>
-                                                </Grid>
-                                            </Grid>
-                                        </Typography>
-                                    </AccordionDetails>
-                                </Accordion>
-                            </Grid>
-
-                        </Grid>
-                    </Box>
-                </Grid>
-                <Grid size={{ xs: 12, sm: 12, md: 6 }}>
-                    <Box className="userInformationcontainer p-0">
-                        <Grid container spacing={3}>
-                            <Grid size={{ xs: 12, sm: 12, md: 12 }}>
-                                <DisplayUploadedFile exsistingFiles={user?.FileData} />
-                            </Grid>
-                        </Grid>
-                    </Box>
-                </Grid>
-            </Grid>
             <Grid container spacing={3}>
                 <Grid size={{ xs: 6, sm: 6, md: 6 }} className="ResetPasswordbutton">
-                    <Button
+                    {isAdmin && <> <Button
                         type="submit"
                         variant="contained"
                         className='ResetPassword'
                         color="primary"
-                        onClick={()=>handleResetPassword(userData?.EmailID)}
+                        onClick={() => handleResetPassword(userData?.EmailID)}
+                        disabled={userData?.Status.toLowerCase() !== 'approved'}
                     >
                         Reset Password
                     </Button>
-                </Grid>
-                <Grid size={{ xs: 6, sm: 6, md: 6 }} className="containedLoginbuttonleft">
-                    <Typography component="div" className="containedLoginbutton ResetPasswordbutton">
                         <Button
                             type="submit"
                             variant="contained"
-                            className='Rejectbutton'
+                            className='ResetPassword'
                             color="primary"
-                            disabled={userData?.Status.toLowerCase() === 'approved'}
-                            onClick={() => handleReject(userData)}
+                            onClick={() => onLockToggle(userData)}
+                            disabled={userData?.Status.toLowerCase() !== 'approved' || !userData.IsAccountLock}
                         >
-                            Reject
+                            Unlock Account
                         </Button>
-                    </Typography>
-                    <Button
+                    </>
+                    }
+                </Grid>
+                <Grid size={{ xs: 6, sm: 6, md: 6 }} className="containedLoginbuttonleft">
+                    {isAdmin && userData?.Status.toLowerCase() !== 'approved' &&
+                     <Button
                         type="submit"
                         variant="contained"
                         className='Loginbutton'
                         color="primary"
-                        disabled={userData?.Status.toLowerCase() === 'approved'}
-                        onClick={() => singleUserUpdate(userData)}
-                    >
+                        disabled={!((userData.Status.toLowerCase() == "verified") || (userData.Status.toLowerCase() == "partially approved"))}
+                        onClick={() => singleUserUpdate(userData)}>
                         Approve
+                    </Button>
+                    }
+                    <Button
+                        type="submit"
+                        variant="contained"
+                        className='Loginbutton buttonmarginleft-20'
+                        color="primary"
+                        onClick={() => handleReviewChange(userData)}
+                    >
+                        Review Request
                     </Button>
                 </Grid>
             </Grid>

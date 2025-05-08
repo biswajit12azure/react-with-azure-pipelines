@@ -27,7 +27,7 @@ function authHeader(url) {
     // return auth header with jwt if user is logged in and request is to the api url
     const token = authToken();
     const isLoggedIn = !!token;
-    const isApiUrl = url.startsWith(process.env.REACT_APP_API_URL);
+    const isApiUrl = url.startsWith(process.env.REACT_APP_API_URL) || url.startsWith(process.env.REACT_APP_MARKETER_API_URL);
     if (isLoggedIn && isApiUrl) {
         return { Authorization: `Bearer ${token}` };
     } else {
@@ -55,8 +55,17 @@ async function handleResponse(response) {
             logout();
         }
 
+        
+         // handle validation errors
+         if (response.status === 400) {
+            const errorData= !isJson && await response.json() ;
+            const validationErrors =  errorData && errorData?.errors;
+            const errors= (data && data.Message) || JSON.stringify(validationErrors);
+            return Promise.reject(errors);
+        }
+
         // get error message from body or default to response status
-        const error = (data && data.Message) || response.status;
+        const error = (data && data.Message) || response.statusText;
         return Promise.reject(error);
     }
 

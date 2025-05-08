@@ -1,0 +1,15 @@
+{
+    "Succeeded": true,
+    "Message": null,
+    "Errors": null,
+    "Data": [{
+            "DocID": 1,
+            "DocName": "UET"
+        }, {
+            "DocID": 2,
+            "DocName": "DRV"
+        }, {
+            "DocID": 3,
+            "DocName": "DC Nomination"
+        }]
+  }

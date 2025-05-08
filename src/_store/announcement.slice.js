@@ -1,4 +1,4 @@
-import { createAsyncThunk, createReducer, createSlice } from '@reduxjs/toolkit';
+import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import { trackPromise } from 'react-promise-tracker';
 import { fetchWrapper } from '_utils/fetch-wrapper';
 
@@ -42,10 +42,15 @@ function createExtraActions() {
     function get() {
         return createAsyncThunk(  
             `${name}/getAnnouncements`,
-            async (id, { rejectWithValue }) => {
+            async ({id, portalIds}, { rejectWithValue }) => {
                 try {
                     const url = new URL(`${baseUrl}/GetAnnouncementByID`);
-                    url.searchParams.append('userID', id);
+                    if(id.toString() !== "0"){
+                        url.searchParams.append('userID', id);
+                    }
+                    else{
+                    url.searchParams.append('PortalIds', portalIds);
+                    }
                     const response = await trackPromise(fetchWrapper.get(url.toString()));
                     return response;
                 } catch (error) {
@@ -58,10 +63,15 @@ function createExtraActions() {
     function getAllAnnouncements() {
         return createAsyncThunk(  
             `${name}/getAllAnnouncements`,
-            async (id, { rejectWithValue }) => {
+            async ({id, portalIds}, { rejectWithValue }) => {
                 try {
                     const url = new URL(`${baseUrl}/GetAnnouncementByAllRole`);
-                    url.searchParams.append('userID', id);
+                    if(id.toString() !== "0"){
+                        url.searchParams.append('userID', id);
+                    }
+                    else{
+                    url.searchParams.append('PortalIds', portalIds);
+                    }
                     const response = await trackPromise(fetchWrapper.get(url.toString()));
                     return response;
                 } catch (error) {

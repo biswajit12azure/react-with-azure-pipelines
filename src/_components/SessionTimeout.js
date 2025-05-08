@@ -1,10 +1,13 @@
 import React, { useRef, useState } from "react";
-import {useIdleTimer} from "react-idle-timer";
+import { useIdleTimer } from "react-idle-timer";
 import SessionTimeoutDialog from "./SessionTimeoutDialog";
+import { useDispatch } from "react-redux";
+import { alertActions } from "_store";
 let countdownInterval;
 let timeout;
-const SessionTimeout =  ({ isAuthenticated, onLogout }) => {
-  const sessionTimeoutTime= process.env.REACT_APP_SESSION_TIMEOUT_MINUTES || 20;
+const SessionTimeout = ({ isAuthenticated, onLogout }) => {
+  const dispatch = useDispatch();
+  const sessionTimeoutTime = process.env.REACT_APP_SESSION_TIMEOUT_MINUTES || 15;
   const [timeoutModalOpen, setTimeoutModalOpen] = useState(false);
   const [timeoutCountdown, setTimeoutCountdown] = useState(0);
   const idleTimer = useRef(null);
@@ -15,10 +18,15 @@ const SessionTimeout =  ({ isAuthenticated, onLogout }) => {
     clearInterval(countdownInterval);
   };
   const handleLogout = async (isTimedOut = false) => {
-      setTimeoutModalOpen(false);
-      clearSessionInterval();
-      clearSessionTimeout();
-      onLogout();
+    setTimeoutModalOpen(false);
+    clearSessionInterval();
+    clearSessionTimeout();
+    onLogout();
+    await dispatch(alertActions.success({
+      showAfterRedirect: true,
+      message: "You have been logged out due to inactivity. Please log in to continue.",
+      header: "Session Timeout"
+    }));
   };
   const handleContinue = () => {
     setTimeoutModalOpen(false);
@@ -54,16 +62,16 @@ const SessionTimeout =  ({ isAuthenticated, onLogout }) => {
     timeout: 1000 * 60 * sessionTimeoutTime, // 10 minutes
     onIdle: onIdle,
     debounce: 500, // 500 milliseconds
-    onActive:onActive
+    onActive: onActive
   });
 
-  return (     
-      <SessionTimeoutDialog
-        countdown={timeoutCountdown}
-        onContinue={handleContinue}
-        onLogout={() => handleLogout(false)}
-        open={timeoutModalOpen}
-      />  
+  return (
+    <SessionTimeoutDialog
+      countdown={timeoutCountdown}
+      onContinue={handleContinue}
+      onLogout={() => handleLogout(false)}
+      open={timeoutModalOpen}
+    />
   );
 }
 export default SessionTimeout;

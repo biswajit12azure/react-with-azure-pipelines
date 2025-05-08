@@ -3,6 +3,7 @@ import { trackPromise } from 'react-promise-tracker';
 import { alertActions } from '_store';
 import { history, fetchWrapper } from '_utils';
 import msalInstance from 'authConfig';
+// import { SessionStorage } from '@azure/msal-browser';
 
 // create slice
 
@@ -22,15 +23,16 @@ export const authReducer = slice.reducer;
 function createInitialState() {
     return {
         // initialize state from local storage to enable user to stay logged in
-        value: JSON.parse(localStorage.getItem('auth')),
-        userId: localStorage.getItem('userId'),
-        isAuthenticated: localStorage.getItem('isAuthenticated')
+        value: JSON.parse(sessionStorage.getItem('auth')),
+        userId: sessionStorage.getItem('userId'),
+        isAuthenticated: sessionStorage.getItem('isAuthenticated')
     }
 }
 
 function createReducers() {
     return {
-        setAuth
+        setAuth,
+        clear
     };
 
     function setAuth(state, action) {
@@ -45,6 +47,21 @@ function createReducers() {
         state.userId = action.payload;
         state.isAuthenticated = action.payload;
     }
+
+    function clear(state)
+    {
+        state.userId=null;
+        state.isAuthenticated=null;
+        state.value=null;
+        sessionStorage.removeItem('auth');
+        sessionStorage.removeItem('isAuthenticated');
+        sessionStorage.removeItem('userId');
+        sessionStorage.removeItem('appMenuItems');
+        sessionStorage.removeItem('portalID');
+        sessionStorage.removeItem('isInternalUser');
+        sessionStorage.removeItem('breadcrumb');
+        sessionStorage.removeItem('mapcenterUserID');
+    }
 }
 
 function createExtraActions() {
@@ -53,10 +70,13 @@ function createExtraActions() {
 
     return {
         login: login(),
+        loginSSO: loginSSO(),
         logout: logout(),
         refreshToken: refreshToken(),
         forgotPasswordRequest: forgotPasswordRequest(),
         resetPasswordRequest: resetPasswordRequest(),
+        userPasswordVerification:userPasswordVerification(),
+        resetPasswordByUser:resetPasswordByUser(),
         generateOtp: generateOtp(),
         validateOtp: validateOtp()
     };
@@ -70,17 +90,55 @@ function createExtraActions() {
                     // set auth user in redux state
                     dispatch(authActions.setAuth(user));
                     // store user details and jwt token in local storage to keep user logged in between page refreshes
-                    localStorage.setItem('auth', JSON.stringify(user));
+                    sessionStorage.setItem('auth', JSON.stringify(user));
                     if (user) {
                         const { Data: { UserDetails: { id } } } = user;
                         const { Succeeded } = user;
 
-                        localStorage.setItem('isAuthenticated', Succeeded);
-                        localStorage.setItem('userId', id);
+                        sessionStorage.setItem('isAuthenticated', Succeeded);
+                        sessionStorage.setItem('userId', id);
                     }
 
                 } catch (error) {
-                    dispatch(alertActions.error({ message: error, header: "Login Failed" }));
+                    if (error instanceof TypeError) {
+                        console.error('Network error:', error);
+                        dispatch(alertActions.error({ message: 'Network error: Please check your internet connection.', header: "Login Failed", showAfterRedirect: true }));
+                    } else {
+                        console.error('Failed to fetch:', error);
+                        dispatch(alertActions.error({ message: error || 'An unexpected error occurred.', header: "Login Failed", showAfterRedirect: true }));
+                    }
+                }
+            }
+        );
+    }
+
+    function loginSSO() {
+        return createAsyncThunk(
+            `${name}/loginSSO`, async ({ MicroEntraToken }, { dispatch }) => {
+                dispatch(alertActions.clear());
+                try {
+                    const user = await trackPromise(fetchWrapper.post(`${baseUrl}/AuthenticateByMicroEntraToken`, { MicroEntraToken }));
+                    // set auth user in redux state
+                    dispatch(authActions.setAuth(user));
+                    // store user details and jwt token in local storage to keep user logged in between page refreshes
+                    sessionStorage.setItem('auth', JSON.stringify(user));
+                    if (user) {
+                        const { Data: { UserDetails: { id } } } = user;
+                        const { Succeeded } = user;
+
+                        sessionStorage.setItem('isAuthenticated', Succeeded);
+                        sessionStorage.setItem('userId', id);
+                    }
+                    console.log('userResponse',user);
+
+                } catch (error) {
+                    if (error instanceof TypeError) {
+                        console.error('Network error:', error);
+                        dispatch(alertActions.error({ message: 'Network error: Please check your internet connection.', header: "Login Failed", showAfterRedirect: true }));
+                    } else {
+                        console.error('Failed to fetch:', error);
+                        dispatch(alertActions.error({ message: error || 'An unexpected error occurred.', header: "Login Failed", showAfterRedirect: true }));
+                    }
                 }
             }
         );
@@ -91,23 +149,29 @@ function createExtraActions() {
             `${name}/logout`, async (arg, { dispatch }) => {
                 try {
                     //console.log(`${window.location.origin}/`);
-                    const isInternalUser = JSON.parse(localStorage.getItem('isInternalUser'));
+                    const isInternalUser = JSON.parse(sessionStorage.getItem('isInternalUser'));
                     if (isInternalUser) {
+                        sessionStorage.removeItem('isInternalUser');
                         await msalInstance.initialize();
                         await msalInstance.logoutPopup({
                             postLogoutRedirectUri: `${window.location.origin}/`,
                         });
                     }
                     dispatch(authActions.setAuth(null));
-                    localStorage.removeItem('auth');
-                    localStorage.removeItem('isAuthenticated');
-                    localStorage.removeItem('userId');
-                    localStorage.removeItem('appMenuItems');
-                    localStorage.removeItem('portalID');
-                    localStorage.removeItem('isInternalUser');
-                    history.navigate('/');
                 } catch (error) {
-                    dispatch(alertActions.error({ message: error, header: "Logout Failed" }));
+                    dispatch(alertActions.error({ message: error, header: "Logout Failed", showAfterRedirect: true }));
+                }
+                finally {
+                    dispatch(authActions.setAuth(null));
+                    sessionStorage.removeItem('auth');
+                    sessionStorage.removeItem('isAuthenticated');
+                    sessionStorage.removeItem('userId');
+                    sessionStorage.removeItem('appMenuItems');
+                    sessionStorage.removeItem('portalID');
+                    sessionStorage.removeItem('isInternalUser');
+                    sessionStorage.removeItem('breadcrumb');
+                    sessionStorage.removeItem('mapcenterUserID');
+                    history.navigate('/');
                 }
             }
         );
@@ -137,9 +201,9 @@ function createExtraActions() {
 
                 dispatch(authActions.setAuth(updatedAuthValue));
                 // store user details and jwt token in local storage to keep user logged in between page refreshes
-                localStorage.setItem('auth', JSON.stringify(updatedAuthValue));
+                sessionStorage.setItem('auth', JSON.stringify(updatedAuthValue));
             } catch (error) {
-                dispatch(alertActions.error({ message: error, header: "Login Issue" }));
+                dispatch(alertActions.error({ message: error, header: "Login Issue", showAfterRedirect: true }));
             }
 
         });
@@ -167,6 +231,34 @@ function createExtraActions() {
             async ({ userId, newPassword }, { rejectWithValue }) => {
                 try {
                     const response = await trackPromise(fetchWrapper.post(`${baseUrl}/reset-password`, { UserId: userId, Password: newPassword }));
+                    return response;
+                } catch (error) {
+                    return rejectWithValue(error);
+                }
+            }
+        );
+    }
+
+    function resetPasswordByUser() { 
+        return createAsyncThunk(
+            `${name}/resetPasswordbyUser`,
+            async ({ userId, newPassword,currentPassword }, { rejectWithValue }) => {
+                try {
+                    const response = await trackPromise(fetchWrapper.post(`${baseUrl}/ResetPasswordbyUser`, { UserId: userId, NewPassword: newPassword,CurrentPassword:currentPassword }));
+                    return response;
+                } catch (error) {
+                    return rejectWithValue(error);
+                }
+            }
+        );
+    }
+
+    function userPasswordVerification() {  
+        return createAsyncThunk(
+            `${name}/userPasswordVerification`,
+            async ({ userId, newPassword,currentPassword }, { rejectWithValue }) => {
+                try {
+                    const response = await trackPromise(fetchWrapper.post(`${baseUrl}/UserPasswordVerification`, { UserId: userId, NewPassword: newPassword,CurrentPassword:currentPassword }));
                     return response;
                 } catch (error) {
                     return rejectWithValue(error);

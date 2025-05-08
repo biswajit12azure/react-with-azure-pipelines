@@ -19,9 +19,9 @@ const DropdownTableInput=({ label, value, onChange, options,disabled})=>{
             return selectedOption ? selectedOption.label : 'Select an option';
           }}
         >
-          <MenuItem value="">
+           <MenuItem value="">
             <em>{label}</em>
-          </MenuItem>
+          </MenuItem> 
           {options.map((option) => (
             <MenuItem key={option.value} value={option.value}>
               {option.label}

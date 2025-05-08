@@ -24,7 +24,8 @@ const ManageProfileMC = () => {
     const documentTypeData = user?.DocumentData || [];
     const states = user?.State || [];
     const exsistingFiles = user?.FileData || [];
-    
+    const isUser = true;
+    const [isEnable,setIsEnable] = useState(false);
     const documentData = documentTypeData.map(x => ({
         label: x.DocumentDescription,
         value: x.DocumentTypeID
@@ -47,20 +48,21 @@ const ManageProfileMC = () => {
         const fetchData = async () => {
             try {
                 dispatch(mapCenterAction.clear());
-                const user = await dispatch(mapCenterAction.get({id})).unwrap();
+                const user = await dispatch(mapCenterAction.get({ id })).unwrap();
                 const data = user?.Data;
+                sessionStorage.setItem('mapcenterUserID', id);
                 reset(data);
                 if (data?.FileData) {
                     setFiles(data?.FileData.map(file => ({
                         ID: file.ID,
-                        AdditionalID:file.AdditionalID,
+                        AdditionalID: file.AdditionalID,
                         DocumentTypeID: file.DocumentTypeID,
                         FileName: file.FileName,
                         Format: file.Format,
                         Size: file.Size,
                         PortalKey: file.PortalKey,
                         File: file.File,
-                        Url:file.Url
+                        Url: file.Url
                     })));
                 }
             } catch (error) {
@@ -74,7 +76,23 @@ const ManageProfileMC = () => {
         fetchData();
     }, [id, dispatch, reset, portalkey]);
 
+    useEffect(()=>{
+        const missingDocumentTypes = documentTypeData.filter(docType =>
+            !files.some(file => file.DocumentTypeID === docType.DocumentTypeID)
+        );
+        if(missingDocumentTypes.length>0){
+            setIsEnable(false);
+        }else{
+            setIsEnable(true);
+
+        }
+        console.log(isEnable);
+    },[files])
+
     const onSubmit = async (data) => {
+        
+
+
         dispatch(alertActions.clear());
         try {
             // Validate that all required document types have files
@@ -94,7 +112,7 @@ const ManageProfileMC = () => {
             const transformedData = {
                 UserID: id,
                 FullName: data.FullName,
-                AlternateEmail: user.AlternateEmail || '',
+                AlternateEmail: data.AlternateEmail,
                 DLState: data.DLState,
                 DLNumber: data.DLNumber,
                 HomeStreetAddress1: data.HomeStreetAddress1,
@@ -114,6 +132,11 @@ const ManageProfileMC = () => {
                 CompanyContactEmailAddress: data.CompanyContactEmailAddress,
                 AuthorizedWGLContact: data.AuthorizedWGLContact,
                 AdditionalID: user?.AdditionalID || 0,
+                StatusID: 1,
+                MobileNumber: user.MobileNumber,
+                AlternatePhoneNumber:data.AlternatePhoneNumber,
+                EmailID: user.EmailID,
+                ModifiedBy: data.FullName,
                 FileData: files
             };
             let result;
@@ -122,11 +145,12 @@ const ManageProfileMC = () => {
             } else {
                 result = await dispatch(mapCenterAction.insert({ id, transformedData }));
             }
-           
+
             if (result?.error) {
-                dispatch(alertActions.error({  message: result?.payload || result?.error.message, header: header }));
+                dispatch(alertActions.error({ message: result?.payload || result?.error.message, header: header }));
                 return;
             }
+            sessionStorage.removeItem('mapcenterUserID');
             navigate('/');
             dispatch(alertActions.success({ message: mapCenterRegistrationLabels.message1, header: mapCenterRegistrationLabels.header, showAfterRedirect: true }));
 
@@ -164,12 +188,17 @@ const ManageProfileMC = () => {
         }
     };
 
+    const handleCancelClick=()=>
+    {
+        navigate('/');
+    }
+
     return (
         <>
             {!(user?.loading || user?.error) && (
                 <Typography component="div" className="MapCenterAccecss">
                     <Typography component="div" className="MapCenterAccecssheading">
-                        <Typography component="h1"  variant="h5">Map Center Access</Typography>
+                        <Typography component="h1" variant="h5">Map Center Access</Typography>
                     </Typography>
                     <form onSubmit={handleSubmit(onSubmit)}>
                         <Typography className="Personal-Information-container" component="div">
@@ -189,6 +218,7 @@ const ManageProfileMC = () => {
                                                             control={control}
                                                             stateData={stateData}
                                                             errors={errors}
+                                                            isUser={isUser}
                                                         />
                                                     </Typography>
                                                 </Grid>
@@ -214,13 +244,14 @@ const ManageProfileMC = () => {
                                                         handleBlur={handleBlur} />
                                                 </Grid>
                                             </Grid>
+                                            
                                         </Grid>
                                         <Grid item xs={12} sm={12} md={4}>
                                             <Typography component="div" className="UploadFiles-container mapcontainer  ">
                                                 <Typography component="div" className="Personal-Informationsheading ">
                                                     <Typography component="h2" variant="h5">Document Upload  <img src={raphaelinfo} alt='raphaelinfo'></img></Typography>
                                                 </Typography>
-                                                <Typography component="div" className="passwordcheck">
+                                                <Typography component="div" className="passwordcheck marbottom0 selecticon">
                                                     <AutocompleteInput
                                                         control={control}
                                                         name="documentType"
@@ -261,7 +292,10 @@ const ManageProfileMC = () => {
                             </Grid>
                         </Typography>
                         <Grid item xs={12} sm={12} md={12} className="Personal-Information">
-                            <Button type="submit" variant="contained" className="CompleteRegistration" color="primary" disabled={!isValid} >
+                            <Button variant="contained" color="red" className="cancelbutton" onClick={handleCancelClick}>
+                                Cancel
+                            </Button>
+                            <Button type="submit" variant="contained" className="CompleteRegistration" color="primary" disabled={!(isValid && isEnable)} >
                                 Complete Registration
                             </Button>
                         </Grid>

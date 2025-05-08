@@ -6,7 +6,7 @@ import { alertActions } from '_store';
 import { Typography, Button, Box, FormGroup, FormControlLabel, Checkbox } from '@mui/material';
 import Popper from '@mui/material/Popper';
 import Grid from "@material-ui/core/Grid";
-import { CustomFormControl, CustomDatePicker } from '_components';
+import { CustomFormControl, CustomDatePicker, CustomNumberField } from '_components';
 import dayjs from 'dayjs';
 import { createMarketerSchema } from '_utils/validationSchema';
 import { AddCircleOutline } from '@mui/icons-material';
@@ -21,14 +21,15 @@ const MarketerCreate = ({ marketers, uetFileData, isOpen, onClose, onOpen, handl
     dayjs.extend(customParseFormat);
     const [anchorEl, setAnchorEl] = useState(null);
     const [selectedFiles, setSelectedFiles] = useState([]);
+    const today = dayjs();
+    const threeMonthsLater = today.add(3, 'month');
+
+    const minDate = today;
+    const maxDate = threeMonthsLater;
 
     const handleClick = (event) => {
         setAnchorEl(event.currentTarget);
-        if (isOpen) {
-            onClose();
-        } else {
-            onOpen();
-        }
+        isOpen ? onClose() : onOpen();
     };
 
     const canBeOpen = isOpen && Boolean(anchorEl);
@@ -42,8 +43,8 @@ const MarketerCreate = ({ marketers, uetFileData, isOpen, onClose, onOpen, handl
     const handleCheckboxChange = (event) => {
         const { name, checked } = event.target;
         const id = parseInt(name, 10);
-        setSelectedFiles(prevState =>
-            checked ? [...prevState, id] : prevState.filter(type => type !== id)
+        setSelectedFiles(prev =>
+            checked ? [...prev, id] : prev.filter(type => type !== id)
         );
     };
 
@@ -55,13 +56,13 @@ const MarketerCreate = ({ marketers, uetFileData, isOpen, onClose, onOpen, handl
                 .map(item => item.MarketerName);
 
             if (duplicateNames.length > 0) {
-                dispatch(alertActions.error({ message: `The following marketer names already exist: ${duplicateNames.join(', ')}. Please use unique names.`, header: header }));
+                dispatch(alertActions.error({ message: `Marketer name already exists`, header }));
                 return;
             }
 
-            const uetFileID = selectedFiles ? selectedFiles.join(',') : "";
-            const parsedDate = dayjs(data.StartDate);
-            const formattedDate = parsedDate.utc().format('YYYY-MM-DDTHH:mm:ss');
+            const uetFileID = selectedFiles.join(',');
+            const formattedDate = dayjs(data.StartDate).add(1, 'day').utc().format('YYYY-MM-DDTHH:mm:ss');
+
             const transformedData = {
                 MarketerID: 0,
                 MarketerName: data.MarketerName,
@@ -72,26 +73,40 @@ const MarketerCreate = ({ marketers, uetFileData, isOpen, onClose, onOpen, handl
             };
 
             const result = await dispatch(marketerAction.insert(transformedData)).unwrap();
+
             if (result?.error) {
-                dispatch(alertActions.error({ message: result?.payload || result?.error.message, header: "Fetch Failed" }));
+                dispatch(alertActions.error({ message: result?.payload || result?.error.message, header }));
                 return;
             }
-            reset();
+
+            // ✅ Reset form and checkbox state
+            reset({
+                MarketerName: '',
+                ServiceProvider: '',
+                StartDate: null
+            });
+            setSelectedFiles([]);
             onClose();
-            dispatch(alertActions.success({ message: "Marketer Created Successfully.", header: header, showAfterRedirect: true }));
+
+            dispatch(alertActions.success({
+                message: "Marketer Created Successfully.",
+                header,
+                showAfterRedirect: true
+            }));
+
             handleRefresh();
         } catch (error) {
-            dispatch(alertActions.error({ message: error?.message || error, header: "Fetch Failed" }));
+            dispatch(alertActions.error({ message: error?.message || error, header }));
         }
     };
 
     const handleBlur = async (e) => {
-        const fieldName = e.target.name;
-        await trigger(fieldName);
+        await trigger(e.target.name);
     };
 
     const handleCancelClick = () => {
         reset();
+        setSelectedFiles([]);
         onClose();
     };
 
@@ -100,19 +115,24 @@ const MarketerCreate = ({ marketers, uetFileData, isOpen, onClose, onOpen, handl
             <Button
                 variant="contained"
                 className='Download'
-                color="primary" aria-describedby={id} onClick={handleClick}
-            ><AddCircleOutline /> Marketer
+                color="primary"
+                aria-describedby={id}
+                onClick={handleClick}
+            >
+                <AddCircleOutline /> Marketer
             </Button>
+
             <Popper id={id} open={canBeOpen} anchorEl={anchorEl} className="Filtercontainer">
                 <Box sx={{ border: 1, p: 1, bgcolor: 'background.paper' }} className="Filtercontainerinner CreateMarketerhight Border">
                     <form onSubmit={handleSubmit(onSubmit)} className='Registrationcontainer marketerFiltercontainer'>
                         <Typography component="div" className='userprofilelist'>
-                            <Grid container direction="row" spacing={{ xs: 2, md: 3 }}>
-                                <Grid item xs={12} sm={6} md={12}>
-                                    <Typography variant="h2" className='userprofilelistcontent'> Create Marketer</Typography>
+                            <Grid container spacing={3}>
+                                <Grid item xs={12}>
+                                    <Typography variant="h2" className='userprofilelistcontent'>Create Marketer</Typography>
                                 </Grid>
                             </Grid>
                         </Typography>
+
                         <CustomFormControl
                             id="MarketerName"
                             label="Marketer Name"
@@ -120,15 +140,19 @@ const MarketerCreate = ({ marketers, uetFileData, isOpen, onClose, onOpen, handl
                             register={register}
                             errors={errors}
                             handleBlur={handleBlur}
+                            maxLength={50}
                         />
-                        <CustomFormControl
+
+                        <CustomNumberField
                             id="ServiceProvider"
                             label="Service Provider #"
-                            type="number"
                             register={register}
                             errors={errors}
                             handleBlur={handleBlur}
+                            maxLength={50}
+                            dynamicMessage=""
                         />
+
                         <Typography component="div" className="SelectedDate">
                             <CustomDatePicker
                                 id="StartDate"
@@ -139,26 +163,32 @@ const MarketerCreate = ({ marketers, uetFileData, isOpen, onClose, onOpen, handl
                                 helperText={errors.StartDate?.message}
                                 handleBlur={handleBlur}
                                 trigger={trigger}
-                                minimumDate={dayjs(new Date())}
+                                minDate={minDate}
+                                maxDate={maxDate}
                             />
                         </Typography>
+
                         <FormGroup className='CreateMarketer'>
                             <Typography component="div" className='userprofilelist'>
                                 <Typography variant="h2" className='userprofilelistcontent'>Permitted UET File Types</Typography>
                             </Typography>
-                            {uetFileData?.map(file => (
-                                <FormControlLabel
-                                    key={file.UETFileID}
-                                    control={
-                                        <Checkbox
-                                            onChange={handleCheckboxChange}
-                                            name={file.UETFileID?.toString()}
-                                        />
-                                    }
-                                    label={file.UETFileName}
-                                />
-                            ))}
+                            <Typography component="div" className='CreateMarketercheckbox'>
+                                {uetFileData?.map(file => (
+                                    <FormControlLabel
+                                        key={file.UETFileID}
+                                        control={
+                                            <Checkbox
+                                                checked={selectedFiles.includes(file.UETFileID)}
+                                                onChange={handleCheckboxChange}
+                                                name={file.UETFileID.toString()}
+                                            />
+                                        }
+                                        label={file.UETFileName}
+                                    />
+                                ))}
+                            </Typography>
                         </FormGroup>
+
                         <Typography component="div" className="CreateMarketerbutton">
                             <Button
                                 type="submit"
@@ -169,9 +199,12 @@ const MarketerCreate = ({ marketers, uetFileData, isOpen, onClose, onOpen, handl
                             >
                                 Create
                             </Button>
-                            <Button variant="contained" color="red"
+                            <Button
+                                variant="contained"
+                                color="red"
                                 className="cancelbutton"
-                                onClick={handleCancelClick}>
+                                onClick={handleCancelClick}
+                            >
                                 Cancel
                             </Button>
                         </Typography>
@@ -180,6 +213,6 @@ const MarketerCreate = ({ marketers, uetFileData, isOpen, onClose, onOpen, handl
             </Popper>
         </>
     );
-}
+};
 
 export default MarketerCreate;

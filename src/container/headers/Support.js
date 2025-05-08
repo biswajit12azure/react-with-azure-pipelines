@@ -17,7 +17,7 @@ const Support = () => {
     const [anchorEl, setAnchorEl] = useState(null);
     const open = Boolean(anchorEl);
 
-    let portalID = localStorage.getItem('portalID') || 99;
+    let portalID = sessionStorage.getItem('portalID') || 99;
 
     useEffect(() => {
         const fetchData = async () => {
@@ -76,13 +76,13 @@ const Support = () => {
                 }}
             >
                 <Box p={2}>
-                    <Menu
+                    <Menu component="div"
                         className='support-list supporticonlist'
                         anchorEl={anchorEl}
                         id="account-menu"
                         open={open}
                         onClose={handleClose}
-                        onClick={handleClose}
+                      //  onClick={handleClose}
                         slotProps={{
                             paper: {
                                 elevation: 0,
@@ -116,54 +116,59 @@ const Support = () => {
                     >
                         <Typography component="div" class="supportcontainer">
                         <Typography component="h3">support</Typography>
-                        <MenuItem onClick={handleEmailService}>
+                        <MenuItem onClick={handleEmailService} component="div">
                         <Grid container spacing={1}>
                         <Grid size={{ xs: 12, sm: 12, md: 12 }}>
-                        <span className='EmailAddress'>Email Address   </span>
+                        <span className='EmailAddress'>Email Us </span>
                           </Grid>
                           <Grid size={{ xs: 12, sm: 12, md: 12 }}>
-                            <span className="DocumentDescription" >{`${support?.EmailAddress}`}</span>
+                            <span  className="DocumentDescription">{`${support?.EmailAddress}`}</span>
                           </Grid>
                           </Grid>
                         </MenuItem>
-                        <MenuItem>
+                     { support?.PhoneNumber &&   <MenuItem component="div">
                         <Grid container spacing={1}>
                         <Grid size={{ xs: 12, sm: 12, md: 12 }}>
-                        <span className='EmailAddress'>Phone Number </span>
+                        <span className='EmailAddress'>Call Us </span>
                           </Grid>
                           <Grid size={{ xs: 12, sm: 12, md: 12 }}>
-                          <span className="DocumentDescription">{support?.PhoneNumber}</span>
+                          <span >{support?.PhoneNumber}</span>
                           </Grid>
                           </Grid>
                            
                            
-                        </MenuItem>
-                        <MenuItem>
+                        </MenuItem>}
+                       {support?.Fax && <MenuItem component="div">
                         <Grid container spacing={1}>
                         <Grid size={{ xs: 12, sm: 12, md: 12 }}>
-                        <span className='EmailAddress' >Fax </span>
+                        <span className='EmailAddress' >Fax Us</span>
                           </Grid>
                           <Grid size={{ xs: 12, sm: 12, md: 12 }}>
-                          <span className="DocumentDescription">{support?.Fax}</span>
+                          <span >{support?.Fax}</span>
                           </Grid>
                           </Grid>
                        
                            
-                        </MenuItem>
-                        <MenuItem>
+                        </MenuItem>}
+                        <MenuItem component="div">
                         <Grid container spacing={1}>
                         <Grid size={{ xs: 12, sm: 12, md: 12 }}>
-                        <span className='EmailAddress'>  Training Material </span>
+                        <span className='EmailAddress'>  Reference Documents </span>
                           </Grid>
                           <Grid size={{ xs: 12, sm: 12, md: 12 }}>
                           {files && files.map((file) =>
-                                <Typography component="div" key={file?.FileName} className="DocumentDescription">
+                                <Typography component="div" key={file?.FileName} >
                                     <Typography component="div" >
-                                <Typography component="span" >{file?.FileName}</Typography>
-                                              <Typography component="div" className="DocumentTypeID">
+                                    <Typography component="div" className="DocumentTypeID">
+                                        <Grid container>
+                                <Typography component="span" className="textwordwrap" >{file?.FileName}</Typography>
+                                             
                                               <IconButton onClick={() => handleDownload(file?.File, file?.FileName)}>
                                           <img src={materialsymbolsdownload} alt='download'></img>
                                         </IconButton>
+                                      
+                                  
+                                    </Grid>
                                     </Typography>
                                     </Typography>
                                 </Typography>

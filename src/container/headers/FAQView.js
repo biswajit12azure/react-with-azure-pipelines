@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
-import { TextField, Accordion, AccordionSummary, AccordionDetails, Typography, InputAdornment, CircularProgress, Fab, Popover, Box } from "@mui/material";
+import { TextField, Accordion, AccordionSummary, AccordionDetails, Typography, InputAdornment } from "@mui/material";
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import SearchIcon from '@mui/icons-material/Search';
 import { useDispatch, useSelector } from "react-redux";
 import { alertActions, faqAction } from "_store";
-import { useNavigate } from "react-router-dom";
 import Support from "./Support";
+import { useLocation } from 'react-router-dom';
 
 const FAQView = () => {
   const dispatch = useDispatch();
@@ -13,15 +13,28 @@ const FAQView = () => {
   const [error, setError] = useState(null);
   const faqData = useSelector(x => x.faq?.faqList);
 
-  const authUserId = useSelector(x => x.auth?.userId);
-
+  // const authUserId = useSelector(x => x.auth?.userId);
+  // const userID = authUserId || sessionStorage.getItem('mapcenterUserID');
+  const location = useLocation();
+  const { param, key } = location.state || {};
   useEffect(() => {
     const fetchData = async () => {
       dispatch(alertActions.clear());
       try {
-        await dispatch(faqAction.get(authUserId)).unwrap();
+        const storedPortalID = sessionStorage.getItem('portalID');
+        if (key === 'PortalId') {
+          if (storedPortalID === "99") {
+            await dispatch(faqAction.get(storedPortalID)).unwrap();
+          }else{
+            await dispatch(faqAction.getById(storedPortalID)).unwrap();
+          }
+        }
+        else if(key==='userId'){
+          await dispatch(faqAction.get(param)).unwrap();
+        }
       } catch (error) {
-        setError(error?.message || error);
+        const message="No Records found.";
+        setError(message);
       }
     };
     fetchData();
@@ -56,7 +69,7 @@ const FAQView = () => {
         }}
       />
       {error ? (
-        <Typography variant="body1" color="error">
+        <Typography variant="body1">
           {error}
         </Typography>
       ) : (
@@ -72,7 +85,7 @@ const FAQView = () => {
                   <Typography className="AccordionSummaryheading" >{faq.Question}</Typography>
                 </AccordionSummary>
                 <AccordionDetails className="p-0">
-                  <Typography className="AccordionDetailslistcontent">{faq.Answer}</Typography>
+                  <Typography className="AccordionDetailslistcontent"><div dangerouslySetInnerHTML={{ __html: faq.Answer }}></div></Typography>
                 </AccordionDetails>
               </Accordion>
             ))

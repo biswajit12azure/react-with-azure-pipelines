@@ -2,27 +2,45 @@
 import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import PortalConfiguration from "./PortalConfiguration";
-import { Select, MenuItem, FormControl, InputLabel } from '@mui/material';
 import { configAction,alertActions } from '_store';
 import { useForm } from 'react-hook-form';
-import { AutocompleteInput } from '_components';
-import { Box, Typography } from '@mui/material';
+import { Typography,Button } from '@mui/material';
 import Grid from '@mui/material/Grid2';
-import { Button } from '@mui/material';
 import AddRole from './AddRole';
 
 const Configuration = () => {
     const header = "Role Management";
     const dispatch = useDispatch();
-    const portalAccessData = useSelector((x) => x.configs?.portalAccessGetData);
-    const accessData = portalAccessData?.Data || [];
-    const [selectedPortal, setSelectedPortal] = useState(null);
+    // const portalAccessData = useSelector((x) => x.configs?.portalAccessGetData);
+    // const accessData = portalAccessData?.Data || [];
+    // console.log(accessData);
+    const [selectedPortal, setSelectedPortal] = useState(1);
     const [data, setData] = useState(null);
-   
-    const options = (accessData?.map(portal => ({
+    const [initialData, setInitialData] = useState(null);
+    const portals = [{
+        "PortalID": 1,
+        "PortalName": "Account Inquiry",
+    },
+    {
+        "PortalID": 2,
+        "PortalName": "Energy Assistance",
+    },
+    {
+        "PortalID": 3,
+        "PortalName": "Map Center",
+    },
+    {
+        "PortalID": 4,
+        "PortalName": "Marketer",
+    },
+    {
+        "PortalID": 5,
+        "PortalName": "Supplier Diversity",
+    }]
+    const options = portals?.map(portal => ({
         value: portal.PortalID,
         label: portal.PortalName
-    })));
+    }));
 
     const portalName = options.find(option=>option.value===selectedPortal)?.label;
     
@@ -30,13 +48,16 @@ const Configuration = () => {
 
     useEffect(() => {
         fetchData();
-    }, [dispatch]);
+    }, [dispatch,selectedPortal]);
 
     const fetchData = async() => 
     {
         try {
             dispatch(alertActions.clear());
-            const result = await dispatch(configAction.getAccess());
+  
+            const result = await dispatch(configAction.getAccess(selectedPortal));
+            setData(result?.payload?.Data);
+            setInitialData(result?.payload?.Data)
             if (result?.error) {
                 dispatch(alertActions.error({
                     showAfterRedirect: true,
@@ -51,24 +72,24 @@ const Configuration = () => {
         }
     }
 
-    useEffect(() => {
-        if (accessData && accessData.length > 0) {
-            const defaultPortalId = selectedPortal ? selectedPortal : accessData[0]?.PortalID;
-            setSelectedPortal(defaultPortalId);
-            const portalData = accessData?.find(x => x.PortalID === defaultPortalId);
-            setData(portalData);
-        }
-    }, [accessData]);
+    // useEffect(() => {
+    //     if (accessData && accessData.length > 0) {
+    //         const defaultPortalId = selectedPortal ? selectedPortal : accessData[0]?.PortalID;
+    //         setSelectedPortal(defaultPortalId);
+    //         const portalData = accessData?.find(x => x.PortalID === defaultPortalId);
+    //         setData(portalData);
+    //     }
+    // }, [accessData]);
 
-    useEffect(() => {
-        if (accessData && selectedPortal) {
-            const portalData = accessData?.find(x => x.PortalID === selectedPortal);
-            setData(portalData);
-        }
-    }, [selectedPortal, accessData]);
+    // useEffect(() => {
+    //     if (accessData && selectedPortal) {
+    //         const portalData = accessData?.find(x => x.PortalID === selectedPortal);
+    //         setData(portalData);
+    //     }
+    // }, [selectedPortal, accessData]);
 
-    const handlePortalChange = (event) => {
-        setSelectedPortal(event.target.value);
+    const handlePortalChange = (value) => {
+        setSelectedPortal(value);
     };
 
     const handleFetch=()=>{
@@ -86,18 +107,36 @@ const Configuration = () => {
                     </Grid>
                 </Grid>
                 <Grid size={{ xs: 6, sm: 6, md: 6 }}  className="Configurationbutton">
-                <AddRole handleFetch={()=>handleFetch}></AddRole> 
+                <AddRole  handleFetch={()=>handleFetch}></AddRole> 
                 </Grid>
             </Grid>
             {data && <PortalConfiguration 
                 control={control}
                 errors={errors}
-                data={data}
+                data={data[0]}
+                initialData={initialData[0]}
                 options={options} 
+                setData={setData}
                 selectedPortal={selectedPortal}
                 handlePortalChange={handlePortalChange}
                 portalName={portalName} 
                 handleFetch={handleFetch} />}
+
+            <Grid size={{ xs: 12, sm: 12, md: 12 }} className="Personal-Information">
+                <Button variant="contained" color="red" className="cancelbutton" onClick={handleFetch} >
+                    Cancel
+                </Button>
+                {/* <Button type="submit"
+                    fullWidth
+                    variant="contained"
+                    color="primary"
+                    className='submitbutton'
+                    // onClick={handleSave}
+                    // disabled={!isEdited}
+                >
+                    Save
+                </Button> */}
+            </Grid>
         </form>
     );
 }

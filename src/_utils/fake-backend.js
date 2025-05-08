@@ -11,8 +11,8 @@ const supplierDiversityUserKey = "supply-diversity-user-datas";
 const userProfileKey = "user-profile-details-data";
 const supportDetailsKey = "support-details-data";
 const adminUserProfileKey = "admin-user-profile-data";
-const IndividualUserKey = JSON.parse(localStorage.getItem('userId')) || '';
-let users = JSON.parse(localStorage.getItem(usersKey)) || [];
+const IndividualUserKey = JSON.parse(sessionStorage.getItem('userId')) || '';
+let users = JSON.parse(sessionStorage.getItem(usersKey)) || [];
 let registerPortalData = portalData;
 let userVerifyData = userRegistrationVerified;
 
@@ -111,7 +111,7 @@ const fakeBackend = () => {
 
             function refreshToken() {
                 if (!isAuthenticated()) return unauthorized();
-                // let auth = JSON.parse(localStorage.getItem('auth')) || [];
+                // let auth = JSON.parse(sessionStorage.getItem('auth')) || [];
                 //const user = users.find(x => x.id === auth?.id);               
 
                 let currentDateTime = new Date();
@@ -134,7 +134,7 @@ const fakeBackend = () => {
                 user.createdDate = new Date();
                 user.status = 1;
                 users.push(user);
-                localStorage.setItem(usersKey, JSON.stringify(users));
+                sessionStorage.setItem(usersKey, JSON.stringify(users));
 
                 return ok();
             }
@@ -181,7 +181,7 @@ const fakeBackend = () => {
 
                 Object.assign(user, userAccess);
 
-                localStorage.setItem(usersKey, JSON.stringify(users));
+                sessionStorage.setItem(usersKey, JSON.stringify(users));
                 return ok();
             }
 
@@ -189,7 +189,7 @@ const fakeBackend = () => {
                 if (!isAuthenticated()) return unauthorized();
 
                 users = users.filter(x => x.id !== idFromUrl());
-                localStorage.setItem(usersKey, JSON.stringify(users));
+                sessionStorage.setItem(usersKey, JSON.stringify(users));
                 return ok();
             }
 
@@ -202,14 +202,14 @@ const fakeBackend = () => {
             }
 
             function getAccessData() {
-                let accessData = JSON.parse(localStorage.getItem(portalAccessKey)) || portalAccessData;;
+                let accessData = JSON.parse(sessionStorage.getItem(portalAccessKey)) || portalAccessData;;
                 return ok(accessData);
             }
 
             function postAccessData() {
                 // Retrieve the access data from the body function
                 const accessData = body();
-                let portalAccess = JSON.parse(localStorage.getItem(portalAccessKey)) || portalAccessData;
+                let portalAccess = JSON.parse(sessionStorage.getItem(portalAccessKey)) || portalAccessData;
                 let newAccesData = { ...portalAccess };
 
                 // Create a new array for the updated portal access data
@@ -236,8 +236,8 @@ const fakeBackend = () => {
                 });
 
                 newAccesData.Data = updatedPortalAccess;
-                // Store the updated portal access data in localStorage
-                localStorage.setItem(portalAccessKey, JSON.stringify(newAccesData));
+                // Store the updated portal access data in sessionStorage
+                sessionStorage.setItem(portalAccessKey, JSON.stringify(newAccesData));
 
                 // Return a successful response
                 return ok();
@@ -254,7 +254,7 @@ const fakeBackend = () => {
 
             function getMapCenterUser() {
                 try {
-                    let mapCenterUser = JSON.parse(localStorage.getItem(mapCenterUserKey)) || getMapCenterData;;
+                    let mapCenterUser = JSON.parse(sessionStorage.getItem(mapCenterUserKey)) || getMapCenterData;;
                     return ok(mapCenterUser);
                 }
                 catch (error) {
@@ -264,7 +264,7 @@ const fakeBackend = () => {
 
             function getSupplierDiversityUser() {
                 try {
-                    let supplierDiversityUser = JSON.parse(localStorage.getItem(supplierDiversityUserKey)) || getSupplierDiversityData;
+                    let supplierDiversityUser = JSON.parse(sessionStorage.getItem(supplierDiversityUserKey)) || getSupplierDiversityData;
                     return ok(supplierDiversityUser);
                 }
                 catch (error) {
@@ -274,7 +274,7 @@ const fakeBackend = () => {
 
             function getUserProfileDetails() {
                 try {
-                    let userProfileDetails = JSON.parse(localStorage.getItem(userProfileKey)) || getMyProfileData;
+                    let userProfileDetails = JSON.parse(sessionStorage.getItem(userProfileKey)) || getMyProfileData;
                     return ok(userProfileDetails);
                 }
                 catch (error) {
@@ -284,7 +284,7 @@ const fakeBackend = () => {
 
             function getById() {
                 try {
-                    let userProfileDetails = JSON.parse(localStorage.getItem(IndividualUserKey)) || IndividualUserData;
+                    let userProfileDetails = JSON.parse(sessionStorage.getItem(IndividualUserKey)) || IndividualUserData;
                     return ok(userProfileDetails);
                 }
                 catch (error) {
@@ -294,7 +294,7 @@ const fakeBackend = () => {
             }
             function getUserProfile() {
                 try {
-                    let userProfile = JSON.parse(localStorage.getItem(adminUserProfileKey)) || getAIUserProfileData;
+                    let userProfile = JSON.parse(sessionStorage.getItem(adminUserProfileKey)) || getAIUserProfileData;
                     return ok(userProfile);
                 }
                 catch (error) {
@@ -355,15 +355,15 @@ const fakeBackend = () => {
                 try {
                     const mapCenterData = body();
 
-                    let mapCenterUserData = JSON.parse(localStorage.getItem(mapCenterUserKey)) || getMapCenterData;
+                    let mapCenterUserData = JSON.parse(sessionStorage.getItem(mapCenterUserKey)) || getMapCenterData;
 
                     // Create a deep copy of the object to avoid modifying read-only properties
                     let newData = JSON.parse(JSON.stringify(mapCenterData));
 
                     newData.Data.DocumentData = [...mapCenterUserData.Data.DocumentData];
 
-                    // Save the updated data back to localStorage
-                    localStorage.setItem(mapCenterUserKey, JSON.stringify(newData));
+                    // Save the updated data back to sessionStorage
+                    sessionStorage.setItem(mapCenterUserKey, JSON.stringify(newData));
 
                     // Return a successful response
                     return ok();
@@ -377,7 +377,7 @@ const fakeBackend = () => {
                 try {
                     const supplierDiversityData = body();
 
-                    let supplierDiversityUserData = JSON.parse(localStorage.getItem(supplierDiversityUserKey)) || getSupplierDiversityData;
+                    let supplierDiversityUserData = JSON.parse(sessionStorage.getItem(supplierDiversityUserKey)) || getSupplierDiversityData;
 
                     // Create a deep copy of the object to avoid modifying read-only properties
                     let newData = JSON.parse(JSON.stringify(supplierDiversityData));
@@ -387,8 +387,8 @@ const fakeBackend = () => {
                     newData.Data.BusinessCategory = [...supplierDiversityUserData.Data.BusinessCategory];
                     newData.Data.Classification = [...supplierDiversityUserData.Data.Classification];
                     newData.Data.Agency = [...supplierDiversityUserData.Data.Agency];
-                    // Save the updated data back to localStorage
-                    localStorage.setItem(supplierDiversityUserKey, JSON.stringify(newData));
+                    // Save the updated data back to sessionStorage
+                    sessionStorage.setItem(supplierDiversityUserKey, JSON.stringify(newData));
 
                     // Return a successful response
                     return ok();
@@ -402,14 +402,14 @@ const fakeBackend = () => {
                 try {
                     const userProfileData = body();
 
-                    let userProfileJsonData = JSON.parse(localStorage.getItem(userProfileKey)) || getMyProfileData;
+                    let userProfileJsonData = JSON.parse(sessionStorage.getItem(userProfileKey)) || getMyProfileData;
 
                     // Create a deep copy of the object to avoid modifying read-only properties
                     let newData = JSON.parse(JSON.stringify(userProfileData));
 
                     newData.Data.State = [...userProfileJsonData.Data.State];
-                    // Save the updated data back to localStorage
-                    localStorage.setItem(userProfileKey, JSON.stringify(newData));
+                    // Save the updated data back to sessionStorage
+                    sessionStorage.setItem(userProfileKey, JSON.stringify(newData));
 
                     // Return a successful response
                     return ok();
@@ -425,8 +425,8 @@ const fakeBackend = () => {
                     // Create a deep copy of the object to avoid modifying read-only properties
                     let newData = JSON.parse(JSON.stringify(supportData));
 
-                    // Save the updated data back to localStorage
-                    localStorage.setItem(supportDetailsKey, JSON.stringify(newData));
+                    // Save the updated data back to sessionStorage
+                    sessionStorage.setItem(supportDetailsKey, JSON.stringify(newData));
 
                     // Return a successful response
                     return ok();

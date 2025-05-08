@@ -1,6 +1,6 @@
 import { jsPDF } from 'jspdf';
 import autoTable from 'jspdf-autotable';
-import images from 'images';
+// import images from 'images';
 import dayjs from 'dayjs';
 import { pdfIcon } from '../images';
 

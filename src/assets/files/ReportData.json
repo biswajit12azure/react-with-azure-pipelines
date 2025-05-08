@@ -1,0 +1,2468 @@
+{
+    "SupplierActiveCustomerReport": {
+        "MarketerName": null,
+        "GasDay": null,
+        "supplierActiveCustomerReport": [
+            {
+                "ServiceProvider": "10036",
+                "RateCategory": "GVA1AH",
+                "BCIss": "RES",
+                "Contract": "3005401056",
+                "ContAccount": "310000811276",
+                "MIDate": "04/28/2025",
+                "MODate": "02/21/2025",
+                "ValidTo": "01/12/2024",
+                "Portion": "14",
+                "SType": "UCBR",
+                "LowIncome": "",
+                "CreatedDate": null
+            },
+            {
+                "ServiceProvider": "10036",
+                "RateCategory": "GVA1AH",
+                "BCIss": "RES",
+                "Contract": "3005401061",
+                "ContAccount": "310005859635",
+                "MIDate": "06/28/2024",
+                "MODate": "04/11/2025",
+                "ValidTo": "07/28/2024",
+                "Portion": "14",
+                "SType": "UCBR",
+                "LowIncome": "",
+                "CreatedDate": null
+            }
+        ],
+        "marketerReportDtos": []
+    },
+    "FiveDaysForeCastReportData": {
+        "RequirementForecastData": [
+            {
+                "CompanyID": 177,
+                "MarketerName": "NOVEC Energy Solutions – 76",
+                "Name": "NOVEC FP",
+                "ShipmentDate": "2025-01-15T05:00:00",
+                "DailyRequiredVolume": 0,
+                "IsFirm": true
+            },
+            {
+                "CompanyID": 177,
+                "MarketerName": "NOVEC Energy Solutions – 76",
+                "Name": "NOVEC FP",
+                "ShipmentDate": "2025-01-16T05:00:00",
+                "DailyRequiredVolume": 0,
+                "IsFirm": true
+            },
+            {
+                "CompanyID": 177,
+                "MarketerName": "NOVEC Energy Solutions – 76",
+                "Name": "NOVEC FP",
+                "ShipmentDate": "2025-01-17T05:00:00",
+                "DailyRequiredVolume": 0,
+                "IsFirm": true
+            },
+            {
+                "CompanyID": 177,
+                "MarketerName": "NOVEC Energy Solutions – 76",
+                "Name": "NOVEC FP",
+                "ShipmentDate": "2025-01-18T05:00:00",
+                "DailyRequiredVolume": 0,
+                "IsFirm": true
+            },
+            {
+                "CompanyID": 177,
+                "MarketerName": "NOVEC Energy Solutions – 76",
+                "Name": "NOVEC FP",
+                "ShipmentDate": "2025-01-19T05:00:00",
+                "DailyRequiredVolume": 0,
+                "IsFirm": true
+            },
+            {
+                "CompanyID": 177,
+                "MarketerName": "NOVEC Energy Solutions – 76",
+                "Name": "NOVEC DC IP",
+                "ShipmentDate": "2025-01-19T05:00:00",
+                "DailyRequiredVolume": 0,
+                "IsFirm": false
+            },
+            {
+                "CompanyID": 177,
+                "MarketerName": "NOVEC Energy Solutions – 76",
+                "Name": "NOVEC DC IP",
+                "ShipmentDate": "2025-01-18T05:00:00",
+                "DailyRequiredVolume": 0,
+                "IsFirm": false
+            },
+            {
+                "CompanyID": 177,
+                "MarketerName": "NOVEC Energy Solutions – 76",
+                "Name": "NOVEC DC IP",
+                "ShipmentDate": "2025-01-17T05:00:00",
+                "DailyRequiredVolume": 0,
+                "IsFirm": false
+            },
+            {
+                "CompanyID": 177,
+                "MarketerName": "NOVEC Energy Solutions – 76",
+                "Name": "NOVEC DC IP",
+                "ShipmentDate": "2025-01-16T05:00:00",
+                "DailyRequiredVolume": 0,
+                "IsFirm": false
+            },
+            {
+                "CompanyID": 177,
+                "MarketerName": "NOVEC Energy Solutions – 76",
+                "Name": "NOVEC DC IP",
+                "ShipmentDate": "2025-01-15T05:00:00",
+                "DailyRequiredVolume": 0,
+                "IsFirm": false
+            },
+            {
+                "CompanyID": 177,
+                "MarketerName": "NOVEC Energy Solutions – 76",
+                "Name": "NOVEC MD IP",
+                "ShipmentDate": "2025-01-15T05:00:00",
+                "DailyRequiredVolume": 0,
+                "IsFirm": false
+            },
+            {
+                "CompanyID": 177,
+                "MarketerName": "NOVEC Energy Solutions – 76",
+                "Name": "NOVEC MD IP",
+                "ShipmentDate": "2025-01-16T05:00:00",
+                "DailyRequiredVolume": 0,
+                "IsFirm": false
+            },
+            {
+                "CompanyID": 177,
+                "MarketerName": "NOVEC Energy Solutions – 76",
+                "Name": "NOVEC MD IP",
+                "ShipmentDate": "2025-01-17T05:00:00",
+                "DailyRequiredVolume": 0,
+                "IsFirm": false
+            },
+            {
+                "CompanyID": 177,
+                "MarketerName": "NOVEC Energy Solutions – 76",
+                "Name": "NOVEC MD IP",
+                "ShipmentDate": "2025-01-18T05:00:00",
+                "DailyRequiredVolume": 0,
+                "IsFirm": false
+            },
+            {
+                "CompanyID": 177,
+                "MarketerName": "NOVEC Energy Solutions – 76",
+                "Name": "NOVEC MD IP",
+                "ShipmentDate": "2025-01-19T05:00:00",
+                "DailyRequiredVolume": 0,
+                "IsFirm": false
+            },
+            {
+                "CompanyID": 177,
+                "MarketerName": "NOVEC Energy Solutions – 76",
+                "Name": "NOVEC VA IP",
+                "ShipmentDate": "2025-01-19T05:00:00",
+                "DailyRequiredVolume": 0,
+                "IsFirm": false
+            },
+            {
+                "CompanyID": 177,
+                "MarketerName": "NOVEC Energy Solutions – 76",
+                "Name": "NOVEC VA IP",
+                "ShipmentDate": "2025-01-18T05:00:00",
+                "DailyRequiredVolume": 0,
+                "IsFirm": false
+            },
+            {
+                "CompanyID": 177,
+                "MarketerName": "NOVEC Energy Solutions – 76",
+                "Name": "NOVEC VA IP",
+                "ShipmentDate": "2025-01-17T05:00:00",
+                "DailyRequiredVolume": 0,
+                "IsFirm": false
+            },
+            {
+                "CompanyID": 177,
+                "MarketerName": "NOVEC Energy Solutions – 76",
+                "Name": "NOVEC VA IP",
+                "ShipmentDate": "2025-01-15T05:00:00",
+                "DailyRequiredVolume": 0,
+                "IsFirm": false
+            },
+            {
+                "CompanyID": 177,
+                "MarketerName": "NOVEC Energy Solutions – 76",
+                "Name": "NOVEC VA IP",
+                "ShipmentDate": "2025-01-16T05:00:00",
+                "DailyRequiredVolume": 0,
+                "IsFirm": false
+            }
+        ],
+        "MarketerDetails": [
+            {
+                "MarketerID": 55638,
+                "MarketerName": "Maryland Gas and Electric"
+            }
+        ],
+        "SubTotalData": [
+            {
+                "SubTotalDate": "2025-01-15T05:00:00",
+                "SubTotalByFirm": 0,
+                "SubToatlByInterruptible": 0,
+                "BothSubTotal": 0
+            },
+            {
+                "SubTotalDate": "2025-01-16T05:00:00",
+                "SubTotalByFirm": 0,
+                "SubToatlByInterruptible": 0,
+                "BothSubTotal": 0
+            },
+            {
+                "SubTotalDate": "2025-01-17T05:00:00",
+                "SubTotalByFirm": 0,
+                "SubToatlByInterruptible": 0,
+                "BothSubTotal": 0
+            },
+            {
+                "SubTotalDate": "2025-01-18T05:00:00",
+                "SubTotalByFirm": 0,
+                "SubToatlByInterruptible": 0,
+                "BothSubTotal": 0
+            },
+            {
+                "SubTotalDate": "2025-01-19T05:00:00",
+                "SubTotalByFirm": 0,
+                "SubToatlByInterruptible": 0,
+                "BothSubTotal": 0
+            }
+        ]
+    },
+    "summaryStorageByMarkerterReport": {
+        "storageSummaryReportResponses": [
+            {
+                "CompanyID": 143125,
+                "ShortName": "Alpha Gas and Electric - DC - 227",
+                "Withdrawl": -2,
+                "Injection": 0,
+                "InventoryBalance": 342
+            },
+            {
+                "CompanyID": 143133,
+                "ShortName": "Alpha Gas and Electric - MD - 235",
+                "Withdrawl": -12,
+                "Injection": 0,
+                "InventoryBalance": 3265
+            },
+            {
+                "CompanyID": 143126,
+                "ShortName": "Alpha Gas and Electric - VA - 228",
+                "Withdrawl": 0,
+                "Injection": 0,
+                "InventoryBalance": 0
+            },
+            {
+                "CompanyID": 73915,
+                "ShortName": "Ambit Energy",
+                "Withdrawl": -102,
+                "Injection": 0,
+                "InventoryBalance": 29351
+            },
+            {
+                "CompanyID": 143015,
+                "ShortName": "American Power & Gas",
+                "Withdrawl": -27,
+                "Injection": 0,
+                "InventoryBalance": 11971
+            },
+            {
+                "CompanyID": 114,
+                "ShortName": "AOC",
+                "Withdrawl": -99,
+                "Injection": 0,
+                "InventoryBalance": 26577
+            },
+            {
+                "CompanyID": 143016,
+                "ShortName": "Atlantic Energy",
+                "Withdrawl": -36,
+                "Injection": 0,
+                "InventoryBalance": 13335
+            },
+            {
+                "CompanyID": 182,
+                "ShortName": "Bollinger Energy",
+                "Withdrawl": -250,
+                "Injection": 0,
+                "InventoryBalance": 56038
+            },
+            {
+                "CompanyID": 143029,
+                "ShortName": "CleanSky Energy - DC and MD - 194",
+                "Withdrawl": -57,
+                "Injection": 0,
+                "InventoryBalance": 12483
+            },
+            {
+                "CompanyID": 161,
+                "ShortName": "Colonial Energy",
+                "Withdrawl": 0,
+                "Injection": 76,
+                "InventoryBalance": -4776
+            },
+            {
+                "CompanyID": 326,
+                "ShortName": "Constellation New Energy",
+                "Withdrawl": -4811,
+                "Injection": 0,
+                "InventoryBalance": 1537113
+            },
+            {
+                "CompanyID": 65135,
+                "ShortName": "Constellation New Energy 2",
+                "Withdrawl": -586,
+                "Injection": 0,
+                "InventoryBalance": 175155
+            },
+            {
+                "CompanyID": 73914,
+                "ShortName": "Deca Energy",
+                "Withdrawl": -396,
+                "Injection": 0,
+                "InventoryBalance": 80166
+            },
+            {
+                "CompanyID": 136034,
+                "ShortName": "Direct Energy Services,LLC-156",
+                "Withdrawl": 0,
+                "Injection": 38,
+                "InventoryBalance": 71426
+            },
+            {
+                "CompanyID": 72875,
+                "ShortName": "Energy Plus Natural Gas LLC",
+                "Withdrawl": 0,
+                "Injection": 7,
+                "InventoryBalance": 4769
+            },
+            {
+                "CompanyID": 89135,
+                "ShortName": "Engie Power & Gas - 135",
+                "Withdrawl": -570,
+                "Injection": 0,
+                "InventoryBalance": 332161
+            },
+            {
+                "CompanyID": 122214,
+                "ShortName": "Enspire Energy",
+                "Withdrawl": -16,
+                "Injection": 0,
+                "InventoryBalance": 9497
+            },
+            {
+                "CompanyID": 204,
+                "ShortName": "Gateway Energy Services",
+                "Withdrawl": 0,
+                "Injection": 34,
+                "InventoryBalance": 16777
+            },
+            {
+                "CompanyID": 143145,
+                "ShortName": "Green Choice Energy - DC - 239",
+                "Withdrawl": -8,
+                "Injection": 0,
+                "InventoryBalance": 1704
+            },
+            {
+                "CompanyID": 143149,
+                "ShortName": "Green Choice Energy - MD & VA - 243",
+                "Withdrawl": -24,
+                "Injection": 0,
+                "InventoryBalance": 3481
+            },
+            {
+                "CompanyID": 143244,
+                "ShortName": "Greenlight Energy Inc.",
+                "Withdrawl": 0,
+                "Injection": 1,
+                "InventoryBalance": -4
+            },
+            {
+                "CompanyID": 142991,
+                "ShortName": "IDT Energy",
+                "Withdrawl": -27,
+                "Injection": 0,
+                "InventoryBalance": 29858
+            },
+            {
+                "CompanyID": 143248,
+                "ShortName": "IGS Energy - MD",
+                "Withdrawl": -2565,
+                "Injection": 0,
+                "InventoryBalance": 221254
+            },
+            {
+                "CompanyID": 143251,
+                "ShortName": "IGS Energy - VA & DC ",
+                "Withdrawl": -2071,
+                "Injection": 0,
+                "InventoryBalance": 572033
+            },
+            {
+                "CompanyID": 142968,
+                "ShortName": "Indra Energy - DC - 169",
+                "Withdrawl": -63,
+                "Injection": 0,
+                "InventoryBalance": 9734
+            },
+            {
+                "CompanyID": 55635,
+                "ShortName": "Indra Energy - MD - 119",
+                "Withdrawl": -25,
+                "Injection": 0,
+                "InventoryBalance": 20342
+            },
+            {
+                "CompanyID": 142969,
+                "ShortName": "Indra Energy - VA - 170",
+                "Withdrawl": -81,
+                "Injection": 0,
+                "InventoryBalance": 11080
+            },
+            {
+                "CompanyID": 142909,
+                "ShortName": "MAJOR Energy",
+                "Withdrawl": -63,
+                "Injection": 0,
+                "InventoryBalance": 18600
+            },
+            {
+                "CompanyID": 55638,
+                "ShortName": "Maryland Gas and Electric",
+                "Withdrawl": -328,
+                "Injection": 0,
+                "InventoryBalance": 56541
+            },
+            {
+                "CompanyID": 143017,
+                "ShortName": "Median Energy",
+                "Withdrawl": -10,
+                "Injection": 0,
+                "InventoryBalance": 7287
+            },
+            {
+                "CompanyID": 142992,
+                "ShortName": "MPower Energy NJ LLC",
+                "Withdrawl": -287,
+                "Injection": 0,
+                "InventoryBalance": 68270
+            },
+            {
+                "CompanyID": 143113,
+                "ShortName": "Nordic Energy Services - 215",
+                "Withdrawl": -80,
+                "Injection": 0,
+                "InventoryBalance": 12149
+            },
+            {
+                "CompanyID": 177,
+                "ShortName": "NOVEC Energy Solutions – 76",
+                "Withdrawl": -4060,
+                "Injection": 0,
+                "InventoryBalance": 450156
+            },
+            {
+                "CompanyID": 100914,
+                "ShortName": "NRG Business Market,LLC - 145",
+                "Withdrawl": 0,
+                "Injection": 1380,
+                "InventoryBalance": 1243537
+            },
+            {
+                "CompanyID": 142922,
+                "ShortName": "NRG Home",
+                "Withdrawl": 0,
+                "Injection": 7,
+                "InventoryBalance": 4589
+            },
+            {
+                "CompanyID": 143049,
+                "ShortName": "Park Power LLC - DC - 204",
+                "Withdrawl": -17,
+                "Injection": 0,
+                "InventoryBalance": 3023
+            },
+            {
+                "CompanyID": 143163,
+                "ShortName": "Park Power LLC - MD & VA - 255",
+                "Withdrawl": -6,
+                "Injection": 0,
+                "InventoryBalance": 729
+            },
+            {
+                "CompanyID": 142214,
+                "ShortName": "SFE Energy",
+                "Withdrawl": -340,
+                "Injection": 0,
+                "InventoryBalance": 67128
+            },
+            {
+                "CompanyID": 2128,
+                "ShortName": "Shell Energy",
+                "Withdrawl": 0,
+                "Injection": 0,
+                "InventoryBalance": 0
+            },
+            {
+                "CompanyID": 143317,
+                "ShortName": "Spark Energy Gas LLC",
+                "Withdrawl": -8,
+                "Injection": 0,
+                "InventoryBalance": 5411
+            },
+            {
+                "CompanyID": 179,
+                "ShortName": "Sprague Op Res LLC - 78",
+                "Withdrawl": -2871,
+                "Injection": 0,
+                "InventoryBalance": 138427
+            },
+            {
+                "CompanyID": 142943,
+                "ShortName": "Spring Power & Gas",
+                "Withdrawl": -2,
+                "Injection": 0,
+                "InventoryBalance": 1533
+            },
+            {
+                "CompanyID": 205,
+                "ShortName": "Stand Energy",
+                "Withdrawl": 0,
+                "Injection": 36,
+                "InventoryBalance": 26392
+            },
+            {
+                "CompanyID": 143066,
+                "ShortName": "Statewise Energy - MD - 210",
+                "Withdrawl": -40,
+                "Injection": 0,
+                "InventoryBalance": 14362
+            },
+            {
+                "CompanyID": 143117,
+                "ShortName": "SunSea Energy - DC - 219",
+                "Withdrawl": -48,
+                "Injection": 0,
+                "InventoryBalance": 16345
+            },
+            {
+                "CompanyID": 143013,
+                "ShortName": "Tomorrow Energy Corp",
+                "Withdrawl": 0,
+                "Injection": 0,
+                "InventoryBalance": 0
+            },
+            {
+                "CompanyID": 134,
+                "ShortName": "UGI Energy Services - 33",
+                "Withdrawl": -9492,
+                "Injection": 0,
+                "InventoryBalance": 1100733
+            },
+            {
+                "CompanyID": 143298,
+                "ShortName": "United Energy Trading ",
+                "Withdrawl": 0,
+                "Injection": 801,
+                "InventoryBalance": 237448
+            },
+            {
+                "CompanyID": 143395,
+                "ShortName": "Virginia Light & Power LLC",
+                "Withdrawl": -57,
+                "Injection": 0,
+                "InventoryBalance": 12662
+            },
+            {
+                "CompanyID": 143240,
+                "ShortName": "Washington Suburban Sanitary Commission ",
+                "Withdrawl": -1101,
+                "Injection": 0,
+                "InventoryBalance": 114182
+            },
+            {
+                "CompanyID": 143263,
+                "ShortName": "Wave Energy",
+                "Withdrawl": 0,
+                "Injection": 0,
+                "InventoryBalance": 0
+            },
+            {
+                "CompanyID": 136,
+                "ShortName": "WGL Energy Svcs - 35",
+                "Withdrawl": -31612,
+                "Injection": 0,
+                "InventoryBalance": 4900997
+            },
+            {
+                "CompanyID": 100554,
+                "ShortName": "Xoom Energy",
+                "Withdrawl": 0,
+                "Injection": 31,
+                "InventoryBalance": 34709
+            },
+            {
+                "CompanyID": 70434,
+                "ShortName": "Xoom Energy Maryland",
+                "Withdrawl": 0,
+                "Injection": 50,
+                "InventoryBalance": 55641
+            }
+        ],
+        "totalSum": {
+            "TotalSumInventoryBalance": 11835983,
+            "TotalSumInjection": 2461,
+            "TotalSumWithdrawal": -62250,
+            "GasDay": "2025-01-01T05:00:00Z"
+        }
+    },
+    "SummaryNominationByCompliance": {
+        "DetailedData": [
+            {
+                "ShipmentDate": "2024-02-01T00:00:00",
+                "AllocationGroupID": 1017,
+                "CompanyName": "AOC",
+                "AllocationGroup": "AOC",
+                "IsFirm": true,
+                "TotalNominationAllocations": 757,
+                "DailyRequiredVolume": 1167,
+                "TotalUsage": 1167,
+                "TotalForecastImbal": -410,
+                "Penalty": 0.00
+            },
+            {
+                "ShipmentDate": "2024-02-01T00:00:00",
+                "AllocationGroupID": 1009,
+                "CompanyName": "Agway Energy Services LLC",
+                "AllocationGroup": "AGWAY FP",
+                "IsFirm": true,
+                "TotalNominationAllocations": 0,
+                "DailyRequiredVolume": 0,
+                "TotalUsage": 0,
+                "TotalForecastImbal": 0,
+                "Penalty": 0.00
+            },
+            {
+                "ShipmentDate": "2024-02-01T00:00:00",
+                "AllocationGroupID": 561,
+                "CompanyName": "Ambit Energy",
+                "AllocationGroup": "AMBIT FP",
+                "IsFirm": true,
+                "TotalNominationAllocations": 369,
+                "DailyRequiredVolume": 630,
+                "TotalUsage": 660,
+                "TotalForecastImbal": -261,
+                "Penalty": 0.00
+            },
+            {
+                "ShipmentDate": "2024-02-01T00:00:00",
+                "AllocationGroupID": 1004,
+                "CompanyName": "American Power & Gas",
+                "AllocationGroup": "AMERICAN FP",
+                "IsFirm": true,
+                "TotalNominationAllocations": 50,
+                "DailyRequiredVolume": 118,
+                "TotalUsage": 123,
+                "TotalForecastImbal": -68,
+                "Penalty": 0.00
+            },
+            {
+                "ShipmentDate": "2024-02-01T00:00:00",
+                "AllocationGroupID": 164,
+                "CompanyName": "Bollinger Energy",
+                "AllocationGroup": "BOLLINGER FP",
+                "IsFirm": true,
+                "TotalNominationAllocations": 1743,
+                "DailyRequiredVolume": 1437,
+                "TotalUsage": 1462,
+                "TotalForecastImbal": 306,
+                "Penalty": 0.00
+            },
+            {
+                "ShipmentDate": "2024-02-01T00:00:00",
+                "AllocationGroupID": 261,
+                "CompanyName": "Colonial Energy",
+                "AllocationGroup": "COLONIAL FP",
+                "IsFirm": true,
+                "TotalNominationAllocations": 74,
+                "DailyRequiredVolume": 65,
+                "TotalUsage": 66,
+                "TotalForecastImbal": 9,
+                "Penalty": 0.00
+            },
+            {
+                "ShipmentDate": "2024-02-01T00:00:00",
+                "AllocationGroupID": 166,
+                "CompanyName": "Constellation New Energy",
+                "AllocationGroup": "CONSTELAT FP",
+                "IsFirm": true,
+                "TotalNominationAllocations": 9764,
+                "DailyRequiredVolume": 24258,
+                "TotalUsage": 25111,
+                "TotalForecastImbal": -14494,
+                "Penalty": 0.00
+            },
+            {
+                "ShipmentDate": "2024-02-01T00:00:00",
+                "AllocationGroupID": 421,
+                "CompanyName": "Constellation New Energy 2",
+                "AllocationGroup": "CNE 2 FP",
+                "IsFirm": true,
+                "TotalNominationAllocations": 1286,
+                "DailyRequiredVolume": 1964,
+                "TotalUsage": 2070,
+                "TotalForecastImbal": -678,
+                "Penalty": 0.00
+            },
+            {
+                "ShipmentDate": "2024-02-01T00:00:00",
+                "AllocationGroupID": 521,
+                "CompanyName": "Deca Energy",
+                "AllocationGroup": "DECA FP",
+                "IsFirm": true,
+                "TotalNominationAllocations": 642,
+                "DailyRequiredVolume": 951,
+                "TotalUsage": 1002,
+                "TotalForecastImbal": -309,
+                "Penalty": 0.00
+            },
+            {
+                "ShipmentDate": "2024-02-01T00:00:00",
+                "AllocationGroupID": 501,
+                "CompanyName": "Energy Plus Natural Gas LLC",
+                "AllocationGroup": "ENERGY PL FP",
+                "IsFirm": true,
+                "TotalNominationAllocations": 68,
+                "DailyRequiredVolume": 143,
+                "TotalUsage": 151,
+                "TotalForecastImbal": -75,
+                "Penalty": 0.00
+            },
+            {
+                "ShipmentDate": "2024-02-01T00:00:00",
+                "AllocationGroupID": 983,
+                "CompanyName": "Enspire Energy",
+                "AllocationGroup": "ENSPIRE FP",
+                "IsFirm": true,
+                "TotalNominationAllocations": 130,
+                "DailyRequiredVolume": 210,
+                "TotalUsage": 53,
+                "TotalForecastImbal": -80,
+                "Penalty": 0.00
+            },
+            {
+                "ShipmentDate": "2024-02-01T00:00:00",
+                "AllocationGroupID": 170,
+                "CompanyName": "Gateway Energy Services",
+                "AllocationGroup": "GATEWAY FP",
+                "IsFirm": true,
+                "TotalNominationAllocations": 283,
+                "DailyRequiredVolume": 1208,
+                "TotalUsage": 1270,
+                "TotalForecastImbal": -925,
+                "Penalty": 0.00
+            },
+            {
+                "ShipmentDate": "2024-02-01T00:00:00",
+                "AllocationGroupID": 721,
+                "CompanyName": "NRG Business Market,LLC - 145",
+                "AllocationGroup": "HEM FP",
+                "IsFirm": true,
+                "TotalNominationAllocations": 6573,
+                "DailyRequiredVolume": 15823,
+                "TotalUsage": 16394,
+                "TotalForecastImbal": -9250,
+                "Penalty": 0.00
+            },
+            {
+                "ShipmentDate": "2024-02-01T00:00:00",
+                "AllocationGroupID": 984,
+                "CompanyName": "Direct Energy Services,LLC-156",
+                "AllocationGroup": "DES FP",
+                "IsFirm": true,
+                "TotalNominationAllocations": 0,
+                "DailyRequiredVolume": 1304,
+                "TotalUsage": 1369,
+                "TotalForecastImbal": -1304,
+                "Penalty": 0.00
+            },
+            {
+                "ShipmentDate": "2024-02-01T00:00:00",
+                "AllocationGroupID": 401,
+                "CompanyName": "Maryland Energy",
+                "AllocationGroup": "MD ENERGY FP",
+                "IsFirm": true,
+                "TotalNominationAllocations": 0,
+                "DailyRequiredVolume": 0,
+                "TotalUsage": 0,
+                "TotalForecastImbal": 0,
+                "Penalty": 0.00
+            },
+            {
+                "ShipmentDate": "2024-02-01T00:00:00",
+                "AllocationGroupID": 541,
+                "CompanyName": "Maryland Gas and Electric",
+                "AllocationGroup": "MD GAS ELEC FP",
+                "IsFirm": true,
+                "TotalNominationAllocations": 894,
+                "DailyRequiredVolume": 1498,
+                "TotalUsage": 1570,
+                "TotalForecastImbal": -604,
+                "Penalty": 0.00
+            },
+            {
+                "ShipmentDate": "2024-02-01T00:00:00",
+                "AllocationGroupID": 172,
+                "CompanyName": "Sprague Op Res LLC - 78",
+                "AllocationGroup": "METROMEDI FP",
+                "IsFirm": true,
+                "TotalNominationAllocations": 2168,
+                "DailyRequiredVolume": 4188,
+                "TotalUsage": 4343,
+                "TotalForecastImbal": -2020,
+                "Penalty": 0.00
+            },
+            {
+                "ShipmentDate": "2024-02-01T00:00:00",
+                "AllocationGroupID": 1008,
+                "CompanyName": "MPower Energy NJ LLC",
+                "AllocationGroup": "MPOWER FP",
+                "IsFirm": true,
+                "TotalNominationAllocations": 702,
+                "DailyRequiredVolume": 702,
+                "TotalUsage": 732,
+                "TotalForecastImbal": 0,
+                "Penalty": 0.00
+            },
+            {
+                "ShipmentDate": "2024-02-01T00:00:00",
+                "AllocationGroupID": 173,
+                "CompanyName": "NOVEC Energy Solutions – 76",
+                "AllocationGroup": "NOVEC FP",
+                "IsFirm": true,
+                "TotalNominationAllocations": 5410,
+                "DailyRequiredVolume": 2635,
+                "TotalUsage": 5496,
+                "TotalForecastImbal": 2775,
+                "Penalty": 0.00
+            },
+            {
+                "ShipmentDate": "2024-02-01T00:00:00",
+                "AllocationGroupID": 994,
+                "CompanyName": "NRG Home",
+                "AllocationGroup": "NRG FP",
+                "IsFirm": true,
+                "TotalNominationAllocations": 116,
+                "DailyRequiredVolume": 291,
+                "TotalUsage": 302,
+                "TotalForecastImbal": -175,
+                "Penalty": 0.00
+            },
+            {
+                "ShipmentDate": "2024-02-01T00:00:00",
+                "AllocationGroupID": 999,
+                "CompanyName": "Indra Energy - DC - 169",
+                "AllocationGroup": "PALMCO DC FP",
+                "IsFirm": true,
+                "TotalNominationAllocations": 95,
+                "DailyRequiredVolume": 120,
+                "TotalUsage": 126,
+                "TotalForecastImbal": -25,
+                "Penalty": 0.00
+            },
+            {
+                "ShipmentDate": "2024-02-01T00:00:00",
+                "AllocationGroupID": 381,
+                "CompanyName": "Indra Energy - MD - 119",
+                "AllocationGroup": "PALMCO FP",
+                "IsFirm": true,
+                "TotalNominationAllocations": 288,
+                "DailyRequiredVolume": 375,
+                "TotalUsage": 393,
+                "TotalForecastImbal": -87,
+                "Penalty": 0.00
+            },
+            {
+                "ShipmentDate": "2024-02-01T00:00:00",
+                "AllocationGroupID": 1000,
+                "CompanyName": "Indra Energy - VA - 170",
+                "AllocationGroup": "PALMCO VA FP",
+                "IsFirm": true,
+                "TotalNominationAllocations": 100,
+                "DailyRequiredVolume": 168,
+                "TotalUsage": 177,
+                "TotalForecastImbal": -68,
+                "Penalty": 0.00
+            },
+            {
+                "ShipmentDate": "2024-02-01T00:00:00",
+                "AllocationGroupID": 1010,
+                "CompanyName": "Engie Power & Gas - 135",
+                "AllocationGroup": "PLYMOUTH FP",
+                "IsFirm": true,
+                "TotalNominationAllocations": 3819,
+                "DailyRequiredVolume": 5419,
+                "TotalUsage": 5657,
+                "TotalForecastImbal": -1600,
+                "Penalty": 0.00
+            },
+            {
+                "ShipmentDate": "2024-02-01T00:00:00",
+                "AllocationGroupID": 989,
+                "CompanyName": "SFE Energy",
+                "AllocationGroup": "SFE FP",
+                "IsFirm": true,
+                "TotalNominationAllocations": 1279,
+                "DailyRequiredVolume": 1484,
+                "TotalUsage": 1550,
+                "TotalForecastImbal": -205,
+                "Penalty": 0.00
+            },
+            {
+                "ShipmentDate": "2024-02-01T00:00:00",
+                "AllocationGroupID": 169,
+                "CompanyName": "Shell Energy",
+                "AllocationGroup": "SHELL FP",
+                "IsFirm": true,
+                "TotalNominationAllocations": 0,
+                "DailyRequiredVolume": 0,
+                "TotalUsage": 0,
+                "TotalForecastImbal": 0,
+                "Penalty": 0.00
+            },
+            {
+                "ShipmentDate": "2024-02-01T00:00:00",
+                "AllocationGroupID": 1006,
+                "CompanyName": "Spring Power & Gas",
+                "AllocationGroup": "SPRING FP",
+                "IsFirm": true,
+                "TotalNominationAllocations": 31,
+                "DailyRequiredVolume": 29,
+                "TotalUsage": 30,
+                "TotalForecastImbal": 2,
+                "Penalty": 0.00
+            },
+            {
+                "ShipmentDate": "2024-02-01T00:00:00",
+                "AllocationGroupID": 177,
+                "CompanyName": "Stand Energy",
+                "AllocationGroup": "STAND FP",
+                "IsFirm": true,
+                "TotalNominationAllocations": 303,
+                "DailyRequiredVolume": 303,
+                "TotalUsage": 313,
+                "TotalForecastImbal": 0,
+                "Penalty": 0.00
+            },
+            {
+                "ShipmentDate": "2024-02-01T00:00:00",
+                "AllocationGroupID": 180,
+                "CompanyName": "Tiger Natural Gas",
+                "AllocationGroup": "TIGER FP",
+                "IsFirm": true,
+                "TotalNominationAllocations": 0,
+                "DailyRequiredVolume": 0,
+                "TotalUsage": 0,
+                "TotalForecastImbal": 0,
+                "Penalty": 0.00
+            },
+            {
+                "ShipmentDate": "2024-02-01T00:00:00",
+                "AllocationGroupID": 1005,
+                "CompanyName": "CleanSky Energy - DC and MD - 194",
+                "AllocationGroup": "TITAN FP",
+                "IsFirm": true,
+                "TotalNominationAllocations": 168,
+                "DailyRequiredVolume": 168,
+                "TotalUsage": 174,
+                "TotalForecastImbal": 0,
+                "Penalty": 0.00
+            },
+            {
+                "ShipmentDate": "2024-02-01T00:00:00",
+                "AllocationGroupID": 1007,
+                "CompanyName": "Tomorrow Energy Corp",
+                "AllocationGroup": "TOM FP",
+                "IsFirm": true,
+                "TotalNominationAllocations": 120,
+                "DailyRequiredVolume": 172,
+                "TotalUsage": 180,
+                "TotalForecastImbal": -52,
+                "Penalty": 0.00
+            },
+            {
+                "ShipmentDate": "2024-02-01T00:00:00",
+                "AllocationGroupID": 182,
+                "CompanyName": "UGI Energy Services - 33",
+                "AllocationGroup": "UGI ENERG FP",
+                "IsFirm": true,
+                "TotalNominationAllocations": 540,
+                "DailyRequiredVolume": 15130,
+                "TotalUsage": 15828,
+                "TotalForecastImbal": -14590,
+                "Penalty": 0.00
+            },
+            {
+                "ShipmentDate": "2024-02-01T00:00:00",
+                "AllocationGroupID": 1028,
+                "CompanyName": "SunSea Energy - DC - 219",
+                "AllocationGroup": "SUNSEA DC FP",
+                "IsFirm": true,
+                "TotalNominationAllocations": 324,
+                "DailyRequiredVolume": 283,
+                "TotalUsage": 298,
+                "TotalForecastImbal": 41,
+                "Penalty": 0.00
+            },
+            {
+                "ShipmentDate": "2024-02-01T00:00:00",
+                "AllocationGroupID": 801,
+                "CompanyName": "Viridian Energy",
+                "AllocationGroup": "VIRIDIAN FP",
+                "IsFirm": true,
+                "TotalNominationAllocations": 44,
+                "DailyRequiredVolume": 52,
+                "TotalUsage": 54,
+                "TotalForecastImbal": -8,
+                "Penalty": 0.00
+            },
+            {
+                "ShipmentDate": "2024-02-01T00:00:00",
+                "AllocationGroupID": 184,
+                "CompanyName": "WGL Energy Svcs - 35",
+                "AllocationGroup": "WGES FP",
+                "IsFirm": true,
+                "TotalNominationAllocations": 58699,
+                "DailyRequiredVolume": 89585,
+                "TotalUsage": 93358,
+                "TotalForecastImbal": -30886,
+                "Penalty": 0.00
+            },
+            {
+                "ShipmentDate": "2024-02-01T00:00:00",
+                "AllocationGroupID": 461,
+                "CompanyName": "Xoom Energy Maryland",
+                "AllocationGroup": "XOOM FP",
+                "IsFirm": true,
+                "TotalNominationAllocations": 99,
+                "DailyRequiredVolume": 1324,
+                "TotalUsage": 1388,
+                "TotalForecastImbal": -1225,
+                "Penalty": 0.00
+            },
+            {
+                "ShipmentDate": "2024-02-01T00:00:00",
+                "AllocationGroupID": 783,
+                "CompanyName": "Xoom Energy",
+                "AllocationGroup": "XOOM VA FP",
+                "IsFirm": true,
+                "TotalNominationAllocations": 9,
+                "DailyRequiredVolume": 409,
+                "TotalUsage": 427,
+                "TotalForecastImbal": -400,
+                "Penalty": 0.00
+            },
+            {
+                "ShipmentDate": "2024-02-01T00:00:00",
+                "AllocationGroupID": 1011,
+                "CompanyName": "IDT Energy",
+                "AllocationGroup": "IDT FP",
+                "IsFirm": true,
+                "TotalNominationAllocations": 426,
+                "DailyRequiredVolume": 349,
+                "TotalUsage": 368,
+                "TotalForecastImbal": 77,
+                "Penalty": 0.00
+            },
+            {
+                "ShipmentDate": "2024-02-01T00:00:00",
+                "AllocationGroupID": 1015,
+                "CompanyName": "Statewise Energy - MD - 210",
+                "AllocationGroup": "STATEWISE FP",
+                "IsFirm": true,
+                "TotalNominationAllocations": 196,
+                "DailyRequiredVolume": 250,
+                "TotalUsage": 263,
+                "TotalForecastImbal": -54,
+                "Penalty": 0.00
+            },
+            {
+                "ShipmentDate": "2024-02-01T00:00:00",
+                "AllocationGroupID": 1016,
+                "CompanyName": "Park Power LLC - DC - 204",
+                "AllocationGroup": "PARK FP",
+                "IsFirm": true,
+                "TotalNominationAllocations": 29,
+                "DailyRequiredVolume": 32,
+                "TotalUsage": 33,
+                "TotalForecastImbal": -3,
+                "Penalty": 0.00
+            },
+            {
+                "ShipmentDate": "2024-02-01T00:00:00",
+                "AllocationGroupID": 990,
+                "CompanyName": "MAJOR Energy",
+                "AllocationGroup": "MAJOR FP",
+                "IsFirm": true,
+                "TotalNominationAllocations": 0,
+                "DailyRequiredVolume": 219,
+                "TotalUsage": 227,
+                "TotalForecastImbal": -219,
+                "Penalty": 0.00
+            },
+            {
+                "ShipmentDate": "2024-02-01T00:00:00",
+                "AllocationGroupID": 1018,
+                "CompanyName": "Nordic Energy Services - 215",
+                "AllocationGroup": "NORDIC FP",
+                "IsFirm": true,
+                "TotalNominationAllocations": 69,
+                "DailyRequiredVolume": 112,
+                "TotalUsage": 118,
+                "TotalForecastImbal": -43,
+                "Penalty": 0.00
+            },
+            {
+                "ShipmentDate": "2024-02-01T00:00:00",
+                "AllocationGroupID": 1019,
+                "CompanyName": "Alpha Gas and Electric - DC - 227",
+                "AllocationGroup": "ALPHA DC FP",
+                "IsFirm": true,
+                "TotalNominationAllocations": 4,
+                "DailyRequiredVolume": 5,
+                "TotalUsage": 5,
+                "TotalForecastImbal": -1,
+                "Penalty": 0.00
+            },
+            {
+                "ShipmentDate": "2024-02-01T00:00:00",
+                "AllocationGroupID": 1020,
+                "CompanyName": "Alpha Gas and Electric - MD - 235",
+                "AllocationGroup": "ALPHA MD FP",
+                "IsFirm": true,
+                "TotalNominationAllocations": 32,
+                "DailyRequiredVolume": 39,
+                "TotalUsage": 40,
+                "TotalForecastImbal": -7,
+                "Penalty": 0.00
+            },
+            {
+                "ShipmentDate": "2024-02-01T00:00:00",
+                "AllocationGroupID": 1021,
+                "CompanyName": "Alpha Gas and Electric - VA - 228",
+                "AllocationGroup": "ALPHA VA FP",
+                "IsFirm": true,
+                "TotalNominationAllocations": 0,
+                "DailyRequiredVolume": 0,
+                "TotalUsage": 0,
+                "TotalForecastImbal": 0,
+                "Penalty": 0.00
+            },
+            {
+                "ShipmentDate": "2024-02-01T00:00:00",
+                "AllocationGroupID": 1023,
+                "CompanyName": "Green Choice Energy - MD & VA - 243",
+                "AllocationGroup": "GREEN CHOICE FP",
+                "IsFirm": true,
+                "TotalNominationAllocations": 0,
+                "DailyRequiredVolume": 61,
+                "TotalUsage": 64,
+                "TotalForecastImbal": -61,
+                "Penalty": 0.00
+            },
+            {
+                "ShipmentDate": "2024-02-01T00:00:00",
+                "AllocationGroupID": 1025,
+                "CompanyName": "Park Power LLC - MD & VA - 255",
+                "AllocationGroup": "PARK MD FP",
+                "IsFirm": true,
+                "TotalNominationAllocations": 13,
+                "DailyRequiredVolume": 19,
+                "TotalUsage": 20,
+                "TotalForecastImbal": -6,
+                "Penalty": 0.00
+            },
+            {
+                "ShipmentDate": "2024-02-01T00:00:00",
+                "AllocationGroupID": 1022,
+                "CompanyName": "Green Choice Energy - DC - 239",
+                "AllocationGroup": "GREEN CHOICE DC FP",
+                "IsFirm": true,
+                "TotalNominationAllocations": 20,
+                "DailyRequiredVolume": 20,
+                "TotalUsage": 21,
+                "TotalForecastImbal": 0,
+                "Penalty": 0.00
+            },
+            {
+                "ShipmentDate": "2024-02-01T00:00:00",
+                "AllocationGroupID": 1026,
+                "CompanyName": "Atlantic Energy",
+                "AllocationGroup": "ATLANTIC FP",
+                "IsFirm": true,
+                "TotalNominationAllocations": 258,
+                "DailyRequiredVolume": 233,
+                "TotalUsage": 243,
+                "TotalForecastImbal": 25,
+                "Penalty": 0.00
+            },
+            {
+                "ShipmentDate": "2024-02-01T00:00:00",
+                "AllocationGroupID": 1029,
+                "CompanyName": "Wave Energy",
+                "AllocationGroup": "WAVE FP",
+                "IsFirm": true,
+                "TotalNominationAllocations": 0,
+                "DailyRequiredVolume": 0,
+                "TotalUsage": 0,
+                "TotalForecastImbal": 0,
+                "Penalty": 0.00
+            },
+            {
+                "ShipmentDate": "2024-02-01T00:00:00",
+                "AllocationGroupID": 1031,
+                "CompanyName": "United Energy Trading ",
+                "AllocationGroup": "UET FP",
+                "IsFirm": true,
+                "TotalNominationAllocations": 1033,
+                "DailyRequiredVolume": 2198,
+                "TotalUsage": 2285,
+                "TotalForecastImbal": -1165,
+                "Penalty": 0.00
+            },
+            {
+                "ShipmentDate": "2024-02-01T00:00:00",
+                "AllocationGroupID": 1032,
+                "CompanyName": "Greenlight Energy Inc.",
+                "AllocationGroup": "GREENLIGHT FP",
+                "IsFirm": true,
+                "TotalNominationAllocations": 2,
+                "DailyRequiredVolume": 2,
+                "TotalUsage": 2,
+                "TotalForecastImbal": 0,
+                "Penalty": 0.00
+            },
+            {
+                "ShipmentDate": "2024-02-01T00:00:00",
+                "AllocationGroupID": 1033,
+                "CompanyName": "IGS Energy - MD",
+                "AllocationGroup": "IGS MD FP",
+                "IsFirm": true,
+                "TotalNominationAllocations": 1381,
+                "DailyRequiredVolume": 3152,
+                "TotalUsage": 3318,
+                "TotalForecastImbal": -1771,
+                "Penalty": 0.00
+            },
+            {
+                "ShipmentDate": "2024-02-01T00:00:00",
+                "AllocationGroupID": 1034,
+                "CompanyName": "IGS Energy - VA & DC ",
+                "AllocationGroup": "IGS FP",
+                "IsFirm": true,
+                "TotalNominationAllocations": 5418,
+                "DailyRequiredVolume": 8330,
+                "TotalUsage": 8749,
+                "TotalForecastImbal": -2912,
+                "Penalty": 0.00
+            },
+            {
+                "ShipmentDate": "2024-02-01T00:00:00",
+                "AllocationGroupID": 1039,
+                "CompanyName": "Washington Suburban Sanitary Commission ",
+                "AllocationGroup": "WSSC FP",
+                "IsFirm": true,
+                "TotalNominationAllocations": 1488,
+                "DailyRequiredVolume": 2088,
+                "TotalUsage": 2163,
+                "TotalForecastImbal": -600,
+                "Penalty": 0.00
+            },
+            {
+                "ShipmentDate": "2024-02-01T00:00:00",
+                "AllocationGroupID": 1040,
+                "CompanyName": "Spark Energy Gas LLC",
+                "AllocationGroup": "SPARK FP",
+                "IsFirm": true,
+                "TotalNominationAllocations": 0,
+                "DailyRequiredVolume": 54,
+                "TotalUsage": 57,
+                "TotalForecastImbal": -54,
+                "Penalty": 0.00
+            },
+            {
+                "ShipmentDate": "2024-02-01T00:00:00",
+                "AllocationGroupID": 1041,
+                "CompanyName": "Median Energy",
+                "AllocationGroup": "MEDIAN FP",
+                "IsFirm": true,
+                "TotalNominationAllocations": 139,
+                "DailyRequiredVolume": 123,
+                "TotalUsage": 129,
+                "TotalForecastImbal": 16,
+                "Penalty": 0.00
+            },
+            {
+                "ShipmentDate": "2024-02-01T00:00:00",
+                "AllocationGroupID": 1038,
+                "CompanyName": "AOC",
+                "AllocationGroup": "AOC IP",
+                "IsFirm": false,
+                "TotalNominationAllocations": 44,
+                "DailyRequiredVolume": 44,
+                "TotalUsage": 0,
+                "TotalForecastImbal": 0,
+                "Penalty": 0.00
+            },
+            {
+                "ShipmentDate": "2024-02-01T00:00:00",
+                "AllocationGroupID": 163,
+                "CompanyName": "Bollinger Energy",
+                "AllocationGroup": "BOLLIN DC IP",
+                "IsFirm": false,
+                "TotalNominationAllocations": 600,
+                "DailyRequiredVolume": 600,
+                "TotalUsage": 613,
+                "TotalForecastImbal": 0,
+                "Penalty": 0.00
+            },
+            {
+                "ShipmentDate": "2024-02-01T00:00:00",
+                "AllocationGroupID": 301,
+                "CompanyName": "Bollinger Energy",
+                "AllocationGroup": "BOLLIN MD IP",
+                "IsFirm": false,
+                "TotalNominationAllocations": 148,
+                "DailyRequiredVolume": 148,
+                "TotalUsage": 306,
+                "TotalForecastImbal": 0,
+                "Penalty": 0.00
+            },
+            {
+                "ShipmentDate": "2024-02-01T00:00:00",
+                "AllocationGroupID": 701,
+                "CompanyName": "Bollinger Energy",
+                "AllocationGroup": "BOLLIN VA IP",
+                "IsFirm": false,
+                "TotalNominationAllocations": 638,
+                "DailyRequiredVolume": 638,
+                "TotalUsage": 758,
+                "TotalForecastImbal": 0,
+                "Penalty": 0.00
+            },
+            {
+                "ShipmentDate": "2024-02-01T00:00:00",
+                "AllocationGroupID": 981,
+                "CompanyName": "Colonial Energy",
+                "AllocationGroup": "COLONIAL MD IP",
+                "IsFirm": false,
+                "TotalNominationAllocations": 0,
+                "DailyRequiredVolume": 0,
+                "TotalUsage": 0,
+                "TotalForecastImbal": 0,
+                "Penalty": 0.00
+            },
+            {
+                "ShipmentDate": "2024-02-01T00:00:00",
+                "AllocationGroupID": 991,
+                "CompanyName": "Colonial Energy",
+                "AllocationGroup": "COLONIAL VA IP",
+                "IsFirm": false,
+                "TotalNominationAllocations": 0,
+                "DailyRequiredVolume": 0,
+                "TotalUsage": 0,
+                "TotalForecastImbal": 0,
+                "Penalty": 0.00
+            },
+            {
+                "ShipmentDate": "2024-02-01T00:00:00",
+                "AllocationGroupID": 321,
+                "CompanyName": "Constellation New Energy",
+                "AllocationGroup": "CNE DC IP",
+                "IsFirm": false,
+                "TotalNominationAllocations": 1280,
+                "DailyRequiredVolume": 1280,
+                "TotalUsage": 1259,
+                "TotalForecastImbal": 0,
+                "Penalty": 0.00
+            },
+            {
+                "ShipmentDate": "2024-02-01T00:00:00",
+                "AllocationGroupID": 64,
+                "CompanyName": "Constellation New Energy",
+                "AllocationGroup": "CNE MD IP",
+                "IsFirm": false,
+                "TotalNominationAllocations": 1035,
+                "DailyRequiredVolume": 1035,
+                "TotalUsage": 1228,
+                "TotalForecastImbal": 0,
+                "Penalty": 0.00
+            },
+            {
+                "ShipmentDate": "2024-02-01T00:00:00",
+                "AllocationGroupID": 121,
+                "CompanyName": "Constellation New Energy",
+                "AllocationGroup": "CNE VA IP",
+                "IsFirm": false,
+                "TotalNominationAllocations": 1850,
+                "DailyRequiredVolume": 1850,
+                "TotalUsage": 1884,
+                "TotalForecastImbal": 0,
+                "Penalty": 0.00
+            },
+            {
+                "ShipmentDate": "2024-02-01T00:00:00",
+                "AllocationGroupID": 995,
+                "CompanyName": "Constellation New Energy",
+                "AllocationGroup": "CNE MD1 IP",
+                "IsFirm": false,
+                "TotalNominationAllocations": 12000,
+                "DailyRequiredVolume": 12000,
+                "TotalUsage": 11971,
+                "TotalForecastImbal": 0,
+                "Penalty": 0.00
+            },
+            {
+                "ShipmentDate": "2024-02-01T00:00:00",
+                "AllocationGroupID": 901,
+                "CompanyName": "Enspire Energy",
+                "AllocationGroup": "ENSPIRE MD IP",
+                "IsFirm": false,
+                "TotalNominationAllocations": 60,
+                "DailyRequiredVolume": 48,
+                "TotalUsage": 799,
+                "TotalForecastImbal": 12,
+                "Penalty": 50.00
+            },
+            {
+                "ShipmentDate": "2024-02-01T00:00:00",
+                "AllocationGroupID": 997,
+                "CompanyName": "Enspire Energy",
+                "AllocationGroup": "ENSPIRE VA IP",
+                "IsFirm": false,
+                "TotalNominationAllocations": 500,
+                "DailyRequiredVolume": 529,
+                "TotalUsage": 495,
+                "TotalForecastImbal": -29,
+                "Penalty": 0.00
+            },
+            {
+                "ShipmentDate": "2024-02-01T00:00:00",
+                "AllocationGroupID": 741,
+                "CompanyName": "NRG Business Market,LLC - 145",
+                "AllocationGroup": "HEM DC IP",
+                "IsFirm": false,
+                "TotalNominationAllocations": 7500,
+                "DailyRequiredVolume": 5900,
+                "TotalUsage": 5724,
+                "TotalForecastImbal": 1600,
+                "Penalty": 0.00
+            },
+            {
+                "ShipmentDate": "2024-02-01T00:00:00",
+                "AllocationGroupID": 743,
+                "CompanyName": "NRG Business Market,LLC - 145",
+                "AllocationGroup": "HEM MD IP",
+                "IsFirm": false,
+                "TotalNominationAllocations": 2600,
+                "DailyRequiredVolume": 2321,
+                "TotalUsage": 2529,
+                "TotalForecastImbal": 279,
+                "Penalty": 0.00
+            },
+            {
+                "ShipmentDate": "2024-02-01T00:00:00",
+                "AllocationGroupID": 745,
+                "CompanyName": "NRG Business Market,LLC - 145",
+                "AllocationGroup": "HEM VA IP",
+                "IsFirm": false,
+                "TotalNominationAllocations": 5700,
+                "DailyRequiredVolume": 5037,
+                "TotalUsage": 5312,
+                "TotalForecastImbal": 663,
+                "Penalty": 0.00
+            },
+            {
+                "ShipmentDate": "2024-02-01T00:00:00",
+                "AllocationGroupID": 171,
+                "CompanyName": "Sprague Op Res LLC - 78",
+                "AllocationGroup": "METROM DC IP",
+                "IsFirm": false,
+                "TotalNominationAllocations": 468,
+                "DailyRequiredVolume": 468,
+                "TotalUsage": 343,
+                "TotalForecastImbal": 0,
+                "Penalty": 0.00
+            },
+            {
+                "ShipmentDate": "2024-02-01T00:00:00",
+                "AllocationGroupID": 998,
+                "CompanyName": "Sprague Op Res LLC - 78",
+                "AllocationGroup": "SPRAGUE MD IP",
+                "IsFirm": false,
+                "TotalNominationAllocations": 145,
+                "DailyRequiredVolume": 145,
+                "TotalUsage": 181,
+                "TotalForecastImbal": 0,
+                "Penalty": 0.00
+            },
+            {
+                "ShipmentDate": "2024-02-01T00:00:00",
+                "AllocationGroupID": 151,
+                "CompanyName": "Sprague Op Res LLC - 78",
+                "AllocationGroup": "METROM VA IP",
+                "IsFirm": false,
+                "TotalNominationAllocations": 29,
+                "DailyRequiredVolume": 29,
+                "TotalUsage": 105,
+                "TotalForecastImbal": 0,
+                "Penalty": 0.00
+            },
+            {
+                "ShipmentDate": "2024-02-01T00:00:00",
+                "AllocationGroupID": 662,
+                "CompanyName": "NOVEC Energy Solutions – 76",
+                "AllocationGroup": "NOVEC DC IP",
+                "IsFirm": false,
+                "TotalNominationAllocations": 192,
+                "DailyRequiredVolume": 192,
+                "TotalUsage": 8,
+                "TotalForecastImbal": 0,
+                "Penalty": 0.00
+            },
+            {
+                "ShipmentDate": "2024-02-01T00:00:00",
+                "AllocationGroupID": 1024,
+                "CompanyName": "NOVEC Energy Solutions – 76",
+                "AllocationGroup": "NOVEC VA IP",
+                "IsFirm": false,
+                "TotalNominationAllocations": 85,
+                "DailyRequiredVolume": 85,
+                "TotalUsage": 166,
+                "TotalForecastImbal": 0,
+                "Penalty": 0.00
+            },
+            {
+                "ShipmentDate": "2024-02-01T00:00:00",
+                "AllocationGroupID": 1027,
+                "CompanyName": "NOVEC Energy Solutions – 76",
+                "AllocationGroup": "NOVEC MD IP",
+                "IsFirm": false,
+                "TotalNominationAllocations": 4124,
+                "DailyRequiredVolume": 3124,
+                "TotalUsage": 3837,
+                "TotalForecastImbal": 1000,
+                "Penalty": 5310.00
+            },
+            {
+                "ShipmentDate": "2024-02-01T00:00:00",
+                "AllocationGroupID": 1014,
+                "CompanyName": "Engie Power & Gas - 135",
+                "AllocationGroup": "PR MD IP",
+                "IsFirm": false,
+                "TotalNominationAllocations": 427,
+                "DailyRequiredVolume": 427,
+                "TotalUsage": 577,
+                "TotalForecastImbal": 0,
+                "Penalty": 0.00
+            },
+            {
+                "ShipmentDate": "2024-02-01T00:00:00",
+                "AllocationGroupID": 1013,
+                "CompanyName": "Engie Power & Gas - 135",
+                "AllocationGroup": "PLYMOUTH VA IP",
+                "IsFirm": false,
+                "TotalNominationAllocations": 0,
+                "DailyRequiredVolume": 0,
+                "TotalUsage": 0,
+                "TotalForecastImbal": 0,
+                "Penalty": 0.00
+            },
+            {
+                "ShipmentDate": "2024-02-01T00:00:00",
+                "AllocationGroupID": 221,
+                "CompanyName": "Shell Energy",
+                "AllocationGroup": "SHELL DC IP",
+                "IsFirm": false,
+                "TotalNominationAllocations": 0,
+                "DailyRequiredVolume": 0,
+                "TotalUsage": 0,
+                "TotalForecastImbal": 0,
+                "Penalty": 0.00
+            },
+            {
+                "ShipmentDate": "2024-02-01T00:00:00",
+                "AllocationGroupID": 101,
+                "CompanyName": "Shell Energy",
+                "AllocationGroup": "SHELL MD IP",
+                "IsFirm": false,
+                "TotalNominationAllocations": 0,
+                "DailyRequiredVolume": 0,
+                "TotalUsage": 0,
+                "TotalForecastImbal": 0,
+                "Penalty": 0.00
+            },
+            {
+                "ShipmentDate": "2024-02-01T00:00:00",
+                "AllocationGroupID": 81,
+                "CompanyName": "Shell Energy",
+                "AllocationGroup": "SHELL VA IP",
+                "IsFirm": false,
+                "TotalNominationAllocations": 0,
+                "DailyRequiredVolume": 0,
+                "TotalUsage": 0,
+                "TotalForecastImbal": 0,
+                "Penalty": 0.00
+            },
+            {
+                "ShipmentDate": "2024-02-01T00:00:00",
+                "AllocationGroupID": 141,
+                "CompanyName": "Stand Energy",
+                "AllocationGroup": "STAND MD IP",
+                "IsFirm": false,
+                "TotalNominationAllocations": 0,
+                "DailyRequiredVolume": 0,
+                "TotalUsage": 0,
+                "TotalForecastImbal": 0,
+                "Penalty": 0.00
+            },
+            {
+                "ShipmentDate": "2024-02-01T00:00:00",
+                "AllocationGroupID": 148,
+                "CompanyName": "Stand Energy",
+                "AllocationGroup": "STAND VA IP",
+                "IsFirm": false,
+                "TotalNominationAllocations": 1519,
+                "DailyRequiredVolume": 1205,
+                "TotalUsage": 1381,
+                "TotalForecastImbal": 314,
+                "Penalty": 0.00
+            },
+            {
+                "ShipmentDate": "2024-02-01T00:00:00",
+                "AllocationGroupID": 341,
+                "CompanyName": "Tiger Natural Gas",
+                "AllocationGroup": "TIGER DC IP",
+                "IsFirm": false,
+                "TotalNominationAllocations": 0,
+                "DailyRequiredVolume": 0,
+                "TotalUsage": 0,
+                "TotalForecastImbal": 0,
+                "Penalty": 0.00
+            },
+            {
+                "ShipmentDate": "2024-02-01T00:00:00",
+                "AllocationGroupID": 146,
+                "CompanyName": "Tiger Natural Gas",
+                "AllocationGroup": "TIGER VA IP",
+                "IsFirm": false,
+                "TotalNominationAllocations": 0,
+                "DailyRequiredVolume": 0,
+                "TotalUsage": 0,
+                "TotalForecastImbal": 0,
+                "Penalty": 0.00
+            },
+            {
+                "ShipmentDate": "2024-02-01T00:00:00",
+                "AllocationGroupID": 181,
+                "CompanyName": "UGI Energy Services - 33",
+                "AllocationGroup": "UGI DC IP",
+                "IsFirm": false,
+                "TotalNominationAllocations": 549,
+                "DailyRequiredVolume": 549,
+                "TotalUsage": 1242,
+                "TotalForecastImbal": 0,
+                "Penalty": 0.00
+            },
+            {
+                "ShipmentDate": "2024-02-01T00:00:00",
+                "AllocationGroupID": 31,
+                "CompanyName": "UGI Energy Services - 33",
+                "AllocationGroup": "UGI MD IP",
+                "IsFirm": false,
+                "TotalNominationAllocations": 117,
+                "DailyRequiredVolume": 117,
+                "TotalUsage": 145,
+                "TotalForecastImbal": 0,
+                "Penalty": 0.00
+            },
+            {
+                "ShipmentDate": "2024-02-01T00:00:00",
+                "AllocationGroupID": 147,
+                "CompanyName": "UGI Energy Services - 33",
+                "AllocationGroup": "UGI VA IP",
+                "IsFirm": false,
+                "TotalNominationAllocations": 1616,
+                "DailyRequiredVolume": 1616,
+                "TotalUsage": 1043,
+                "TotalForecastImbal": 0,
+                "Penalty": 0.00
+            },
+            {
+                "ShipmentDate": "2024-02-01T00:00:00",
+                "AllocationGroupID": 183,
+                "CompanyName": "WGL Energy Svcs - 35",
+                "AllocationGroup": "WGES DC IP",
+                "IsFirm": false,
+                "TotalNominationAllocations": 14400,
+                "DailyRequiredVolume": 11534,
+                "TotalUsage": 14732,
+                "TotalForecastImbal": 2866,
+                "Penalty": 7470.00
+            },
+            {
+                "ShipmentDate": "2024-02-01T00:00:00",
+                "AllocationGroupID": 33,
+                "CompanyName": "WGL Energy Svcs - 35",
+                "AllocationGroup": "WGES MD IP",
+                "IsFirm": false,
+                "TotalNominationAllocations": 22685,
+                "DailyRequiredVolume": 22685,
+                "TotalUsage": 24808,
+                "TotalForecastImbal": 0,
+                "Penalty": 0.00
+            },
+            {
+                "ShipmentDate": "2024-02-01T00:00:00",
+                "AllocationGroupID": 149,
+                "CompanyName": "WGL Energy Svcs - 35",
+                "AllocationGroup": "WGES VA IP",
+                "IsFirm": false,
+                "TotalNominationAllocations": 5997,
+                "DailyRequiredVolume": 5997,
+                "TotalUsage": 5665,
+                "TotalForecastImbal": 0,
+                "Penalty": 0.00
+            },
+            {
+                "ShipmentDate": "2024-02-01T00:00:00",
+                "AllocationGroupID": 1035,
+                "CompanyName": "United Energy Trading ",
+                "AllocationGroup": "UET DC IP",
+                "IsFirm": false,
+                "TotalNominationAllocations": 317,
+                "DailyRequiredVolume": 317,
+                "TotalUsage": 200,
+                "TotalForecastImbal": 0,
+                "Penalty": 0.00
+            },
+            {
+                "ShipmentDate": "2024-02-01T00:00:00",
+                "AllocationGroupID": 1036,
+                "CompanyName": "United Energy Trading ",
+                "AllocationGroup": "UET MD IP",
+                "IsFirm": false,
+                "TotalNominationAllocations": 133,
+                "DailyRequiredVolume": 133,
+                "TotalUsage": 83,
+                "TotalForecastImbal": 0,
+                "Penalty": 0.00
+            },
+            {
+                "ShipmentDate": "2024-02-01T00:00:00",
+                "AllocationGroupID": 1037,
+                "CompanyName": "United Energy Trading ",
+                "AllocationGroup": "UET VA IP",
+                "IsFirm": false,
+                "TotalNominationAllocations": 417,
+                "DailyRequiredVolume": 417,
+                "TotalUsage": 666,
+                "TotalForecastImbal": 0,
+                "Penalty": 0.00
+            },
+            {
+                "ShipmentDate": "2024-02-01T00:00:00",
+                "AllocationGroupID": 32,
+                "CompanyName": "WGL Energy Svcs - 35",
+                "AllocationGroup": "WGES DC IP-Inactive",
+                "IsFirm": false,
+                "TotalNominationAllocations": 0,
+                "DailyRequiredVolume": 0,
+                "TotalUsage": 6929,
+                "TotalForecastImbal": 0,
+                "Penalty": 0.00
+            },
+            {
+                "ShipmentDate": "2024-02-01T00:00:00",
+                "AllocationGroupID": 24,
+                "CompanyName": "Bollinger Energy",
+                "AllocationGroup": "BOLLIN DC IP-Inactive",
+                "IsFirm": false,
+                "TotalNominationAllocations": 0,
+                "DailyRequiredVolume": 0,
+                "TotalUsage": 50,
+                "TotalForecastImbal": 0,
+                "Penalty": 0.00
+            },
+            {
+                "ShipmentDate": "2024-02-01T00:00:00",
+                "AllocationGroupID": 62,
+                "CompanyName": "UGI Energy Services - 33",
+                "AllocationGroup": "UGI DC IP-Inactive",
+                "IsFirm": false,
+                "TotalNominationAllocations": 0,
+                "DailyRequiredVolume": 0,
+                "TotalUsage": 1242,
+                "TotalForecastImbal": 0,
+                "Penalty": 0.00
+            },
+            {
+                "ShipmentDate": "2024-02-01T00:00:00",
+                "AllocationGroupID": 1012,
+                "CompanyName": "Engie Power & Gas - 135",
+                "AllocationGroup": "PLYMOUTH MD IP-Inactive",
+                "IsFirm": false,
+                "TotalNominationAllocations": 0,
+                "DailyRequiredVolume": 0,
+                "TotalUsage": 577,
+                "TotalForecastImbal": 0,
+                "Penalty": 0.00
+            },
+            {
+                "ShipmentDate": "2024-02-01T00:00:00",
+                "AllocationGroupID": 25,
+                "CompanyName": "Bollinger Energy",
+                "AllocationGroup": "BOLLIN MD IP-Inactive",
+                "IsFirm": false,
+                "TotalNominationAllocations": 0,
+                "DailyRequiredVolume": 0,
+                "TotalUsage": 59,
+                "TotalForecastImbal": 0,
+                "Penalty": 0.00
+            },
+            {
+                "ShipmentDate": "2024-02-01T00:00:00",
+                "AllocationGroupID": 702,
+                "CompanyName": "Bollinger Energy",
+                "AllocationGroup": "BOLLIN VA IP-Inactive",
+                "IsFirm": false,
+                "TotalNominationAllocations": 0,
+                "DailyRequiredVolume": 0,
+                "TotalUsage": 49,
+                "TotalForecastImbal": 0,
+                "Penalty": 0.00
+            },
+            {
+                "ShipmentDate": "2024-02-01T00:00:00",
+                "AllocationGroupID": 1042,
+                "CompanyName": "Engie Power & Gas - 135",
+                "AllocationGroup": "PLYMOUTH MD IP-Inactive",
+                "IsFirm": false,
+                "TotalNominationAllocations": 0,
+                "DailyRequiredVolume": 0,
+                "TotalUsage": 577,
+                "TotalForecastImbal": 0,
+                "Penalty": 0.00
+            }
+        ],
+        "CompanyTotals": [
+            {
+                "CompanyName": "Agway Energy Services LLC",
+                "AllocationGroup": "Total",
+                "IsFirm": null,
+                "TotalNominationAllocations": 0,
+                "DailyRequiredVolume": 0,
+                "TotalUsage": 0,
+                "TotalForecastImbal": 0,
+                "Penalty": 0.00
+            },
+            {
+                "CompanyName": "Alpha Gas and Electric - DC - 227",
+                "AllocationGroup": "Total",
+                "IsFirm": null,
+                "TotalNominationAllocations": 4,
+                "DailyRequiredVolume": 5,
+                "TotalUsage": 5,
+                "TotalForecastImbal": -1,
+                "Penalty": 0.00
+            },
+            {
+                "CompanyName": "Alpha Gas and Electric - MD - 235",
+                "AllocationGroup": "Total",
+                "IsFirm": null,
+                "TotalNominationAllocations": 32,
+                "DailyRequiredVolume": 39,
+                "TotalUsage": 40,
+                "TotalForecastImbal": -7,
+                "Penalty": 0.00
+            },
+            {
+                "CompanyName": "Alpha Gas and Electric - VA - 228",
+                "AllocationGroup": "Total",
+                "IsFirm": null,
+                "TotalNominationAllocations": 0,
+                "DailyRequiredVolume": 0,
+                "TotalUsage": 0,
+                "TotalForecastImbal": 0,
+                "Penalty": 0.00
+            },
+            {
+                "CompanyName": "Ambit Energy",
+                "AllocationGroup": "Total",
+                "IsFirm": null,
+                "TotalNominationAllocations": 369,
+                "DailyRequiredVolume": 630,
+                "TotalUsage": 660,
+                "TotalForecastImbal": -261,
+                "Penalty": 0.00
+            },
+            {
+                "CompanyName": "American Power & Gas",
+                "AllocationGroup": "Total",
+                "IsFirm": null,
+                "TotalNominationAllocations": 50,
+                "DailyRequiredVolume": 118,
+                "TotalUsage": 123,
+                "TotalForecastImbal": -68,
+                "Penalty": 0.00
+            },
+            {
+                "CompanyName": "AOC",
+                "AllocationGroup": "Total",
+                "IsFirm": null,
+                "TotalNominationAllocations": 801,
+                "DailyRequiredVolume": 1211,
+                "TotalUsage": 1167,
+                "TotalForecastImbal": -410,
+                "Penalty": 0.00
+            },
+            {
+                "CompanyName": "Atlantic Energy",
+                "AllocationGroup": "Total",
+                "IsFirm": null,
+                "TotalNominationAllocations": 258,
+                "DailyRequiredVolume": 233,
+                "TotalUsage": 243,
+                "TotalForecastImbal": 25,
+                "Penalty": 0.00
+            },
+            {
+                "CompanyName": "Bollinger Energy",
+                "AllocationGroup": "Total",
+                "IsFirm": null,
+                "TotalNominationAllocations": 3129,
+                "DailyRequiredVolume": 2823,
+                "TotalUsage": 3297,
+                "TotalForecastImbal": 306,
+                "Penalty": 0.00
+            },
+            {
+                "CompanyName": "CleanSky Energy - DC and MD - 194",
+                "AllocationGroup": "Total",
+                "IsFirm": null,
+                "TotalNominationAllocations": 168,
+                "DailyRequiredVolume": 168,
+                "TotalUsage": 174,
+                "TotalForecastImbal": 0,
+                "Penalty": 0.00
+            },
+            {
+                "CompanyName": "Colonial Energy",
+                "AllocationGroup": "Total",
+                "IsFirm": null,
+                "TotalNominationAllocations": 74,
+                "DailyRequiredVolume": 65,
+                "TotalUsage": 66,
+                "TotalForecastImbal": 9,
+                "Penalty": 0.00
+            },
+            {
+                "CompanyName": "Constellation New Energy",
+                "AllocationGroup": "Total",
+                "IsFirm": null,
+                "TotalNominationAllocations": 25929,
+                "DailyRequiredVolume": 40423,
+                "TotalUsage": 41453,
+                "TotalForecastImbal": -14494,
+                "Penalty": 0.00
+            },
+            {
+                "CompanyName": "Constellation New Energy 2",
+                "AllocationGroup": "Total",
+                "IsFirm": null,
+                "TotalNominationAllocations": 1286,
+                "DailyRequiredVolume": 1964,
+                "TotalUsage": 2070,
+                "TotalForecastImbal": -678,
+                "Penalty": 0.00
+            },
+            {
+                "CompanyName": "Deca Energy",
+                "AllocationGroup": "Total",
+                "IsFirm": null,
+                "TotalNominationAllocations": 642,
+                "DailyRequiredVolume": 951,
+                "TotalUsage": 1002,
+                "TotalForecastImbal": -309,
+                "Penalty": 0.00
+            },
+            {
+                "CompanyName": "Direct Energy Services,LLC-156",
+                "AllocationGroup": "Total",
+                "IsFirm": null,
+                "TotalNominationAllocations": 0,
+                "DailyRequiredVolume": 1304,
+                "TotalUsage": 1369,
+                "TotalForecastImbal": -1304,
+                "Penalty": 0.00
+            },
+            {
+                "CompanyName": "Energy Plus Natural Gas LLC",
+                "AllocationGroup": "Total",
+                "IsFirm": null,
+                "TotalNominationAllocations": 68,
+                "DailyRequiredVolume": 143,
+                "TotalUsage": 151,
+                "TotalForecastImbal": -75,
+                "Penalty": 0.00
+            },
+            {
+                "CompanyName": "Engie Power & Gas - 135",
+                "AllocationGroup": "Total",
+                "IsFirm": null,
+                "TotalNominationAllocations": 4246,
+                "DailyRequiredVolume": 5846,
+                "TotalUsage": 7388,
+                "TotalForecastImbal": -1600,
+                "Penalty": 0.00
+            },
+            {
+                "CompanyName": "Enspire Energy",
+                "AllocationGroup": "Total",
+                "IsFirm": null,
+                "TotalNominationAllocations": 690,
+                "DailyRequiredVolume": 787,
+                "TotalUsage": 1347,
+                "TotalForecastImbal": -97,
+                "Penalty": 50.00
+            },
+            {
+                "CompanyName": "Gateway Energy Services",
+                "AllocationGroup": "Total",
+                "IsFirm": null,
+                "TotalNominationAllocations": 283,
+                "DailyRequiredVolume": 1208,
+                "TotalUsage": 1270,
+                "TotalForecastImbal": -925,
+                "Penalty": 0.00
+            },
+            {
+                "CompanyName": "Green Choice Energy - DC - 239",
+                "AllocationGroup": "Total",
+                "IsFirm": null,
+                "TotalNominationAllocations": 20,
+                "DailyRequiredVolume": 20,
+                "TotalUsage": 21,
+                "TotalForecastImbal": 0,
+                "Penalty": 0.00
+            },
+            {
+                "CompanyName": "Green Choice Energy - MD & VA - 243",
+                "AllocationGroup": "Total",
+                "IsFirm": null,
+                "TotalNominationAllocations": 0,
+                "DailyRequiredVolume": 61,
+                "TotalUsage": 64,
+                "TotalForecastImbal": -61,
+                "Penalty": 0.00
+            },
+            {
+                "CompanyName": "Greenlight Energy Inc.",
+                "AllocationGroup": "Total",
+                "IsFirm": null,
+                "TotalNominationAllocations": 2,
+                "DailyRequiredVolume": 2,
+                "TotalUsage": 2,
+                "TotalForecastImbal": 0,
+                "Penalty": 0.00
+            },
+            {
+                "CompanyName": "IDT Energy",
+                "AllocationGroup": "Total",
+                "IsFirm": null,
+                "TotalNominationAllocations": 426,
+                "DailyRequiredVolume": 349,
+                "TotalUsage": 368,
+                "TotalForecastImbal": 77,
+                "Penalty": 0.00
+            },
+            {
+                "CompanyName": "IGS Energy - MD",
+                "AllocationGroup": "Total",
+                "IsFirm": null,
+                "TotalNominationAllocations": 1381,
+                "DailyRequiredVolume": 3152,
+                "TotalUsage": 3318,
+                "TotalForecastImbal": -1771,
+                "Penalty": 0.00
+            },
+            {
+                "CompanyName": "IGS Energy - VA & DC ",
+                "AllocationGroup": "Total",
+                "IsFirm": null,
+                "TotalNominationAllocations": 5418,
+                "DailyRequiredVolume": 8330,
+                "TotalUsage": 8749,
+                "TotalForecastImbal": -2912,
+                "Penalty": 0.00
+            },
+            {
+                "CompanyName": "Indra Energy - DC - 169",
+                "AllocationGroup": "Total",
+                "IsFirm": null,
+                "TotalNominationAllocations": 95,
+                "DailyRequiredVolume": 120,
+                "TotalUsage": 126,
+                "TotalForecastImbal": -25,
+                "Penalty": 0.00
+            },
+            {
+                "CompanyName": "Indra Energy - MD - 119",
+                "AllocationGroup": "Total",
+                "IsFirm": null,
+                "TotalNominationAllocations": 288,
+                "DailyRequiredVolume": 375,
+                "TotalUsage": 393,
+                "TotalForecastImbal": -87,
+                "Penalty": 0.00
+            },
+            {
+                "CompanyName": "Indra Energy - VA - 170",
+                "AllocationGroup": "Total",
+                "IsFirm": null,
+                "TotalNominationAllocations": 100,
+                "DailyRequiredVolume": 168,
+                "TotalUsage": 177,
+                "TotalForecastImbal": -68,
+                "Penalty": 0.00
+            },
+            {
+                "CompanyName": "MAJOR Energy",
+                "AllocationGroup": "Total",
+                "IsFirm": null,
+                "TotalNominationAllocations": 0,
+                "DailyRequiredVolume": 219,
+                "TotalUsage": 227,
+                "TotalForecastImbal": -219,
+                "Penalty": 0.00
+            },
+            {
+                "CompanyName": "Maryland Energy",
+                "AllocationGroup": "Total",
+                "IsFirm": null,
+                "TotalNominationAllocations": 0,
+                "DailyRequiredVolume": 0,
+                "TotalUsage": 0,
+                "TotalForecastImbal": 0,
+                "Penalty": 0.00
+            },
+            {
+                "CompanyName": "Maryland Gas and Electric",
+                "AllocationGroup": "Total",
+                "IsFirm": null,
+                "TotalNominationAllocations": 894,
+                "DailyRequiredVolume": 1498,
+                "TotalUsage": 1570,
+                "TotalForecastImbal": -604,
+                "Penalty": 0.00
+            },
+            {
+                "CompanyName": "Median Energy",
+                "AllocationGroup": "Total",
+                "IsFirm": null,
+                "TotalNominationAllocations": 139,
+                "DailyRequiredVolume": 123,
+                "TotalUsage": 129,
+                "TotalForecastImbal": 16,
+                "Penalty": 0.00
+            },
+            {
+                "CompanyName": "MPower Energy NJ LLC",
+                "AllocationGroup": "Total",
+                "IsFirm": null,
+                "TotalNominationAllocations": 702,
+                "DailyRequiredVolume": 702,
+                "TotalUsage": 732,
+                "TotalForecastImbal": 0,
+                "Penalty": 0.00
+            },
+            {
+                "CompanyName": "Nordic Energy Services - 215",
+                "AllocationGroup": "Total",
+                "IsFirm": null,
+                "TotalNominationAllocations": 69,
+                "DailyRequiredVolume": 112,
+                "TotalUsage": 118,
+                "TotalForecastImbal": -43,
+                "Penalty": 0.00
+            },
+            {
+                "CompanyName": "NOVEC Energy Solutions – 76",
+                "AllocationGroup": "Total",
+                "IsFirm": null,
+                "TotalNominationAllocations": 9811,
+                "DailyRequiredVolume": 6036,
+                "TotalUsage": 9507,
+                "TotalForecastImbal": 3775,
+                "Penalty": 5310.00
+            },
+            {
+                "CompanyName": "NRG Business Market,LLC - 145",
+                "AllocationGroup": "Total",
+                "IsFirm": null,
+                "TotalNominationAllocations": 22373,
+                "DailyRequiredVolume": 29081,
+                "TotalUsage": 29959,
+                "TotalForecastImbal": -6708,
+                "Penalty": 0.00
+            },
+            {
+                "CompanyName": "NRG Home",
+                "AllocationGroup": "Total",
+                "IsFirm": null,
+                "TotalNominationAllocations": 116,
+                "DailyRequiredVolume": 291,
+                "TotalUsage": 302,
+                "TotalForecastImbal": -175,
+                "Penalty": 0.00
+            },
+            {
+                "CompanyName": "Park Power LLC - DC - 204",
+                "AllocationGroup": "Total",
+                "IsFirm": null,
+                "TotalNominationAllocations": 29,
+                "DailyRequiredVolume": 32,
+                "TotalUsage": 33,
+                "TotalForecastImbal": -3,
+                "Penalty": 0.00
+            },
+            {
+                "CompanyName": "Park Power LLC - MD & VA - 255",
+                "AllocationGroup": "Total",
+                "IsFirm": null,
+                "TotalNominationAllocations": 13,
+                "DailyRequiredVolume": 19,
+                "TotalUsage": 20,
+                "TotalForecastImbal": -6,
+                "Penalty": 0.00
+            },
+            {
+                "CompanyName": "SFE Energy",
+                "AllocationGroup": "Total",
+                "IsFirm": null,
+                "TotalNominationAllocations": 1279,
+                "DailyRequiredVolume": 1484,
+                "TotalUsage": 1550,
+                "TotalForecastImbal": -205,
+                "Penalty": 0.00
+            },
+            {
+                "CompanyName": "Shell Energy",
+                "AllocationGroup": "Total",
+                "IsFirm": null,
+                "TotalNominationAllocations": 0,
+                "DailyRequiredVolume": 0,
+                "TotalUsage": 0,
+                "TotalForecastImbal": 0,
+                "Penalty": 0.00
+            },
+            {
+                "CompanyName": "Spark Energy Gas LLC",
+                "AllocationGroup": "Total",
+                "IsFirm": null,
+                "TotalNominationAllocations": 0,
+                "DailyRequiredVolume": 54,
+                "TotalUsage": 57,
+                "TotalForecastImbal": -54,
+                "Penalty": 0.00
+            },
+            {
+                "CompanyName": "Sprague Op Res LLC - 78",
+                "AllocationGroup": "Total",
+                "IsFirm": null,
+                "TotalNominationAllocations": 2810,
+                "DailyRequiredVolume": 4830,
+                "TotalUsage": 4972,
+                "TotalForecastImbal": -2020,
+                "Penalty": 0.00
+            },
+            {
+                "CompanyName": "Spring Power & Gas",
+                "AllocationGroup": "Total",
+                "IsFirm": null,
+                "TotalNominationAllocations": 31,
+                "DailyRequiredVolume": 29,
+                "TotalUsage": 30,
+                "TotalForecastImbal": 2,
+                "Penalty": 0.00
+            },
+            {
+                "CompanyName": "Stand Energy",
+                "AllocationGroup": "Total",
+                "IsFirm": null,
+                "TotalNominationAllocations": 1822,
+                "DailyRequiredVolume": 1508,
+                "TotalUsage": 1694,
+                "TotalForecastImbal": 314,
+                "Penalty": 0.00
+            },
+            {
+                "CompanyName": "Statewise Energy - MD - 210",
+                "AllocationGroup": "Total",
+                "IsFirm": null,
+                "TotalNominationAllocations": 196,
+                "DailyRequiredVolume": 250,
+                "TotalUsage": 263,
+                "TotalForecastImbal": -54,
+                "Penalty": 0.00
+            },
+            {
+                "CompanyName": "SunSea Energy - DC - 219",
+                "AllocationGroup": "Total",
+                "IsFirm": null,
+                "TotalNominationAllocations": 324,
+                "DailyRequiredVolume": 283,
+                "TotalUsage": 298,
+                "TotalForecastImbal": 41,
+                "Penalty": 0.00
+            },
+            {
+                "CompanyName": "Tiger Natural Gas",
+                "AllocationGroup": "Total",
+                "IsFirm": null,
+                "TotalNominationAllocations": 0,
+                "DailyRequiredVolume": 0,
+                "TotalUsage": 0,
+                "TotalForecastImbal": 0,
+                "Penalty": 0.00
+            },
+            {
+                "CompanyName": "Tomorrow Energy Corp",
+                "AllocationGroup": "Total",
+                "IsFirm": null,
+                "TotalNominationAllocations": 120,
+                "DailyRequiredVolume": 172,
+                "TotalUsage": 180,
+                "TotalForecastImbal": -52,
+                "Penalty": 0.00
+            },
+            {
+                "CompanyName": "UGI Energy Services - 33",
+                "AllocationGroup": "Total",
+                "IsFirm": null,
+                "TotalNominationAllocations": 2822,
+                "DailyRequiredVolume": 17412,
+                "TotalUsage": 19500,
+                "TotalForecastImbal": -14590,
+                "Penalty": 0.00
+            },
+            {
+                "CompanyName": "United Energy Trading ",
+                "AllocationGroup": "Total",
+                "IsFirm": null,
+                "TotalNominationAllocations": 1900,
+                "DailyRequiredVolume": 3065,
+                "TotalUsage": 3234,
+                "TotalForecastImbal": -1165,
+                "Penalty": 0.00
+            },
+            {
+                "CompanyName": "Viridian Energy",
+                "AllocationGroup": "Total",
+                "IsFirm": null,
+                "TotalNominationAllocations": 44,
+                "DailyRequiredVolume": 52,
+                "TotalUsage": 54,
+                "TotalForecastImbal": -8,
+                "Penalty": 0.00
+            },
+            {
+                "CompanyName": "Washington Suburban Sanitary Commission ",
+                "AllocationGroup": "Total",
+                "IsFirm": null,
+                "TotalNominationAllocations": 1488,
+                "DailyRequiredVolume": 2088,
+                "TotalUsage": 2163,
+                "TotalForecastImbal": -600,
+                "Penalty": 0.00
+            },
+            {
+                "CompanyName": "Wave Energy",
+                "AllocationGroup": "Total",
+                "IsFirm": null,
+                "TotalNominationAllocations": 0,
+                "DailyRequiredVolume": 0,
+                "TotalUsage": 0,
+                "TotalForecastImbal": 0,
+                "Penalty": 0.00
+            },
+            {
+                "CompanyName": "WGL Energy Svcs - 35",
+                "AllocationGroup": "Total",
+                "IsFirm": null,
+                "TotalNominationAllocations": 101781,
+                "DailyRequiredVolume": 129801,
+                "TotalUsage": 145492,
+                "TotalForecastImbal": -28020,
+                "Penalty": 7470.00
+            },
+            {
+                "CompanyName": "Xoom Energy",
+                "AllocationGroup": "Total",
+                "IsFirm": null,
+                "TotalNominationAllocations": 9,
+                "DailyRequiredVolume": 409,
+                "TotalUsage": 427,
+                "TotalForecastImbal": -400,
+                "Penalty": 0.00
+            },
+            {
+                "CompanyName": "Xoom Energy Maryland",
+                "AllocationGroup": "Total",
+                "IsFirm": null,
+                "TotalNominationAllocations": 99,
+                "DailyRequiredVolume": 1324,
+                "TotalUsage": 1388,
+                "TotalForecastImbal": -1225,
+                "Penalty": 0.00
+            }
+        ],
+        "FirmInterruptibleTotals": [
+            {
+                "Category": "Total Interruptible",
+                "TotalNominationAllocations": 87175,
+                "DailyRequiredVolume": 80470,
+                "TotalUsage": 97543,
+                "TotalForecastImbal": 6705,
+                "Penalty": 12830.00
+            },
+            {
+                "Category": "Total FIRM",
+                "TotalNominationAllocations": 107455,
+                "DailyRequiredVolume": 190899,
+                "TotalUsage": 201399,
+                "TotalForecastImbal": -83444,
+                "Penalty": 0.00
+            }
+        ],
+        "GrandTotal": [
+            {
+                "Category": "Total",
+                "TotalNominationAllocations": 194630,
+                "DailyRequiredVolume": 271369,
+                "TotalUsage": 298942,
+                "TotalForecastImbal": -76739,
+                "Penalty": 12830.00
+            }
+        ]
+    }
+
+}

@@ -1,6 +1,3 @@
-import Home from "./Home";
-import UserList from "./userProfile/UserList";
-import ManageProfile from "./userProfile/ManageProfile";
 import Announcement from "./announcement/Announcement";
 import FAQ from "./faq/FAQ";
 import Users from "./userProfile/Users";
@@ -17,8 +14,12 @@ import MarketerGroupList from "./marketerGroup/MarketerGroupList";
 import MarketerGroupDetails from "./marketerGroup/MarketerGroupDetails";
 import MarketerGroupFilter from "./marketerGroup/MarketerGroupFilter";
 import MarketerGroupCreate from "./marketerGroup/MarketerGroupCreate";
+import Customer from "./customers/Customer";
+import CustomerDetails from "./customers/CustomerDetails";
+import CustomerFilter from "./customers/CustomerFilter";
 
-export {Home,UserList,ManageProfile,Announcement,FAQ,Users,UserProfileList,UserFilter,Support,AnnouncementDetails,
+
+
+export {Announcement,FAQ,Users,UserProfileList,UserFilter,Support,AnnouncementDetails,
     Marketers,MarketerDetails,MarketerFilter,MarketerCreate, MarketersGroup,MarketerGroupList,MarketerGroupDetails,
-    MarketerGroupFilter,MarketerGroupCreate
-};
+    MarketerGroupFilter,MarketerGroupCreate,Customer,CustomerDetails,CustomerFilter}

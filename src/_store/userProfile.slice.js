@@ -1,4 +1,4 @@
-import { createAsyncThunk, createReducer, createSlice } from '@reduxjs/toolkit';
+import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import { trackPromise } from 'react-promise-tracker';
 import { fetchWrapper } from '_utils/fetch-wrapper';
 
@@ -33,9 +33,10 @@ function createExtraActions() {
         getUserProfile: getUserProfile(),
         update: update(),
         delete: _delete(),
+        verifyUser:verifyUser(),
         rejectUser: rejectUser(),
         filter: filter(),
-        lockProfile:lockProfile()
+        lockProfile:lockProfile()       
     };
 
     function getUserProfile() {
@@ -68,12 +69,26 @@ function createExtraActions() {
         );
     }
 
+    function verifyUser() { 
+        return createAsyncThunk( 
+            `${name}/verifyUser`,
+            async ( transformedData , { rejectWithValue }) => { 
+                try {
+                    const response = await trackPromise(fetchWrapper.put(`${baseUrl}/MapCenterUserUpdateBySecurityReviewer`, transformedData ));
+                    return response;
+                } catch (error) {
+                    return rejectWithValue(error);
+                }
+            }
+        );
+    }
+    // /api/Account/UpdateRejectionReasonBySecurity
     function rejectUser() { 
         return createAsyncThunk(
             `${name}/rejectUser`,
             async ( transformedData , { rejectWithValue }) => { 
                 try {
-                    const response = await trackPromise(fetchWrapper.put(`${baseUrl}/UserRejection`, transformedData ));
+                    const response = await trackPromise(fetchWrapper.put(`${baseUrl}/UpdateRejectionReasonBySecurity`, {rejectionDetails:transformedData} ));
                     return response;
                 } catch (error) {
                     return rejectWithValue(error);

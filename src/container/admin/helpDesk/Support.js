@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef} from 'react';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { useDispatch, useSelector } from 'react-redux';
@@ -13,7 +13,6 @@ import { convertToBase64, base64ToFile, fileExtension, fileSizeReadable, fileTyp
 import { Delete } from '../../../images';
 import { materialsymbolsupload, materialsymbolsdownload } from 'images';
 import SupportDetails from './SupportDetails';
-import { UnderConstruction } from '_components';
 
 const formatPhoneNumber = (number) => {
       const cleaned = ('' + number).replace(/\D/g, '');
@@ -46,18 +45,19 @@ const Support = () => {
       const [files, setFiles] = useState([]);
       const authUser = useSelector(x => x.auth?.value);
       const authUserId = useSelector(x => x.auth?.userId);
-      const [email, setEmail] = useState("");
       const user = authUser?.Data;
-
+      const [Supportdata, setSupportData] = useState(null);
+      const [initialData, setInitialData] = useState({});
+      const [isModified, setIsModified] = useState(false);
       const adminList = user?.UserAccess?.filter(access => access.Role.toLowerCase() === "admin");
-
+      const initialDataRef = useRef({});
       const portalsList = adminList ? adminList?.map(admin => ({
             PortalId: admin.PortalId,
             PortalName: admin.PortalName,
             PortalKey: admin.PortalKey,
       })) : [];
 
-      const defaultPortalId = portalsList && portalsList[0].PortalId || null;
+      const defaultPortalId = (portalsList && portalsList[0].PortalId) || null;
 
       const portalData = portalsList ? portalsList?.map(x => ({
             label: x.PortalName,
@@ -65,12 +65,48 @@ const Support = () => {
       })) : [];
 
       portalData.push({ label: "Global", value: 99 });
+      portalData.push({ label: "Admin", value: 98 });
 
       const [selectedPortal, setSelectedPortal] = useState(defaultPortalId);
 
-      const { register, handleSubmit, control, trigger, reset, setValue, formState: { errors, isValid } } = useForm({
-            resolver: yupResolver(supportInformationSchema)
+      const { register, handleSubmit, control, trigger, reset, setValue, formState: { errors, isValid }, watch } = useForm({
+            resolver: yupResolver(supportInformationSchema),
+            mode:'onBlur',
+            defaultValues: {
+                  EmailAddress: ' ',
+                  PhoneNumber: ' ',
+                  Fax: ' ',
+                  PortalID: defaultPortalId,
+            }
       });
+
+      const isDeepEqual = (obj1, obj2) => {
+            if (obj1 === obj2) return true;
+
+            if (typeof obj1 !== "object" || typeof obj2 !== "object" || obj1 === null || obj2 === null) {
+                  return obj1 === obj2;
+            }
+
+            const keys1 = Object.keys(obj1);
+            const keys2 = Object.keys(obj2);
+
+            if (keys1.length !== keys2.length) return false;
+
+            for (let key of keys1) {
+                  if (!isDeepEqual(obj1[key], obj2[key])) {
+                        return false;
+                  }
+            }
+            return true;
+      };
+      useEffect(() => {
+            const subscription = watch((currentData) => {
+                  const isChanged = !isDeepEqual(initialDataRef.current, currentData);
+                  setIsModified(isChanged);
+            });
+
+            return () => subscription.unsubscribe();
+      }, [watch]);
 
       useEffect(() => {
             const fetchData = async () => {
@@ -78,11 +114,16 @@ const Support = () => {
                   try {
                         const result = await dispatch(supportActions.getSupportDetails(selectedPortal)).unwrap();
                         const supportData = result?.Data;
+                        setSupportData(result.Data);
+                        sessionStorage.setItem('portalID', selectedPortal);
                         const data = { ...supportData, PhoneNumber: formatPhoneNumber(supportData.PhoneNumber), Fax: formatPhoneNumber(supportData.Fax) };
                         if (supportData?.FileData) {
                               setFiles(supportData?.FileData);
                         }
+                        setInitialData(data);
+                        initialDataRef.current = data;
                         reset(data);
+                      
                         if (result?.error) {
                               dispatch(alertActions.error({
                                     message: result.error?.message,
@@ -101,9 +142,9 @@ const Support = () => {
             fetchData();
       }, [selectedPortal, dispatch, reset]);
 
-      useEffect(() => {
-            setValue('PortalID', selectedPortal);
-      }, [selectedPortal, setValue]);
+      // useEffect(() => {
+      //       setValue('PortalID', selectedPortal);
+      // }, [selectedPortal, setValue]);
 
       const onSubmit = async (data) => {
             dispatch(alertActions.clear());
@@ -117,6 +158,7 @@ const Support = () => {
                         return;
                   }
                   hanldeRefresh();
+                  setSupportData(result.Data);
                   dispatch(alertActions.success({ message: SupportLabels.message1, header: SupportLabels.header, showAfterRedirect: true }));
             } catch (error) {
                   dispatch(alertActions.error({ message: error?.message || error, header: header }));
@@ -126,32 +168,28 @@ const Support = () => {
       const hanldeRefresh = async () => {
             const result = await dispatch(supportActions.getSupportDetails(selectedPortal)).unwrap();
             const supportData = result?.Data;
+            setSupportData(result.Data);
             const data = { ...supportData, PhoneNumber: formatPhoneNumber(supportData.PhoneNumber), Fax: formatPhoneNumber(supportData.Fax) };
             if (supportData?.FileData) {
                   setFiles(supportData?.FileData);
             }
+            initialDataRef.current = data;
+            setInitialData(data);
             reset(data);
-      }
-
-      const resetValue = () => {
-            reset({
-                  EmailAddress: null,
-                  PhoneNumber: null,
-                  Fax: null,
-                  PortalID: selectedPortal
-            });
+          
       }
 
       const handlePortalChange = (event, newValue) => {
-            resetValue();
+            // resetValue();
             setSelectedPortal(newValue);
+
       };
 
       const handleBlur = async (e) => {
             const fieldName = e.target.name;
-           // console.log(`Triggering validation for: ${fieldName}`);
+            // console.log(`Triggering validation for: ${fieldName}`);
             await trigger(fieldName);
-          //  console.log(`Validation result for ${fieldName}:`, result);
+            //  console.log(`Validation result for ${fieldName}:`, result);
       };
 
       const handleDownload = (base64String, fileName) => {
@@ -159,39 +197,34 @@ const Support = () => {
       };
 
       const handleUpload = async (event) => {
-            event.preventDefault();
             let filesAdded = event.dataTransfer ? event.dataTransfer.files : event.target.files;
+            if (!filesAdded || filesAdded.length === 0) return;
+
             if (multiple === false && filesAdded.length > 1) {
                   filesAdded = [filesAdded[0]];
             }
+
             const fileResults = [];
+            const errorMessages = [];
+
             for (let i = 0; i < filesAdded.length; i += 1) {
                   const file = filesAdded[i];
                   file.extension = fileExtension(file);
                   file.sizeReadable = fileSizeReadable(file.size);
 
                   if (file.size > maxFileSize) {
-                        handleError({
-                              code: 2,
-                              message: `${file.name} is too large`,
-                        }, file);
-                        return;
+                        dispatch(alertActions.error({ message: `File size cannot exceed 5 MB`, header: header }));
+                        continue;
                   }
 
                   if (file.size < minFileSize) {
-                        handleError({
-                              code: 3,
-                              message: `${file.name} is too small`,
-                        }, file);
-                        return;
+                        dispatch(alertActions.error({ message: `File is too small`, header: header }));
+                        continue;
                   }
 
                   if (!fileTypeAcceptable(supportSupportedFormat, file)) {
-                        handleError({
-                              code: 1,
-                              message: `${file.name} is not a valid file type`,
-                        }, file);
-                        return;
+                        dispatch(alertActions.error({ message: `Invalid file format`, header: header }));
+                        continue;
                   }
 
                   const base64 = await convertToBase64(file);
@@ -210,8 +243,19 @@ const Support = () => {
 
                   fileResults.push(fileData);
             }
-            setFiles(prevFiles => [...prevFiles, ...fileResults]);
-      }
+
+            if (errorMessages.length > 0) {
+                  dispatch(alertActions.error(errorMessages.join('\n')));
+            }
+
+            if (fileResults.length > 0) {
+                  setFiles(prevFiles => [...prevFiles, ...fileResults]);
+            }
+
+            // Reset input value so selecting same file again triggers onChange
+            event.target.value = null;
+      };
+
 
       const handleError = (error, file) => {
             dispatch(alertActions.error(error.message));
@@ -220,6 +264,7 @@ const Support = () => {
       const handleCancelClick = async () => {
             await setFiles(support?.FileData);
             reset(support);
+            hanldeRefresh();
       }
 
       const handleFileRemove = (fileName) => {
@@ -231,7 +276,7 @@ const Support = () => {
                   <Typography component="div">
                         <Typography component="h1" variant="h5" className='userprofilelistcontent '>Support</Typography>
                   </Typography>
-                  {!(support?.loading) && (
+                  {Supportdata && (
                         <form onSubmit={handleSubmit(onSubmit)}>
                               <Typography className="suportcontentcontainer" component="div">
                                     <Grid container spacing={3}>
@@ -249,6 +294,7 @@ const Support = () => {
                                                 <Typography component="div" className="SupportedFormats Personal-Informationsheading">
                                                       <Typography component="h2">Uploaded Documents</Typography>
                                                       <Typography component="div" >
+                                                            <Typography component="h3">Reference Documents</Typography>
                                                             {files && files.map((file) =>
                                                                   <Typography component="div" className="marginbottom">
                                                                         <Typography component="span" className="DocumentDescription">{file?.FileName}</Typography>
@@ -308,7 +354,7 @@ const Support = () => {
                                     <Button variant="contained" color="red" className="cancelbutton" onClick={handleCancelClick}>
                                           Cancel
                                     </Button>
-                                    <Button type="submit" variant="contained" className='submitbutton' color="primary" disabled={!isValid}>
+                                    <Button type="submit" variant="contained" className='submitbutton' color="primary" disabled={!isModified || !isValid}>
                                           Save
                                     </Button>
                               </Grid>

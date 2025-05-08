@@ -18,7 +18,7 @@ const UploadFiles = ({
     documentTypes,
     supportedFormats,
     maxFiles = Infinity,
-    maxFileSize = Infinity,
+    maxFileSize = 5 * 1024 * 1024,
     minFileSize = 0,
     onFileChange,
     initialFiles = [],
@@ -75,26 +75,38 @@ const UploadFiles = ({
             file.sizeReadable = fileSizeReadable(file.size);
 
             if (file.size > maxFileSize) {
-                handleError({
-                    code: 2,
-                    message: `${file.name} is too large`,
-                }, file);
+                // handleError({
+                //     code: 2,
+                //     message: `File size cannot exceed 5MB`,
+                // }, file);
+                dispatch(alertActions.error({
+                    message: `File size cannot exceed 5MB`, 
+                    header:`File Upload`
+                }));
                 break;
             }
 
             if (file.size < minFileSize) {
-                handleError({
-                    code: 3,
-                    message: `${file.name} is too small`,
-                }, file);
+                // handleError({
+                //     code: 3,
+                //     message: `${file.name} is too small`,
+                // }, file);
+                dispatch(alertActions.error({
+                    message: `${file.name} is too small`, 
+                    header:`File Upload`
+                }));
                 break;
             }
 
             if (!fileTypeAcceptable(supportedFormats, file)) {
-                handleError({
-                    code: 1,
-                    message: `${file.name} is not a valid file type`,
-                }, file);
+                // handleError({
+                //     code: 1,
+                //     message: `Inavalid file format.`,
+                // }, file);
+                 dispatch(alertActions.error({
+                                message: `Invalid file format.`, 
+                                header:`File Upload`
+                            }));
                 break;
             }
 
@@ -176,7 +188,7 @@ const UploadFiles = ({
                         role={undefined}
                         variant="contained"
                         tabIndex={-1}
-                        className="Uploadfiles"
+                        className={`Uploadfiles ${!selectedDocumentType ? 'disabled' : ''}`}
                         startIcon={<img src={materialsymbolsupload} alt="Upload" />}
                     >
                         <span> Upload your files here</span>
@@ -184,6 +196,7 @@ const UploadFiles = ({
                         <VisuallyHiddenInput
                             type="file"
                             onChange={handleChange}
+                            disabled={!selectedDocumentType}
                         />
                     </Button>
                 </Grid>
@@ -206,16 +219,20 @@ const UploadFiles = ({
                                         <div className="mar-top-16" key={type.DocumentTypeID}>
                                             <Typography component="div" >
                                                 <CheckCircleRounded fontSize="small" style={{ color: green[500] }} />
-                                                <Typography component="span" className="DocumentDescription">{type.DocumentDescription}</Typography> 
+                                                <Typography component="p" className="DocumentDescription">{type.DocumentDescription}</Typography> 
                                                 <Typography component="div" className="DocumentTypeID">
-                                                <IconButton onClick={() => handleDownload(uploadedDocument[0].File, uploadedDocument[0].FileName)}>
+                                                    <Grid container>
+                                                        <Typography className="textwordwrap">{uploadedDocument[0].FileName}</Typography>
+                                                    <IconButton onClick={() => handleDownload(uploadedDocument[0].File, uploadedDocument[0].FileName)}>
                                                   
-                                                   <img src={materialsymbolsdownload} alt='download'></img>                                              
-                                                </IconButton>
-                                                <IconButton onClick={() => handleDialogOpen(type.DocumentTypeID)}>
-                                                {/* <Delete variant="contained" color="secondary" /> */}
-                                                 <img src={Delete} alt="Delete" ></img>
-                                                </IconButton>
+                                                  <img src={materialsymbolsdownload} alt='download'></img>                                              
+                                               </IconButton>
+                                               <IconButton onClick={() => handleDialogOpen(type.DocumentTypeID)}>
+                                               {/* <Delete variant="contained" color="secondary" /> */}
+                                                <img src={Delete} alt="Delete" ></img>
+                                               </IconButton>
+                                                    </Grid>
+                                               
                                                 </Typography>
                                             </Typography>
                                         </div>

@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { FormControl, TextField, InputAdornment, Autocomplete } from '@mui/material';
 import Checkbox from '@mui/material/Checkbox';
 import { createFilterOptions } from '@mui/material/Autocomplete';
@@ -81,7 +81,6 @@ return (
         {...params}
         name={name}
         label={label}
-        placeholder="Search options"
         error={!!error}
         helperText={helperText}
         slotProps={{

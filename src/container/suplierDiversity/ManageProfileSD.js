@@ -224,7 +224,7 @@ const ManageProfileSD = () => {
                       <Typography component="div" className="Personal-Informationsheading">
                         <Grid item xs={12} sm={6} md={12} >
                           <Typography component="h2" variant="h5" >Documents upload <img src={raphaelinfo} alt='raphaelinfo'></img></Typography>
-                          <Typography component="div" className="passwordcheck">
+                          <Typography component="div" className="passwordcheck marbottom0 selecticon">
                             <AutocompleteInput
                               control={control}
                               name="documentType"

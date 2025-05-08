@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import MarketerFilter from "./MarketerFilter";
-import { Box, Typography, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, Button } from "@mui/material";
+import {  Typography, Button } from "@mui/material";
 import Grid from "@mui/material/Grid2";
 import MarketerList from "./MarketerList";
 import { alertActions } from '_store';
-import { marketerGetData } from '_utils/constant';
+// import { marketerGetData } from '_utils/constant';
 import MarketerCreate from './MarketerCreate';
-import { CommonConfimationmodal, ModalPopup } from '_components';
+import {  ModalPopup } from '_components';
 import { marketerAction } from '_store/marketer.slice';
 import dayjs from 'dayjs';
 
@@ -15,7 +15,7 @@ const Marketers = () => {
   const header = " Marketer";
   const dispatch = useDispatch();
   const marketers = useSelector(x => x.marketer?.marketerList);
-  const authUserId = useSelector(x => x.auth?.userId);
+  // const authUserId = useSelector(x => x.auth?.userId);
   const [data, setData] = useState([]);
   const [isDataChanged, setIsDataChanged] = useState(false);
   const [editedRowId, setEditedRowId] = useState({});
@@ -24,15 +24,17 @@ const Marketers = () => {
   const [rowSelection, setRowSelection] = useState({});
   const [confirmDialogOpen, setConfirmDialogOpen] = useState(false);
   const [openComponent, setOpenComponent] = useState(null); // State to track which component is open
-
+  const [backdropOpen, setBackdropOpen] = useState(false);
+  const [isActivate,setIsActivate] = useState(false);
+  
   useEffect(() => {
     const fetchData = async () => {
       dispatch(alertActions.clear());
       try {
-        // const result = await dispatch(marketerAction.get()).unwrap();
-        // const marketerData = result?.Data;
-        const result = null;//await dispatch(marketerAction.get()).unwrap();
-        const marketerData = marketerGetData?.Data;
+        const result = await dispatch(marketerAction.get()).unwrap();
+        const marketerData = result?.Data;
+        // const result = null;//await dispatch(marketerAction.get()).unwrap();
+        // const marketerData = marketerGetData?.Data;
         setData(marketerData);
       } catch (error) {
         dispatch(alertActions.error({
@@ -45,6 +47,12 @@ const Marketers = () => {
   }, [dispatch]);
 
   const handleChange = (newValue, rowData, field) => {
+
+    if ((field == "ServiceProvider" || field == "MarketerName") && (newValue == null || newValue == "")) {
+      setIsDataChanged(false);
+    } else {
+      setIsDataChanged(true);
+    }
     setEditedRowId((prev) => {
       const updatedRows = { ...prev };
       if (!updatedRows[rowData.MarketerID]) {
@@ -55,7 +63,6 @@ const Marketers = () => {
     });
     const newData = data?.Marketers?.map(row => row.MarketerID === rowData.MarketerID ? { ...row, [field]: newValue } : row);
     setData(pre => ({ ...pre, Marketers: [...newData] }));
-    setIsDataChanged(true);
   };
 
   const handleToggleStatusSubmit = async (data) => {
@@ -74,11 +81,19 @@ const Marketers = () => {
       dispatch(alertActions.error({ message: error?.message || error, header: header }));
     }
   };
+  
+const hasEmptyMarketerNameOrServiceProvider = (arr) => arr.some(item => !item.MarketerName || item.ServiceProvider === '');
+  console.log("hasEmptyMarketerNameOrServiceProvider",hasEmptyMarketerNameOrServiceProvider)
+  
 
   const handleSubmit = async () => {
     dispatch(alertActions.clear());
     try {
       let editedRowData = Object.values(editedRowId);
+      if(hasEmptyMarketerNameOrServiceProvider(editedRowData)){
+        dispatch(alertActions.error({ message: "Enter the required fields.", header: header }));
+        return;
+      }
       const invalidDates = editedRowData.filter(item => !dayjs(item.StartDate).isValid());
       if (invalidDates.length > 0) {
         dispatch(alertActions.error({ message: "One or more dates are invalid. Please correct them before submitting.", header: header }));
@@ -114,9 +129,9 @@ const Marketers = () => {
         dispatch(alertActions.error({ message: result?.payload || result?.error.message, header: header }));
         return;
       }
-      setIsDataChanged(true);
       handleRefresh();
       dispatch(alertActions.success({ message: "Marketed data updated Successfully.", header: header, showAfterRedirect: true }));
+      setIsDataChanged(false);
     }
     catch (error) {
       dispatch(alertActions.error({ message: error?.message || error, header: header }));
@@ -129,11 +144,31 @@ const Marketers = () => {
 
   const handleCancelClick = async () => {
     handleRefresh();
+    setIsDataChanged(false);
   };
+useEffect(()=>{
+  if(selectedRows){
+    let Active = selectedRows.some(row => row.IsActive);
+    let DeActive = selectedRows.some(row => !row.IsActive);
+    if(Active && DeActive){
+      setIsActivate(true);
+    }else if(Active){
+      setIsActivate(true);
+    }else{
+      setIsActivate(false);
+    }
+    console.log("Active",Active);
+    console.log("DeActive",DeActive);
+  }
+
+},[selectedRows])
 
   const handleToggleActiveStatus = () => {
-    const inActive = selectedRows.some(row => !row.IsActive);
-    if (inActive) {
+    let inActive = selectedRows.some(row => row.IsActive);
+    let DeActive = selectedRows.some(row => !row.IsActive);
+    console.log("Active",inActive);
+    console.log("DeActive",DeActive);
+    if (inActive && DeActive) {
       dispatch(alertActions.error({ message: "Please deselect inactive marketers to proceed", header: header }));
     } else {
       setConfirmDialogOpen(true);
@@ -145,15 +180,27 @@ const Marketers = () => {
     selectedRows.forEach(row => {
       handleChange(false, row, 'IsActive');
     });
-
-    const transformedData = selectedRows.map((item) => ({
+  if(selectedRows?.some(row => row?.IsActive)){
+    const transformedData = selectedRows?.map((item) => ({
       MarketerID: item.MarketerID,
-      IsActive: false
+      IsActive: !item.IsActive
     }));
     await handleToggleStatusSubmit(transformedData);
     setIsDataChanged(true);
     setConfirmDialogOpen(false);
     dispatch(alertActions.success({ message: "Marketers deactivated successfully", header: header }));
+  }else{
+
+  
+    const transformedData = selectedRows.map((item) => ({
+      MarketerID: item.MarketerID,
+      IsActive: !item.IsActive
+    }));
+    await handleToggleStatusSubmit(transformedData);
+    setIsDataChanged(true);
+    setConfirmDialogOpen(false);
+    dispatch(alertActions.success({ message: "Marketers activated successfully", header: header }));
+  }
   };
 
   const handleLockToggle = async (row) => {
@@ -165,7 +212,7 @@ const Marketers = () => {
 
     await handleToggleStatusSubmit(transformedData);
     setIsDataChanged(true);
-    const message = row.original.IsActive ? "Marketers deactivated successfully" : "Marketers activated successfully";
+    const message = row.original.IsActive ? "Marketer deactivated successfully" : "Marketer activated successfully";
     dispatch(alertActions.success({ message: message, header: header }));
   };
 
@@ -179,7 +226,14 @@ const Marketers = () => {
 
   const handleOpenComponent = (component) => {
     setOpenComponent(prev => prev === component ? null : component);
+    setBackdropOpen(prev => prev === component ? false : true); // Toggle backdrop
   };
+
+  const handleCloseBackdrop = () => {
+    setBackdropOpen(false);
+    setOpenComponent(null);
+  };
+
 
   return (
     <>
@@ -200,7 +254,7 @@ const Marketers = () => {
                     <MarketerFilter
                       handleFilterSubmit={handleFilterSubmit}
                       isOpen={openComponent === 'filter'}
-                      onClose={() => setOpenComponent(null)}
+                      onClose={handleCloseBackdrop}
                       onOpen={() => handleOpenComponent('filter')}
                     />
                   </Grid>
@@ -209,7 +263,7 @@ const Marketers = () => {
                       marketers={marketers}
                       uetFileData={data?.UETFileDate}
                       isOpen={openComponent === 'create'}
-                      onClose={() => setOpenComponent(null)}
+                      onClose={handleCloseBackdrop}
                       onOpen={() => handleOpenComponent('create')}
                       handleRefresh={handleRefresh}
                     />
@@ -220,42 +274,44 @@ const Marketers = () => {
           </Grid>
         </Grid>
       </Typography>
+      <div className={backdropOpen ? 'backdrop' : ''}>
+        </div>
+        <div className='MarketerList'>
+      <MarketerList
+        marketerData={data}
+        isModalOpen={isModalOpen}
+        setIsModalOpen={setIsModalOpen}
+        onLockToggle={handleLockToggle}
+        handleChange={handleChange}
+        rowSelection={rowSelection}
+        isActivate={isActivate}
+        selectedRows={selectedRows}
+        setSelectedRows={setSelectedRows}
+        setRowSelection={setRowSelection}
+        handleRefresh={handleRefresh}
+        handleToggleActiveStatus={handleToggleActiveStatus}
+      />
+      
+      </div>
+      <Grid size={{ xs: 12, sm: 12, md: 12 }} className="Personal-Information">
+        <Button variant="contained" color="red" className="cancelbutton" onClick={handleCancelClick}>
+          Cancel
+        </Button>
+        <Button type="submit"
+          fullWidth
+          variant="contained"
+          color="primary"
+          className='submitbutton'
+          onClick={() => handleSubmit()}
+          disabled={!isDataChanged}
+        >
+          Save
+        </Button>
+      </Grid>
 
-      {/* {!(marketers?.loading || marketers?.error) && */}
-        <>
-          <MarketerList
-            marketerData={data}
-            isModalOpen={isModalOpen}
-            setIsModalOpen={setIsModalOpen}
-            onLockToggle={handleLockToggle}
-            handleChange={handleChange}
-            rowSelection={rowSelection}
-            selectedRows={selectedRows}
-            setSelectedRows={setSelectedRows}
-            setRowSelection={setRowSelection}
-            handleRefresh={handleRefresh}
-            handleToggleActiveStatus={handleToggleActiveStatus}
-          />
-          <Grid size={{ xs: 12, sm: 12, md: 12 }} className="Personal-Information">
-            <Button variant="contained" color="red" className="cancelbutton" onClick={handleCancelClick}>
-              Cancel
-            </Button>
-            <Button type="submit"
-              fullWidth
-              variant="contained"
-              color="primary"
-              className='submitbutton'
-              onClick={() => handleSubmit()}
-              disabled={!isDataChanged}
-            >
-              Save
-            </Button>
-          </Grid>
-        </>
-      {/* } */}
       {confirmDialogOpen && <ModalPopup
         header="Marketer"
-        message1="Are you sure you want to deactivate selected marketers?"
+        message1={selectedRows.some(row => row.IsActive) ?"Are you sure you want to deactivate selected marketers?":"Are you sure you want to activate selected marketers?"}
         btnPrimaryText="Confirm"
         btnSecondaryText="Cancel"
         handlePrimaryClick={() => handleConfirmDeactivation()}

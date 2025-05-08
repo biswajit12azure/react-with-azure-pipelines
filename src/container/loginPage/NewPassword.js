@@ -13,6 +13,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useLocation, useNavigate } from "react-router-dom";
 import { labels } from "_utils/labels";
 import { logo } from '../../images';
+import { LoginLayout } from "container/layout";
 const NewPassword = ({ isModalOpen, handleCloseModal, usersID }) => {
   const header = "New Password"
   const dispatch = useDispatch();
@@ -22,22 +23,25 @@ const NewPassword = ({ isModalOpen, handleCloseModal, usersID }) => {
 
   const userId = user?.UserID;
   const email = user?.EmailID;
- 
+
   const id = new URLSearchParams(location.search).get('verifyId') || usersID;
   const FullName = user?.FullName;
 
   const [isPasswordValid, setIsPasswordValid] = useState(false);
-  const [newPassword, setNewPassword] = useState("");
+  //const [newPassword, setNewPassword] = useState("");
   const [modalState, setModalState] = useState({ open: true, otpOpen: false });
-
-  const { handleSubmit, control, formState: { errors, isValid }, watch, trigger,reset } = useForm({
+  const [showPasswordCheck, setShowPasswordCheck] = useState(false);
+  const { handleSubmit, control, formState: { errors, isValid }, watch, trigger, reset, clearErrors } = useForm({
     resolver: yupResolver(passwordValidationSchema(FullName)),
+    mode:"onChange",
   });
-  const password = watch('Password', '');
 
+  const password = watch('Password', '');
+  const confirmPassword = watch('ConfirmPassword', '');
   useEffect(() => {
     const fetchData = async () => {
-      dispatch(userActions.clear());
+      dispatch(alertActions.clear());  
+    //  dispatch(authActions.clear());    
       try {
         const result = await dispatch(userActions.getUserDetailsById(id)).unwrap();
         if (result?.error) {
@@ -62,15 +66,31 @@ const NewPassword = ({ isModalOpen, handleCloseModal, usersID }) => {
     }
   }, [isModalOpen]);
 
+  useEffect(() => {
+    if (errors.Password) {
+        setShowPasswordCheck(true);
+    } else {
+        setShowPasswordCheck(false);
+    }
+}, [errors.Password]);
+
+useEffect(() => {
+  if (confirmPassword) {
+    trigger("ConfirmPassword");
+  }
+}, [password,confirmPassword, trigger]);
   const handleOpen = () => setModalState({ ...modalState, open: true });
   const handleClose = () => {
-    reset({ Password: '' });
+    reset({ Password: '',ConfirmPassword: '' });
+    handleNavigateLogin();
     setModalState({ open: false, otpOpen: false });
-   if(handleCloseModal) {handleCloseModal(); }
-  
+   
   };
   const handleOtpOpen = () => setModalState({ ...modalState, open: false, otpOpen: true });
-  const handleOtpClose = () => setModalState({ ...modalState, otpOpen: false });
+  const handleOtpClose = () => { 
+    setModalState({ ...modalState, otpOpen: false });
+    handleNavigateLogin();
+    if (handleCloseModal) { handleCloseModal(); } }
 
   const handleBlur = async (e) => {
     const fieldName = e.target.name;
@@ -80,7 +100,9 @@ const NewPassword = ({ isModalOpen, handleCloseModal, usersID }) => {
   const onSubmit = async (data) => {
     try {
       dispatch(alertActions.clear());
-      const result = await dispatch(authActions.generateOtp({ email }));
+      //const result = await dispatch(authActions.generateOtp({ email }));
+      const newPassword= data.Password;
+      const result = await dispatch(authActions.resetPasswordRequest({ userId, newPassword }));
       if (result?.error) {
         dispatch(alertActions.error({
           showAfterRedirect: true,
@@ -90,16 +112,25 @@ const NewPassword = ({ isModalOpen, handleCloseModal, usersID }) => {
         return;
       }
 
-      await setNewPassword(data.Password);
+     // await setNewPassword(data.Password);
       await handleClose();
-      await handleOtpOpen();
+    //  await handleOtpOpen();
+    await dispatch(alertActions.success({
+      showAfterRedirect: true,
+      message: resetSuccessLabels.message1,
+      header: resetSuccessLabels.header,
+      islogout:true
+    }));
     } catch (error) {
-       dispatch(alertActions.error({ message: error?.message || error, header: "New Password" }));
+      dispatch(alertActions.error({ message: error?.message || error, header: "New Password" }));
     }
   };
 
   const handlePasswordValidation = (isValid) => {
     setIsPasswordValid(isValid);
+    if (isValid) {
+      setShowPasswordCheck(false);
+  }
   };
 
   const handleOTPSubmit = async (otp) => {
@@ -116,7 +147,7 @@ const NewPassword = ({ isModalOpen, handleCloseModal, usersID }) => {
         return;
       }
 
-      const resetResult = await dispatch(authActions.resetPasswordRequest({ userId, newPassword }));
+      const resetResult = null;//await dispatch(authActions.resetPasswordRequest({ userId, newPassword }));
 
       if (resetResult?.error) {
         dispatch(alertActions.error({
@@ -128,21 +159,38 @@ const NewPassword = ({ isModalOpen, handleCloseModal, usersID }) => {
       }
 
       await handleOtpClose();
-      await navigate('/');
       await dispatch(alertActions.success({
         showAfterRedirect: true,
         message: resetSuccessLabels.message1,
-        header: resetSuccessLabels.header
+        header: resetSuccessLabels.header,
+        islogout:true
       }));
     } catch (error) {
-       dispatch(alertActions.error({ message: error?.message || error, header: "New Password" }));
+      dispatch(alertActions.error({ message: error?.message || error, header: "New Password" }));
     }
   }
 
+  const handleNavigateLogin = () => {
+    if (!usersID) {
+      navigate('/');
+    }
+  }
+
+  const handleCancel = () => {
+    handleClose();
+    handleNavigateLogin();
+    if (handleCloseModal) { handleCloseModal(); }
+  }
+  const handlePasswordFocus = () => {
+    if (!isPasswordValid) {
+        setShowPasswordCheck(true);
+    }
+};
   return (
     <>
       {!(user?.loading || user?.error) && (
         <>
+       {!usersID && <LoginLayout />}
           <Modal
             open={modalState.open}
             aria-labelledby="child-modal-title"
@@ -168,13 +216,25 @@ const NewPassword = ({ isModalOpen, handleCloseModal, usersID }) => {
                     <PasswordInput
                       control={control}
                       name="Password"
-                      label="Password"
+                      label="Enter New Password"
                       rules={{ required: 'Password is required' }}
                       errors={errors}
                       handleBlur={handleBlur}
+                      handleFocus={handlePasswordFocus}
                       isPasswordValid={isPasswordValid}
                     />
-                    <PasswordCheck password={password} userName={FullName} onValidationChange={handlePasswordValidation} />
+                          <PasswordInput
+                      control={control}
+                      name="ConfirmPassword"
+                      label="Re-Enter New Password"
+                      rules={{ required: 'Password is required' }}
+                      trigger={trigger}
+                      errors={errors}
+                      isPasswordValid={isPasswordValid}
+                      handleBlur={handleBlur}
+                    />
+                  {showPasswordCheck && ( <PasswordCheck password={password} userName={FullName} onValidationChange={handlePasswordValidation} />
+                  )}
                     <Box>
                       <Button
                         type="submit"
@@ -182,7 +242,7 @@ const NewPassword = ({ isModalOpen, handleCloseModal, usersID }) => {
                         variant="contained"
                         color="primary"
                         className="Loginbutton"
-                        disabled={!isValid}
+                        disabled={!isValid || password !== confirmPassword}
                       >
                         RESET PASSWORD
                       </Button>
@@ -191,7 +251,7 @@ const NewPassword = ({ isModalOpen, handleCloseModal, usersID }) => {
                         variant="contained"
                         color="primary"
                         className="buttonCancel"
-                        onClick={handleClose}
+                        onClick={handleCancel}
                       >
                         Cancel
                       </Button>

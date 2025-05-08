@@ -1,5 +1,3 @@
-import HomeEA  from "./HomeEA";
-import  Jurisdiction from "./Jurisdiction"
-import ManageProfileEA from "./ManageProfileEA"
+import EnergyAssistance from "./EnergyAssistance";
 
-export{HomeEA,Jurisdiction,ManageProfileEA};
+export{EnergyAssistance};

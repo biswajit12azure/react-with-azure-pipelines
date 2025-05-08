@@ -3,7 +3,7 @@ import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { useDispatch, useSelector } from 'react-redux';
 import { Typography, Button, Box, Popper } from '@mui/material';
-import { alertActions, configAction, masterActions } from '_store';
+import { alertActions, masterActions } from '_store';
 import { CustomFormControl, AutocompleteInput } from '_components';
 import { newRoleSchema } from '_utils/validationSchema';
 import Grid from "@material-ui/core/Grid";
@@ -24,7 +24,7 @@ const AddRole = ({ handleFetch }) => {
         value: x.PortalID
     })) : [];
 
-    const { register, handleSubmit, control, reset, formState: { errors } } = useForm({
+    const { register, handleSubmit, control, formState: { errors } } = useForm({
         resolver: yupResolver(newRoleSchema)
     });
 
@@ -49,6 +49,17 @@ const AddRole = ({ handleFetch }) => {
     const handleOnSubmit = async (data) => {
         dispatch(alertActions.clear());
         try {
+            // {
+            //     "roles": {
+            //       "RoleID": 0,
+            //       "RoleName": "string",
+            //       "RoleDescription": "string",
+            //       "IsActive": true,
+            //       "PortalId": 0,
+            //       "CreatedBy": "string",
+            //       "IsWglRole": true
+            //     }
+            //   }
             data={...data, RoleDescription:data.RoleName}
             const result =await dispatch(masterActions.saveRole({data})).unwrap();
 
@@ -80,7 +91,7 @@ const AddRole = ({ handleFetch }) => {
     return (<>
         <Button
             variant="contained"
-            className='Download'
+            className='Download margin-25'
             color="primary" aria-describedby={id} onClick={handleClick}
         ><AddCircleOutlineIcon /> Role
         </Button>
@@ -113,6 +124,7 @@ const AddRole = ({ handleFetch }) => {
                             variant="contained"
                             className='cancelButton'
                             color="primary"
+                            onClick={handleClick}
                         >
                             cancel
                         </Button>

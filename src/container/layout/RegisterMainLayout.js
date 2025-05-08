@@ -11,7 +11,8 @@ import { Box,IconButton,Tooltip } from "@mui/material";
 const RegisterMainLayout = () => {
     const navigate = useNavigate();
     const handleSupportClick = () => {
-        navigate('/faqView');
+        sessionStorage.setItem("register","Register");
+        navigate('/faqViews',{ state: { page:"Register" } });
     }
     return (<>
         <PortalZoom></PortalZoom>

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { makeStyles, createStyles } from '@material-ui/core/styles';
 import { Menu, MenuItem } from '@mui/material';
@@ -21,6 +21,17 @@ export const AppMenuItem = (props) => {
   const classes = useStyles();
   const isExpandable = items && items.length > 0;
   const [anchorEl, setAnchorEl] = useState(null);
+
+  useEffect(() => {
+    const normalizePath = (path) => path.startsWith('/') ? path : `/${path}`;
+    const currentPath = normalizePath(window.location.pathname);
+  
+    if (link && currentPath === normalizePath(link)) {
+      setActiveItem(name);
+    } else if (isExpandable && items.some(item => currentPath === normalizePath(item.link))) {
+      setActiveItem(name);
+    }
+  }, [link, name, items, isExpandable, setActiveItem]);
 
   const handleClick = (event) => {
     if (isExpandable) {

@@ -126,6 +126,25 @@ body {
   float: right;
 }
 
+.Supporticon .active , .Supporticon .active:hover{
+  border-radius: 60px;
+  border: 2px solid var(--WG-Blue-700, #0059B3);
+  background: var(--WG-Blue-700, #0059B3);
+  color:#ffffff;
+  padding: 5px;
+  }
+  .Supporticon .active span{
+    color:#fff;
+  }
+  .Supporticon .active span.MuiIconButton-loadingIndicator{
+    background: url(./assets/images/headseticon-white.svg);
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px;
+    display: block;
+    text-align: left;
+    margin-left: -37px;
+    }
 
 
 /* GALLERY */
@@ -177,3 +196,221 @@ body {
 .editlabel label{
   transform: translate(14px, -9px) scale(1);
   }
+
+  .MuiBadge-badge{
+    display: none !important;
+  }
+
+  .custom-table-container .MuiTableCell-stickyHeader {
+    position: sticky;
+    background: white;
+    z-index: 1;
+  }
+  
+  .custom-table-container .MuiTableCell-stickyHeader[data-sticky="left"] {
+    left: 0;
+  }
+  
+  .custom-table-container .MuiTableCell-stickyHeader[data-sticky="right"] {
+    right: 0;
+  }
+  
+  .header-scroll {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    margin-bottom: 8px;
+  }
+  
+  .header-scroll > div {
+    display: inline-block;
+    min-width: 100px;
+    padding: 8px;
+    border: 1px solid #ccc;
+  }
+
+  .admincontent .containedLoginbuttonleft .Loginbutton.buttonmarginleft-20{
+    margin-left: 20px;
+}
+
+
+.service-card-title {
+  color: var(--Gray-700, #4D4C52);
+  font-family: "ITC Avant Garde Gothic Std Md";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+  display: inline-block;
+  padding: 5px;
+}
+
+.service-card-heading {
+  color: var(--WG-Blue-700, #0059B3);
+  text-align: center;
+  font-family: "ITC Avant Garde Gothic Std Md";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.service-card-body-text {
+  color: var(--Gray-700, #4D4C52);
+  text-align: center;
+  font-family: "Proxima Nova Rg";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: capitalize;
+}
+
+.card-last-item-content {
+  justify-content: center !important;
+  align-items: center !important;
+  text-align: center !important;
+  padding: 20px !important;
+}
+
+.card-last-item {
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+.editicon {
+  border-radius: 32px;
+  border: 0.8px solid var(--WG-Blue-100, #DFEDFF);
+}
+
+.runningicon {
+  width: 20px;
+  height: 20px;
+}
+
+.service-card-detail-container {
+  background-color: #fff !important;
+}
+
+.calender-widht {
+  width: 319px;
+}
+
+.card-layout {
+  border-radius: 16px;
+  border: 1px solid var(--WG-Blue-100, #DFEDFF);
+  background: var(--White, #FFF);
+  box-shadow: 0px 1px 1px 0px rgba(0, 89, 179, 0.25);
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.css-1xgnz6y-MuiStack-root{
+  padding: 0px !important;
+}
+
+.filterButtonDisabled{
+  color:#84848c
+}
+.filterButton{
+  color: white;
+}
+.UploadedFilesSection.disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.UploadedFile .MuiIconButton-root[disabled] {
+  pointer-events: none;
+  opacity: 0.3;
+}
+
+.MuiIconButton-root[disabled] {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.css-1dune0f-MuiInputBase-input-MuiOutlinedInput-input{
+  height:1.3em !important;
+}
+
+.userprofilelist .fcreport-line {
+  font-size: 13px !important;
+  font-family: "ITC Avant Garde Gothic Std Md", sans-serif;
+  font-weight: normal;
+  color: #0A3B70;
+  padding-bottom: 4px;
+}
+
+.userprofilelist .fcreport-line span {
+  font-size: 13px !important;
+  font-weight: normal;
+  text-transform: none;
+  color: #0059B3;
+}
+.Stackalert .MuiAlert-message{
+  width: 100%;
+}
+.Stackalert .alertitle{
+  color: var(--Red-950, #450A0A);
+font-family: "ITC Avant Garde Gothic Std Md";
+font-size: 16px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+text-transform: uppercase;
+}
+.Stackalert .alertdata{
+  color: var(--Red-950, #450A0A);
+font-family: "Proxima Nova Rg";
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+body .Stackalert{
+background:#FECACA;
+}
+
+.PipeLinettext textarea{
+  border-radius: 2px;
+  border: 2px solid var(--WG-Blue-100, #757677);
+  padding:15px;
+}
+.PipeLinettext textarea:focus{
+  border-color: var(--WG-Blue-700, #0059B3) !important;
+  border-width: 2px;
+  
+}
+
+.clear-both{
+clear: both;
+}
+
+.Foooter{
+margin-top: 20px;
+}
+.Foooter li{
+  float: left;
+  text-decoration: none;
+  list-style: none;
+  padding-right: 15px;
+}
+.wrappedlabel{
+  margin: 20px 0px;
+}
+.widthfilter{
+  width: 100%;
+  margin-bottom: 15px;
+}
+

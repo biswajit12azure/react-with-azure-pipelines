@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { TextareaAutosize as BaseTextareaAutosize } from '@mui/base/TextareaAutosize';
 import { styled } from '@mui/system';
 import { FormControl, FormHelperText, InputLabel } from '@mui/material';
@@ -58,7 +57,7 @@ const Textarea = styled(BaseTextareaAutosize)(
   `,
 );
 
-const CustomTextArea = ({ id, label, register, errors, handleBlur, handleFocus }) => (
+const CustomTextArea = ({ id, label,maxLength, register, errors, handleBlur, handleFocus,disabled = false }) => (
     <FormControl variant="outlined" fullWidth margin="normal" error={!!errors[id]}>
         <InputLabel shrink htmlFor={id}>{label}</InputLabel>
         <Textarea
@@ -67,6 +66,8 @@ const CustomTextArea = ({ id, label, register, errors, handleBlur, handleFocus }
             onBlur={handleBlur}
             onFocus={handleFocus}
             aria-label={label}
+            maxLength={maxLength || undefined}
+            disabled={disabled} 
         />
         {errors[id] && (
             <FormHelperText error>

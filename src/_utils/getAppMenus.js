@@ -7,45 +7,54 @@ const getAppMenus = (portalKey, isMBAdmin) => {
 
     switch (portalKey.toLowerCase()) {
         case "ai":
-            addMenuItem('Account Search', 'dashboardAI', 1);
-            addMenuItem('Upload', 'upload', 2);
-            break;
+           // addMenuItem('Account Search', 'dashboardAI', 1);
+           // addMenuItem('Upload', 'upload', 2);
+           return appMenuItems;
         case "ea":
-            addMenuItem('Dashboard', 'dashboardEA', 1, 'dashboard');
-            addMenuItem('Jurisdiction', 'jurisdiction', 2, 'jurisdiction');
-            break;
+           // addMenuItem('Dashboard', 'dashboardEA', 1, 'dashboard');
+           // addMenuItem('Jurisdiction', 'jurisdiction', 2, 'jurisdiction');
+           return appMenuItems;
         case "mc":
-            addMenuItem('Map Request', 'dashboardMC', 1);
+           // addMenuItem('Map Center', 'dashboardMC', 1);
             break;
         case "mb":
             appMenuItems.push({
-                name: 'Nomination',
+                name: 'Nominations',
                 orderID: 1,
                 items: [
-                    { name: 'PIPELINE DELIVERY', link: 'pipelinedelivery', orderID: 1 },
-                    { name: 'NOMINATION BY PIPELINE', link: 'faqCreate', orderID: 2 },
-                    { name: 'NOMINATION BY GROUP', link: 'faqCreate', orderID: 3 }
+                    { name: 'Nominations', link:"nomination",order:1 },
+                    { name: 'NOMINATIONS BY PIPELINE', link: 'nominationPipeline', orderID: 4 },
+                    { name: 'NOMINATIONS BY GROUP', link: 'nominationGroup', orderID: 2},
+                    { name: 'PIPELINE DELIVERY', link: 'pipelinedelivery', orderID: 3},
+                   
                 ]
             });
-            addMenuItem('Filehub', 'pipeline', 2);
-            addMenuItem('Services', 'nomination', 3);
+            addMenuItem('Filehub', 'Filehub', 2);
+            addMenuItem('Services', 'services', 3);
             appMenuItems.push({
                 name: 'Adjustments',
                 orderID: 4,
                 items: [
-                    { name: 'BY FIRM', link: 'pipelinedelivery', orderID: 1 },
-                    { name: 'By Interruptible', link: 'faqCreate', orderID: 2 }
+                    { name: 'BY FIRM', link: 'byfirm', orderID: 1 },
+                    { name: 'By Interruptible', link: 'byInterruptible', orderID: 2 }
                 ]
             });
-            addMenuItem('Customers', 'userprofile', 5);
-            break;
+            addMenuItem('Customers','customerDetails', 5);
+            return appMenuItems;
         case "sd":
-            addMenuItem('Supplier', 'dashboardSD', 1);
-            break;
+           // addMenuItem('Supplier', 'dashboardSD', 1);
+           return appMenuItems;
         case "admin":
-            addMenuItem('Users', 'userprofile', 1);
+            //addMenuItem('Users', 'userprofile', 1);
             // addMenuItem('Role Management', 'configuration', 3);
+            appMenuItems.push({
+                name:'Users',
+                orderID:1,
+                items:[]
+            });
+            addMenuItem('Customers', 'customer', 3);
             addMenuItem('Announcements', 'announcement', 4);
+            addMenuItem('SeasonDates', 'configuration', 5);
             appMenuItems.push({
                 name: 'Support',
                 orderID: 5,
@@ -64,17 +73,24 @@ const getAppMenus = (portalKey, isMBAdmin) => {
                     ]
                 });
             }
-            break;
-        case "securityreviewer":
-            addMenuItem('Users', 'userprofile', 1);
+            appMenuItems.sort((a, b) => a.orderID - b.orderID);
+            return appMenuItems;
+        case "reviewer":
+           // addMenuItem('Users', 'userprofile', 1);
+           appMenuItems.push({
+            name:'Users',
+            orderID:1,
+            items:[]
+        });
+        return appMenuItems;
         default:
-            break;
+            return appMenuItems;
     }
 
     // Sort the menu items by orderID
-    appMenuItems.sort((a, b) => a.orderID - b.orderID);
+    // appMenuItems.sort((a, b) => a.orderID - b.orderID);
 
-    return appMenuItems;
+    // return appMenuItems;
 };
 
 export default getAppMenus;

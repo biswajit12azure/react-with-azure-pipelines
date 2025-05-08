@@ -2,31 +2,42 @@ import { useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { ModalPopup } from '_components';
-import { verifiedRegistrationLabels, notVerifiedRegistrationLabels, genericlabels, emailSentLabels } from '_utils/labels';
+import { verifiedRegistrationLabels, notVerifiedRegistrationLabels, genericlabels, emailSentLabels, verifyEmailLabels} from '_utils/labels';
 import { registrationActions } from '_store/registration.slice';
 import TimerModal from '_components/TimerModal';
 import { alertActions } from '_store';
+import { Login } from 'container/loginPage';
+import { LoginLayout } from 'container/layout';
 
 const VerifiedRegistration = () => {
+    const header = "Verfication";
     const dispatch = useDispatch();
     const navigate = useNavigate();
     const location = useLocation();
 
     const userVerify = useSelector((x) => x.registration?.verifiedUserData);
     const data = userVerify?.Data;
-    const isVerified = data?.IsVerified;
+    const isVerified = data?.IsVerified || data?.Status?.toLowerCase() == 'submitted';
     const portalKey = data?.PortalKey || '';
     const portalID = data?.PortalID || 0;
-    const isRequiredCompleteRegistration = portalKey.toLowerCase() === 'mc' || portalKey.toLowerCase() === 'sd';
-   
+    const isRequiredCompleteRegistration = portalKey.toLowerCase() === 'mc';
+
     const verifyId = new URLSearchParams(location.search).get('verifyId');
     const id = data?.UserId;
     const emailAddress = data?.Email;
-
     useEffect(() => {
         const verifyEmail = async () => {
             try {
-                await dispatch(registrationActions.getVerifiedUserData(verifyId));
+               const  result =  await dispatch(registrationActions.getVerifiedUserData(verifyId));
+               if (result?.error) {
+                dispatch(alertActions.success({
+                    showAfterRedirect: true,
+                    message: result?.payload || result?.error.message,
+                    header: `Verfication Completed`
+                }));
+                return;
+            }
+            
             } catch (error) {
                 dispatch(alertActions.error({ message: error?.message || error, header: "Verification Failed" }));
             }
@@ -41,9 +52,10 @@ const VerifiedRegistration = () => {
 
     const handleClick = () => {
         if (id) {
-            localStorage.setItem('portalID', portalID);
+            sessionStorage.setItem('portalID', portalID);
             if (portalKey.toLowerCase() === 'mc') {
                 navigate(`/registration/mapCenter/${portalKey}/${id}`);
+                sessionStorage.setItem('mapcenterUserID', id);
             }
             else if (portalKey.toLowerCase() === 'sd') {
                 navigate(`/registration/diversity/${portalKey}/${id}`);
@@ -54,7 +66,7 @@ const VerifiedRegistration = () => {
 
     const handleSubmit = async () => {
         try {
-            var result = await dispatch(registrationActions.resendVerificationLink({emailAddress, id}));
+            var result = await dispatch(registrationActions.resendVerificationLink({ emailAddress, id }));
             if (result?.error) {
                 dispatch(alertActions.error({
                     showAfterRedirect: true,
@@ -63,7 +75,7 @@ const VerifiedRegistration = () => {
                 }));
                 return;
             }
-
+            handleClose();
             dispatch(alertActions.success({
                 showAfterRedirect: true,
                 message: emailSentLabels.message1,
@@ -75,30 +87,36 @@ const VerifiedRegistration = () => {
         }
     }
 
+    const handleClose = () => {
+        navigate('/');
+    }
+
     if (!verifyId) return null;
 
     return (
 
         <>
+            <LoginLayout />
             {(userVerify && !(userVerify?.loading || userVerify?.error)) && <div>
 
                 {(isVerified && isRequiredCompleteRegistration) && <ModalPopup
                     header={verifiedRegistrationLabels.header}
                     message1={verifiedRegistrationLabels.message1}
-                    message2={verifiedRegistrationLabels.message2}
+                    //message2={verifiedRegistrationLabels.message2}
                     btnPrimaryText={verifiedRegistrationLabels.btnPrimaryText}
                     btnSecondaryText={verifiedRegistrationLabels.btnSecondaryText}
                     handlePrimaryClick={() => handleClick()}
+                    handleSecondaryClick={() => handleClose()}
                     className="verifiedRegistrationpopup"
                 />
                 }
                 {(isVerified && !isRequiredCompleteRegistration) && <TimerModal
                     timerCountdown={60}
                     header={verifiedRegistrationLabels.header}
-                    message1={verifiedRegistrationLabels.message1}
-                    message2={verifiedRegistrationLabels.message2NonRegistration}
+                   // message1={verifiedRegistrationLabels.message1}
+                    message2={portalKey.toLowerCase() === 'sd' ? verifiedRegistrationLabels.messageSd: verifiedRegistrationLabels.message2NonRegistration}
                     btnSecondaryText={genericlabels.lblClose}
-                    handleBtnSecondaryClick={() => handleClick()}
+                    handleBtnSecondaryClick={() => handleClose()}
                 />
                 }
                 {!isVerified && <ModalPopup
@@ -108,7 +126,8 @@ const VerifiedRegistration = () => {
                     btnPrimaryText={notVerifiedRegistrationLabels.btnPrimaryText}
                     btnSecondaryText={notVerifiedRegistrationLabels.btnSecondaryText}
                     handlePrimaryClick={() => handleSubmit()}
-                     className="verifiedRegistrationpopup"
+                    handleSecondaryClick={() => handleClose()}
+                    className="verifiedRegistrationpopup"
                 />
                 }
             </div>

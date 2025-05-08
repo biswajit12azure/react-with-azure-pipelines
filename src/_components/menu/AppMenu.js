@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
-import { Grid } from '@mui/material';
 import { makeStyles, createStyles } from '@material-ui/core/styles';
 import AppMenuItem from './AppMenuItem';
 
@@ -16,7 +15,7 @@ const AppMenu = ({ appMenuItems }) => {
     <div className="menulist">
     <div className={classes.appMenu}>
       {appMenuItems.map((item, index) => (
-        <AppMenuItem 
+        <AppMenuItem key={index}
         {...item}
         activeItem={activeItem}
         setActiveItem={setActiveItem} />

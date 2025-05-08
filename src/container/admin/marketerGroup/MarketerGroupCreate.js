@@ -22,6 +22,7 @@ const MarketerGroupCreate = ({ marketerGroupData, isOpen, onClose, onOpen, handl
     const jurisdictions = marketerGroupData?.Jurisdiction?.map(j => ({ value: j.JurisdictionID, label: j.JurisdictionName })) || [];
     const interruptibleBalancingModel = marketerGroupData?.BalancingModel?.map(bal => ({ value: bal.BalancingModelID, label: bal.BalancingModelName })) || [];
     const firmBalancingModel = [{ value: 4, label: "Storage Balancing" }];
+
     const currentDate = dayjs();
     const minDate = currentDate.subtract(3, 'month');
     const maxDate = currentDate.add(3, 'month');
@@ -43,23 +44,28 @@ const MarketerGroupCreate = ({ marketerGroupData, isOpen, onClose, onOpen, handl
     const canBeOpen = isOpen && Boolean(anchorEl);
     const id = canBeOpen ? 'simple-popper' : undefined;
 
-    const { register, handleSubmit, control, reset, formState: { errors, isValid }, trigger, watch } = useForm({
+    const { register, handleSubmit, control, reset, formState: { errors, isValid }, trigger, watch, setValue } = useForm({
         resolver: yupResolver(createMarketerGroupSchema),
         mode: 'onBlur'
     });
 
     const groupType = watch('GroupType');
 
+    // Effect to reset form fields based on GroupType selection
     useEffect(() => {
         if (groupType?.toLowerCase() === 'firm') {
-            reset((formValues) => ({
-                ...formValues,
-                JurisdictionID: null,
-            }));
-            trigger(['GroupType', 'JurisdictionID']);
+            // When GroupType is "Firm", reset related fields and set defaults
+            setValue('JurisdictionID', null); // Reset Jurisdiction for Firm
+            setValue('BalancingModelID', 4); // Set BalancingModel to Storage Balancing for Firm
+            trigger(['GroupType', 'JurisdictionID', 'BalancingModelID']);
+        } else if (groupType?.toLowerCase() === 'interruptible') {
+            // Reset BalancingModel for Interruptible
+            setValue('BalancingModelID', null);
+            trigger(['GroupType', 'BalancingModelID']);
         }
-    }, [groupType, reset, trigger]);
+    }, [groupType, setValue, trigger]);
 
+    // Form submission handler
     const onSubmit = async (data) => {
         dispatch(alertActions.clear());
         try {
@@ -67,7 +73,7 @@ const MarketerGroupCreate = ({ marketerGroupData, isOpen, onClose, onOpen, handl
                 ID: 0,
                 GroupName: data.GroupName,
                 GroupType: data.GroupType,
-                JurisdictionID: data.JurisdictionID || 0, // Default to 0 if null
+                JurisdictionID: data.JurisdictionID || 0,
                 StartMonth: dayjs(data.StartMonth).toISOString(),
                 EndMonth: dayjs(data.EndMonth).toISOString(),
                 BalancingModelID: data.BalancingModelID,
@@ -79,30 +85,32 @@ const MarketerGroupCreate = ({ marketerGroupData, isOpen, onClose, onOpen, handl
                 dispatch(alertActions.error({ message: result?.payload || result?.error.message, header: "Fetch Failed" }));
                 return;
             }
-            handleClear();
+            handleClear(); // Reset form after successful submission
             handleRefresh();
-            dispatch(alertActions.success({ message: "Marketer Group Created Successfully.", header: header, showAfterRedirect: true }));           
-           
+            dispatch(alertActions.success({ message: "Marketer Group Created Successfully.", header: header, showAfterRedirect: true }));
         } catch (error) {
             dispatch(alertActions.error({ message: error?.message || error, header: "Fetch Failed" }));
         }
     };
 
+    // Handle field blur
     const handleBlur = async (e) => {
         const fieldName = e.target.name;
         await trigger(fieldName);
     };
 
+    // Handle "Cancel" button click - clear form and close
     const handleCancelClick = () => {
         handleClear();
     };
 
-    const handleClear=()=>{
+    // Reset form fields and close modal
+    const handleClear = () => {
         setStartMonth(null);
         setEndMonth(null);
-        reset();
+        reset(); // Reset the form to initial state
         onClose();
-    }
+    };
 
     return (
         <>
@@ -122,6 +130,7 @@ const MarketerGroupCreate = ({ marketerGroupData, isOpen, onClose, onOpen, handl
                                 </Grid>
                             </Grid>
                         </Typography>
+
                         <CustomFormControl
                             id="GroupName"
                             label="Marketer Group Name"
@@ -130,27 +139,32 @@ const MarketerGroupCreate = ({ marketerGroupData, isOpen, onClose, onOpen, handl
                             errors={errors}
                             handleBlur={handleBlur}
                         />
-                        <AutocompleteInput
-                            control={control}
-                            name="GroupType"
-                            label="Group Type"
-                            options={groupTypes}
-                            error={!!errors.GroupType}
-                            helperText={errors.GroupType?.message}
-                            handleBlur={handleBlur}
-                            trigger={trigger}
-                        />
-                        <AutocompleteInput
-                            control={control}
-                            name="JurisdictionID"
-                            label="Jurisdiction"
-                            options={jurisdictions}
-                            error={!!errors.JurisdictionID}
-                            helperText={errors.JurisdictionID?.message}
-                            handleBlur={handleBlur}
-                            trigger={trigger}
-                            disabled={groupType?.toLowerCase() !== 'interruptible'}
-                        />
+                        <Typography component="div" className='marbottom0 selecticon marginbottom16'>
+                            <AutocompleteInput
+                                control={control}
+                                name="GroupType"
+                                label="Group Type"
+                                options={groupTypes}
+                                error={!!errors.GroupType}
+                                helperText={errors.GroupType?.message}
+                                handleBlur={handleBlur}
+                                trigger={trigger}
+                            />
+                        </Typography>
+                        <Typography component="div" className='marbottom0 selecticon marginbottom16'>
+                            <AutocompleteInput
+                                control={control}
+                                name="JurisdictionID"
+                                label="Jurisdiction"
+                                options={jurisdictions}
+                                error={!!errors.JurisdictionID}
+                                helperText={errors.JurisdictionID?.message}
+                                handleBlur={handleBlur}
+                                trigger={trigger}
+                                disabled={groupType?.toLowerCase() !== 'interruptible'}
+                            />
+                        </Typography>
+
                         <LocalizationProvider dateAdapter={AdapterDayjs}>
                             <Controller
                                 name="StartMonth"
@@ -183,10 +197,10 @@ const MarketerGroupCreate = ({ marketerGroupData, isOpen, onClose, onOpen, handl
                                     <DatePicker
                                         className='SelectedDate '
                                         {...field}
-                                        label="End Month"
+                                        label="End Month (Optional)"
                                         views={['year', 'month']}
-                                        minDate={startMonth ? dayjs(startMonth).add(1, 'month') : currentDate}
-                                        maxDate={currentDate.add(4, 'month')}
+                                        minDate={startMonth}
+                                        maxDate={startMonth ? dayjs(startMonth).add(3, 'month') : currentDate.add(4, 'month')}
                                         value={endMonth}
                                         onChange={(newValue) => {
                                             setEndMonth(newValue);
@@ -199,19 +213,19 @@ const MarketerGroupCreate = ({ marketerGroupData, isOpen, onClose, onOpen, handl
                                 )}
                             />
                         </LocalizationProvider>
-                        <AutocompleteInput
-                            control={control}
-                            name="BalancingModelID"
-                            label="Balancing Model"
-                            options={groupType?.toLowerCase() === "firm" ? firmBalancingModel : interruptibleBalancingModel}
-                            error={!!errors.BalancingModelID}
-                            helperText={errors.BalancingModelID?.message}
-                            handleBlur={handleBlur}
-                            trigger={trigger}
-                        />
-                        <Box component="div" className="CreateMarketerbutton"   >
-
-
+                        <Typography component="div" className='marbottom0 selecticon marginbottom16'>
+                            <AutocompleteInput
+                                control={control}
+                                name="BalancingModelID"
+                                label="Balancing Model"
+                                options={groupType?.toLowerCase() === "firm" ? firmBalancingModel : interruptibleBalancingModel}
+                                error={!!errors.BalancingModelID}
+                                helperText={errors.BalancingModelID?.message}
+                                handleBlur={handleBlur}
+                                trigger={trigger}
+                            />
+                        </Typography>
+                        <Box component="div" className="CreateMarketerbutton">
                             <Button type="submit"
                                 variant="contained"
                                 className='submitbutton'

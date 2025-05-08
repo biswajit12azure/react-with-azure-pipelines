@@ -7,7 +7,7 @@ import dayjs from 'dayjs';
 import { marketergroupAction, alertActions } from "_store";
 import { useDispatch } from "react-redux";
 
-const BalancingModel = ({ marketerGroupID, label, value, onChange, options, disabled }) => {
+const BalancingModel = ({ marketerGroupID, label, value, onChange, options, disabled,handleRefresh }) => {
     const header = "Marketer Group";
     const dispatch = useDispatch();
     const [open, setOpen] = useState(false);
@@ -25,8 +25,8 @@ const BalancingModel = ({ marketerGroupID, label, value, onChange, options, disa
     const handleSave = async () => {
         dispatch(alertActions.clear());
         try {
-            const startM = dayjs(startMonth).isValid() ? dayjs(startMonth).toISOString() : null;
-            const endM = dayjs(endMonth).isValid() ? dayjs(endMonth).toISOString() : null;
+            const startM = dayjs(startMonth).isValid() ? dayjs(startMonth).format('YYYY-MM-DDTHH:mm:ss') : null;
+            const endM = dayjs(endMonth).isValid() ? dayjs(endMonth).format('YYYY-MM-DDTHH:mm:ss') : null;
             const transformedData = {
                 MarketerGroupID: marketerGroupID,
                 BalancingModelID: selectedValue,
@@ -34,6 +34,7 @@ const BalancingModel = ({ marketerGroupID, label, value, onChange, options, disa
                 EndMonth: endM
             };
             const result = await dispatch(marketergroupAction.updateBalancingModel(transformedData)).unwrap();
+            handleRefresh();
             if (result?.error) {
                 dispatch(alertActions.error({ message: result?.payload || result?.error.message, header: "Upadte Failed" }));
                 return;
@@ -113,10 +114,10 @@ const BalancingModel = ({ marketerGroupID, label, value, onChange, options, disa
                         />
                         <DatePicker
                          className='SelectedDate '
-                            label="End Month"
+                            label="End Month (optional)"
                             views={['year', 'month']}
                             minDate={startMonth}
-                            maxDate={startMonth ? startMonth.add(4, 'month') : dayjs().add(4, 'month')}
+                            maxDate={startMonth ? startMonth.add(3, 'month') : dayjs().add(3, 'month')}
                             value={endMonth}
                             onChange={(newValue) => setEndMonth(newValue)}
                             slotProps={{
