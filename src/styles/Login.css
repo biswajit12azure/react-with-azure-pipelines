@@ -1,0 +1,1972 @@
+@font-face {
+    font-family: 'ITC Avant Garde Gothic Std Md';
+    src: url('../assets/fontfamily/ITC-Avant-Garde-Gothic-Std-Bold.otf');
+}
+
+
+@font-face {
+    font-family: 'Proxima Nova Rg';
+    src: url('../assets/fontfamily/proximanova_regular.ttf');
+}
+
+@font-face {
+    font-family: 'Proxima Nova';
+    src: url('../assets/fontfamily/proximanova_extrabold.otf');
+}
+
+@font-face {
+    font-family: 'Roboto Light';
+    src: url('../assets/fontfamily/Roboto-Light.ttf');
+}
+
+/* @font-face {
+    font-family: 'ITC Avant Garde Std Md';
+    src: url('../assets/fontfamily/ITCAvantGardeStd-Bold.ttf');
+} */
+
+
+.ul {
+    margin: 0;
+    padding: 0;
+}
+
+ul li.checked {
+    background: #888;
+    color: #fff;
+    text-decoration: line-through;
+}
+
+ul li.checked::before {
+    content: '';
+    position: absolute;
+    border-color: #fff;
+    border-style: solid;
+    border-width: 0 2px 2px 0;
+    top: 10px;
+    left: 16px;
+    transform: rotate(45deg);
+    height: 15px;
+    width: 7px;
+}
+
+.passwordselect .passwordselectli {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 16px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.passwordselectli input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    border: 2px solid #ddd;
+}
+
+.passwordselectli:hover input~.checkmark {
+    background-color: transparent;
+}
+
+.passwordselectli input:checked~.checkmark {
+    background-color: #10B981;
+    border: 2px solid #10B981;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.passwordselectli input:checked~.checkmark:after {
+    display: block;
+}
+
+.passwordselectli .checkmark:after {
+    left: 6px;
+    top: 2px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.forgotpasswordcontainer .passwordselect {
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.modalpopupinner .forgotpasswordcontainer .MuiInputAdornment-root button {
+    margin-top: 0px;
+}
+
+body {
+    background: var(--WG-Blue-25, #F7FBFF) !important;
+    overflow: auto !important;
+    padding-right: 0px !important;
+
+}
+
+.MuiAutocomplete-popper {
+    background-color: #fff;
+    box-shadow: 0px 1px 1px 0px rgba(0, 89, 179, 0.25);
+}
+
+.inputtags .MuiFormControl-fullWidth ul li,
+.inputtags .MuiAutocomplete-popper ul li {
+
+    color: #4E4E4F;
+    font-family: "Proxima Nova Rg";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.inputtags .MuiFormControl-fullWidth ul li:hover,
+.inputtags .MuiAutocomplete-popper ul li:focus {
+    color: #0A3B70;
+    background-color: transparent;
+
+}
+
+.height-fix {
+    background: url("../assets/images/WGLImage.jpg") no-repeat;
+    /* height: 100vh; 
+   
+   background-position: center;
+   background-size: 100%; */
+    height: 100vh;
+    position: fixed;
+    max-width: 100%;
+    width: 100%;
+    background-size: contain;
+}
+
+
+.root {
+    position: relative;
+    flex: 1.3344;
+}
+
+.root img {
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.pb-10 {
+    padding: 10pc 30px 10pc 30px;
+}
+
+.wglcontainer {
+
+    margin-top: 12px;
+}
+
+.MuiTypography-h5.Logincontent {
+    color: var(--WG-Blue-900, #0A3B70);
+    font-family: "ITC Avant Garde Gothic Std Md";
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+.wglcontainer .loginheader,
+.loginheader {
+    display: flex;
+    height: 56px;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
+    margin: 20px 0px;
+}
+
+.wgllogo {
+    display: flex;
+    height: 64px;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
+    color: var(--WG-Blue-700, #0059B3);
+    font-family: "Proxima Nova Rg";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration: none !important;
+}
+
+.MuiTypography-root.ResetPassword {
+
+    float: right;
+    font-family: "Proxima Nova Rg";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.15000000596046448px;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: var(--Gray-700, #4D4C52);
+    text-decoration: none;
+
+
+}
+
+.form .Loginbutton.Loginbuttonheight {
+    margin-top: 20%;
+}
+
+.login-container .mobile-none,
+.login-container .wglcontainerblock {
+    padding-bottom: 0px !important;
+}
+
+.MuiGrid-item.accountSignup {
+    display: ruby;
+    margin-top: 15px;
+}
+
+#account-menu .MuiPaper-root.MuiPaper-elevation li.MuiButtonBase-root .submitbutton {
+    margin: 15px 0px;
+    float: right;
+}
+
+.MuiButton-containedPrimary.Loginbutton,
+.admincontent .submitbutton,
+#account-menu .MuiPaper-root.MuiPaper-elevation li.MuiButtonBase-root .submitbutton {
+    display: flex;
+    height: 48px;
+    padding: 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    align-self: stretch;
+    border-radius: 4px;
+    background: var(--WG-Blue-900, #0A3B70);
+    color: var(--White, #FFF);
+    text-align: center;
+    font-family: "ITC Avant Garde Gothic Std Md";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+    box-shadow: 0px 1px 1px 0px rgba(0, 89, 179, 0.25);
+}
+
+.inputtags .PrivateNotchedOutline-root-1 {
+
+    border: 0px;
+    top: 0px;
+}
+
+
+.inputtags .MuiOutlinedInput-root,
+.inputtags .css-1tlcqt-MuiAutocomplete-root .MuiOutlinedInput-root,
+.passwordcheck.mar-top-16 .MuiAutocomplete-root .MuiInputBase-root,
+.inputtags .MuiAutocomplete-hasPopupIcon .MuiOutlinedInput-root {
+    border-radius: 4px;
+    border: 1px solid var(--WG-Blue-100, #DFEDFF);
+    background: var(--White, #FFF);
+    box-shadow: 0px 1px 1px 0px rgba(0, 89, 179, 0.25);
+    font-family: "Proxima Nova Rg";
+    font-size: 16px;
+    color: var(--Gray-700, #4D4C52);
+}
+
+.passwordcheck label {
+    background-color: #fff;
+    padding: 0px 8px;
+    font-family: "Proxima Nova Rg";
+}
+
+
+.MuiFormLabel-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+    border: 2px solid #1F5FAC;
+
+}
+
+.inputtags .MuiOutlinedInput-notchedOutline {
+    border: 0px solid var(--WG-Blue-100, #DFEDFF)
+}
+
+/* .inputtags .MuiOutlinedInput-root .MuiOutlinedInput-input:hover {
+    border: 2px solid var(--WG-Blue-100, #1976d2);
+    border-radius: 4px;
+} */
+
+.inputtags .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-input {
+    border: 2px solid var(--WG-Blue-100, #1976d2);
+}
+
+.inputtags .MuiOutlinedInput-root.Mui-error .MuiOutlinedInput-input {
+
+    border: 0px solid var(--WG-Blue-100, #DFEDFF);
+    background: var(--White, #FFF);
+    box-shadow: 0px 0px 0px 0px rgba(0, 89, 179, 0.25);
+}
+
+.Registrationcontainer .MuiFormControl-fullWidth {
+    margin: 0px 0px 16px;
+    background-color: #fff;
+}
+
+.MuiFormControl-fullWidth {
+    background-color: #fff;
+}
+
+.inputtags .passwordcheck .MuiOutlinedInput-root .MuiOutlinedInput-input {
+    border-radius: 0px;
+    border: 0px solid var(--WG-Blue-100, #DFEDFF);
+    background: var(--White, #FFF);
+    box-shadow: 0px 0px 0px 0px rgba(0, 89, 179, 0.25);
+}
+
+.inputtags .passwordcheck .MuiOutlinedInput-root .MuiOutlinedInput-input,
+.inputtags .PasswordInput .MuiOutlinedInput-root .MuiOutlinedInput-input {
+    border-radius: 0px;
+    border: 0px solid var(--WG-Blue-100, #DFEDFF);
+    background: var(--White, #FFF);
+    box-shadow: 0px 0px 0px 0px rgba(0, 89, 179, 0.25);
+}
+
+
+/* .login-container .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-input:hover {
+    border: 0px solid var(--WG-Blue-100, #1976d2);
+} */
+.inputtags .MuiOutlinedInput-root.Mui-error .MuiOutlinedInput-input:hover {
+    border: 0px solid var(--WG-Blue-100, #1976d2);
+}
+
+.wglcontainer .css-qxc2i0-MuiButtonBase-root-MuiButton-root.Mui-disabled {
+    color: var(--White, #FFF);
+}
+
+.inputtags.MuiOutlinedInput-root.Mui-focused.Mui-error .MuiOutlinedInput-input .inputtags .passwordcheck .MuiOutlinedInput-root:hover.Mui-error .MuiOutlinedInput-notchedOutline {
+    border: 0px solid var(--WG-Blue-100, #1976d2);
+}
+
+
+
+.mobile-block {
+    display: none;
+
+}
+
+.mobile-none {
+    display: block;
+    padding: 0px;
+}
+
+.width590 {
+    width: 590px;
+}
+
+.modalpopup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    padding: 0px 16px 16px 16px;
+    border-radius: 10px;
+    display: flex;
+    width: 590px;
+    flex-direction: column;
+    align-items: flex-start;
+    border-radius: 16px;
+    border: 1px solid var(--WG-Blue-100, #DFEDFF);
+    background: var(--White, #FFF);
+    box-shadow: 0px 1px 1px 0px rgba(0, 89, 179, 0.25);
+    outline: 0px;
+}
+
+.modalpopupVerification h2 {
+    font-weight: bold;
+}
+
+.modalpopupinner {
+    position: relative;
+    margin: 0px;
+}
+
+.MuiFormLabel-root.Mui-focused,
+.MuiFormControl-root .MuiFormLabel-root {
+    background-color: #FFF;
+    z-index: 1;
+    top: 0px;
+    padding: 0px 5px;
+    font-family: "Proxima Nova Rg";
+
+}
+
+
+
+
+
+
+.wglcontainer .css-19qnlrw-MuiFormLabel-root-MuiInputLabel-root {
+    font-family: "Proxima Nova Rg";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.15000000596046448px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: var(--Gray-500, #71717A);
+}
+
+
+.MuiInputBase-root.MuiOutlinedInput-root.MuiInputBase-colorPrimary.Mui-error:hover .MuiOutlinedInput-notchedOutline,
+.MuiInputBase-root.MuiOutlinedInput-root.MuiInputBase-colorPrimary.Mui-error.MuiInputBase-formControl:hover .MuiOutlinedInput-notchedOutline {
+
+    border-color: var(--Red-500, #EF4444) !important;
+    border-width: 2px;
+}
+
+.MuiInputBase-root.MuiOutlinedInput-root.MuiInputBase-colorPrimary.MuiInputBase-formControl:hover .MuiOutlinedInput-notchedOutline {
+    border-color: var(--WG-Blue-700, #0059B3) !important;
+    border-width: 2px;
+
+}
+
+/* .inputtags .inputBackground .MuiInputBase-root.MuiOutlinedInput-root.MuiInputBase-colorPrimary.MuiInputBase-formControl:hover .MuiOutlinedInput-notchedOutline{
+    border-color: var(--WG-Blue-700, #0059B3) !important;
+    border-width: 0px;
+
+} */
+
+
+
+.wglcontainer .css-quhxjy-MuiInputBase-root-MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline,
+.css-jupps9-MuiInputBase-root-MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline .inputtags .passwordcheck .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline .inputtags .passwordcheck .MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline {
+    border-color: transparent;
+}
+
+.inputtags .inputBackground .css-16wblaj-MuiInputBase-input-MuiOutlinedInput-input,
+.inputtags .inputBackground .css-16wblaj-MuiInputBase-input-MuiOutlinedInput-input,
+.inputtags .inputBackground .passwordcheck .MuiOutlinedInput-root .MuiOutlinedInput-input {
+    /* background: var(--WG-Blue-100, #DFEDFF);
+    color: var(--WG-Blue-900, #07254A);
+    border-radius: 4px; */
+}
+
+
+/* .inputBackground label {
+    display: none;
+} */
+
+.wglcontainer .css-19qnlrw-MuiFormLabel-root-MuiInputLabel-root.Mui-error.Mui-focused,
+.wglcontainer .css-113d811-MuiFormLabel-root-MuiInputLabel-root.Mui-error.Mui-focused {
+    color: var(--Red-500, #EF4444) !important;
+}
+
+.wglcontainer .css-113d811-MuiFormLabel-root-MuiInputLabel-root.Mui-focused {
+    color: var(--WG-Blue-700, #0059B3);
+
+}
+
+.inputtags .passwordcheck .MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline,
+.css-1blp12k-MuiInputBase-root-MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline,
+.css-1n04w30-MuiInputBase-root-MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline {
+    border-color: var(--WG-Blue-700, #0059B3) !important;
+    border-width: 2px;
+
+}
+
+
+
+.css-1n04w30-MuiInputBase-root-MuiOutlinedInput-root:hover.Mui-error .MuiOutlinedInput-notchedOutline {
+    border-color: var(--Red-500, #EF4444) !important;
+}
+
+.accountSignup div {
+    color: var(--Gray-700, #4D4C52);
+    text-align: center;
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: "Proxima Nova Rg";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.15px;
+}
+
+.accountSignup a {
+    color: var(--WG-Blue-700, #0059B3);
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: "Proxima Nova Rg";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0.15px;
+    text-decoration: none;
+    padding-left: 5px;
+}
+
+.Emailicons {
+    display: inline-flex;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.Emailicons img {
+    margin: 10px 15px 10px 0px;
+    border: 1px solid #b2adad;
+    padding: 15px;
+    border-radius: 6px;
+}
+
+.displayblock {
+    display: block;
+}
+
+.MuiGrid-item.Newpassword {
+    display: block;
+    margin: auto;
+}
+
+.Newpassword h5 {
+    font-weight: bold;
+}
+
+.css-1nrlq1o-MuiFormControl-root.newpassword-list {
+    margin: 20px 0px;
+
+}
+
+.newpassword-list {
+    width: 100%;
+}
+
+.modalpopupVerification .ResetLogo {
+    margin: 0px 9px;
+    max-width: 14.5%;
+    flex-basis: 14.5%;
+}
+
+.modalpopupVerification .form {
+    margin: 15px 0px;
+}
+
+
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+
+}
+
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.login-container .NeedSupport {
+    margin-top: 30px;
+}
+
+.wgllogocontainer {
+    cursor: pointer;
+}
+
+.wgllogocontainer img {
+    margin-right: 10px;
+}
+
+.login-container .NeedSupport .none-moblie {
+
+    display: flex;
+    padding: 0px 5px;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 12px;
+    font-family: Arial;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    color: #FFF;
+    font-family: "Proxima Nova Rg";
+
+}
+
+.support-list ul li::before {
+    right: auto;
+    left: 12px;
+
+
+}
+
+.support-list ul li {
+    font-family: "Proxima Nova Rg";
+    color: var(--Gray-500, #71717A);
+    font-size: 16px;
+}
+
+.support-list ul li:hover,
+.support-list ul li .MuiListItemIcon-root:hover {
+    -webkit-text-decoration: none;
+    text-decoration: none;
+    background-color: transparent;
+    color: #0A3B70;
+
+}
+
+.ration .Supporticon {
+    position: absolute;
+    top: 0px;
+    height: auto;
+    width: auto;
+    display: block;
+    right: 0px;
+    font-family: "Proxima Nova Rg";
+}
+
+.ration .Supporticon button {
+    float: right;
+}
+
+.login-container .NeedSupport:hover {
+    background-color: transparent;
+}
+
+.NeedSupport img {
+    width: 16px;
+    height: 16px;
+}
+
+.zoom125 .login-container,
+.zoom150 .login-container,
+.zoom100 .login-container {
+    width: 1200px;
+}
+
+.zoom100 {
+    zoom: 100%;
+}
+
+.zoom125 {
+    zoom: 125%;
+}
+
+.zoom150 {
+    zoom: 150%;
+}
+
+.standardEamil .MuiInputBase-colorPrimary {
+    display: flex;
+    width: 100%;
+    height: 48px;
+    padding: 12px 12px 12px 16px;
+    justify-content: flex-end;
+    align-items: center;
+    border-radius: 4px;
+    border: 1px solid var(--WG-Blue-100, #DFEDFF);
+    background: var(--White, #FFF);
+}
+
+.standardEamil .MuiFormControl-root {
+    margin: 16px 0px 16px 0px;
+    width: 100%;
+}
+
+.forgotpassword h3 {
+    color: var(--Gray-700, #4D4C52);
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: "Proxima Nova Rg";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    /* 150% */
+    letter-spacing: 0.15px;
+}
+
+.forgotpassword p {
+    color: var(--Gray-700, #4D4C52);
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: "Proxima Nova Rg";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.15px;
+    padding: 8px 0px;
+}
+
+.forgotpasswordcontainer .buttonCancel,
+.closebutton {
+    color: var(--Gray-700, #0A3B70);
+    text-align: center;
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: "ITC Avant Garde Gothic Std Md";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0.15px;
+    margin-top: 8px;
+    box-shadow: none;
+    display: flex;
+    height: 48px;
+    padding: 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    align-self: stretch;
+    border-radius: 4px;
+    background: #DFEDFF;
+    box-shadow: 0px 1px 1px 0px rgba(0, 89, 179, 0.25);
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.Registrationcontainerlist .Logincontent {
+    margin: 12px 0px 24px;
+}
+
+.Registrationcontainer .Loginbutton {
+    margin-top: 25%;
+}
+
+.passwordselect {
+    border-radius: 2px;
+    border: 1px solid var(--WG-Blue-100, #DFEDFF);
+    background: var(--White, #FFF);
+    padding: 16px;
+    box-shadow: 0px 1px 1px 0px rgba(0, 89, 179, 0.25);
+    position: absolute;
+    z-index: 9999;
+    width: -webkit-fill-available;
+}
+
+.passwordselect p {
+    color: var(--Gray-700, #4D4C52);
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: "Proxima Nova Rg";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0.25px;
+}
+
+.css-1blp12k-MuiInputBase-root-MuiOutlinedInput-root:hover.Mui-error .MuiOutlinedInput-notchedOutline {
+    border-color: #d32f2f !important;
+}
+
+.passwordselect ul li {
+    color: var(--Gray-700, #4D4C52);
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: 'Roboto Light';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0.25px;
+    list-style: none;
+}
+
+.passwordselect ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+.headercontent,
+.Verifyemail .headercontent {
+    color: var(--Gray-700, #4D4C52);
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: "Proxima Nova Rg";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    padding: 16px 0px;
+    letter-spacing: 0.15px;
+}
+
+.modalpopupinner {
+    width: 100%;
+}
+
+.modalpopupcontent {
+    color: var(--Gray-700, #4D4C52);
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: "Proxima Nova Rg";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+    margin: 0px;
+    letter-spacing: 0.15px;
+}
+
+.Loginbutton.mar-48 {
+    margin-top: 48px;
+}
+
+.modalpopupinner button,
+.modalpopupinner .Loginbutton.mar-48 {
+    margin-top: 15px;
+}
+
+.modalpopupinner .closebutton,
+.Verifyemail .closebutton {
+    color: var(--Gray-700, #0A3B70);
+    text-align: center;
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: "ITC Avant Garde Gothic Std Md";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0.15px;
+    margin-top: 8px;
+    box-shadow: none;
+    display: flex;
+    height: 48px;
+    text-transform: uppercase;
+    padding: 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    align-self: stretch;
+    border-radius: 4px;
+    box-shadow: 0px 1px 1px 0px rgba(0, 89, 179, 0.25);
+    width: 100%;
+    text-decoration: none;
+    background: #DFEDFF;
+}
+
+.Verifyemail .p-0,
+.MuiPaper-root .Verifyemail .p-0 {
+    padding: 0px;
+}
+
+.Verifyemail {
+    padding: 0px 24px 24px;
+}
+
+
+/* upload Button */
+.UploadContainer .Uploadfiles {
+    border-radius: 16px;
+    border: 3px dashed var(--WG-Blue-200, #B9DCFE);
+    background: #FFF;
+    display: flex;
+    width: 100%;
+    height: 180px;
+    padding: 32px 0px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    color: var(--WG-Blue-900, #0A3B70);
+    text-align: center;
+    font-family: "Proxima Nova";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-top: 15px;
+}
+
+.Browsechoose {
+    color: var(--WG-Blue-950, #07254A);
+    text-align: center;
+    font-family: "Proxima Nova Rg";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.SupportedFormats .fileformat {
+    margin: 15px 0px;
+    word-break: break-word;
+}
+
+.fileformat span {
+    color: var(--Gray-700, #4D4C52);
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: "Proxima Nova Rg";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.25px;
+}
+
+.fileformat h4 {
+    color: var(--Gray-700, #4D4C52);
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: "ITC Avant Garde Gothic Std Md";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.25px;
+    text-transform: uppercase;
+    width: 100%;
+}
+
+.SupportedFormats .fileformatlist {
+    margin: 15px 0px;
+}
+
+.fileformatlist span {
+    color: var(--WG-Blue-900, #0A3B70);
+    font-family: "Proxima Nova Rg";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 8px;
+    float: left;
+}
+
+.SupportedFormats {
+    float: left;
+    width: 100%;
+}
+
+.MapCenterAccecss .margin-bottom-12 {
+    margin-bottom: 35px;
+}
+
+.SupportedFormats h3 {
+    color: var(--WG-Blue-900, #0A3B70);
+    font-family: "ITC Avant Garde Gothic Std Md";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+    margin-top: 24px;
+}
+
+.width100 {
+    width: 100%;
+}
+
+.nav-bar-container .navbar-nav {
+    width: 100%;
+    display: contents;
+}
+
+.nav-linksbuttons {
+    display: flex;
+}
+
+.nav-linksbuttons .headseticon img {
+    padding-right: 8px;
+}
+
+.nav-linksbuttons .iconcolor {
+    padding-left: 15px;
+}
+
+.nav-linksbuttons button,
+.nav-linksbuttons .iconcolor svg {
+    padding: 0px;
+    color: #3f51b5;
+    cursor: pointer;
+}
+
+.support-list .MuiList-root li svg {
+    margin-right: 10px;
+
+}
+
+.support-list .MuiList-root {
+    padding: 0px;
+    width: 387px;
+    border-radius: 8px;
+    border: 1px solid var(--WG-Blue-100, #DFEDFF);
+    background: var(--White, #FFF);
+    box-shadow: 0px 2px 4px 0px rgba(0, 89, 179, 0.25);
+}
+
+.fontsizeicon {
+    font-size: 25px;
+}
+
+.Notifications .MuiList-root {
+    width: 400px !important;
+}
+
+.Notifications .CardDetailContainer-right .Announcementcontainer {
+    width: 100%;
+    max-height: 300px;
+    overflow-y: scroll;
+}
+
+#account-menu .MuiPaper-root.MuiPaper-elevation li.MuiButtonBase-root {
+    display: block;
+}
+
+.nav-bar-container .container {
+    padding: 0px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto !important;
+    padding: 0px;
+}
+
+.MapCenterAccecss .MapCenterAccecssheading h1 {
+    margin: 26px 0px;
+    color: var(--WG-Blue-900, #0A3B70);
+    font-family: "ITC Avant Garde Gothic Std Md";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+    height: 56px;
+    width: 100%;
+}
+
+.MapCenterAccecssheading {
+    display: flex;
+    align-items: center;
+}
+
+.Personal-Informationsheading h2 {
+    color: var(--WG-Blue-700, #0059B3);
+    font-family: "ITC Avant Garde Gothic Std Md";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+}
+
+.MapCenterAccecss .Personal-Information-container {
+    border-radius: 8px;
+    border: 1px solid var(--WG-Blue-100, #DFEDFF);
+    background: #FFF;
+    box-shadow: 0px 1px 1px 0px rgba(0, 89, 179, 0.25);
+    padding: 24px;
+    margin-bottom: 24px;
+}
+
+.modalpopupcontenterror {
+    margin-top: 15px;
+    color: #ef4444;
+    margin-bottom: 20px;
+}
+
+.alertpopup {
+    display: flex;
+
+}
+
+.alertpopup img {
+    padding-right: 30px;
+}
+
+.ration-1x1 {
+    --bs-aspect-ration: 60%;
+}
+
+.ration {
+    position: relative;
+    width: 100%;
+}
+
+.ration::before {
+    display: block;
+    content: '';
+    padding-top: 100%;
+}
+
+.ration>* {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 24px 0px 0px 24px;
+
+}
+
+/* .inputBackground .MuiFormLabel-root{
+    background: #fff;
+    padding: 0px 5px;
+    font-family: "Proxima Nova Rg" !important;
+} */
+
+
+/* .inputBackground .css-1ll44ll-MuiOutlinedInput-notchedOutline {
+    border-width: 0px;
+} */
+.inputtags input,
+.inputtags select,
+.inputtags textarea {
+    color: var(--WG-Blue-950, #71717A);
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: "Proxima Nova Rg" !important;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    /* 150% */
+    letter-spacing: 0.15px;
+    /* box-shadow: 0px 1px 1px 0px rgba(0, 89, 179, 0.25); */
+
+}
+
+.Personal-Information .Cancelbutton {
+    border-radius: 4px;
+    background: var(--Gray-100, #F5F5F6);
+    padding: 16px 25px;
+    box-shadow: 0px 1px 1px 0px rgba(132, 132, 140, 0.25);
+    color: var(--Gray-400, #84848C);
+    text-align: center;
+    font-family: "ITC Avant Garde Gothic Std Md";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+}
+
+.Personal-Information .CompleteRegistration {
+    border-radius: 4px;
+    padding: 16px 25px;
+    float: right;
+    background: var(--WG-Blue-900, #0A3B70);
+    color: var(--White, #FFF);
+    text-align: center;
+    font-family: "ITC Avant Garde Gothic Std Md";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 24px;
+    text-transform: uppercase;
+    box-shadow: 0px 1px 1px 0px rgba(0, 89, 179, 0.25);
+}
+
+.Registrationcontainer .MuiFormControl-marginNormal .MuiAutocomplete-endAdornment button .css-1umw9bq-MuiSvgIcon-root {
+    display: none
+}
+
+.MuiFormControl-marginNormal .MuiAutocomplete-endAdornment button.MuiAutocomplete-popupIndicator svg,
+.passwordcheck.mar-top-16 .MuiAutocomplete-root .MuiAutocomplete-endAdornment button svg {
+    display: none;
+}
+
+.inputtags .admincontent .admincontentContainer table tbody tr td .MuiOutlinedInput-root .MuiSvgIcon-root path {
+    display: none;
+}
+
+.inputtags .admincontent .admincontentContainer table tbody tr td .MuiAutocomplete-endAdornment button:nth-child(2) .MuiSvgIcon-root,
+.inputtags .admincontent .admincontentContainer table tbody tr td .MuiOutlinedInput-root .MuiSvgIcon-root,
+
+.MuiFormControl-marginNormal .MuiAutocomplete-endAdornment button.MuiAutocomplete-popupIndicator,
+.passwordcheck.mar-top-16 .MuiAutocomplete-root .MuiAutocomplete-endAdornment button.MuiAutocomplete-popupIndicator {
+    background: url('../assets/images/Vector.svg');
+    width: 18px;
+    height: 18px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.inputtags .admincontent .admincontentContainer table tbody tr td .MuiAutocomplete-endAdornment button:nth-child(2) .MuiSvgIcon-root path {
+    display: none;
+}
+
+.forgotpassword h2 {
+    color: var(--Gray-700, #4D4C52);
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: "Proxima Nova Rg";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0.15px;
+}
+
+.Personal-Information .MuiOutlinedInput-notchedOutline {
+    border-radius: 4px;
+    border: 1px solid var(--WG-Blue-100, #DFEDFF);
+    box-shadow: 0px 1px 1px 0px rgba(0, 89, 179, 0.25);
+
+}
+
+.Personal-Information-container .mapcontainer .supplierDetailes {
+    padding: 0px 12px;
+}
+
+.Documentsuplaod {
+    margin: 16px 0px;
+}
+
+.mobile-block {
+
+    display: none;
+}
+
+.mobile-none {
+    display: block;
+}
+
+.loginpagebanner .ration::before {
+    padding-top: 73%;
+}
+
+.passwordcheck {
+    position: relative;
+}
+
+.inputtags .mar-top-16 {
+    margin-top: 16px;
+}
+
+.Personal-Information-container .CompanyDetails-container .CompanyDetails {
+    padding: 0px 12px;
+}
+
+/* .MuiBackdrop-root.MuiModal-backdrop{
+    background: url("../assets/images/WGLImage.jpg") no-repeat;
+    height: 100vh;
+} */
+.DocumentTypeID {
+    float: right;
+}
+
+.DocumentTypeID button {
+    padding: 0px;
+    padding-left: 10px;
+
+}
+
+.DocumentTypeID button svg {
+    font-size: 18px;
+}
+
+.mar-top-16 .DocumentTypeID {
+    margin-right: 29%;
+}
+
+.mar-top-16 .DocumentDescription {
+    padding: 0px 0px 0px 5px;
+    color: var(--Gray-700, #4D4C52);
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: 'Roboto Light';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    /* 125% */
+    letter-spacing: 0.25px;
+    width: 50%;
+    display: block;
+    float: left;
+    border: 0px;
+}
+
+.fileformat .mar-top-16 {
+    display: flow-root;
+}
+
+.fileformat .mar-top-16 svg {
+    float: left;
+}
+
+.PortalName {
+    display: flex;
+    justify-content: flex-end;
+    margin: 25px 0px;
+}
+
+.Notifications {
+    position: relative;
+}
+
+.Notifications .Notificationscount {
+    font-size: 11px;
+    font-family: "Proxima Nova Rg";
+    background: #FB1212;
+    border-radius: 100%;
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    right: -5px;
+    z-index: 999;
+    font-weight: 800;
+    text-align: center;
+    top: -6px;
+}
+
+.navbaremailcontainer {
+    border-radius: 0px 16px 0px 0px;
+    background: var(--WG-Blue-900, #0A3B70);
+    padding: 24px 63px 24px 24px;
+    align-items: center;
+}
+
+.navbaremailcontainer .navbarusername {
+    color: var(--White, #FFF);
+    font-family: "ITC Avant Garde Gothic Std Md";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+    text-align: left;
+}
+
+.navbaremailcontainer .navbaremail {
+    overflow: hidden;
+    color: var(--White, #FFF);
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-family: "Proxima Nova Rg";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: left;
+}
+
+.navbaremailcontainer .navbarnumber {
+    overflow: hidden;
+    color: var(--White, #FFF);
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-family: "Proxima Nova Rg";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: left;
+}
+
+
+
+@media only screen and (min-width: 1600px) {
+
+    .ration::before {
+        padding-top: 75%;
+    }
+}
+
+@media only screen and (min-width: 1400px) {
+
+    .loginbuttonfixed {
+        position: absolute;
+        bottom: 10px;
+        width: 96%;
+    }
+
+    .wglcontainerblock {
+        position: relative;
+    }
+
+    .loginpagebanner .ration::before {
+        padding-top: 73%;
+    }
+
+
+}
+
+
+@media only screen and (min-width: 1200px) {
+    .container {
+        max-width: 100%;
+        padding: 0px 20px;
+    }
+
+    .ration::before {
+        padding-top: 100%;
+    }
+
+    .loginpagebanner .ration::before {
+        padding-top: 72%;
+    }
+
+}
+
+
+@media only screen and (max-width: 1200px) {
+    .form .Loginbutton.Loginbuttonheight {
+        margin-top: 30%;
+    }
+
+    .loginpagebanner .ration::before {
+        padding-top: 72%;
+    }
+
+    .container {
+        max-width: 100%;
+        margin: auto;
+        padding: 0px 20px;
+    }
+
+    .Registrationcontainer .Loginbutton {
+        margin-top: 6%;
+    }
+}
+
+@media only screen and (max-width: 1124px) {
+    .pb-10 {
+        padding: 5pc 30px 5pc 30px;
+    }
+
+}
+
+@media only screen and (max-width: 1024px) {
+
+    .accountSignup div,
+    .accountSignup a {
+        font-size: 14px;
+    }
+
+    .MuiGrid-item.accountSignup {
+        margin-top: 5px;
+    }
+
+    .Registrationcontainerlist .Logincontent {
+        font-size: 22px;
+        margin: 12px 0px 12px;
+    }
+
+    .wglcontainer input {
+        padding: 11.5px 14px;
+    }
+
+    .wglcontainer .css-19qnlrw-MuiFormLabel-root-MuiInputLabel-root {
+        font-size: 14px;
+        top: -5px;
+    }
+
+    .modalpopupinner .closebutton {
+        height: 40px;
+    }
+
+    .admincontentContainer .MuiButton-containedPrimary.Loginbutton {
+        margin-top: 0%;
+    }
+
+    .MuiButton-containedPrimary.Loginbutton {
+        height: 40px;
+        font-size: 14px;
+        margin-top: 25%;
+    }
+
+    .login-container .cancelButton {
+        height: 40px;
+        font-size: 14px;
+    }
+
+    .checkmark {
+
+        top: 5px;
+
+        height: 15px;
+        width: 15px;
+
+    }
+
+    .passwordselectli .checkmark:after {
+        left: 3px;
+        top: 1px;
+        width: 5px;
+        height: 8px;
+        border: solid white;
+        border-width: 0 3px 3px 0;
+        transform: rotate(45deg);
+    }
+
+    .passwordselect .passwordselectli {
+        padding-left: 25px;
+        font-size: 14px;
+        margin-bottom: 0px;
+    }
+
+    .passwordselect p {
+        margin-bottom: 0px;
+        font-size: 14px;
+    }
+
+    .Registrationcontainer .MuiFormControl-fullWidth {
+        margin: 0px 0px 8px;
+    }
+
+    .Announcementcontainerlist .Registrationcontainer .MuiFormControl-fullWidth {
+        margin: 0px 0px 0px;
+    }
+
+    .Announcementcontainerlist .Textarealist {
+        margin-top: 15px;
+    }
+
+
+
+    .wglcontainer {
+        margin-top: 0px;
+    }
+
+    .wgllogo {
+        height: 45px;
+    }
+
+    .loginpagebanner,
+    .Registrationnone {
+        display: none;
+    }
+
+    .login-container .mobile-padding .css-1tlcqt-MuiAutocomplete-root .MuiOutlinedInput-root {
+        padding: 5px;
+    }
+
+    .forgotpasswordcontainer .MuiButton-containedPrimary.Loginbutton {
+        margin-top: 10px;
+    }
+
+    .standardEamil .MuiFormControl-root {
+        margin: 10px 0px 10px 0px;
+        width: 100%;
+    }
+
+
+    .wglcontainerblock.MuiGrid-grid-sm-5 {
+        max-width: 400px;
+        margin: auto;
+        flex-basis: 400px;
+    }
+}
+
+
+@media only screen and (max-width: 999px) {
+    .pb-10 {
+        padding: 3pc 15px 3pc 15px;
+    }
+
+    .MapCenterAccecss .Personal-Information-container {
+        border: 0px;
+        background-color: transparent;
+        box-shadow: none;
+        padding: 0px;
+    }
+
+
+    .MuiTypography-h5.Logincontent {
+
+        padding: 10px 0px;
+        font-size: 18px;
+    }
+
+    .list-type li {
+        font-size: 14px;
+        padding: 15px 5px;
+    }
+
+    /* .inputtags .PasswordInput .MuiFormControl .MuiInputBase-root{
+          padding: 0px; 
+          padding-right: 15px;
+    } */
+    .inputtags .MuiFormControl-root .PasswordInput .MuiFormControl-root .MuiInputBase-root {
+        padding: 0px;
+        padding-right: 15px;
+    }
+}
+
+@media only screen and (max-width: 820px) {
+    .pb-10 {
+        padding: 20px 15px 10px 15px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .inputtags .passwordcheck .MuiOutlinedInput-root .MuiOutlinedInput-input {
+        font-size: 14px;
+    }
+
+    .mobile-block {
+        display: block;
+
+    }
+
+    .Browsechoose {
+        font-size: 12px;
+    }
+
+    .UploadContainer .Uploadfiles,
+    .SupportedFormats h3,
+    .Personal-Information .CompleteRegistration,
+    .Personal-Informationsheading h2 {
+        font-size: 14px;
+    }
+
+    .inputtags .MuiOutlinedInput-root .MuiOutlinedInput-input,
+    .inputtags .css-jupps9-MuiInputBase-root-MuiOutlinedInput-root,
+    .inputtags .css-1tlcqt-MuiAutocomplete-root .MuiOutlinedInput-root {
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    .inputtags .PasswordInput .css-jupps9-MuiInputBase-root-MuiOutlinedInput-root {
+        padding: 0px;
+        font-size: 14px;
+    }
+
+    .inputtags .PasswordInput .MuiInputAdornment-root.MuiInputAdornment-positionEnd {
+        margin-right: 15px;
+    }
+
+    .inputtags .MuiOutlinedInput-root.Mui-error.css-jupps9-MuiInputBase-root-MuiOutlinedInput-root {
+        padding: 0px;
+        padding-right: 10px;
+    }
+
+    .inputtags .css-19qnlrw-MuiFormLabel-root-MuiInputLabel-root {
+        top: -3px;
+        font-size: 14px;
+    }
+
+    .inputtags .passwordcheck .MuiOutlinedInput-root {
+        padding: 5px;
+    }
+
+    /* .login-container {
+        margin-bottom: 100px;
+    } */
+
+    .width590 {
+        width: 100%;
+        padding: 0px 15px 15px;
+    }
+
+    .form .Loginbutton.Loginbuttonheight {
+        margin-top: 30%;
+    }
+
+    .Registrationcontainer .Loginbutton {
+
+        margin: 0px;
+    }
+
+
+    .height-fix {
+        border-radius: 0pc;
+    }
+
+    .mobile-none {
+        display: none;
+    }
+
+    .list-type {
+        position: relative;
+    }
+
+    .ResetLogo img {
+        width: 50px;
+    }
+
+
+    .alertpopup {
+        display: block;
+    }
+
+    .alertTypeinner {
+        text-align: center;
+    }
+
+
+    .list-type {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .modalpopup {
+        width: 90%;
+        padding: 15px;
+    }
+
+
+    .wglcontainerblock.MuiGrid-grid-sm-5 {
+        max-width: 400px;
+        margin: auto;
+        flex-basis: 400px;
+    }
+
+    .headercontent,
+    .Verifyemail .headercontent {
+        padding: 5px 0px;
+        font-size: 14px;
+    }
+
+    .modalpopupcontenterror,
+    .modalpopupcontent,
+    .forgotpassword h2,
+    .passwordselect p,
+    .passwordselectli {
+        margin: 0px;
+        font-size: 14px;
+    }
+
+    .alertpopup img {
+        width: 75px;
+    }
+
+    .modalpopupinner .closebutton,
+    .Verifyemail .closebutton,
+    .MuiButton-containedPrimary.Loginbutton,
+    .MuiButton-containedPrimary.Loginbutton:hover,
+    .forgotpasswordcontainer .buttonCancel,
+    .closebutton,
+    .wgllogo {
+        height: 40px;
+        font-size: 14px;
+        margin-bottom: 0px;
+    }
+
+    .wglcontainer .loginheader,
+    .loginheader {
+        height: 40px;
+        margin: 10px 0px;
+    }
+
+    .accountSignup div,
+    .MuiTypography-root.ResetPassword {
+        font-size: 14px;
+    }
+
+    .MuiGrid-item.accountSignup {
+        margin-top: 5px;
+    }
+
+    .newpassword-list .css-16mfwdg-MuiFormControl-root {
+        margin-top: 0px;
+    }
+
+    .MapCenterAccecss .Personal-Information-container .CompanyDetails {
+        padding: 0px 12px;
+    }
+
+    .forgotpasswordcontainer .passwordselect {
+        margin-bottom: 5px;
+    }
+
+    .checkmark {
+
+        top: 5px;
+
+        height: 15px;
+        width: 15px;
+
+    }
+
+    .passwordselectli .checkmark:after {
+        left: 3px;
+        top: 1px;
+        width: 5px;
+        height: 8px;
+        border: solid white;
+        border-width: 0 3px 3px 0;
+        transform: rotate(45deg);
+    }
+
+    .forgotpasswordcontainer .passwordselect {
+        margin-bottom: 8px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .navmobilelist.nav-linksbuttons {
+        display: block;
+        margin-top: 50px;
+    }
+  
+    .MuiDrawer-paperAnchorLeft {
+        border-radius: 0px 16px 16px 0px;
+        background: var(--White, #FFF);
+        box-shadow: 0px 2px 4px 0px rgba(0, 89, 179, 0.25)!important;
+    }
+
+    .iconcolor span,
+    .Notifications button {
+        color: var(--WG-Blue-900, #0A3B70);
+        font-family: "Proxima Nova Rg";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    .iconcolor span img,
+    .Notifications button img {
+        padding-right: 10px;
+    }
+
+    .navmobilelist.nav-linksbuttons div {
+        float: none;
+        text-align: left;
+        padding-left: 0px;
+    }
+
+    .nav-linksbuttons.nav-linksbuttons button {
+        margin-left: 0px;
+    }
+
+    .MuiDrawer-paperAnchorLeft {
+        position: relative;
+    }
+
+    .wgllogoposition.wgllogo {
+        position: absolute;
+        bottom: 15px;
+        margin-left: 20px;
+    }
+
+    .navmobilelist.nav-linksbuttons .iconcolor,
+    .navmobilelist.nav-linksbuttons .Notifications {
+        float: none;
+        text-align: left;
+        padding: 20px;
+    }
+
+    .nav-linksbuttons .headseticon img {
+        margin-right: 0px;
+        padding-right: 0px;
+    }
+
+    .wgllogodesktop .wgllogo {
+        display: flex;
+        text-align: center;
+        justify-content: center;
+    }
+}
+
+@media only screen and (max-width: 460px) {
+    .wglcontainerblock.MuiGrid-grid-sm-5 {
+        max-width: 100%;
+        margin: auto;
+        flex-basis: 100%;
+    }
+
+    .MapCenterAccecss .MapCenterAccecssheading h1 {
+        height: 50px;
+        font-size: 20px;
+    }
+
+    .loginbuttonfixed {
+        position: relative;
+    }
+
+    .MapCenterAccecss .margin-bottom-12 {
+        margin-bottom: 24px;
+    }
+
+    .loginbuttonfixed .loginbuttonfixedbutton {
+        position: fixed;
+        width: -webkit-fill-available;
+        bottom: 0px;
+        margin-right: 20px;
+
+    }
+
+    .Personal-Informationsheading h2 {
+        border-radius: 4px;
+        background: var(--WG-Blue-100, #DFEDFF);
+        padding: 16px;
+        margin-bottom: 10px;
+    }
+
+    .admincontent .Personal-Informationsheading h2 {
+        background-color: #fff;
+    }
+
+    .modalpopup {
+        padding: 15px;
+    }
+
+    .forgotpassword p {
+        padding: 8px 0px;
+        font-size: 14px;
+    }
+
+    .forgotpassword h2,
+    .passwordselect p {
+        font-size: 14px;
+    }
+
+    .passwordselectli {
+        font-size: 14px;
+        margin-bottom: 5px;
+        padding-left: 25px;
+    }
+
+    .checkmark {
+
+        top: 5px;
+
+        height: 15px;
+        width: 15px;
+
+    }
+
+    .wglcontainer {
+        width: 100%;
+        margin: auto;
+
+    }
+
+    .passwordselectli .checkmark:after {
+        left: 3px;
+        top: 1px;
+        width: 5px;
+        height: 8px;
+        border: solid white;
+        border-width: 0 3px 3px 0;
+        transform: rotate(45deg);
+    }
+
+    .forgotpasswordcontainer .passwordselect {
+        margin-bottom: 8px;
+    }
+
+    .MuiButton-containedPrimary.Loginbutton,
+    .MuiButton-containedPrimary.Loginbutton:hover,
+    .forgotpasswordcontainer .buttonCancel,
+    .closebutton {
+        height: 40px;
+        padding: 0px;
+        font-size: 14px;
+    }
+}

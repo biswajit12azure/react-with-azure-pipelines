@@ -1,0 +1,2584 @@
+@font-face {
+    font-family: 'Inter 18pt SemiBold';
+    src: url('../assets/fontfamily/Inter_18pt-SemiBold.ttf');
+}
+
+@font-face {
+    font-family: 'Inter 18pt Regular';
+    src: url('../assets/fontfamily/Inter_18pt-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'ITC Avant Garde Std XLt Cn';
+    src: url('../assets/fontfamily/ITCAvantGardeGothicStdExtraLightCondensed.otf');
+}
+
+.welcometext {
+    color: var(--WG-Blue-900, #0A3B70);
+    font-family: "ITC Avant Garde Gothic Std Md";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+    margin: 24px 0px;
+}
+
+.CardDetail {
+    /* width: 245px; */
+    height: 180px;
+    flex-shrink: 0;
+    border-radius: 16px;
+    border: 1px solid var(--WG-Blue-100, #DFEDFF);
+    background: var(--White, #FFF);
+    box-shadow: 0px 1px 1px 0px rgba(0, 89, 179, 0.25);
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+}
+
+.CardDetail .MuiPaper-root.MuiPaper-elevation {
+    box-shadow: none;
+    background-color: transparent;
+    width: 100%;
+}
+
+.CardDetail .css-1lt5qva-MuiCardContent-root .MuiTypography-gutterBottom {
+    color: var(--WG-Blue-700, #0059B3);
+    text-align: center;
+    font-family: "ITC Avant Garde Gothic Std Md";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+.CardDetail:nth-last-child(1) .MuiCardContent-root {
+    padding-bottom: 0px;
+    display: flex;
+    align-items: center;
+}
+
+.CardDetail .MuiCardContent-root:nth-last-child(1).cardcontent {
+    margin-right: 25px;
+}
+
+
+.nav-bar-container .container,
+.container {
+    max-width: 1200px;
+    margin: auto !important;
+    padding: 0px;
+}
+
+.navbar-nav .headseticon {
+    float: right;
+    color: #1F5FAC;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 19.49px;
+    text-align: left;
+}
+
+.navbar-expand .navbar-nav {
+    display: contents;
+}
+
+.dashbordpage .SelectaPortal {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 21.92px;
+    text-align: left;
+    margin: 3% 0px;
+
+}
+
+.CardDetailContainer {
+    padding: 40px 39px 40px 40px;
+    border-radius: 8px;
+    border: 1px solid var(--WG-Blue-100, #DFEDFF);
+    background: var(--WG-Blue-100, #DFEDFF);
+    box-shadow: 0px 1px 1px 0px rgba(0, 89, 179, 0.25);
+}
+
+.CardDetailContainer-right {
+    border-radius: 8px;
+    border: 1px solid var(--WG-Blue-100, #DFEDFF);
+    background: var(--WG-Blue-100, #DFEDFF);
+    box-shadow: 0px 1px 1px 0px rgba(0, 89, 179, 0.25);
+    position: relative;
+}
+
+.CardDetailContainer-right h4 {
+    font-family: 'Proxima Nova';
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 21.92px;
+    text-align: left;
+
+}
+
+.Announcements {
+    padding: 5px 25px;
+    width: 100%;
+}
+
+.Announcements label span:nth-child(2) {
+    color: #18181B;
+
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.49px;
+    text-align: left;
+}
+
+.Remembermychoice {
+    margin: 20px 0px;
+
+
+}
+
+.CardDetailContainer-right .Announcements-text {
+    text-align: center;
+
+    justify-content: center;
+    padding: 20px 16px 10px 16px;
+    gap: 10px;
+    color: var(--WG-Blue-900, #0A3B70);
+    font-family: "ITC Avant Garde Gothic Std Md";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+
+}
+
+.width-100 {
+    width: 100%;
+}
+
+
+.mar-10 {
+    margin-top: 15px;
+}
+
+.Announcementcontainer {
+    padding: 16px;
+    position: sticky;
+}
+
+.CardDetailContainer-right::before {
+    content: '';
+    background: url('../assets/images/WG_Logo-big.svg') no-repeat;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    width: 99px;
+    height: 95px;
+
+}
+
+.Announcementcontainer .Announcementsnew {
+    border-radius: 4px;
+    border: 1px solid var(--WG-Blue-100, #DFEDFF);
+    background: var(--White, #FFF);
+    padding: 10px;
+    box-shadow: 0px 1px 1px 0px rgba(0, 89, 179, 0.25);
+    margin-bottom: 20px;
+}
+
+.Announcementsnew .padding-left-15 {
+    padding-left: 15px;
+}
+
+.Announcementsnew h2 {
+    color: #103662;
+    text-align: center;
+    font-family: "ITC Avant Garde Gothic Std Md";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+.Announcementsnew span {
+    color: #103662;
+    text-align: center;
+    font-family: "Proxima Nova Rg";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+.Announcementsnew .title {
+    color: var(--Gray-700, #4D4C52);
+    font-family: "Proxima Nova Rg";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 5px;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    /* Limits text to 2 lines */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.Announcementsnew .content {
+    color: var(--Gray-500, #71717A);
+    font-family: "Proxima Nova Rg";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    white-space: break-spaces;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    /* Limits text to 2 lines */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.container.inputtags .dashbordpage {
+    margin-bottom: 30px;
+}
+
+.Announcementsnew .dateMonth {
+    padding: 0px;
+    display: grid;
+    text-align: center;
+}
+
+.navcontainer .navbarbackground {
+    background-color: transparent;
+    position: relative;
+    box-shadow: none;
+    padding-right: 0px !important;
+}
+
+.Announcementiconslist-flex {
+    display: flex;
+    justify-content: end;
+}
+
+.MuiIconButton-edgeStart svg path {
+    fill: var(--WG-Blue-700, #0059B3);
+}
+
+.menulist .Menuitemlist {
+    margin: 10px;
+}
+
+.menulist div {
+    margin: 0px;
+    padding: 0px;
+}
+
+.menulist div a,
+.menulist div button {
+    border-radius: 4px;
+    border: 1px solid var(--WG-Blue-100, #DFEDFF);
+    background: var(--White, #FFF);
+    color: var(--WG-Blue-700, #0059B3);
+    font-family: "ITC Avant Garde Gothic Std Md";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+    padding: 12px;
+    margin-right: 20px;
+    width: 183px;
+    height: 48px;
+    position: relative;
+    box-shadow: 0px 1px 1px 0px rgba(0, 89, 179, 0.25);
+}
+
+.menulist {
+    margin-top: 20px;
+}
+
+.menulist button svg {
+    position: absolute;
+    right: 10px;
+}
+
+.menuItemIcon {
+    color: #0059B3;
+    margin-right: 8px;
+}
+
+.admincontent {
+    flex-Grow: 1;
+    overflow: hidden;
+
+}
+
+.admincontentContainer {
+    padding: 0px;
+}
+
+.admincontent table thead tr {
+    border-radius: 8px 8px 0px 0px;
+    background: var(--WG-Blue-100, #DFEDFF);
+}
+
+.admincontent table tbody tr:hover td::after {
+    background-color: #fff;
+}
+
+.admincontent table tbody tr.Mui-selected td::after,
+.admincontent table tbody tr.Mui-selected {
+    background-color: #fff !important;
+}
+
+.admincontent table thead tr .Mui-TableHeadCell-Content-Wrapper {
+    color: var(--WG-Blue-900, #0A3B70);
+    font-family: "Proxima Nova Rg";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    font-variant: all-small-caps;
+    text-transform: uppercase;
+}
+
+.admincontent table tbody tr td {
+    border-bottom: 0px;
+    font-family: "Proxima Nova Rg";
+    color: var(--Gray-700, #4D4C52);
+    font-size: 16px;
+}
+
+.admincontent table {
+    border-radius: 8px;
+    border: 1px solid var(--WG-Blue-100, #DFEDFF);
+    background: var(--White, #FFF);
+    box-shadow: 0px 1px 1px 0px rgba(0, 89, 179, 0.25);
+    font-family: "Proxima Nova Rg";
+}
+
+.admincontentContainer .MuiPaper-root.MuiPaper-elevation,
+.admincontentContainer .MuiBox-root.css-10gei56 {
+    background: transparent;
+    box-shadow: none;
+}
+
+.inputtags .admincontent .admincontentContainer table tbody tr td input,
+.inputtags .admincontent .admincontentContainer table tbody tr td .ServiceProvider input {
+    border: 0px;
+    box-shadow: none;
+    font-family: "Proxima Nova Rg";
+}
+
+.inputtags .admincontent .admincontentContainer table tbody tr td .ServiceProvider {
+    height: 48px;
+}
+
+.inputtags .admincontent .admincontentContainer table tbody tr td .MuiOutlinedInput-root {
+    border-radius: 4px;
+    border: 1px solid var(--WG-Blue-100, #DFEDFF);
+    background: var(--White, #FFF);
+    box-shadow: 0px 0px 0px 0px rgba(0, 89, 179, 0.25);
+    font-family: "Proxima Nova Rg";
+    font-size: 16px;
+    color: var(--Gray-700, #4D4C52);
+}
+
+.Border .MuiOutlinedInput-notchedOutline {
+    border: 1px solid var(--WG-Blue-100, #DFEDFF);
+    border-color: #DFEDFF !important;
+}
+
+.admincontentContainer table tbody tr td:nth-child(3) span {
+    color: #4fa4ef;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.inputtags .admincontent .admincontentContainer .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-input {
+    border: 0px;
+}
+
+.tableicons button.edit svg path {
+    fill: #0A3B70;
+}
+
+.tableicons button.lock svg,
+.DocumentTypeID button:nth-child(1) svg,
+.tableicons button.edit svg {
+    font-size: 20px;
+}
+
+.tableicons button.lock svg path,
+.DocumentTypeID button:nth-child(1) svg path {
+    fill: #4fa4ef;
+
+}
+
+.tableicons button.delete svg path,
+.DocumentTypeID button:nth-child(2) svg path {
+    fill: #e36b6b;
+}
+
+.MuiTablePagination-root {
+    font-family: "Proxima Nova Rg";
+    color: var(--Gray-700, #4D4C52);
+    font-size: 16px;
+}
+
+.Supporticon .none-moblie {
+    color: #1F5FAC;
+    font-family: "Proxima Nova Rg";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-right: 10px;
+}
+
+.MuiCollapse-wrapper.MuiCollapse-vertical {
+    background: var(--WG-Blue-50, #F0F7FF);
+}
+
+.userInformation {
+    color: var(--WG-Blue-700, #0059B3);
+    font-family: "ITC Avant Garde Gothic Std";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+.userInformationcontainer {
+    border-radius: 4px;
+    border: 1px solid var(--WG-Blue-100, #DFEDFF);
+    background: var(--White, #FFF);
+    box-shadow: 0px 1px 1px 0px rgba(0, 89, 179, 0.25);
+    margin-bottom: 20px;
+}
+
+.containedLoginbutton {
+    display: flex;
+    justify-content: left;
+}
+
+.containedLoginbuttonleft,
+.containedLoginbutton.containedLoginbuttonlist {
+    display: flex;
+    justify-content: right;
+}
+
+.containedLoginbutton .Loginbutton,
+.containedLoginbutton .Loginbutton:hover {
+    border-radius: 30px;
+    background: #FB1212;
+    box-shadow: 0px 1px 1px 0px rgba(0, 89, 179, 0.25);
+    color: var(--White, #FFF);
+    text-align: center;
+    font-family: "ITC Avant Garde Gothic Std Md";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+    width: 160px;
+    height: 48px;
+}
+
+.containedLoginbuttonleft .Loginbutton,
+.containedLoginbuttonleft .Loginbutton:hover {
+    border-radius: 4px;
+    background: var(--WG-Blue-900, #0A3B70);
+    box-shadow: 0px 1px 1px 0px rgba(0, 89, 179, 0.25);
+    color: var(--WG-Blue-25, #F7FBFF);
+    text-align: center;
+    font-family: "ITC Avant Garde Gothic Std Md";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+    width: 160px;
+    height: 48px;
+}
+
+.admincontentContainer .Download,
+.admincontentContainer .Download:hover {
+    border-radius: 60px;
+    border: 1px solid var(--WG-Blue-100, #DFEDFF);
+    background: var(--WG-Blue-100, #DFEDFF);
+    box-shadow: 0px 1px 1px 0px rgba(0, 89, 179, 0.25);
+    overflow: hidden;
+    color: var(--WG-Blue-900, #0A3B70);
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-family: "Proxima Nova";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    padding: 16px 25px;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    height: 48px;
+}
+
+.Filter svg {
+    margin-right: 10px;
+}
+
+.admincontent .Filter {
+    border-radius: 60px;
+    border: 1px solid var(--WG-Blue-100, #DFEDFF);
+    background: var(--White, #FFF);
+    box-shadow: 0px 1px 1px 0px rgba(0, 89, 179, 0.25);
+    width: 155px;
+    padding: 16px;
+    height: 48px;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    overflow: hidden;
+    color: var(--WG-Blue-900, #0A3B70);
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-family: "Proxima Nova";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+
+}
+
+
+.userInformationcontainer h2 {
+    color: var(--WG-Blue-700, #0059B3);
+    font-family: "ITC Avant Garde Gothic Std Md";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+    /* margin-bottom: 16px; */
+}
+
+.userInformationcontainer span.textleft {
+    overflow: hidden;
+    color: var(--Gray-700, #4D4C52);
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-family: "Proxima Nova Rg";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    font-variant: all-small-caps;
+}
+
+.userInformationcontainer span.textright {
+    text-align: right;
+    width: 100%;
+    display: block;
+    font-weight: 400;
+    overflow: hidden;
+    color: var(--Gray-700, #4D4C52);
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-family: "Proxima Nova Rg";
+    font-size: 16px;
+    font-style: normal;
+    line-height: normal;
+    font-variant: all-small-caps;
+}
+
+.userInformationcontainer .UserName {
+    margin-bottom: 10px;
+}
+
+.Announcementcontainerlist .Announcementcontent {
+    color: var(--WG-Blue-900, #0A3B70);
+    font-family: "ITC Avant Garde Gothic Std Md";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+    margin: 50px 0px;
+}
+.CardDetailContainer-right .Announcementcontainer{
+    background: transparent;
+    border:0px;
+    box-shadow:none;
+}
+.Announcementcontainerlist .CardDetailContainer ,.Announcementcontainer {
+    border-radius: 8px;
+    border: 1px solid var(--WG-Blue-100, #DFEDFF);
+    background: #FFF;
+    padding: 16px;
+    box-shadow: 0px 1px 1px 0px rgba(0, 89, 179, 0.25);
+}
+
+.admincontent .userprofilelistcontent {
+    margin: 50px 0px;
+}
+
+.admincontent .userprofilelistcontent,
+.Filtercontainer h2 {
+    margin-top: 45px;
+    color: var(--WG-Blue-700, #0059B3);
+    font-family: "ITC Avant Garde Gothic Std Md";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+.userprofilelist h2 span {
+    color: var(--WG-Blue-900, #0A3B70);
+    font-family: "ITC Avant Garde Gothic Std Md";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+.Filtercontainerinner {
+    border-radius: 8px;
+    border: 1px solid var(--WG-Blue-100, #DFEDFF);
+    background: var(--White, #FFF);
+
+    box-shadow: 0px 2px 2px 0px rgba(0, 89, 179, 0.25);
+    z-index: 99;
+    margin-top: 10px !important;
+}
+
+.Filtercontainer .Filtercontainerinner {
+    padding: 15px;
+    border: 0px;
+    box-shadow: 0px 2px 2px 0px rgba(0, 89, 179, 0.25);
+}
+
+.Filtercontainer h2 {
+    margin: 20px 0px;
+}
+
+.admincontent .PortalName .MuiToolbar-root {
+    margin-left: 5%;
+}
+
+.admincontent .Filter:hover {
+    background: transparent;
+}
+
+.Configurationbutton {
+    display: flex;
+    justify-content: end;
+}
+
+.Announcementcontainerlist .Textarealist {
+    min-height: 248px !important;
+    border-radius: 4px;
+    border: 1px solid var(--WG-Blue-100, #DFEDFF);
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+
+
+/* .CardDetailContainer-right .Announcementsnew {
+    display: flex;
+} */
+
+.Announcementcontainerlist .CardDetailContainer .Uploadfiles {
+
+    background: transparent;
+    box-shadow: none;
+    padding-left: 0px;
+}
+
+.Announcementcontainerlist .CardDetailContainer .Uploadfiles .Browsechoose {
+    color: var(--Gray-500, #71717A);
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: "Proxima Nova Rg";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    /* 125% */
+    letter-spacing: 0.25px;
+    text-transform: capitalize;
+}
+
+.Announcementcontainerlist .CardDetailContainer .Uploadfiles svg {
+    fill: #0A3B70;
+}
+
+.Announcementcontainerlist {
+    padding: 0px;
+}
+
+.MuiCheckbox-colorPrimary svg {
+    fill: #0A3B70;
+}
+
+.Announcementiconslist {
+    display: flex;
+    align-items: center;
+}
+
+
+.Announcementiconslist svg {
+    fill: #0A3B70;
+    font-size: 18px;
+}
+
+.Announcementiconslist .PushPinOutlined {
+    fill: var(--WG-Blue-300, #7BC1FE);
+}
+
+.Announcementiconslist button {
+    padding: 5px;
+}
+
+.Announcementiconslist .Delete svg {
+    fill: #EF4444;
+}
+
+.faqtextarea {
+    display: flex;
+    padding: 16px 16px 28px 16px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    margin-top: 16px;
+    align-self: stretch;
+    border-radius: 4px;
+    border: 1px solid var(--WG-Blue-100, #DFEDFF);
+}
+
+.faqtextarea h2 {
+    color: var(--WG-Blue-700, #0059B3);
+    font-family: "ITC Avant Garde Gothic Std Md";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+    padding: 10px;
+    align-items: center;
+    margin-bottom: 16px;
+    width: 100%;
+}
+
+.faqtextarea h2 svg {
+    font-size: 18px;
+    vertical-align: baseline;
+    margin-left: 10px;
+}
+
+.FAQContainer-right .AccordionSummarycontainer .AccordionSummary {
+    border-radius: 4px;
+    border: 1px solid var(--WG-Blue-100, #DFEDFF);
+    background: var(--White, #FFF);
+    box-shadow: 0px 1px 1px 0px rgba(0, 89, 179, 0.25);
+}
+
+.admincontentContainer .FAQContainer-right .MuiPaper-root.MuiPaper-elevation {
+    border-radius: 4px;
+    border: 1px solid var(--WG-Blue-100, #DFEDFF);
+    background: var(--White, #FFF);
+    box-shadow: 0px 1px 1px 0px rgba(0, 89, 179, 0.25);
+    margin-bottom: 10px;
+}
+
+.admincontentContainer .FAQContainer-right .MuiPaper-root.MuiPaper-elevation span {
+    color: var(--WG-Blue-700, #0059B3);
+    font-family: "ITC Avant Garde Gothic Std Md";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+.MuiAccordionDetails-root {
+    background: var(--White, #FFF);
+}
+
+.admincontentContainer .cancelbutton {
+    border-radius: 4px;
+    background: var(--Gray-100, #F5F5F6);
+    box-shadow: 0px 1px 1px 0px rgba(132, 132, 140, 0.25);
+    display: flex;
+    width: 183px;
+    height: 48px;
+    padding: 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+    color: var(--Gray-400, #84848C);
+    text-align: center;
+    font-family: "ITC Avant Garde Gothic Std Md";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+    margin: 20px 0px;
+    float: left;
+
+}
+
+.admincontent .admincontentContainer .submitbutton {
+    float: right;
+    width: 183px;
+    height: 48px;
+    padding: 16px;
+    margin: 20px 0px;
+}
+
+/* button:hover{
+    box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+} */
+
+.admincontent .submitbutton:hover,
+.MuiButton-containedPrimary.Loginbutton:hover {
+    background: var(--WG-Blue-900, #0A3B70);
+}
+
+.admincontent .MapCenterAccecss .MapCenterAccecssheading h1 {
+    font-size: 16px;
+}
+
+.admincontentContainer .suportcontent .suportcontentcontainer,
+.suportcontentcontainer {
+    border-radius: 8px;
+    border: 1px solid var(--WG-Blue-100, #DFEDFF);
+    background: #FFF;
+    box-shadow: 0px 1px 1px 0px rgba(0, 89, 179, 0.25);
+    padding: 24px;
+    margin-bottom: 24px;
+}
+
+.SupportedFormats .uploadfilssupport {
+    border-radius: 4px;
+    border: 1px solid var(--WG-Blue-100, #DFEDFF);
+    background: var(--White, #FFF);
+    box-shadow: 0px 1px 1px 0px rgba(0, 89, 179, 0.25);
+    color: #0059B3;
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: "Proxima Nova Rg";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    word-break: break-word;
+    letter-spacing: 0.15px;
+    padding: 16px;
+
+}
+
+.MuiBox-root.css-1tbggly {
+    z-index: 0;
+}
+
+.MuiAccordion-region p {
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: "Proxima Nova Rg";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    /* 150% */
+    letter-spacing: 0.15px;
+    padding: 16px 0px;
+    color: #4D4C52;
+}
+
+.MuiAccordion-region h5 {
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: "Proxima Nova Rg";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 24px;
+    /* 150% */
+    letter-spacing: 0.15px;
+    color: #4D4C52;
+}
+
+.admincontentContainer .portalconfiguration {
+    overflow: hidden;
+    color: var(--WG-Blue-700, #0059B3);
+    text-overflow: ellipsis;
+    font-family: "ITC Avant Garde Gothic Std Md";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+    margin: 10px 0px;
+}
+
+.popup-button {
+    display: flex;
+}
+
+.popup-button .Savebutton,
+.Savebutton {
+    color: var(--Gray-400, #fff);
+    border-radius: 4px;
+    background: var(--WG-Blue-900, #0A3B70);
+    box-shadow: 0px 1px 1px 0px rgba(0, 89, 179, 0.25);
+    margin-left: 10px;
+}
+
+.Filtercontainerinner .Registrationcontainer .Searchbutton {
+    color: var(--Gray-400, #fff);
+    border-radius: 4px;
+    background: var(--WG-Blue-900, #0A3B70);
+    box-shadow: 0px 1px 1px 0px rgba(0, 89, 179, 0.25);
+    text-align: center;
+    font-family: "ITC Avant Garde Gothic Std Md";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+    border-radius: 4px;
+    padding: 16px 25px;
+    justify-content: end;
+    margin: 20px 0px;
+}
+
+.popup-button .Savebutton,
+.popup-button .cancelButton,
+.Savebutton,
+.login-container .cancelButton {
+    border-radius: 4px;
+    width: 48%;
+    box-shadow: 0px 1px 1px 0px rgba(132, 132, 140, 0.25);
+    text-align: center;
+    font-family: "ITC Avant Garde Gothic Std Md";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+    padding: 16px;
+}
+
+.login-container .cancelButton {
+    width: 100%;
+    border-radius: 4px;
+    box-shadow: 0px 1px 1px 0px rgba(0, 89, 179, 0.25);
+    padding: 14px;
+    border-radius: 4px;
+    background: var(--WG-Blue-700, #0059B3);
+    box-shadow: 0px 1px 1px 0px rgba(0, 89, 179, 0.25);
+}
+
+.popup-button .cancelButton {
+    color: var(--Gray-400, #84848C);
+    margin-right: 10px;
+    background: var(--Gray-100, #F5F5F6);
+}
+
+.supplierDetailes .Deltebuttonlist {
+    border-radius: 4px;
+    background: #FB1212;
+    box-shadow: 0px 1px 1px 0px rgba(0, 89, 179, 0.25);
+    display: flex;
+    width: 183px;
+    height: 48px;
+    padding: 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: var(--White, #FFF);
+    text-align: center;
+    font-family: "ITC Avant Garde Gothic Std Md";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+    flex-shrink: 0;
+}
+
+.UploadContainer {
+    display: flex;
+}
+
+.login-container .Orcontent {
+    color: #000;
+    text-align: center;
+    font-family: "ITC Avant Garde Gothic Std Md";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: uppercase;
+    margin: 5px 0px;
+}
+
+.Configurationbutton {
+    margin: 10px 0px;
+}
+
+.Configurationbutton.mar-0 {
+    margin: 0px;
+}
+
+.MuiPaper-root.MuiPaper-elevation .MuiButtonBase-root a {
+    border: 1px solid var(--WG-Blue-100, #DFEDFF);
+    background: var(--White, #FFF);
+    color: var(--WG-Blue-700, #0059B3);
+    font-family: "ITC Avant Garde Gothic Std Md";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+    padding: 12px;
+    width: 100%;
+    box-shadow: 0px 1px 1px 0px rgba(0, 89, 179, 0.25);
+
+}
+
+.MuiPaper-root.MuiPaper-elevation li.MuiButtonBase-root {
+    background: transparent;
+}
+
+.menulist div a:hover,
+.menulist div button:hover,
+.MuiPaper-root.MuiPaper-elevation .MuiButtonBase-root a:hover {
+    background: #DFEDFF;
+}
+
+.Filtercontainer {
+    width: 400px;
+    padding: 0px 20px;
+}
+
+.UploadContainer a svg:nth-last-child(1) path {
+    fill: #e36b6b;
+
+}
+
+.UploadContainer a svg:nth-last-child(1) {
+    margin-left: 10px;
+}
+
+.userprofilebutton .delete {
+    border-radius: 4px;
+    background: #FB1212;
+    box-shadow: 0px 1px 1px 0px rgba(0, 89, 179, 0.25);
+    color: var(--White, #FFF);
+    text-align: center;
+    font-family: "ITC Avant Garde Gothic Std Md";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+    width: 183px;
+    padding: 14px;
+    float: right;
+    margin: 20px 20px 0px 0px;
+}
+
+.admincontent .userprofilebutton .submitbutton,
+.userprofilebutton .cancelbutton {
+    width: 183px;
+}
+
+.userprofilebutton .submitbutton.ResetPassword {
+    width: 216px;
+    padding: 0px;
+    float: left;
+    margin-left: 20px;
+}
+
+.faqtextarea .MuiInputBase-root.MuiInput-root {
+    background: var(--WG-Blue-25, #F7FBFF);
+    height: 48px;
+    padding: 10px;
+    width: 100%;
+}
+
+.faqtextarea .MuiInputBase-root.MuiInput-root::before,
+.faqtextarea .css-5h82ro-MuiInputBase-root-MuiInput-root:hover:not(.Mui-disabled, .Mui-error):before {
+    border: 0px;
+    border-bottom: 0px;
+}
+
+.faqtextarea .MuiFormControl-root.css-1iw3t7y-MuiFormControl-root {
+    width: 100%;
+}
+
+.faqtextarea .MuiInputBase-root.MuiInput-root input {
+    box-shadow: none;
+}
+
+.faqtextarea .MuiInputBase-root.MuiInput-root .MuiInputAdornment-root.MuiInputAdornment-positionStart p {
+    color: var(--WG-Blue-700, #0059B3);
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: "ITC Avant Garde Gothic Std Md";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    /* 150% */
+    letter-spacing: 0.15px;
+}
+
+.faqtextarea textarea {
+    background: var(--WG-Blue-25, #F7FBFF);
+    display: flex;
+    Min-height: 120px;
+    align-items: center;
+    gap: 12px;
+    align-self: stretch;
+    border: 0px;
+}
+
+.styles_calendar-container__3nN6q {
+    width: auto !important;
+}
+
+.SelectedDate .MuiBox-root {
+    width: 100%;
+}
+
+.styles_calendar-inner-1__FZOnv,
+.styles_calendar-header-item__qxrU-,
+.styles_item__2Aavf,
+.admincontentContainer .marginbottom .DocumentDescription {
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: "Proxima Nova Rg";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.15px;
+    padding: 16px 0px;
+    color: #4D4C52;
+}
+
+.ComposeAnnouncement textarea {
+    min-height: 170px;
+}
+
+.clear-both {
+    clear: both;
+}
+
+.admincontentContainer .uploadeddocuments {
+    margin-top: 40px;
+}
+
+.admincontentContainer .marginbottom {
+    margin-bottom: 20px;
+}
+
+.admincontentContainer .dateMonthlist {
+    display: flex;
+    padding: 0px;
+}
+
+.Announcementsdetails .containedLoginbutton .Loginbutton {
+    margin: 20px;
+}
+
+.Announcementcontainerlist .Registrationcontainer .MuiFormControl-fullWidth {
+    margin: 0px 0px 16px;
+    background-color: #fff;
+}
+
+.Announcementcontainerlist .AccordionSummaryheading {
+    color: var(--Gray-700, #4D4C52);
+    font-family: 'Inter 18pt SemiBold';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.Announcementcontainerlist .AccordionDetailslistcontent {
+    color: var(--Gray-500, #71717A);
+    font-family: 'Inter 18pt Regular';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding: 0px;
+}
+
+.SearchIconinput {
+    border-radius: 8px;
+    border: 1px solid var(--WG-Blue-100, #DFEDFF);
+    background: var(--White, #FFF);
+    box-shadow: 0px 1px 1px 0px rgba(0, 89, 179, 0.25);
+}
+
+svg.SearchIcon path,
+.AccordionSummaryheadingcontent span svg path,
+.userInformationcontainer span svg path {
+    fill: #0A3B70;
+}
+
+svg.SearchIcon {
+    cursor: pointer;
+}
+
+.inputtags .SearchIconinput .MuiOutlinedInput-root .MuiOutlinedInput-input {
+    border: 0px;
+    box-shadow: none;
+}
+
+.p-0 {
+    padding: 0px;
+}
+
+.userInformationcontainer .AccordionDetailsuploadfile {
+    padding: 8px 0px;
+}
+
+.suportcontentcontainer .AccordionSummaryheadingcontent.css-1808mag-MuiPaper-root-MuiAccordion-root::before {
+    background-color: transparent;
+}
+
+.suportcontentcontainer .AccordionSummaryheadingcontent button {
+    padding: 0px;
+    min-height: 40px;
+}
+
+.suportcontentcontainer .AccordionSummaryheadingcontent button .css-yfrx4k-MuiAccordionSummary-content.Mui-expanded {
+    margin: 10px 0px;
+}
+
+.supporticonlist .MuiMenu-paper {
+    top: auto !important;
+    bottom: 80px;
+    background: transparent;
+}
+
+.support-list .MuiMenu-paper {
+    background: transparent;
+}
+
+.css-1dfcyzw-MuiPaper-root-MuiPopover-paper {
+    display: none;
+}
+
+.supporticonimg {
+    width: 30px;
+}
+
+.supporticonlist h3 {
+    color: var(--WG-Blue-700, #0059B3);
+    font-family: "ITC Avant Garde Gothic Std Md";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+    margin: 20px 0px;
+}
+
+.supportcontainer {
+    padding: 15px;
+}
+
+.supportcontainer li {
+    padding: 10px 0px;
+}
+
+.supportcontainer .EmailAddress {
+    color: var(--Gray-700, #4D4C52);
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: "ITC Avant Garde Gothic Std Md";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.25px;
+    text-transform: uppercase;
+}
+
+.DocumentDescription,
+.DocumentDescription span {
+    color: var(--Gray-700, #4D4C52);
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: "Proxima Nova Rg";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    /* 150% */
+    letter-spacing: 0.15px;
+
+}
+
+.supportcontainer .DocumentDescription {
+    border-radius: 4px;
+    border: 1px solid var(--WG-Blue-100, #DFEDFF);
+    background: var(--White, #FFF);
+    padding: 8px 12px 8px 16px;
+    width: 100%;
+    display: block;
+}
+
+.css-x6cj71-MuiPaper-root-MuiPopover-paper-MuiMenu-paper::before {
+    display: none !important;
+}
+
+.Announcementcontainer {
+    max-height: 370px;
+    overflow-y: scroll;
+}
+
+.Announcementcontainer::-webkit-scrollbar,
+.MuiTableContainer-root::-webkit-scrollbar {
+    width: 8px;
+}
+
+.MuiTableContainer-root::-webkit-scrollbar {
+    width: 5px;
+    height: 8px;
+}
+
+.Announcementcontainer::-webkit-scrollbar-track,
+.MuiTableContainer-root::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.Announcementcontainer::-webkit-scrollbar-thumb,
+.MuiTableContainer-root::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+.Announcementcontainer::-webkit-scrollbar-thumb:hover,
+.MuiTableContainer-root::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.ResetPasswordbutton .ResetPassword,
+.ResetPasswordbutton .ResetPassword:hover {
+    border-radius: 4px;
+    border: 1px solid var(--WG-Blue-700, #0059B3);
+    background: var(--White, #FFF);
+    box-shadow: 0px 1px 1px 0px rgba(0, 89, 179, 0.25);
+    color: var(--WG-Blue-700, #0059B3);
+    text-align: center;
+    font-family: "ITC Avant Garde Gothic Std Md";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+    height: 48px;
+    padding: 8px 15px
+}
+
+.containedLoginbuttonleft .Rejectbutton,
+.containedLoginbuttonleft .Rejectbutton:hover {
+    border-radius: 4px;
+    background: var(--Red-500, #EF4444);
+    box-shadow: 0px 1px 1px 0px rgba(132, 132, 140, 0.25);
+    height: 48px;
+    padding: 16px 20px;
+    color: var(--White, #FFF);
+    text-align: center;
+    font-family: "ITC Avant Garde Gothic Std Md";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+    width: 160px;
+    margin-right: 15px;
+}
+
+.DownloadContainer .DocumentTypeID {
+    display: flex;
+}
+
+.DownloadContainer .DocumentTypeID .DocumentDescription {
+    border: 0px;
+    padding: 0px;
+    font-family: "Proxima Nova Rg";
+    color: var(--Gray-700, #4D4C52);
+    font-size: 16px;
+}
+
+.admincontent .MuiTablePagination-root,
+.admincontent .MuiBox-root.css-10gei56 {
+    z-index: 0;
+}
+
+.SelectedDate .MuiInputAdornment-positionEnd .MuiIconButton-root .MuiSvgIcon-fontSizeMedium {
+    display: none;
+}
+
+.SelectedDate .MuiInputAdornment-positionEnd .MuiIconButton-root {
+    background: url(../assets/images/calendar.svg);
+    width: 20px;
+    height: 20px;
+    background-size: 100%;
+}
+
+.SelectedDate .MuiInputAdornment-positionEnd {
+    margin-left: 0px;
+    margin-right: 5px;
+}
+
+.admincontentContainer .buttonwidth100 button {
+    width: 100%;
+}
+
+.marketerFiltercontainer .SelectedDate .MuiInputBase-colorPrimary .MuiInputAdornment-positionEnd.css-elo8k2-MuiInputAdornment-root {
+    margin-right: 10px;
+}
+
+.marketerFiltercontainer.Registrationcontainer .Loginbutton {
+    margin-top: 0%;
+}
+
+.Registrationcontainer.marketerFiltercontainer .CreateMarketer,
+.Registrationcontainer.marketerFiltercontainer .CreateMarketerbutton {
+    display: block;
+}
+
+.CreateMarketer label {
+    width: 50%;
+    margin-right: 0px;
+    float: left;
+}
+
+.clear-both {
+    clear: both;
+}
+
+.Filtercontainerinner .CreateMarketerbutton .submitbutton ,.BalancingModel .CreateMarketerbutton .submitbutton {
+    float: right;
+    border-radius: 4px;
+    background: var(--WG-Blue-900, #0A3B70);
+    box-shadow: 0px 1px 1px 0px rgba(0, 89, 179, 0.25);
+    color: var(--White, #FFF);
+    text-align: center;
+    font-family: "ITC Avant Garde Gothic Std Md";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    padding: 10px 16px;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+.Filtercontainerinner .CreateMarketerbutton .cancelbutton  ,.BalancingModel .CreateMarketerbutton .cancelbutton{
+    border-radius: 4px;
+    background: var(--Gray-100, #F5F5F6);
+    box-shadow: 0px 1px 1px 0px rgba(132, 132, 140, 0.25);
+    color: var(--Gray-400, #84848C);
+    text-align: center;
+    font-family: "ITC Avant Garde Gothic Std Md";
+    font-size: 16px;
+    padding: 10px 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+.Filtercontainerinner .MuiFormControl-fullWidth .MuiOutlinedInput-root {
+    border-radius: 4px;
+    /* border: 1px solid var(--WG-Blue-100, #DFEDFF); */
+    background: var(--White, #FFF);
+    color: var(--Gray-500, #71717A);
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: "Proxima Nova Rg";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    /* 150% */
+    letter-spacing: 0.15px;
+}
+
+.admincontent .MarketerManagement button {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.marketrtableContainer .marketrtableContainertable {
+    padding: 0px 20px;
+    border: 0px;
+    background-color: transparent;
+}
+
+.marketrtableContainer .marketrtableContainertable .marketrtableContainertableinner {
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid var(--WG-Blue-100, #DFEDFF);
+    background: var(--White, #FFF);
+    box-shadow: 0px 1px 1px 0px rgba(0, 89, 179, 0.25);
+}
+
+.userInformationcontainer .FormGrouplist {
+    display: block;
+}
+
+.userInformationcontainer .FormGrouplist label span {
+    color: var(--Gray-500, #71717A);
+    font-family: "Proxima Nova Rg";
+    font-size: 16px;
+}
+
+.PipeLineDelivery .PipeLineDeliveryleft,
+.PipeLineDelivery .PipeLineDeliveryright {
+    border-radius: 16px;
+    border: 1px solid var(--WG-Blue-100, #DFEDFF);
+    background: var(--White, #FFF);
+    box-shadow: 0px 1px 1px 0px rgba(0, 89, 179, 0.25);
+    padding: 15px;
+}
+
+.PipeLineDelivery .systemload {
+    color: var(--WG-Blue-700, #0059B3);
+    text-align: center;
+    font-family: "ITC Avant Garde Gothic Std Md";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 10px 0px;
+}
+
+.PipeLineDelivery .systemload span {
+    color: var(--WG-Blue-700, #0059B3);
+    font-family: "ITC Avant Garde Std XLt Cn";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+
+}
+
+.PipeLineDelivery .PipeLineDeliverycount {
+    color: var(--WG-Blue-900, #0A3B70);
+    text-align: center;
+    font-family: "ITC Avant Garde Gothic Std Md";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+    padding: 20px 0px;
+
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.PipeLineDelivery .PipeLineDeliverycount span {
+    overflow: hidden;
+    color: var(--Gray-700, #4D4C52);
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-family: "Proxima Nova Rg";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: capitalize;
+    margin: 10px 10px 0px 0px;
+}
+
+.PipeLineDelivery .EditIcon {
+    border-radius: 40px;
+    border: 1px solid var(--WG-Blue-100, #DFEDFF);
+    box-shadow: 0px 1px 1px 0px rgba(0, 89, 179, 0.25);
+    display: flex;
+    width: 40px;
+    height: 40px;
+    padding: 8px 0px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+    margin: auto;
+}
+
+.EditIcon svg {
+    color: var(--WG-Blue-900, #0A3B70);
+    font-size: 16px;
+}
+
+.PipeLineDelivery {
+    margin-bottom: 20px;
+}
+
+.PipeLineDelivery .assigned {
+    overflow: hidden;
+    color: var(--Gray-700, #4D4C52);
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-family: "Proxima Nova Rg";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    font-variant: all-small-caps;
+}
+
+.PipeLineDelivery .PipeLinecountmin span {
+    overflow: hidden;
+    color: var(--Gray-700, #4D4C52);
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-family: "Proxima Nova Rg";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    font-variant: all-small-caps;
+}
+
+.PipeLineDelivery .PipeLinecountmin {
+    color: var(--WG-Blue-900, #0A3B70);
+    text-align: center;
+    font-family: "ITC Avant Garde Gothic Std Md";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+    padding: 10px 0px;
+}
+
+.PipeLineDeliveryGrid .PipeLineDeliverywdith {
+    width: 18.88%;
+    margin: 0px 10px;
+
+}
+
+.userprofilelist .PipeLineDeliveryGrid {
+    display: flex;
+    margin: 0px -10px;
+}
+
+.CardDetailContainer .menuItemIcon svg {
+    display: none
+}
+
+.CardDetailContainer .menuItemIcon {
+    background: url('../assets/images/dashiconsadmintools.svg');
+    background-size: 100%;
+    width: 60px;
+    height: 50px;
+    margin: 0px;
+    background-repeat: no-repeat;
+}
+
+.CreateMarketerhight {
+    height: 600px;
+}
+
+.MuiMenu-list {
+    min-width: 183px;
+    max-width: 300px;
+}
+
+.Deactivate svg {
+    color: #fff;
+    font-size: 30px;
+}
+
+.marketrtableContainer {
+    margin-top: 20px !important;
+}
+
+.admincontent .EditPipeLineMatrix {
+    float: right;
+    margin-top: 30px;
+}
+
+.EditPipeLineMatrixcontainer .Deactivate button.materialsymbolsclose {
+    border-radius: 40px;
+    border: 1px solid var(--WG-Blue-100, #DFEDFF);
+    background: var(--WG-Blue-100, #DFEDFF);
+}
+
+.EditPipeLineMatrixcontainer .Deactivate button.Filter {
+    padding: 10px;
+    float: right;
+}
+
+.admincontentContainer .DeleteSelected button{
+    background: var(--Red-500, #EF4444);
+}
+.admincontentContainer .Deactivate button,
+.EditPipeLineMatrixcontainer .Deactivate button {
+    background: #0059B3;
+    border-radius: 40px;
+    padding: 8px;
+    min-width: auto;
+}
+
+.EditPipeLineMatrixcontainer .Deactivate button {
+    margin: 15px 0px 0px 10px;
+    float: right;
+}
+
+.admincontentContainer .DeleteSelected button {
+    padding: 11px;
+}
+
+.admincontentContainer .DeleteSelected button.Mui-disabled,
+.admincontentContainer .Deactivate button.Mui-disabled {
+    background-color: #ddd;
+}
+
+.EditPipeLineMatrixcontainer .Deactivate button span {
+    display: none;
+}
+
+.MuiTablePagination-root svg {
+    color: #0059B3;
+}
+
+.MuiTablePagination-root .MuiFormLabel-root {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    color: var(--Gray-700, #4D4C52);
+    font-family: "Proxima Nova Rg";
+
+}
+
+.MuiPagination-root ul li button:hover svg {
+    color: #fff;
+}
+
+.MuiPagination-root ul li button.Mui-selected,
+.MuiPagination-root ul li button:hover {
+    background-color: #0059B3;
+    color: #fff;
+}
+
+#simple-popper .marketrtableContainer {
+    width: 1200px;
+}
+
+.EditPipeLineMatrixcontainer thead th:nth-child(1) {
+    color: var(--WG-Blue-900, #0A3B70);
+    font-family: "ITC Avant Garde Gothic Std";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+.EditPipeLineMatrixcontainer thead th {
+    color: var(--WG-Blue-700, #0059B3);
+    text-align: center;
+    font-family: "ITC Avant Garde Gothic Std";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+.EditPipeLineMatrixcontainer thead tr td,
+.EditPipeLineMatrixcontainer tbody tr td,
+.EditPipeLineMatrixcontainer thead th {
+    border-bottom: 0px;
+}
+
+.marketrtableContainertable .MuiBox-root {
+    box-shadow: none;
+}
+
+.EditPipeLineMatrixcontainer .marketrtableContainertable table tbody tr td .MuiFormControl-root .MuiOutlinedInput-notchedOutline {
+    border-radius: 2px;
+    border: 1px solid var(--WG-Blue-100, #DFEDFF);
+}
+
+.EditPipeLineMatrixcontainer .marketrtableContainertable table tbody tr:hover td::after {
+    background-color: #fff;
+}
+
+.EditPipeLineMatrixcontainer .marketrtableContainertable .MuiPaper-root.MuiPaper-elevation {
+    box-shadow: none;
+}
+
+.EditPipeLineMatrixcontainer .marketrtableContainertable .userprofilelist {
+    padding: 0px 20px;
+}
+
+
+
+.userprofilelist .PipeLineDeliverynone {
+    display: none;
+}
+
+.custom-span {
+    border-radius: 4px;
+    border: 1px solid var(--WG-Blue-100, #DFEDFF);
+    width: 100%;
+    padding: 10px;
+    display: block;
+    color: var(--WG-Blue-700, #0059B3);
+    font-family: "Proxima Nova Rg";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: uppercase;
+}
+.EditPipeLineMatrixcontainer .marketrtableContainertable table tbody tr td:nth-child(1) .MuiFormControl-root input{
+    color: var(--WG-Blue-700, #0059B3); 
+    font-weight: 600;
+    text-align: left;
+}
+.EditPipeLineMatrixcontainer .marketrtableContainertable table tbody tr td .MuiFormControl-root input {
+    color: var(--Gray-500, #71717A);
+    text-align: center;
+    font-family: "ITC Avant Garde Gothic Std Md";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+.PipeLineDelivery .margin-20 {
+    margin: 20px auto;
+    text-align: center;
+    display: block;
+}
+
+.positionabsolute {
+    position: absolute;
+
+}
+
+.positionrelative {
+    position: relative;
+}
+
+.positionabsolute svg {
+    border-radius: 32px;
+    border: 0.8px solid var(--WG-Blue-100, #DFEDFF);
+    display: flex;
+    width: 32px;
+    height: 32px;
+    padding: 6.4px 0px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    position: absolute;
+    right: 20px;
+}
+
+.PipeLineDeliverycount svg {
+    border-radius: 32px;
+    border: 0.8px solid var(--WG-Blue-100, #DFEDFF);
+    display: flex;
+    width: 32px;
+    height: 32px;
+    padding: 6.4px 0px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.marketerGroup .Registrationcontainer .MuiFormControl-fullWidth .MuiFormControl-fullWidth {
+    margin: 0px;
+}
+
+.marketerGroup .SelectedDate {
+    width: 100%;
+    margin-bottom: 16px;
+}
+.MarketerManagement{
+    justify-content: end;
+}
+.gasflowcontainer{
+    background: var(--WG-Blue-50, #F0F7FF);
+    padding: 12px;
+}
+.gasflowpadding{
+    padding: 25px;
+}
+.gasflowcontainer .subtitle{
+    color: var(--WG-Blue-900, #0A3B70);
+font-family: "ITC Avant Garde Gothic Std Md";
+font-size: 14px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+text-transform: uppercase;
+}
+.gasflowcontainer .gasflowdescription{
+    color: #000;
+font-family: "Proxima Nova Rg";
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+.marketrtableContainertable .MuiPaper-root.MuiPaper-elevation div:nth-child(3){
+    display: none;
+}
+@media (min-width: 0px) {
+
+    .navcontainer .css-1q89n6x-MuiTypography-root,
+    .navcontainer .css-130f8nx {
+        display: block;
+    }
+
+}
+
+@media (min-width: 1280px) {
+    .admincontent .MuiContainer-maxWidthLg {
+        max-width: 100%;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .container {
+        max-width: 100%;
+        padding: 0px 20px;
+    }
+
+    #simple-popper.marketrtableContainer {
+        width: 100%;
+    }
+}
+
+@media (min-width: 600px) {
+    .MuiContainer-root.admincontentContainer {
+        padding: 0px;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+}
+
+@media only screen and (max-width: 1200px) {
+
+    .nav-bar-container .container,
+    .container {
+        max-width: 100%;
+        padding: 0px 15px;
+    }
+
+    .positionabsolute svg {
+
+        right: 0px;
+        top: -4px;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .CardDetailContainer {
+        padding: 15px;
+    }
+
+    .menulist button svg {
+        right: 0px;
+    }
+
+    .MuiContainer-root.admincontentContainer {
+        padding: 0px;
+    }
+
+    .welcometext {
+        font-size: 20px;
+    }
+
+    .menulist div {
+        margin: 0px;
+        background: #DFEDFF;
+        padding: 15px;
+    }
+
+    .menulist div a.active,
+    .menulist div button.active {
+        background: #fff;
+    }
+
+    .menulist div a,
+    .menulist div button {
+        background: #DFEDFF;
+        font-size: 12px;
+        margin-right: 0px;
+        box-shadow: none;
+        padding: 10px 20px;
+        margin-right: 10px;
+    }
+
+    .menuItemIcon {
+        margin-right: 0px;
+    }
+
+    .CardDetailContainer .menuItemIcon {
+
+        width: 35px;
+        height: 35px;
+        display: inline-block;
+    }
+
+    .Registrationcontainer.marketerFiltercontainer .MuiFormControl-fullWidth {
+        margin: 0px 0px 20px;
+    }
+
+    .admincontent .admincontentContainer .MarketerManagement button {
+        margin-top: 20px;
+    }
+
+    .marketrtableContainer .marketrtableContainertable {
+        width: 768px;
+        overflow: scroll;
+    }
+}
+
+@media only screen and (max-width: 960px) {
+
+    .userprofilebutton .submitbutton.ResetPassword,
+    .admincontentContainer .userprofilebutton .submitbutton.save {
+        float: right;
+        font-size: 14px;
+        margin: 0px;
+    }
+
+
+
+    .userprofilebutton .delete,
+    .admincontentContainer .userprofilebutton .cancelbutton {
+        float: left;
+        font-size: 14px;
+        margin: 0px;
+    }
+
+    .userprofilebutton .delete {
+        margin-bottom: 20px;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .PipeLineDeliveryGrid .PipeLineDeliverywdith {
+        width: 100%;
+        margin: 0px 10px 20px;
+    }
+
+    .positionabsolute {
+        position: relative;
+    }
+
+    .PipeLineDelivery .PipeLineDeliverycount span {
+        margin: 0px 10x 0px 0px;
+    }
+
+    .EditPipeLineMatrixcontainer thead th,
+    .custom-span,
+    .EditPipeLineMatrixcontainer thead th:nth-child(1),
+    .EditPipeLineMatrixcontainer .marketrtableContainertable table tbody tr td .MuiFormControl-root input {
+        font-size: 14px;
+    }
+
+    .none-tab {
+        display: none;
+    }
+
+    .admincontent .EditPipeLineMatrix {
+        float: right;
+        margin-top: 12px;
+    }
+
+    .userprofilelist .PipeLineDeliveryGrid {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0px;
+    }
+
+    .PipeLineDelivery .assigned {
+        display: none;
+    }
+
+    .PipeLineDelivery .assigned.nomination {
+        display: block;
+    }
+
+    .PipeLineDeliverynone .Drymar-15 {
+        float: right;
+        margin-right: 30px;
+        margin-bottom: 15px;
+    }
+
+    .admincontent .Filter,
+    .containedLoginbutton .Loginbutton {
+        height: 40px;
+        padding: 0px 15px;
+        font-size: 14px;
+        width: 140px;
+    }
+
+    .PipeLineDelivery .systemload,
+    .PipeLineDelivery .systemload span,
+    .PipeLineDelivery .systemload span,
+    .PipeLineDelivery .assigned,
+    .PipeLineDelivery .PipeLinecountmin {
+        font-size: 14px;
+    }
+
+    .PipeLineDelivery .PipeLineDeliverycount {
+        font-size: 18px;
+    }
+
+    .admincontent .admincontentContainer .MarketerManagement button {
+        margin: 20px 0px;
+    }
+
+    .menulist {
+        overflow: scroll;
+    }
+
+    .menulist div {
+        display: inline-flex;
+        min-width: 800px;
+    }
+
+    .admincontent table tbody tr td,
+    .admincontent table tbody tr td span,
+    .admincontentContainer table tbody tr td:nth-child(3) span,
+    .admincontent table thead tr .Mui-TableHeadCell-Content-Wrapper,
+    .Filtercontainerinner .CreateMarketerbutton .cancelbutton,.BalancingModel .CreateMarketerbutton .cancelbutton,
+    .Filtercontainerinner .CreateMarketerbutton .submitbutton ,.BalancingModel .CreateMarketerbutton .submitbutton,
+    .userprofilelist h2 span {
+        font-size: 14px;
+    }
+
+    .mar-bottom-0-900 {
+        margin-bottom: 0px;
+    }
+
+    .CardDetail .MuiCardContent-root:last-child {
+        padding-bottom: 0px;
+        display: block;
+        align-items: center;
+    }
+
+    .CardDetail .MuiCardContent-root:last-child .cardcontent {
+        margin-right: 0px;
+    }
+
+    .Announcementsnew .padding-left-15 {
+        padding-left: 10px;
+    }
+
+    .Announcementcontainerlist .Announcementcontent {
+        margin: 25px 0px;
+        font-size: 14px;
+    }
+
+    .admincontent .userprofilelistcontent {
+        margin: 35px 0px 10px;
+        font-size: 14px;
+    }
+
+
+    .admincontentContainer .Download,
+    .admincontentContainer .Download:hover {
+        height: 40px;
+        padding: 0px 15px;
+        font-size: 14px;
+    }
+
+    .admincontentContainer .cancelbutton,
+    .admincontent .admincontentContainer .submitbutton {
+        font-size: 14px;
+    }
+
+    .PipeLineDelivery .PipeLineDeliveryright {
+        border-radius: 0px;
+        border: 0px solid var(--WG-Blue-100, #DFEDFF);
+        background: transparent;
+        box-shadow: 0px 0px 0px 0px rgba(0, 89, 179, 0.25);
+        padding: 0px;
+    }
+
+    .PipeLineDelivery .PipeLineDeliveryright .MuiGrid2-grid-sm-12 {
+        border-radius: 16px;
+        border: 1px solid var(--WG-Blue-100, #DFEDFF);
+        background: var(--White, #FFF);
+        box-shadow: 0px 1px 1px 0px rgba(0, 89, 179, 0.25);
+        padding: 15px;
+        margin-bottom: 15px;
+    }
+
+    .PipeLineDelivery .MuiGrid2-root .PipeLineDeliveryright:nth-child(3) .MuiGrid2-grid-sm-12 {
+        margin-bottom: 0px;
+    }
+
+    .admincontentContainer .DeleteSelected button,
+    .admincontentContainer .DeleteSelected button,
+    .admincontentContainer .Deactivate button,
+    .EditPipeLineMatrixcontainer .Deactivate button {
+        padding: 8px;
+    }
+
+    .admincontentContainer .DeleteSelected button img {
+        width: 18px;
+    }
+
+    .Deactivate svg {
+        color: #fff;
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .CardDetail {
+        max-width: 100%;
+        height: 120px;
+    }
+
+    .PipeLineDeliveryGrid .PipeLineDeliverywdith {
+        width: 100%;
+        margin: 0px 0px 20px;
+    }
+
+
+
+
+    .CardDetail .css-1lt5qva-MuiCardContent-root .MuiTypography-gutterBottom,
+    .navbar-nav .headseticon {
+        font-size: 12px;
+    }
+
+    .headseticon img {
+        margin-right: 4px;
+    }
+
+    .menulist div a,
+    .menulist div button {
+
+        font-size: 12px;
+
+    }
+
+    .menuItemIcon svg {
+        width: 18px;
+    }
+
+    .CardDetail .menuItemIcon svg {
+        width: 18px;
+    }
+
+    .admincontentContainer .FAQContainer-right .MuiPaper-root.MuiPaper-elevation span,
+    .CardDetailContainer-right .Announcements-text,
+    .admincontentContainer .portalconfiguration,
+    .MuiPaper-root.MuiPaper-elevation li.MuiButtonBase-root a,
+    .Announcementcontainerlist .AccordionSummaryheading {
+        font-size: 14px;
+    }
+
+
+}
+
+@media only screen and (max-width: 600px) {
+    .userInformationcontainer h2 {
+        font-size: 12px;
+    }
+    .CardDetail{
+        border-radius: 4px;
+    background: var(--WG-Blue-100, #DFEDFF);
+    color: var(--WG-Blue-900, #0A3B70);
+    text-align: center;
+    font-family: "ITC Avant Garde Gothic Std Md";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+    height: auto;
+    
+    }
+    .CardDetail .MuiCardContent-root{
+        padding-top: 0px;
+   
+    }
+    .CardDetail .MuiCardContent-root:last-child{
+        display: flex;
+        justify-content: center;
+    }
+    .CardDetail .MuiPaper-root.MuiPaper-elevation{
+        padding: 10px;
+        max-width: 100%;
+    }
+    .CardDetailContainer{
+        padding: 0px;
+        background-color: #fff;
+        border: 0px;
+        box-shadow:none;
+    }
+    .menulist button svg {
+        right: 10px;
+    }
+
+    .positionabsolute {
+        position: relative;
+        justify-items: center;
+        margin-top: 10px;
+    }
+
+    .positionabsolute svg {
+        position: relative;
+        right: 0px;
+    }
+
+    .userprofilelist .PipeLineDeliverynone {
+        display: none;
+    }
+
+    .PipeLineDelivery .assigned {
+        display: block;
+    }
+
+    .CardDetailContainer .menuItemIcon {
+
+        width: 25px;
+        height: 25px;
+
+    }
+
+    .MuiMenu-list {
+        max-width: 100%;
+    }
+
+    .menulist {
+        overflow: hidden;
+    }
+
+    .admincontent .userprofilelistcontent {
+        border-radius: 4px;
+        background: var(--WG-Blue-200, #B9DCFE);
+        padding: 10px;
+    }
+.justifyContent{
+    justify-content: flex-end;
+}
+    .admincontent .admincontentContainer .MarketerManagement button {
+        margin: 0px 0px 25px;
+    }
+    .userprofilelist h2 span ,.admincontent .userprofilelistcontent{
+        font-size: 12px;
+    }
+
+    .admincontent .admincontentContainer .MarketerManagement .MuiGrid2-grid-xs-12:nth-child(3) button {
+        margin: 0px 0px 20px;
+    }
+
+    .PortalName {
+        margin: 0px 0px 20px;
+        display: block;
+    }
+
+    .PortalName {
+        margin: 0px 0px 20px;
+    }
+
+    .Announcementiconslist {
+        display: grid;
+    }
+
+    .faqtextarea {
+        padding: 0px;
+    }
+
+    .faqtextarea h2 {
+        margin-bottom: 0px;
+    }
+
+    .Filtercontainer {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .proflepage .supplierDetailes .MuiFormControl-fullWidth {
+        margin: 0px;
+    }
+
+    .Announcementcontainerlist .CardDetailContainer {
+        border-radius: 5px;
+        background: #DFEDFF;
+    }
+
+    .Configurationbuttonmar-20 .Configurationbutton {
+        margin: 0px;
+    }
+
+    .Configurationbuttonmar-20 {
+        margin: 20px 0px;
+    }
+
+    .admincontentContainer .cancelbutton {
+        width: 48%;
+    }
+
+    .admincontentContainer .MuiButton-containedPrimary.Loginbutton,
+    .admincontent .Filter,
+    .containedLoginbuttonleft .Rejectbutton,
+    .ResetPasswordbutton .ResetPassword,
+    .Filtercontainerinner .Registrationcontainer .Searchbutton {
+        width: 100%;
+        height: 40px;
+        font-size: 12px;
+
+        justify-content: center;
+    }
+
+    .support-list .MuiList-root {
+        width: 100%;
+
+    }
+
+    .Announcementcontainerlist .MuiFab-primary {
+        width: 45px;
+        height: 45px;
+    }
+
+    .supporticonimg {
+        width: 20px;
+    }
+
+    .admincontentContainer table tbody tr td:nth-child(3) span,
+    .admincontent table tbody tr td,
+    .admincontent table thead tr .Mui-TableHeadCell-Content-Wrapper,
+    .Filtercontainer h2,
+    .supporticonlist h3 {
+        font-size: 14px;
+    }
+
+    .supportcontainer .EmailAddress {
+        font-size: 12px;
+    }
+
+    .admincontent .admincontentContainer .cancelbutton,
+    .admincontent .admincontentContainer .submitbutton,
+    .userprofilebutton .delete {
+        width: 48%;
+        font-size: 14px;
+    }
+
+    .admincontent .admincontentContainer .Personal-Information {
+        padding: 0px;
+    }
+
+    .nav-linksbuttons div {
+        width: 100%;
+        float: left;
+        padding-left: 5px;
+    }
+
+    .MuiPaper-root.MuiPaper-elevation,
+    .SupportedFormats .uploadfilssupport {
+        width: 100%;
+    }
+
+
+
+
+    .admincontent .PortalName .MuiToolbar-root {
+        width: 48%;
+    }
+
+    .admincontent .PortalName .MuiToolbar-root .MuiBox-root.css-2uchni,
+    .admincontent .PortalName .MuiToolbar-root .MuiBox-root.css-2uchni .Download {
+        width: 100%;
+    }
+
+
+
+    .admincontent .userprofilelistcontent {
+        margin: 10px 0px;
+    }
+
+    .nav-linksbuttons button {
+        margin-left: 5px;
+    }
+
+    .nav-linksbuttons {
+        display: flex;
+    }
+
+    .menulist div a,
+    .menulist div button {
+
+        font-size: 14px;
+        width: 100%;
+
+    }
+
+    .menulist div {
+        margin: 0px;
+        background: transparent;
+        padding: 0px;
+        display: block;
+        min-width: 100%;
+    }
+
+    .menulist div a.active,
+    .menulist div button.active {
+        background: #fff;
+    }
+
+    .menulist div a,
+    .menulist div button {
+        background: #DFEDFF;
+        font-size: 12px;
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+
+    .menuItemIcon svg {
+        width: 24px;
+    }
+
+    .navcontainer .none-moblie {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    .PipeLineDeliveryGrid .PipeLineDeliverywdith {
+        width: 100%;
+        margin: 0px 0px 7%;
+    }
+}
