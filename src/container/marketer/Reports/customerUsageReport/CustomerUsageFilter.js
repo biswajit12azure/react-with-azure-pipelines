@@ -64,8 +64,8 @@ const CustomerUsageFilter = ({ handleFilterSubmit,isAdmin,userdetails,data,fromD
             const formattedEndDate = dayjs(data.SelectedDate[1]).format('YYYY-MM-DDTHH:mm:ss');
             const transformed = {
                 UserID: isAdmin ? 0 : userdetails.id,
-                CompanyID: data?.MarketerName || 0,
-                AccountNumber: data?.AccountNumber || "",
+                CompanyID: data?.MarketerName,
+                AccountNumber: data?.AccountNumber,
                 StartDate: formattedStartDate,
                 EndDate: formattedEndDate
               }

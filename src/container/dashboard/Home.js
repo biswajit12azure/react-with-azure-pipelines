@@ -53,7 +53,7 @@ const Home = ({ handleCardClick, setBreadcrumb }) => {
           name: "marketer",
           title: item.PortalName,
           description: item.PortalName,
-          path: "nomination",
+          path: "nominationPipeline",
           portalKey: item.PortalKey,
           portalID: item.PortalId
         }];

@@ -13,15 +13,15 @@ import { getNominationPipeline } from '_utils/constant';
 
 dayjs.extend(utc);
 
-const PipelineNomination = ({fromDate,setFromDate,toDate,setToDate}) => {
+const PipelineNomination = () => {
   const header = " Nomination By Pipeline";
   const dispatch = useDispatch();
   const nominationData = useSelector(x => x.nominationpipeline?.nominationPipelineList);
   const marketerData=nominationData?.MarketerData;
   const pipelineData= nominationData?.PipelineData;
   const [data, setData] = useState([]);
-  // const [fromDate, setFromDate] = useState(dayjs().startOf('month'));
-  // const [toDate, setToDate] = useState(dayjs().endOf('month'));
+  const [fromDate, setFromDate] = useState(dayjs().startOf('month'));
+  const [toDate, setToDate] = useState(dayjs().endOf('month'));
   const [marketerId, setMarketerId] = useState(null);
   const [pipelineID, setPipelineID] = useState(null);
   const [isDataChanged, setIsDataChanged] = useState(false);

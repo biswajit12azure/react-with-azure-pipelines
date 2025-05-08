@@ -38,12 +38,9 @@ function createExtraActions() {
     function getAccess() {
         return createAsyncThunk(
             `${name}/getAccessData`,
-            async (data, { rejectWithValue }) => {
+            async (_, { rejectWithValue }) => {
                 try {
-                    const url = new URL(`${baseUrl}/GetUserPortalRoleMapping`);
-                    url.searchParams.append('PortalID', data);
-                    const response = await trackPromise(fetchWrapper.get(url.toString()));
-
+                    const response = await trackPromise(fetchWrapper.get(`${baseUrl}/GetUserPortalRoleMapping`));
                     return response;
                 }
                 catch (error) {

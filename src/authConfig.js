@@ -7,7 +7,7 @@ const msalConfig = {
     // redirectUri: "http://localhost:3000",
     clientId: "d4fdc014-7705-4f31-a57c-e4cd99f27078",
     authority: "https://login.microsoftonline.com/6b79820f-864a-4f1c-a8c2-85c5f09e79d7",
-    redirectUri: "https://wglhzus2desvas001.azurewebsites.net",
+    redirectUri: "https://wglhzus2tesvas001.azurewebsites.net",
   },
 };
 

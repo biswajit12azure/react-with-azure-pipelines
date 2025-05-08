@@ -7,7 +7,7 @@ import Grid from "@mui/material/Grid2";
 import dayjs from 'dayjs';
 import utc from 'dayjs/plugin/utc';
 import { NominationGroupData } from '_utils/constant';
-const GroupNomination = ({fromDate,setFromDate,toDate,setToDate}) => {
+const GroupNomination = () => {
   const header = "Nomination By Group";
   const dispatch = useDispatch();
   // const nominationData = useSelector(x => x.nominationgroup?.nominationGroupList);
@@ -16,8 +16,8 @@ const GroupNomination = ({fromDate,setFromDate,toDate,setToDate}) => {
   // console.log(nominationData);
   // console.log("marketerGroupData",marketerGroupData);
   const [data, setData] = useState([]);
-  // const [fromDate, setFromDate] = useState(dayjs().startOf('month').toDate());
-  // const [toDate, setToDate] = useState(dayjs().endOf('month').toDate());
+  const [fromDate, setFromDate] = useState(dayjs().startOf('month').toDate());
+  const [toDate, setToDate] = useState(dayjs().endOf('month').toDate());
   const [marketerId, setMarketerId] = useState(null);
   const [marketerGroupId, setMarketerGroupId] = useState(null);
   const [pipelineID, setPipelineID] = useState(null);

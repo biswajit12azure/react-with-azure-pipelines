@@ -179,15 +179,7 @@ const MarketerList = ({ marketerData, rowSelection, handleChange,isActivate, isM
                         </Typography>
                     );
                 }
-            },
-            {
-                accessorKey: 'IsActive', header: 'Status',
-                Cell: ({ row }) => (
-                    <span onClick={() => handleAddEdit(row)} >
-                        {row.original.IsActive ===true ? "Active" :"InActive"}
-                    </span>
-                ),
-            },
+            }
         ];
 
         return baseColumns;
@@ -250,10 +242,10 @@ const MarketerList = ({ marketerData, rowSelection, handleChange,isActivate, isM
             columnOrder: [
                 'mrt-row-expand',
                 'mrt-row-select',
-                'ServiceProvider',
                 'PortalID',
                 'MarketerName',
                 'StartDate',
+                'ServiceProvider',
                 "UETFileID",
                 'mrt-row-actions'
             ],

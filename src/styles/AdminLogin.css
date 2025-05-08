@@ -2951,17 +2951,15 @@ table .MuiTableBody-root .MuiTableRow-root td:after {
 }
 
 .inputtags .admincontentContainer .PiplineNominationList tr[data-pinned="true"] td:nth-child(2) {
-    color: var(--WG-Blue-900, #0A3B70);
-    font-family: "Proxima Nova Rg";
-    font-size: 16px;
+    color: var(--WG-Blue-700, #0059B3);
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-family: "ITC Avant Garde Gothic Std";
+    font-size: 14px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-    font-variant: all-small-caps;
     text-transform: uppercase;
-    text-transform: uppercase;
-    min-width: auto;
-    float: left;
 }
 
 .inputtags .admincontentContainer .PiplineNominationList tr[data-pinned="true"] td .MuiOutlinedInput-root {

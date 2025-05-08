@@ -11,33 +11,13 @@ import AddRole from './AddRole';
 const Configuration = () => {
     const header = "Role Management";
     const dispatch = useDispatch();
-    // const portalAccessData = useSelector((x) => x.configs?.portalAccessGetData);
-    // const accessData = portalAccessData?.Data || [];
-    // console.log(accessData);
-    const [selectedPortal, setSelectedPortal] = useState(1);
+    const portalAccessData = useSelector((x) => x.configs?.portalAccessGetData);
+    const accessData = portalAccessData?.Data || [];
+    console.log(accessData);
+    const [selectedPortal, setSelectedPortal] = useState(null);
     const [data, setData] = useState(null);
-    const [initialData, setInitialData] = useState(null);
-    const portals = [{
-        "PortalID": 1,
-        "PortalName": "Account Inquiry",
-    },
-    {
-        "PortalID": 2,
-        "PortalName": "Energy Assistance",
-    },
-    {
-        "PortalID": 3,
-        "PortalName": "Map Center",
-    },
-    {
-        "PortalID": 4,
-        "PortalName": "Marketer",
-    },
-    {
-        "PortalID": 5,
-        "PortalName": "Supplier Diversity",
-    }]
-    const options = portals?.map(portal => ({
+   
+    const options = accessData?.map(portal => ({
         value: portal.PortalID,
         label: portal.PortalName
     }));
@@ -48,16 +28,20 @@ const Configuration = () => {
 
     useEffect(() => {
         fetchData();
-    }, [dispatch,selectedPortal]);
+    }, [dispatch]);
 
     const fetchData = async() => 
     {
         try {
             dispatch(alertActions.clear());
-  
-            const result = await dispatch(configAction.getAccess(selectedPortal));
-            setData(result?.payload?.Data);
-            setInitialData(result?.payload?.Data)
+            let tranformed = {
+                PortalID : selectedPortal
+            }
+            if(selectedPortal){
+                const result = await dispatch(configAction.getAccess(tranformed));
+                setData(result?.Data);
+            }
+            const result = await dispatch(configAction.getAccess());
             if (result?.error) {
                 dispatch(alertActions.error({
                     showAfterRedirect: true,
@@ -72,24 +56,24 @@ const Configuration = () => {
         }
     }
 
-    // useEffect(() => {
-    //     if (accessData && accessData.length > 0) {
-    //         const defaultPortalId = selectedPortal ? selectedPortal : accessData[0]?.PortalID;
-    //         setSelectedPortal(defaultPortalId);
-    //         const portalData = accessData?.find(x => x.PortalID === defaultPortalId);
-    //         setData(portalData);
-    //     }
-    // }, [accessData]);
+    useEffect(() => {
+        if (accessData && accessData.length > 0) {
+            const defaultPortalId = selectedPortal ? selectedPortal : accessData[0]?.PortalID;
+            setSelectedPortal(defaultPortalId);
+            const portalData = accessData?.find(x => x.PortalID === defaultPortalId);
+            setData(portalData);
+        }
+    }, [accessData]);
 
-    // useEffect(() => {
-    //     if (accessData && selectedPortal) {
-    //         const portalData = accessData?.find(x => x.PortalID === selectedPortal);
-    //         setData(portalData);
-    //     }
-    // }, [selectedPortal, accessData]);
+    useEffect(() => {
+        if (accessData && selectedPortal) {
+            const portalData = accessData?.find(x => x.PortalID === selectedPortal);
+            setData(portalData);
+        }
+    }, [selectedPortal, accessData]);
 
-    const handlePortalChange = (value) => {
-        setSelectedPortal(value);
+    const handlePortalChange = (event) => {
+        setSelectedPortal(event.target.value);
     };
 
     const handleFetch=()=>{
@@ -113,8 +97,7 @@ const Configuration = () => {
             {data && <PortalConfiguration 
                 control={control}
                 errors={errors}
-                data={data[0]}
-                initialData={initialData[0]}
+                data={data}
                 options={options} 
                 setData={setData}
                 selectedPortal={selectedPortal}
@@ -123,10 +106,10 @@ const Configuration = () => {
                 handleFetch={handleFetch} />}
 
             <Grid size={{ xs: 12, sm: 12, md: 12 }} className="Personal-Information">
-                <Button variant="contained" color="red" className="cancelbutton" onClick={handleFetch} >
+                <Button variant="contained" color="red" className="cancelbutton"  >
                     Cancel
                 </Button>
-                {/* <Button type="submit"
+                <Button type="submit"
                     fullWidth
                     variant="contained"
                     color="primary"
@@ -135,7 +118,7 @@ const Configuration = () => {
                     // disabled={!isEdited}
                 >
                     Save
-                </Button> */}
+                </Button>
             </Grid>
         </form>
     );

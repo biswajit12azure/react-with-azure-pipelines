@@ -26,7 +26,7 @@ const BalancingModel = ({ marketerGroupID, label, value, onChange, options, disa
         dispatch(alertActions.clear());
         try {
             const startM = dayjs(startMonth).isValid() ? dayjs(startMonth).format('YYYY-MM-DDTHH:mm:ss') : null;
-            const endM = dayjs(endMonth).isValid() ? dayjs(endMonth).format('YYYY-MM-DDTHH:mm:ss') : null;
+            const endM = dayjs(endMonth).isValid() ? dayjs(endMonth).format('YYYY-MM-DDTHH:mm:ss') : dayjs().subtract(1, 'month').format('YYYY-MM-DDTHH:mm:ss');
             const transformedData = {
                 MarketerGroupID: marketerGroupID,
                 BalancingModelID: selectedValue,

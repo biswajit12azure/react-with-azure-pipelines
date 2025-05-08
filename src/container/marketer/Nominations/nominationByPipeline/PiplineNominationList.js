@@ -62,7 +62,7 @@ const PipelineNominationList = ({ data = [],setData,setIsDataChanged, fromDate, 
       { header: 'Contracts', accessorKey: 'ContractID', id: 'ContractID' },
       ...dateRange.map(date => ({
         accessorKey: date,
-        header: dayjs(date).format('MM/DD'),
+        header: date,
         id: date,
         Cell: ({ cell, row }) => (
           <TextField

@@ -1,6 +1,6 @@
 
 import React, { useMemo, useState, useCallback, useEffect } from 'react';
-import { useDispatch , useSelector} from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { MaterialReactTable, useMaterialReactTable } from 'material-react-table';
 import { Switch, Button, Box, Typography } from '@mui/material';
 import { alertActions, configAction } from '_store';
@@ -8,28 +8,22 @@ import { AutocompleteInput , DropdownTableInput} from '_components';
 import Grid from '@mui/material/Grid2';
 import _ from 'lodash';
 
-const PortalConfiguration = ({control,errors,data,options,setData,initialData,selectedPortal,handlePortalChange,portalName,handleFetch}) => {
+const PortalConfiguration = ({control,errors,data,options,setData,selectedPortal,handlePortalChange,portalName,handleFetch}) => {
     const dispatch = useDispatch();
-    // const initialData = _.cloneDeep(data);
+    // const initialData = data;
     // const options= options;
     // const [data, setData] = useState(_.cloneDeep(initialData));
     const [pagination, setPagination] = useState({ pageIndex: 0, pageSize: 5 });
-    const authUser = useSelector(x => x.auth?.value);
-    console.log(authUser);
-    const userProfiles = useSelector(x => x.userProfile?.userProfileData);
-  
-    const user = authUser?.Data?.UserDetails;
-    console.log(user);
-    const name = `${user.FirstName} ${user.LastName}`;
-    console.log(name);
+
+ 
 
     const pivotData = useCallback((portal) => {
         const result = [];
         const accessNames = new Set();
         const roles = {};
 
-        portal?.PortalRoleAccess?.forEach(roleAccess => {
-            roleAccess?.FeatureAccess.forEach(permission => {
+        portal?.PortalRoleAccess.forEach(roleAccess => {
+            roleAccess.FeatureAccess.forEach(permission => {
                 accessNames.add(permission.AccessID);
                 if (!roles[permission.AccessID]) {
                     roles[permission.AccessID] = {};
@@ -54,62 +48,45 @@ const PortalConfiguration = ({control,errors,data,options,setData,initialData,se
         return pivotData(data);
     }, [data, pivotData]);
 
-    
-    
     const handleToggle = (featureId, roleId) => {
-        console.log("featureID",featureId);
-        console.log("roleid",roleId);
-      setData(prevData => {
-   const updatedData = _.cloneDeep(prevData);
-     updatedData[0]?.PortalRoleAccess?.forEach(roleAccess => {
-       roleAccess?.FeatureAccess.forEach(permission => {
-        if (permission.AccessID === parseInt(featureId) && roleAccess.RoleID === parseInt(roleId)) {
-        permission.IsActive = !permission.IsActive;
-      }
-      });
-      });
-      console.log('Updated Data:', updatedData); // Debugging statement
-      return updatedData;
+        setData(prevData => {
+            const updatedData = _.cloneDeep(prevData);
+            updatedData.PortalRoleAccess.forEach(roleAccess => {
+                roleAccess.FeatureAccess.forEach(permission => {
+                    if (permission.AccessID === parseInt(featureId) && roleAccess.RoleID === parseInt(roleId)) {
+                        permission.IsActive = !permission.IsActive;
+                    }
+                });
+            });
+            return updatedData;
         });
-       };
-        
+    };
 
     const handleSubmit = async () => {
-        console.log("intialData",data);
-
-    console.log("error",initialData);
         const changedData = [];
-    
-        data?.PortalRoleAccess.forEach(roleAccess => {
-            const initialRoleAccess = initialData.PortalRoleAccess.find(r => r.RoleID === roleAccess.RoleID);
-    
-            roleAccess.FeatureAccess.forEach(permission => {
-                const initialPermission = initialRoleAccess?.FeatureAccess.find(p => p.AccessID === permission.AccessID);
-    
-                if (initialPermission && permission.IsActive !== initialPermission.IsActive) {
+        data.PortalRoleAccess.forEach((roleAccess, roleIndex) => {
+            roleAccess.FeatureAccess.forEach((permission, featureIndex) => {
+                const initialPermission = data?.PortalRoleAccess[roleIndex].FeatureAccess[featureIndex];
+                if (permission.IsActive !== initialPermission.IsActive) {
                     changedData.push({
                         RoleAccessMappingID: permission.RoleAccessMappingID,
-                        IsActive: permission.IsActive,
-                        CreatedBy: name
+                        IsActive: permission.IsActive
                     });
                 }
             });
         });
-    
-        console.log("Sending changed data:", changedData);
-    
+
         try {
+            let message;
             await dispatch(configAction.postAccess(changedData)).unwrap();
-            dispatch(alertActions.success({ message: 'Role updated successfully.', showAfterRedirect: true, header: "Role Management"}));
+            message = 'Config updated';
             handleFetch();
+            dispatch(alertActions.success({ message, showAfterRedirect: true }));
         } catch (error) {
-            dispatch(alertActions.error({ message: error?.message || error, header: "Role Management" }));
+            dispatch(alertActions.error({ message: error?.message || error, header: "Role Management" }));                               
         }
     };
-    
-    
-    
-    
+
     const columns = useMemo(() => {
         const dynamicColumns = [
             { header: 'Feature Name', accessorKey: 'FeatureName' }
@@ -154,7 +131,7 @@ const PortalConfiguration = ({control,errors,data,options,setData,initialData,se
             
                 <Grid container className="portalconfigurationwidth" >  
                 <Grid size={{ xs: 12, sm: 12, md: 12 }}  className='passwordcheck'>                  
-                        {/* <AutocompleteInput
+                        <AutocompleteInput
                             control={control}
                             name="selectedPortal"
                             label="Select Portal"
@@ -164,17 +141,17 @@ const PortalConfiguration = ({control,errors,data,options,setData,initialData,se
                             helperText={errors.selectedPortal?.message}
                             
                             onChange={handlePortalChange}
-                        /> */}
-                    <DropdownTableInput
-
-                        name="selectedPortal"
-                        label="Select Portal"
-                        value={selectedPortal}
-                        options={options}
-                        error={!!errors.selectedPortal}
-                        //  helperText={errors.selectedPortal?.message}
-                        onChange={(value) => handlePortalChange(value)}
-                    />
+                        />
+                    {/* <DropdownTableInput
+                     control={props.control}
+                     name="selectedPortal"
+                     label="Select Portal"
+                     value={options?.find(option => option.value === props.selectedPortal)}
+                     options={options}
+                     error={!!props.errors.selectedPortal}
+                     helperText={props.errors.selectedPortal?.message}
+                     onChange={props.handlePortalChange}
+                    /> */}
                         </Grid>
                         <Grid size={{ xs: 12, sm: 12, md: 12 }}  >        
               

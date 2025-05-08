@@ -2,7 +2,7 @@ import React from 'react';
 import { MaterialReactTable, useMaterialReactTable } from 'material-react-table';
 import { Paper, Box, Typography } from '@mui/material';
 
-const SNComplianceReportList = ({ data,ref }) => {
+const SNComplianceReportList = ({ data }) => {
   console.log("data", data);
 
   const columns = [
@@ -48,7 +48,7 @@ const SNComplianceReportList = ({ data,ref }) => {
     data,
 
     enableSorting: true,
-    enableColumnFilters: true,
+    enableColumnFilters: false,
     enableColumnFilterRow: false,
     enableGlobalFilter: false,
     enableColumnFilterModes: true,
@@ -75,7 +75,7 @@ const SNComplianceReportList = ({ data,ref }) => {
       },
     },
 
-
+    
     muiTableBodyRowProps: ({ row }) => {
       const { AllocationGroup, customCategory } = row.original || {};
       const isFixedTotal =
@@ -83,7 +83,7 @@ const SNComplianceReportList = ({ data,ref }) => {
         ['Total FIRM', 'Total Interruptible', 'Grand Total'].includes(AllocationGroup);
 
       return {
-        onClick: isFixedTotal ? undefined : () => { },
+        onClick: isFixedTotal ? undefined : () => {}, 
         sx: {
           fontWeight: row.original?.isTotal ? 'bold' : 'normal',
           backgroundColor: isFixedTotal ? '#0F3557' : 'inherit',
@@ -104,8 +104,8 @@ const SNComplianceReportList = ({ data,ref }) => {
     },
 
     initialState: {
-      pageIndex: 0,
-      pageSize: 5,
+      pageIndex: 0, 
+      pageSize: 5,  
     },
     muiTablePaginationProps: {
       rowsPerPageOptions: [5, 10, 25, 50],
@@ -113,7 +113,7 @@ const SNComplianceReportList = ({ data,ref }) => {
       showLastButton: true,
     },
 
-
+   
     renderEmptyRowsFallback: () => (
       <Box
         sx={{
@@ -131,16 +131,9 @@ const SNComplianceReportList = ({ data,ref }) => {
   });
 
   return (
-    <Box
-      id="table-container"
-      ref={ref}
-      sx={{
-        height: '500px',
-        overflow: 'auto',
-      }}
-    >
+    <Paper>
       <MaterialReactTable table={table} />
-    </Box>
+    </Paper>
   );
 };
 

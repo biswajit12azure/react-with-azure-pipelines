@@ -22,11 +22,9 @@ const getAppMenus = (portalKey, isMBAdmin) => {
                 name: 'Nominations',
                 orderID: 1,
                 items: [
-                    { name: 'Nominations', link:"nomination",order:1 },
-                    { name: 'NOMINATIONS BY PIPELINE', link: 'nominationPipeline', orderID: 4 },
+                    { name: 'NOMINATIONS BY PIPELINE', link: 'nominationPipeline', orderID: 1 },
                     { name: 'NOMINATIONS BY GROUP', link: 'nominationGroup', orderID: 2},
-                    { name: 'PIPELINE DELIVERY', link: 'pipelinedelivery', orderID: 3},
-                   
+                    { name: 'PIPELINE DELIVERY', link: 'pipelinedelivery', orderID: 3}
                 ]
             });
             addMenuItem('Filehub', 'Filehub', 2);

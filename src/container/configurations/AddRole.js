@@ -49,17 +49,6 @@ const AddRole = ({ handleFetch }) => {
     const handleOnSubmit = async (data) => {
         dispatch(alertActions.clear());
         try {
-            // {
-            //     "roles": {
-            //       "RoleID": 0,
-            //       "RoleName": "string",
-            //       "RoleDescription": "string",
-            //       "IsActive": true,
-            //       "PortalId": 0,
-            //       "CreatedBy": "string",
-            //       "IsWglRole": true
-            //     }
-            //   }
             data={...data, RoleDescription:data.RoleName}
             const result =await dispatch(masterActions.saveRole({data})).unwrap();
 
@@ -124,7 +113,6 @@ const AddRole = ({ handleFetch }) => {
                             variant="contained"
                             className='cancelButton'
                             color="primary"
-                            onClick={handleClick}
                         >
                             cancel
                         </Button>

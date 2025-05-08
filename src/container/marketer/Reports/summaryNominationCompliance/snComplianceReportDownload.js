@@ -10,7 +10,7 @@ import 'dayjs/locale/en-gb';
 import { materialsymbolsdownload, WGL_logo } from 'images';
 import { DateRange } from "@mui/icons-material";
 
-const SNComplianceReportDownload = ({ data, startDate, endDate ,tableRef}) => {
+const SNComplianceReportDownload = ({ data, startDate, endDate }) => {
     const [anchorEl, setAnchorEl] = useState(null);
 
     const handleClick = (event) => setAnchorEl(event.currentTarget);

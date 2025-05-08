@@ -13,7 +13,7 @@ const AlertMessage = ({portalID}) => {
     console.log("@@@@@@@@@@@@@@@@@@",portalID);
     console.log("@@@@@@@@@@@@@@@@@@@@@@@@@@",user?.UserDetails?.id);
     const portalid  = sessionStorage.getItem('portalID') || portalID;
-    const Roleid = user?.UserAccess?.filter(user => user.PortalId === portalid);
+    const Roleid = user?.UserAccess?.filter(user => user.PortalId == portalid);
     console.log(user);
     console.log(Roleid[0]?.RoleId);
     const handleClose = (id) => {

@@ -1,0 +1,97 @@
+trigger:
+  - release/qa
+
+pool:
+  name: Default
+  demands:
+    - Agent.Name -equals AZWSVDOP100
+
+steps:
+  - checkout: self
+    persistCredentials: true
+    fetchTags: true
+    clean: true
+
+  # ✅ Restrict execution to specific agents
+  - script: |
+      @echo off
+      if /I NOT "$(Agent.Name)"=="AZWSVDOP100" (
+        if /I NOT "$(Agent.Name)"=="AZWSVDOP101" (
+          echo Skipping execution on $(Agent.Name)
+          exit /B 1
+        )
+      )
+    displayName: "Ensure the job runs only on AZWSVDOP101 or AZWSVDOP100"
+
+  # ✅ Auto-Increment and Push Git Tag
+  - powershell: |
+      git config user.name "Azure DevOps"
+      git config user.email "devops@yourcompany.com"
+
+      $prefix = "qa-fe-"
+
+      git fetch --tags
+
+      # Get tags matching the prefix
+      $latestTag = git tag --list "$prefix*" | Sort-Object {
+        ($_ -replace "^$prefix", '') -as [version]
+      } | Select-Object -Last 1
+
+      Write-Host "Latest tag found: $latestTag"
+
+      if (-not $latestTag) {
+        $newTag = "${prefix}1.0.0"
+      }
+      else {
+        $ver = [version]($latestTag -replace "^$prefix", '')
+        $newVer = "{0}.{1}.{2}" -f $ver.Major, ($ver.Minor + 1), $ver.Build
+        $newTag = "${prefix}$newVer"
+      }
+
+      Write-Host "Creating new tag: $newTag"
+      git tag -a $newTag -m "Auto-tagged release: $newTag"
+      git push origin $newTag
+
+      Write-Host "##vso[task.setvariable variable=newTag]$newTag"
+    displayName: 'Auto-Increment qa-fe Tag'
+    
+  # ✅ Install Latest Node.js (22.x for better performance)
+  - task: NodeTool@0
+    inputs:
+      versionSpec: '20.x'
+    displayName: 'Install Node.js 20'
+
+  # ✅ Install Dependencies (Only if node_modules is missing)
+  - script: |
+      if not exist "$(Build.SourcesDirectory)\node_modules" (
+        echo "node_modules not found. Installing dependencies..."
+        npm i --prefer-offline --legacy-peer-deps --concurrency=%NUMBER_OF_PROCESSORS%
+      ) else (
+        echo "Skipping dependency installation as node_modules already exists."
+      )
+    displayName: 'Install Dependencies (Skip if Exists)'
+    workingDirectory: $(Build.SourcesDirectory)
+
+  # ✅ Build React Application with Multi-Threading
+  - script: |
+      npm run build -- --max-old-space-size=4096 --threads=%NUMBER_OF_PROCESSORS%
+    displayName: 'Build React Application (Optimized)'
+    workingDirectory: $(Build.SourcesDirectory)
+
+  # ✅ Validate Build Output
+  - script: |
+      if not exist "$(Build.SourcesDirectory)\build" (
+        echo Build output directory not found!
+        exit /b 1
+      )
+    displayName: 'Validate Build Output'
+
+  # ✅ Deploy to Azure Web App
+  - task: AzureRmWebAppDeployment@4
+    inputs:
+      ConnectionType: 'AzureRM'
+      azureSubscription: 'azure-s1'
+      appType: 'webApp'
+      WebAppName: 'WGLHZUS2TESVAS001'
+      package: '$(Build.SourcesDirectory)\build'
+    displayName: 'Deploy to Azure Web App'

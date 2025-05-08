@@ -50,7 +50,6 @@ import {
   SNComplianceReport,
   SupplierPendingEnrollmentOrDropReports,
   SupplierActiveCustomerReport,
-  Nominations
 } from "container/marketer";
 import { Customer } from "container/admin";
 import Firm from "container/marketer/summaryAdjustment/byFirm/Firm";
@@ -261,7 +260,6 @@ const RouteList = () => {
 
               <Route path="/activityLog/:portalID" element={<ActivityList />} />
               <Route path="/services" element={<Service />} />
-              <Route path="/nomination" element={<Nominations/>}/>
             </Route>
             {/* public */}
             <Route path="/faqView" element={<FAQView />} />

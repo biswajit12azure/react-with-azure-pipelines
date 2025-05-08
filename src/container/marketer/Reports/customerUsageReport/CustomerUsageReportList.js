@@ -18,7 +18,7 @@ const CustomerUsageList = forwardRef(({ fromDate, toDate, data, handleChange,ref
 
   const transformData = useCallback(() => {
     const usageData = data?.CustomerUsageData;
-    if (!Array.isArray(usageData))return { rows: [], columns: [] };
+    if (!usageData) return { rows: [], columns: [] };
   
     const dateRange = generateDateRange(fromDate, toDate);
     const grouped = {};
